@@ -1,0 +1,45 @@
+@import '../../assets/scss/Main.scss';
+
+.video-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 0;
+  @media (max-width: $laptop) {
+    padding: 32px 0;
+  }   
+  @media (max-width: $small) {
+    padding: 16px 0;
+  }
+  &__wrapper {
+    max-width: 1920px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+  }
+  &__videos {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 32px;
+    column-gap: 32px;
+    padding: 0px 40px;
+    @media (max-width: $laptop) {
+      padding: 0px 20px;  
+      row-gap: 20px;
+      column-gap: 20px;
+    }   
+    @media (max-width: 847px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $small) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 12px;
+      column-gap: 12px;
+      padding: 0 12px;
+    }
+    
+  }
+
+}

@@ -1,0 +1,65 @@
+@import '../../assets/scss/Main.scss';
+
+header {
+  display: flex;
+  justify-content: center;
+  background: $primary;
+  color: $fontColorPrimary;   
+  width: 100%; 
+  .header__wrapper {
+    max-width: 1920px;
+    width: 100%;
+    padding: 30px 40px 0;
+    @media (max-width: $laptop) {
+      padding: 30px 20px 0;
+    }   
+    @media (max-width: $small) {
+      padding: 20px 12px 0;
+    }
+    h1 {
+      max-width: 505px;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;    
+      margin-bottom: 12px;
+      @media (max-width: $small) {
+        font-size: 16px;
+        line-height: 18px;
+        max-width: 340px
+      }
+    }
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: 20px;
+      @media (max-width: $small) {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+    nav {
+      display: flex;
+      .header__tab {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        padding: 10px 0px;
+        border-bottom: 2px solid transparent;
+        &:hover {
+          cursor: pointer;
+        }
+        &:nth-child(1), &:nth-child(2) {
+          margin-right: 24px;
+          @media (max-width: $small) {
+            margin-right: 20px;
+          }
+        }
+      }
+      .current__tab {
+        border-bottom: 2px solid #FFA500;
+      }
+    }
+    
+  }
+}
