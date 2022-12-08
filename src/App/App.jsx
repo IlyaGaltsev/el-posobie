@@ -27,7 +27,6 @@ function App() {
         handleClickTab={handleClickTab}
       />
       {stateTabs[0] ? <BookScreen/> : stateTabs[1] ?  <VideoScreen/> : <PrezentationScreen/>}
-
     </div>
   );
 }
