@@ -1,9 +1,9 @@
+import './App.scss';
 import { useState } from "react";
 import { Header } from '../components/Header';
 import { BookScreen } from "../screens/BookScreen";
 import { PrezentationScreen } from "../screens/PrezentationScreen";
 import { VideoScreen } from "../screens/VideoScreen";
-import './App.scss';
 
 function App() {
   const [stateTabs, setStateTabs] = useState({
@@ -22,15 +22,14 @@ function App() {
   }
   return (
     <div className="app__wrapepr">
-      <Header 
-        stateTabs={stateTabs} 
+      <Header
+        stateTabs={stateTabs}
         handleClickTab={handleClickTab}
       />
       {stateTabs[0] ? <BookScreen/> : stateTabs[1] ?  <VideoScreen/> : <PrezentationScreen/>}
-      
+
     </div>
   );
 }
 
 export { App };
- 
