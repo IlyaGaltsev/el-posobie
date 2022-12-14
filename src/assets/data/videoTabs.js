@@ -1,30 +1,36 @@
 const videoTabs = [
   {
-    id:0,
+    id: 0,
     flag: true,
+    title: 'Все',
+    tag: '',
+  },
+  {
+    id: 1,
+    flag: false,
     title: 'Медицинская подготовка',
     tag: 'med',
   },
   {
-    id:1,
+    id: 2,
     flag: false,
     title: 'Огневая подготовка',
     tag: 'fire',
   },
   {
-    id:2,
+    id: 3,
     flag: false,
     title: 'РХБ',
     tag: 'rxb',
   },
   {
-    id:3,
+    id: 4,
     flag: false,
     title: 'Тактическая подготовка',
     tag: 'tacktic',
   },
   {
-    id:4,
+    id: 5,
     flag: false,
     title: 'Физическая подготовка',
     tag: 'fizik',

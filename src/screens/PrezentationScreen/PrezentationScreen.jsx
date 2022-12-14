@@ -12,29 +12,35 @@ const PrezentationScreen = () => {
       {
         id: 0,
         flag: false,
+        title: 'Все',
+        tag: '',
+      },
+      {
+        id: 1,
+        flag: false,
         title: 'ВМП',
         tag: 'vmp',
       },
       {
-        id: 1,
+        id: 2,
         flag: false,
         title: 'ОБВС',
         tag: 'obvs',
       },
       {
-        id: 2,
+        id: 3,
         flag: false,
         title: 'ОВУ',
         tag: 'oby',
       },
       {
-        id: 3,
+        id: 4,
         flag: false,
         title: 'Огневая подготовка',
         tag: 'fire',
       },
       {
-        id: 4,
+        id: 5,
         flag: false,
         title: 'ТП',
         tag: 'tp',
@@ -56,7 +62,7 @@ const PrezentationScreen = () => {
         />
         <div className="prezentation-screen__prezentation">
           {massPrez
-            .filter(item => item.tag === stateVideoTabs.find(tab => tab.flag === true).tag)
+            .filter(item => item.tag.includes(stateVideoTabs.find(tab => tab.flag === true).tag))
             .map(item => {
             return (
               <PrezentationCard
