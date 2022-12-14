@@ -21,6 +21,13 @@ import rxb3 from '../images/rxb3.jpg';
 import rxb4 from '../images/rxb4.jpg';
 import rxb5 from '../images/rxb5.jpg';
 
+import tacktic1 from '../images/tacktic1.jpg';
+import tacktic2 from '../images/tacktic2.jpg';
+
+import fizic1 from '../images/fizic1.jpg';
+import fizic2 from '../images/fizic2.jpg';
+import fizic3 from '../images/fizic3.jpg';
+
 const massVideo = [
   {
     id: "US3LGHxiciQ",
@@ -122,15 +129,30 @@ const massVideo = [
     tag: 'rxb',
     promo: rxb5,
   },
-  // {
-  //   id: "",
-  //   tag: 'tacktic',
-  //   promo: tacktic1,
-  // },
-  // {
-  //   id: "",
-  //   tag: 'fizik',
-  //   promo: fizic1,
-  // },
+  {
+    id: "XjLIPcOZVMo",
+    tag: 'tacktic',
+    promo: tacktic1,
+  },
+  {
+    id: "3YR8px3VFrI",
+    tag: 'tacktic',
+    promo: tacktic2,
+  },
+  {
+    id: "p11sJEgp88A",
+    tag: 'fizik',
+    promo: fizic1,
+  },
+  {
+    id: "8Paa1InCwFk",
+    tag: 'fizik',
+    promo: fizic2,
+  },
+  {
+    id: "tRKT25wOjIQ",
+    tag: 'fizik',
+    promo: fizic3,
+  },
 ]
 export default massVideo;

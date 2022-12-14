@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { Tabs } from "../../components/VideoScreen/Tabs";
+import { Tabs } from "../../components/Tabs";
 import { VideoCard } from "../../components/VideoScreen/VideoCard";
 import massVideo from "../../assets/data/massVideo"
 import "./VideoScreen.scss";
 import videoTabs from "../../assets/data/videoTabs";
 
 const VideoScreen = () => {
-  const [stateVideoTabs, setStateVideoTabs] = useState(videoTabs)
+  const [stateVideoTabs, setStateVideoTabs] = useState(videoTabs);
   const handleClickTab = (e) => {
     let defaultMass = [
       {
@@ -40,7 +40,7 @@ const VideoScreen = () => {
         tag: 'fizik',
       },
     ]
-    defaultMass.map(item => {
+    defaultMass.forEach(item => {
       if (item.id == e.target.id) {
         item.flag = true;
       }
@@ -59,7 +59,10 @@ const VideoScreen = () => {
             .filter(item => item.tag === stateVideoTabs.find(tab => tab.flag === true).tag)
             .map(item => {
             return (
-              <VideoCard key={item.id} {...item}/>
+              <VideoCard
+                key={item.id}
+                {...item}
+              />
             )
           })}
         </div>

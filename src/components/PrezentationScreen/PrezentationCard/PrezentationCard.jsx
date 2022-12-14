@@ -1,18 +1,24 @@
 import { useState } from "react";
-import "./VideoCard.scss";
+import "./PrezentationCard.scss";
 
-const VideoCard = ({id, promo}) => {
-  const [isActive, setActive] = useState(false)
+const PrezentationCard = (props) => {
+  const {
+    path,
+    preview,
+    title,
+  } = props;
+
+  const [isActive, setActive] = useState(false);
+
   const onHandleClick = () => {
     setActive(true)
   }
-
   if (isActive === false) {
     return (
-      <div className="video-card__img">
+      <div className="prez-card__img">
         <img
-          className="video-card"
-          src={promo}
+          className="prez-card"
+          src={preview}
           alt="img-card"
         />
         <svg
@@ -44,20 +50,21 @@ const VideoCard = ({id, promo}) => {
                32.4535 15.4867L48.2097 23.5353C49.0114 23.9447
                49.5148 24.7588 49.516 25.647C49.517 26.5359 49.0157
                27.3512 48.2153 27.7626Z"
-          />
+           />
         </svg>
       </div>
     )
-  } else{
+  } else {
     return (
       <iframe
-        title="video"
-        className="video-card"
-        src={'https://www.youtube.com/embed/' + id + '?autoplay=1'}
-        allowfullscreen="true"
-        allow='autoplay'
-      >
-      </iframe>
-  )}
-}
-export { VideoCard };
+        className="prez-card"
+        title={title}
+        src={path}
+        frameBorder="0"
+        allowFullScreen="true"
+        mozallowfullscreen="true"
+        webkitallowfullscreen="true"
+      />
+    )}
+  }
+export { PrezentationCard }
