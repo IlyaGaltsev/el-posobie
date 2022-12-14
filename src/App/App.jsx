@@ -4,6 +4,7 @@ import { Header } from '../components/Header';
 import { BookScreen } from "../screens/BookScreen";
 import { PrezentationScreen } from "../screens/PrezentationScreen";
 import { VideoScreen } from "../screens/VideoScreen";
+import { ConspectScreen } from '../screens/ConspectScreen';
 
 function App() {
   const [stateTabs, setStateTabs] = useState({
@@ -26,7 +27,15 @@ function App() {
         stateTabs={stateTabs}
         handleClickTab={handleClickTab}
       />
-      {stateTabs[0] ? <BookScreen/> : stateTabs[1] ?  <VideoScreen/> : <PrezentationScreen/>}
+      {
+        stateTabs[0]
+          ? <BookScreen/>
+          : stateTabs[1]
+          ? <VideoScreen/>
+          : stateTabs[2]
+          ? <PrezentationScreen/>
+          : <ConspectScreen/>
+      }
     </div>
   );
 }
