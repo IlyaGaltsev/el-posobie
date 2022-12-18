@@ -1,2 +1,36 @@
-@import '../../assets/scss/Main.scss';
+@import "../../assets/scss/Main.scss";
 
+.book-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__wrapper {
+    max-width: 1920px;
+    width: 100%;
+    display: flex;
+  }
+  &__navigation {
+    max-width: 400px;
+    width: 100%;
+    background: $primary;
+    ul {
+      list-style-type: none;
+      li {
+        display: block;
+        width: 100%;
+        button {
+          border: none;
+          background: none;
+          text-align: left;
+          color: $fontColorPrimary;
+          padding: 10px;
+        }
+        ul {
+          background: $tertiary;
+        }
+      }
+    }
+  }
+  &__page {
+  }
+}

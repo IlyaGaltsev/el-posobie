@@ -1,0 +1,39 @@
+@import '../../assets/scss/Main.scss';
+
+.pagebook {
+  padding: 34px 30px;
+  &__wrapper {
+    max-width: 1400px;
+    span {
+      color: #525252;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 18px;
+    }
+    h1 {
+      margin: 24px 0;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 34px;
+      color: #000000;
+    }
+  }
+  p {
+    text-indent: 20px;
+  }
+  &__text {
+    p {
+    }
+    ul {
+      li {
+      }
+    }
+  }
+  button {
+    margin-top: 48px;
+    border: none;
+    background: $contrast;
+    padding: 10px 24px;
+  }
+}
+
