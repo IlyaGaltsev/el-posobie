@@ -6,7 +6,7 @@ const PageBook = (props) => {
   return (
     <div className="pagebook">
       <div className="pagebook__wrapper">
-        <span>Читается за {timeRead} минут</span>
+        <span>Читается за {timeRead} мин</span>
         <h1>{title}</h1>
         {text()}
         <button onClick={onNext}>Далее</button>

@@ -5,6 +5,7 @@ import { BookScreen } from "../screens/BookScreen";
 import { PrezentationScreen } from "../screens/PrezentationScreen";
 import { VideoScreen } from "../screens/VideoScreen";
 import { ConspectScreen } from '../screens/ConspectScreen';
+import { Footer } from '../components/Footer';
 
 function App() {
   const [stateTabs, setStateTabs] = useState({
@@ -36,6 +37,7 @@ function App() {
           ? <PrezentationScreen/>
           : <ConspectScreen/>
       }
+      <Footer/>
     </div>
   );
 }
