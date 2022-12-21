@@ -24,6 +24,7 @@ function App() {
   }
   return (
     <div className="app__wrapepr">
+      <div>
       <Header
         stateTabs={stateTabs}
         handleClickTab={handleClickTab}
@@ -37,6 +38,7 @@ function App() {
           ? <PrezentationScreen/>
           : <ConspectScreen/>
       }
+      </div>
       <Footer/>
     </div>
   );
