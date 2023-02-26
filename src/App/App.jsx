@@ -1,19 +1,27 @@
-import "./App.scss";
-import { Header } from "../components/Header";
-import { Route, Routes } from "react-router-dom";
-import { routes } from "../routes";
+import { Route, Routes } from "react-router-dom"
+import { Header } from "../components/Header"
+import { routes } from "../routes"
+import "./App.scss"
 
-function App() {
+const App = () => {
   return (
-    <div id="main" className="app__wrapepr">
+    <div
+      id="main"
+      className="app__wrapepr"
+    >
       <Header />
       <Routes>
-        {routes.map(({ path, Element }) => {
-          return <Route path={path} element={Element} />;
+        {routes.map(route => {
+          return (
+            <Route
+              key={route.path}
+              {...route}
+            />
+          )
         })}
       </Routes>
     </div>
-  );
+  )
 }
 
-export { App };
+export { App }

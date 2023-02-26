@@ -1,18 +1,13 @@
-import { useState } from "react";
-import "./PrezentationCard.scss";
+import { useState } from "react"
+import "./PrezentationCard.scss"
 
-const PrezentationCard = (props) => {
-  const {
-    path,
-    preview,
-    title,
-  } = props;
-
-  const [isActive, setActive] = useState(false);
+const PrezentationCard = ({ path, preview, title }) => {
+  const [isActive, setActive] = useState(false)
 
   const onHandleClick = () => {
     setActive(true)
   }
+  
   if (isActive === false) {
     return (
       <div className="prez-card__img">
@@ -26,7 +21,8 @@ const PrezentationCard = (props) => {
           width="76"
           height="52"
           viewBox="0 0 76 52"
-          xmlns="http://www.w3.org/2000/svg">
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <rect
             x="20.5508"
             y="6.86157"
@@ -50,7 +46,7 @@ const PrezentationCard = (props) => {
                32.4535 15.4867L48.2097 23.5353C49.0114 23.9447
                49.5148 24.7588 49.516 25.647C49.517 26.5359 49.0157
                27.3512 48.2153 27.7626Z"
-           />
+          />
         </svg>
       </div>
     )
@@ -65,6 +61,7 @@ const PrezentationCard = (props) => {
         mozallowfullscreen="true"
         webkitallowfullscreen="true"
       />
-    )}
+    )
   }
+}
 export { PrezentationCard }

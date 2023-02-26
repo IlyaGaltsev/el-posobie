@@ -1,8 +1,6 @@
-import "./PageBook.scss";
+import "./PageBook.scss"
 
-const PageBook = (props) => {
-  const { id, timeRead, title, text, onNext } = props;
-
+const PageBook = ({ timeRead, title, text, onNext }) => {
   return (
     <div className="pagebook">
       <div className="pagebook__wrapper">
@@ -12,6 +10,6 @@ const PageBook = (props) => {
         <button onClick={onNext}>Далее</button>
       </div>
     </div>
-  );
-};
-export { PageBook };
+  )
+}
+export { PageBook }

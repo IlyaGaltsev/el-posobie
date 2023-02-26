@@ -1,6 +1,6 @@
-import "./Header.scss";
-import { NavLink } from "react-router-dom";
-import { headerNav } from "../../constants/headerNav";
+import "./Header.scss"
+import { headerNav } from "../../constants/headerNav"
+import { NavLink } from "react-router-dom"
 
 const Header = () => {
   return (
@@ -10,17 +10,18 @@ const Header = () => {
           {headerNav.map(({ path, icon, title }) => {
             return (
               <NavLink
+                key={path}
                 to={path}
-                className={({ isActive }) => isActive && "current__tab"}
+                className={({ isActive }) => (isActive ? "current__tab" : "")}
               >
                 {icon}
                 {title}
               </NavLink>
-            );
+            )
           })}
         </nav>
       </div>
     </header>
-  );
-};
-export { Header };
+  )
+}
+export { Header }

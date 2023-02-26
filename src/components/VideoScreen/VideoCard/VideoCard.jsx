@@ -1,7 +1,7 @@
-import { useState } from "react";
-import "./VideoCard.scss";
+import { useState } from "react"
+import "./VideoCard.scss"
 
-const VideoCard = ({id, promo}) => {
+const VideoCard = ({ id, promo }) => {
   const [isActive, setActive] = useState(false)
   const onHandleClick = () => {
     setActive(true)
@@ -20,7 +20,8 @@ const VideoCard = ({id, promo}) => {
           width="76"
           height="52"
           viewBox="0 0 76 52"
-          xmlns="http://www.w3.org/2000/svg">
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <rect
             x="20.5508"
             y="6.86157"
@@ -48,16 +49,16 @@ const VideoCard = ({id, promo}) => {
         </svg>
       </div>
     )
-  } else{
+  } else {
     return (
       <iframe
         title="video"
         className="video-card"
-        src={'https://www.youtube.com/embed/' + id + '?autoplay=1'}
+        src={"https://www.youtube.com/embed/" + id + "?autoplay=1"}
         allowfullscreen="true"
-        allow='autoplay'
-      >
-      </iframe>
-  )}
+        allow="autoplay"
+      />
+    )
+  }
 }
-export { VideoCard };
+export { VideoCard }
