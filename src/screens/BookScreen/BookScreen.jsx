@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import tutorialSection from "../../assets/data/data";
 import { DropDown } from "../../components/DropDown";
 import { PageBook } from "../../components/PageBook";
 import "./BookScreen.scss";
-
+import { IoClose } from "react-icons/io5";
 const BookScreen = () => {
   const [currentValue, setCurrentValue] = useState(0);
 
@@ -13,6 +13,38 @@ const BookScreen = () => {
   const onNext = () => {
     setCurrentValue(currentValue + 1);
   };
+
+  function openNav() {
+    if (
+      document.getElementById("mySidenav") &&
+      document.getElementById("main")
+    ) {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+  }
+
+  function closeNav() {
+    console.log(
+      document.getElementById("mySidenav") && document.getElementById("main")
+    );
+
+    if (
+      document.getElementById("mySidenav") &&
+      document.getElementById("main")
+    ) {
+      console.log("input");
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+    }
+  }
+
+  const [showMenu, setShowMenu] = useState(false);
+
+  useEffect(() => {
+    showMenu ? openNav() : closeNav();
+  }, [showMenu]);
+
   const mass1 = [
     {
       id: 1,
@@ -149,207 +181,21 @@ const BookScreen = () => {
   return (
     <div className="book-screen">
       <div className="book-screen__wrapper">
-        <div className="book-screen__navigation">
+        <div id="mySidenav" className="sidenav">
+          <IoClose
+            className="closebtn"
+            color="white"
+            onClick={() => setShowMenu(false)}
+          />
           {mass1.map((item) => (
             <DropDown key={item.id} openPage={openPage} {...item} />
           ))}
-          {/* <ul>
-            <li>
-              <button onClick={() => openPage(0)}>Введение</button>
-            </li>
-            <li>
-              <button onClick={() => openPage(1)}>
-                Раздел I. Основополагающие требования руководящих документов по
-                организации и проведению учебных сборов по основам военной
-                службы с (допризывной молодежью) гражданами Российской
-                Федерации, в рамках подготовки по основам военной службы
-              </button>
-              <ul>
-                <li>
-                  <button onClick={() => openPage(1)}>
-                    Глава 1. Основополагающие требования Федерального закона от
-                    28 марта 1998 г. N 53-ФЗ «О воинской обязанности и военной
-                    службе» к обязательной и добровольной подготовке гражданина
-                    к военной службе
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => openPage(2)}>
-                    Глава 2. Основополагающие требования постановления
-                    Правительства РФ от 31 декабря 1999 г. № 1441 «Об
-                    утверждении Положения о подготовке граждан Российской
-                    Федерации к военной службе».
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => openPage(3)}>
-                    Глава 3. Основополагающие требования «Инструкции об
-                    организации обучения граждан Российской Федерации начальным
-                    знаниям в области обороны и их подготовки по основам военной
-                    службы в образовательных учреждениях среднего (полного)
-                    общего образования, образовательных учреждениях начального
-                    профессионального и среднего профессионального образования и
-                    учебных пунктах». Утверждена приказом Министра обороны
-                    Российской Федерации и Министра образования и науки
-                    Российской Федерации от 24 февраля 2010 года № 96/134
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => openPage(4)}>
-                    Глава 4. Учебные сборы по основам военной службы – как
-                    важнейшая форма адаптации допризывной молодежи к военной
-                    службе в рядах Вооруженных Сил Российской Федерации
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => openPage(5)}>
-                    Глава 5. Алгоритм деятельности образовательной организации в
-                    рамках подготовки к проведению учебных сборов по основам
-                    военной службы
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => openPage(6)}>
-                    Глава 6. Организационные мероприятия по выезду допризывной
-                    молодежи, привлекаемой к участию в учебных сборах по основам
-                    военной службы, в соединения и воинские части
-                    (учебно-методические центры военно-патриотического
-                    воспитания молодежи, оборонно-спортивные и оздоровительные
-                    лагеря) и возвращению их образовательные организации
-                  </button>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <button onClick={() => openPage(7)}>
-                Раздел II. Методика организации и проведения занятий в ходе
-                проведения учебных сборов по основам военной службы.
-              </button>
-              <ul>
-                <li>
-                  <button onClick={() => openPage(8)}>
-                    Глава 1. Методика организации и проведения занятий по
-                    строевой подготовке
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => openPage(9)}>
-                    Глава 2. Методика организации и проведения занятий по
-                    тактической подготовке
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => openPage(10)}>
-                    Глава 3. Методика организации и проведения занятий по
-                    радиационной, химической и биологической защите
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => openPage(11)}>
-                    Глава 4. Методика организации и проведения занятий по
-                    общевоинским уставам Вооруженных Сил Российской Федерации
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => openPage(12)}>
-                    Глава 5. Методика организации и проведения занятий по
-                    военно-медицинской подготовке
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => openPage(13)}>
-                    Глава 6. Методика организации и проведения занятий по
-                    огневой подготовке
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => openPage(14)}>
-                    Глава 7. Методика организации и проведения занятий по
-                    физической подготовке
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => openPage(15)}>
-                    Глава 8. Требования к результатам обучения на учебных сборах
-                    по основам военной службы. Оценка учебных сборов по основам
-                    военной службы
-                  </button>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <button>
-                Раздел III. Примерная тематика занятий, проводимых в ходе
-                учебных сборов. Планы проведения занятий и презентации к
-                занятиям на учебных сборах по основам военной службы
-              </button>
-              <ul>
-                <li>
-                  <button onClick={() => openPage(16)}>
-                    Глава 1. Примерная тематика занятий и планы проведения
-                    занятий по строевой подготовке
-                  </button>
-                </li>
-                <li>
-                  <button>
-                    Глава 2. Примерная тематика занятий, планы проведения
-                    занятий и презентации к занятиям по тактической подготовке
-                  </button>
-                </li>
-                <li>
-                  <button>
-                    Глава 3. Примерная тематика занятий, планы проведения
-                    занятий и презентации к занятиям по радиационной, химической
-                    и биологической защите
-                  </button>
-                </li>
-                <li>
-                  <button>
-                    Глава 4. Примерная тематика занятий, планы проведения
-                    занятий и презентации к занятиям по общевоинским уставам
-                    Вооруженных Сил Российской Федерации
-                  </button>
-                </li>
-                <li>
-                  <button>
-                    Глава 5. Примерная тематика занятий, планы проведения
-                    занятий и презентации к занятиям по военно-медицинской
-                    подготовке
-                  </button>
-                </li>
-                <li>
-                  <button>
-                    Глава 6. Примерная тематика занятий, планы проведения
-                    занятий и презентации к занятиям по огневой подготовке
-                  </button>
-                </li>
-                <li>
-                  <button>
-                    Глава 7. Примерная тематика занятий и планы проведения
-                    занятий по физической подготовке
-                  </button>
-                </li>
-                <li>
-                  <button>
-                    Глава 8. Примерная тематика занятий, планы проведения
-                    занятий и презентации к занятиям по обеспечению безопасности
-                    военной службы
-                  </button>
-                </li>
-              </ul>
-              <li>
-                <button>Приложения</button>
-              </li>
-              <li>
-                <button>Презентации</button>
-              </li>
-              <li>
-                <button>Литература</button>
-              </li>
-            </li>
-          </ul> */}
         </div>
+
         <div className="book-screen__page">
+          <button onClick={() => setShowMenu(!showMenu)}>
+            {showMenu ? "Скрыть оглавление" : "Оглавление"}
+          </button>
           <PageBook {...tutorialSection[currentValue]} onNext={onNext} />
         </div>
       </div>

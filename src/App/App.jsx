@@ -1,45 +1,17 @@
-import './App.scss';
-import { useState } from "react";
-import { Header } from '../components/Header';
-import { BookScreen } from "../screens/BookScreen";
-import { PrezentationScreen } from "../screens/PrezentationScreen";
-import { VideoScreen } from "../screens/VideoScreen";
-import { ConspectScreen } from '../screens/ConspectScreen';
-import { Footer } from '../components/Footer';
+import "./App.scss";
+import { Header } from "../components/Header";
+import { Route, Routes } from "react-router-dom";
+import { routes } from "../routes";
 
 function App() {
-  const [stateTabs, setStateTabs] = useState({
-    0: true,
-    1: false,
-    2: false,
-  })
-  const handleClickTab = (e) => {
-    const id = e.target.id;
-    let nullObj = {
-      0: false,
-      1: false,
-      2: false,
-    }
-    setStateTabs({...nullObj, [id]: true})
-  }
   return (
-    <div className="app__wrapepr">
-      <div>
-      <Header
-        stateTabs={stateTabs}
-        handleClickTab={handleClickTab}
-      />
-      {
-        stateTabs[0]
-          ? <BookScreen/>
-          : stateTabs[1]
-          ? <VideoScreen/>
-          : stateTabs[2]
-          ? <PrezentationScreen/>
-          : <ConspectScreen/>
-      }
-      </div>
-      <Footer/>
+    <div id="main" className="app__wrapepr">
+      <Header />
+      <Routes>
+        {routes.map(({ path, Element }) => {
+          return <Route path={path} element={Element} />;
+        })}
+      </Routes>
     </div>
   );
 }
