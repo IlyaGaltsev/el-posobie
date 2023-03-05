@@ -1,36 +1,44 @@
+import * as S from "./VideoCard.styled"
 import { useState } from "react"
+import { Modal } from "antd"
 import "./VideoCard.scss"
 
-const VideoCard = ({ id, promo }) => {
-  const [isActive, setActive] = useState(false)
-  const onHandleClick = () => {
-    setActive(true)
+const VideoCard = ({ id, promo, title }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const showModal = () => {
+    setIsModalOpen(true)
+  }
+  const handleOk = () => {
+    setIsModalOpen(false)
+  }
+  const handleCancel = () => {
+    setIsModalOpen(false)
   }
 
-  if (isActive === false) {
-    return (
-      <div className="video-card__img">
-        <img
-          className="video-card"
-          src={promo}
-          alt="img-card"
+  return (
+    <div className="video-card__img">
+      <img
+        className="video-card"
+        src={promo}
+        alt="img-card"
+      />
+      <svg
+        onClick={showModal}
+        width="76"
+        height="52"
+        viewBox="0 0 76 52"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          x="20.5508"
+          y="6.86157"
+          width="38"
+          height="45"
+          fill="white"
         />
-        <svg
-          onClick={onHandleClick}
-          width="76"
-          height="52"
-          viewBox="0 0 76 52"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
-            x="20.5508"
-            y="6.86157"
-            width="38"
-            height="45"
-            fill="white"
-          />
-          <path
-            d="M72.1741 4.46325C69.4632 1.29312 64.458 0 54.8993
+        <path
+          d="M72.1741 4.46325C69.4632 1.29312 64.458 0 54.8993
                0H20.2013C10.4238 0 5.33389 1.37654 2.63315 4.75162C0
                8.04234 0 12.8909 0 19.6016V32.3919C0 45.3925 3.12422
                51.9932 20.2013 51.9932H54.8996C63.1888 51.9932
@@ -45,20 +53,26 @@ const VideoCard = ({ id, promo }) => {
                32.4535 15.4867L48.2097 23.5353C49.0114 23.9447
                49.5148 24.7588 49.516 25.647C49.517 26.5359 49.0157
                27.3512 48.2153 27.7626Z"
-          />
-        </svg>
-      </div>
-    )
-  } else {
-    return (
-      <iframe
-        title="video"
-        className="video-card"
-        src={"https://www.youtube.com/embed/" + id + "?autoplay=1"}
-        allowfullscreen="true"
-        allow="autoplay"
-      />
-    )
-  }
+        />
+      </svg>
+      <Modal
+        title={title}
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+        width={"100%"}
+        footer={null}
+        style={{ top: 50 }}
+        destroyOnClose={true}
+      >
+        <S.VideoModal
+          title="video"
+          src={"https://www.youtube.com/embed/" + id + "?autoplay=1"}
+          allowfullscreen="true"
+          allow="autoplay"
+        />
+      </Modal>
+    </div>
+  )
 }
 export { VideoCard }

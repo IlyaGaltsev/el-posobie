@@ -1,27 +1,20 @@
-import "./Header.scss"
 import { headerNav } from "../../constants/headerNav"
-import { NavLink } from "react-router-dom"
+import * as S from "./Header.styled"
 
-const Header = () => {
+const Header = ({ onChange }) => {
   return (
-    <header>
-      <div className="header__wrapper">
-        <nav>
-          {headerNav.map(({ path, icon, title }) => {
-            return (
-              <NavLink
-                key={path}
-                to={path}
-                className={({ isActive }) => (isActive ? "current__tab" : "")}
-              >
-                {icon}
-                {title}
-              </NavLink>
-            )
-          })}
-        </nav>
-      </div>
-    </header>
+    <S.Header id="header">
+      <S.Body>
+        <S.NavMenu
+          defaultSelectedKeys={["1"]}
+          mode="horizontal"
+          theme="dark"
+          onSelect={onChange}
+          items={headerNav}
+        />
+      </S.Body>
+    </S.Header>
   )
 }
+
 export { Header }

@@ -1,14 +1,40 @@
+import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md"
+import { Button, Typography } from "antd"
+import * as S from "./PageBook.styled"
 import "./PageBook.scss"
 
-const PageBook = ({ timeRead, title, text, onNext }) => {
+const { Title } = Typography
+
+const PageBook = ({ timeRead, id, title, onPrev, text, onNext, minLenght, maxLenght }) => {
   return (
     <div className="pagebook">
+      <div id="top"></div>
       <div className="pagebook__wrapper">
         <span>Читается за {timeRead} мин</span>
-        <h1>{title}</h1>
+        <Title level={2}>{title}</Title>
         {text()}
-        <button onClick={onNext}>Далее</button>
       </div>
+      <S.PagesNavBar>
+        {minLenght !== id && (
+          <Button
+            onClick={onPrev}
+            type="primary"
+          >
+            <MdArrowBackIosNew style={{ marginRight: 8 }} />
+            Назад
+          </Button>
+        )}
+
+        {maxLenght !== id && (
+          <Button
+            type="primary"
+            onClick={onNext}
+          >
+            Далее
+            <MdArrowForwardIos style={{ marginLeft: 8 }} />
+          </Button>
+        )}
+      </S.PagesNavBar>
     </div>
   )
 }
