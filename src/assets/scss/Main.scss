@@ -3,15 +3,20 @@ $laptop: 1200px;
 $small: 640px;
 
 //app-colors
-$primary:#556832;
-$secondary:#465945;
-$tertiary: #3A3A3A;
-$contrast: #FFA500;
+$primary: #556832;
+$secondary: #465945;
+$tertiary: #3a3a3a;
+$contrast: #ffa500;
 
 //fonts
 $fontColorPrimary: white;
 
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
+
+

@@ -1,21 +1,19 @@
-@import '../../../assets/scss/Main.scss';
+import styled from "styled-components"
 
-.video-card {
+export const VideoModal = styled.iframe`
   width: 100%;
-  height: 20vh;
+  height: 90vh;
   max-height: 600px;
   border: none;
   border-radius: 10px;
   min-height: 300px;
   background-color: gray;
 
-  @media (max-width: 1566px) {
+  @media (max-width: 640px) {
     min-height: 200px;
-  }
-
-  @media (max-width: $small) {
     height: 200px;
     width: 100%;
+    max-height: 300px;
   }
 
   &__img {
@@ -24,8 +22,8 @@
     svg {
       fill: $contrast;
       position: absolute;
-      top:50%;
-      left:50%;
+      top: 50%;
+      left: 50%;
       transform: translate(-50%, -50%);
       transition: 0.2s;
       
@@ -35,4 +33,4 @@
       }
     }
   }
-}
+`

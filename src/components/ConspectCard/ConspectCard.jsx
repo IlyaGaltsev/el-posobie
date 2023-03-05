@@ -1,15 +1,10 @@
-import './ConspectCard.scss';
-import document from "../../assets/icons/document.svg";
+import document from "../../assets/icons/document.svg"
+import "./ConspectCard.scss"
 
-const ConspectCard = (props) => {
-  const {
-    title,
-    path,
-  } = props;
-
-  return(
+const ConspectCard = ({ title, path }) => {
+  return (
     <a
-      className='conspectcard__wrapper'
+      className="conspectcard__wrapper"
       href={path}
       target="_blank"
       rel="noreferrer"
@@ -22,4 +17,4 @@ const ConspectCard = (props) => {
     </a>
   )
 }
-export { ConspectCard };
+export { ConspectCard }

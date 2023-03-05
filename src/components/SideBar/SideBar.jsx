@@ -1,33 +1,40 @@
 import { navBook } from "../../constants/navBook"
-import { IoClose } from "react-icons/io5"
-import { DropDown } from "../DropDown"
-import "./SideBar.scss"
+import * as S from "./SideBar.styled"
 
-const SideBar = ({ onClick, setShowMenu }) => {
+const SideBar = ({ selectPageBook, selectValue, setOpen, open }) => {
+  const onClose = () => {
+    setOpen(false)
+  }
+
+  const setWidthLeftMenu = () => {
+    let width = 400
+
+    if (window.innerWidth < 440) {
+      width = 280
+    }
+    return width
+  }
+
   return (
     <>
-      <div
-        id="sidebar__close"
-        className="sidebar__close"
-        onClick={() => setShowMenu(false)}
-      />
-      <div
-        id="mySidenav"
-        className="sidebar"
+      <S.LeftMenu
+        title="Оглавление"
+        closable={false}
+        onClose={onClose}
+        width={setWidthLeftMenu()}
+        placement="left"
+        open={open}
       >
-        <IoClose
-          className="closebtn"
-          color="white"
-          onClick={() => setShowMenu(false)}
+        <S.NavMenu
+          defaultSelectedKeys={selectValue.toString()}
+          selectedKeys={selectValue.toString()}
+          defaultOpenKeys={["1"]}
+          mode="inline"
+          theme="light"
+          items={navBook}
+          onClick={selectPageBook}
         />
-        {navBook.map(item => (
-          <DropDown
-            key={item.id}
-            openPage={onClick}
-            {...item}
-          />
-        ))}
-      </div>
+      </S.LeftMenu>
     </>
   )
 }

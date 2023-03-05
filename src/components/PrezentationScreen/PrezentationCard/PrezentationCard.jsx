@@ -1,37 +1,44 @@
+import * as S from "./PrezentationCard.styled"
 import { useState } from "react"
 import "./PrezentationCard.scss"
+import { Modal } from "antd"
 
 const PrezentationCard = ({ path, preview, title }) => {
-  const [isActive, setActive] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
-  const onHandleClick = () => {
-    setActive(true)
+  const showModal = () => {
+    setIsModalOpen(true)
   }
-  
-  if (isActive === false) {
-    return (
-      <div className="prez-card__img">
-        <img
-          className="prez-card"
-          src={preview}
-          alt="img-card"
+  const handleOk = () => {
+    setIsModalOpen(false)
+  }
+  const handleCancel = () => {
+    setIsModalOpen(false)
+  }
+
+  return (
+    <div className="prez-card__img">
+      <img
+        className="prez-card"
+        src={preview}
+        alt="img-card"
+      />
+      <svg
+        onClick={showModal}
+        width="76"
+        height="52"
+        viewBox="0 0 76 52"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          x="20.5508"
+          y="6.86157"
+          width="38"
+          height="45"
+          fill="white"
         />
-        <svg
-          onClick={onHandleClick}
-          width="76"
-          height="52"
-          viewBox="0 0 76 52"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
-            x="20.5508"
-            y="6.86157"
-            width="38"
-            height="45"
-            fill="white"
-          />
-          <path
-            d="M72.1741 4.46325C69.4632 1.29312 64.458 0 54.8993
+        <path
+          d="M72.1741 4.46325C69.4632 1.29312 64.458 0 54.8993
                0H20.2013C10.4238 0 5.33389 1.37654 2.63315 4.75162C0
                8.04234 0 12.8909 0 19.6016V32.3919C0 45.3925 3.12422
                51.9932 20.2013 51.9932H54.8996C63.1888 51.9932
@@ -46,22 +53,28 @@ const PrezentationCard = ({ path, preview, title }) => {
                32.4535 15.4867L48.2097 23.5353C49.0114 23.9447
                49.5148 24.7588 49.516 25.647C49.517 26.5359 49.0157
                27.3512 48.2153 27.7626Z"
-          />
-        </svg>
-      </div>
-    )
-  } else {
-    return (
-      <iframe
-        className="prez-card"
+        />
+      </svg>
+      <Modal
         title={title}
-        src={path}
-        frameBorder="0"
-        allowFullScreen="true"
-        mozallowfullscreen="true"
-        webkitallowfullscreen="true"
-      />
-    )
-  }
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+        width={"100%"}
+        footer={null}
+        style={{ top: 50 }}
+        destroyOnClose={true}
+      >
+        <S.PrezentationModal
+          title={title}
+          src={path}
+          frameBorder="0"
+          allowFullScreen="true"
+          mozallowfullscreen="true"
+          webkitallowfullscreen="true"
+        />
+      </Modal>
+    </div>
+  )
 }
 export { PrezentationCard }

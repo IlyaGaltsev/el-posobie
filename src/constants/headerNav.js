@@ -8,23 +8,23 @@ import {
 
 export const headerNav = [
   {
-    path: BOOK_ROUTE,
+    key: BOOK_ROUTE,
     icon: <FaBook className="icon" />,
-    title: "Учебник",
+    label: "Учебник",
   },
   {
-    path: VIDEO_ROUTE,
+    key: VIDEO_ROUTE,
     icon: <FaVideo className="icon" />,
-    title: "Видео",
+    label: "Видео",
   },
   {
-    path: PREZENTATIONS_ROUTE,
+    key: PREZENTATIONS_ROUTE,
     icon: <FaPhotoVideo className="icon" />,
-    title: "Презентации",
+    label: "Презентации",
   },
   {
-    path: CONSPECTS_ROUTE,
+    key: CONSPECTS_ROUTE,
     icon: <FaPencilAlt className="icon" />,
-    title: "Конспекты",
+    label: "Конспекты",
   },
 ];
