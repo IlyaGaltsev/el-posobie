@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { maxContent } from "../constants/style/breakpoints"
+import { device, maxContent } from "../constants/style/breakpoints"
 
 export const App = styled.div`
   width: 100%;
@@ -14,4 +14,8 @@ export const Body = styled.div`
   padding: 10px 20px;
   display: flex;
   flex-direction: column;
+
+  @media ${device.tablet} {
+    padding: 8px 12px;
+  }
 `
