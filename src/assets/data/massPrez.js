@@ -20,14 +20,14 @@ import tp3 from "../images/prezentations/tp3.jpg";
 
 const massPrez = [
   {
-    id: 1,
+    id: '2PACX-1vTX-CZ9g4JS0zBHSy4vwTOHRDLiqXmsaRfIr8uSKNnHiiCzMjamezsiPEhd2Q_9QA',
     title: 'ВМП-1',
     preview: vmp1,
     path: 'https://docs.google.com/presentation/d/e/2PACX-1vTX-CZ9g4JS0zBHSy4vwTOHRDLiqXmsaRfIr8uSKNnHiiCzMjamezsiPEhd2Q_9QA/embed?start=false&loop=true&delayms=5000',
     tag: 'vmp',
   },
   {
-    id: 2,
+    id: '2PACX-1vTDvMrFhfQrAIiUzDQG887dr_-S32YCoIBPxoWXnJU5fvfx6ip637kcar2omhCUrA',
     title: 'ОБВС-1',
     preview: obvs1,
     path: 'https://docs.google.com/presentation/d/e/2PACX-1vTDvMrFhfQrAIiUzDQG887dr_-S32YCoIBPxoWXnJU5fvfx6ip637kcar2omhCUrA/embed?start=false&loop=true&delayms=5000',

@@ -1,7 +1,7 @@
 import { Button, Menu } from "antd"
 import styled from "styled-components"
 import { device } from "../../constants/style/breakpoints"
-import { backgroundColor, primaryColor } from "../../constants/style/colors"
+import { primaryColor } from "../../constants/style/colors"
 
 export const ToolBar = styled.div`
   width: 100%;
@@ -41,7 +41,6 @@ export const ButtonUp = styled.div`
   &:active {
   }
 `
-
 
 export const NavMenu = styled(Menu)`
   max-width: 300px;

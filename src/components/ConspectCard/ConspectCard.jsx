@@ -1,7 +1,7 @@
 import document from "../../assets/icons/document.svg"
 import "./ConspectCard.scss"
 
-const ConspectCard = ({ title, path }) => {
+const ConspectCard = ({ id,title, path }) => {
   return (
     <a
       className="conspectcard__wrapper"

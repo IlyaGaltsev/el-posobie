@@ -3,7 +3,7 @@ import { useState } from "react"
 import "./PrezentationCard.scss"
 import { Modal } from "antd"
 
-const PrezentationCard = ({ path, preview, title }) => {
+const PrezentationCard = ({ id, path, preview, title }) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   const showModal = () => {
@@ -20,6 +20,9 @@ const PrezentationCard = ({ path, preview, title }) => {
     <div className="prez-card__img">
       <img
         className="prez-card"
+        // поменяй  id
+
+        // src={`https://lh3.google.com/u/0/d/${id}=w416-h234-iv3`
         src={preview}
         alt="img-card"
       />

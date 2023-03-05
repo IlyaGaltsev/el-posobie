@@ -1,4 +1,5 @@
 import { tutorialSection } from "../../assets/data/data"
+import { size } from "../../constants/style/breakpoints"
 import { PageBook } from "../../components/PageBook"
 import { MdArrowBackIosNew } from "react-icons/md"
 import { SideBar } from "../../components/SideBar"
@@ -13,7 +14,9 @@ const BookScreen = () => {
   const [currentValue, setCurrentValue] = useState(0)
 
   const scrollToTop = () => {
-    document.getElementById("top").scrollIntoView({ block: "center", behavior: "smooth" })
+    document
+      .getElementById("top")
+      .scrollIntoView(window.innerWidth > size.laptopS && { block: "center", behavior: "smooth" })
   }
 
   const onPrev = () => {
