@@ -1,20 +1,12 @@
-import document from "../../assets/icons/document.svg"
-import "./ConspectCard.scss"
+import { HiOutlineClipboardDocumentList } from "react-icons/hi2"
+import * as S from "./ConspectCard.styled"
 
-const ConspectCard = ({ id,title, path }) => {
+const ConspectCard = ({ id, title, path }) => {
   return (
-    <a
-      className="conspectcard__wrapper"
-      href={path}
-      target="_blank"
-      rel="noreferrer"
-    >
-      <img
-        src={document}
-        alt="doc"
-      />
-      {title}
-    </a>
+    <S.ConspectCard href={path}>
+      <HiOutlineClipboardDocumentList size={40} />
+      <S.Title>{title}</S.Title>
+    </S.ConspectCard>
   )
 }
 export { ConspectCard }
