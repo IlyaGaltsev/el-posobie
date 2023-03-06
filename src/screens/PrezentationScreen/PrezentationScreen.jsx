@@ -1,21 +1,19 @@
-import {massPrez} from "../../assets/data/massPrez"
-import { PrezentationCard } from "../../components/PrezentationScreen/PrezentationCard"
-import "./PrezentationScreen.scss"
+import { PrezentationCard } from "../../components/PrezentationCard"
+import * as S from "../../constants/style/components.styled"
+import { massPrez } from "../../assets/data/massPrez"
 
 const PrezentationScreen = () => {
   return (
-    <div className="prezentation-screen__wrapper">
-      <div className="prezentation-screen__prezentation">
-        {massPrez.map(item => {
-          return (
-            <PrezentationCard
-              key={item.id}
-              {...item}
-            />
-          )
-        })}
-      </div>
-    </div>
+    <S.Grid>
+      {massPrez.map(item => {
+        return (
+          <PrezentationCard
+            key={item.id}
+            {...item}
+          />
+        )
+      })}
+    </S.Grid>
   )
 }
 export { PrezentationScreen }

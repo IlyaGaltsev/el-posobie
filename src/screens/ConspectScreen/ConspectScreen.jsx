@@ -1,23 +1,20 @@
 import { ConspectCard } from "../../components/ConspectCard"
+import * as S from "../../constants/style/components.styled"
 import massConspects from "../../assets/data/massConspects"
-import "./ConspectScreen.scss"
+
 
 const ConspectScreen = () => {
   return (
-    <div className="prezentation-screen">
-      <div className="prezentation-screen__wrapper">
-        <div className="prezentation-screen__prezentation">
-          {massConspects.map(item => {
-            return (
-              <ConspectCard
-                key={item.id}
-                {...item}
-              />
-            )
-          })}
-        </div>
-      </div>
-    </div>
+    <S.Grid>
+      {massConspects.map(item => {
+        return (
+          <ConspectCard
+            key={item.id}
+            {...item}
+          />
+        )
+      })}
+    </S.Grid>
   )
 }
 export { ConspectScreen }

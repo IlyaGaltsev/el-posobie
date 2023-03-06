@@ -53,7 +53,7 @@ const BookScreen = () => {
               type="primary"
               onClick={showDrawer}
             >
-              <MdMenu />
+              <MdMenu style={{marginRight: 10}} />
               Оглавление
             </S.MenuButton>
           </S.ToolBar>

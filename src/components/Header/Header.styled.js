@@ -1,5 +1,5 @@
 import { maxContent } from "../../constants/style/breakpoints"
-import { secondaryColor } from "../../constants/style/colors"
+import { colors } from "../../constants/style/colors"
 import { AiFillEye } from "react-icons/ai"
 import styled from "styled-components"
 import { Menu } from "antd"
@@ -12,7 +12,7 @@ export const Header = styled.header`
   width: 100%;
   display: flex;
   justify-content: center;
-  background: ${secondaryColor};
+  background: ${colors.secondaryColor};
   position: sticky;
   top: 0;
   z-index: 2;
