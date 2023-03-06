@@ -1,7 +1,6 @@
 import * as S from "./VideoCard.styled"
 import { useState } from "react"
 import { Modal } from "antd"
-import "./VideoCard.scss"
 
 const VideoCard = ({ id, promo, title }) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
