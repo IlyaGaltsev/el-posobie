@@ -1,20 +1,13 @@
-import document from "../../assets/icons/document.svg"
-import "./ConspectCard.scss"
+import * as S from "./ConspectCard.styled"
 
-const ConspectCard = ({ id,title, path }) => {
+const ConspectCard = ({ id, title }) => {
   return (
-    <a
-      className="conspectcard__wrapper"
-      href={path}
-      target="_blank"
-      rel="noreferrer"
+    <S.ConspectCard
+      href={`https://docs.google.com/document/d/${id}/edit?usp=sharing&ou32858117889381065&rtpof=true&sd=true`}
     >
-      <img
-        src={document}
-        alt="doc"
-      />
-      {title}
-    </a>
+      <S.IconDoc size={40}/>
+      <S.Title>{title}</S.Title>
+    </S.ConspectCard>
   )
 }
 export { ConspectCard }

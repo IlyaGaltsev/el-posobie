@@ -1,196 +1,196 @@
 const massConspects = [
   {
-    id: 1,
-    title: 'Приложение 1_Строевая Т 1-1 план',
-    path: 'https://docs.google.com/document/d/1ZZAoUD70OQtOp2pL-_JzQmBd7H_HXwNz/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'sp',
+    number: 1,
+    title: "СП 1.1 план",
+    id: "1ZZAoUD70OQtOp2pL-_JzQmBd7H_HXwNz",
+    tag: "sp"
   },
   {
-    id: 2,
-    title: 'Приложение 2_Строевая Т 1-2 план',
-    path: 'https://docs.google.com/document/d/1A3xI9j6AsYpN-6ejUDY23NoVRGxkWf74/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'sp',
+    number: 2,
+    title: "СП 1.2 план",
+    id: "1A3xI9j6AsYpN-6ejUDY23NoVRGxkWf74",
+    tag: "sp"
   },
   {
-    id: 3,
-    title: 'Приложение 3_Строевая Т 1-3 план',
-    path: 'https://docs.google.com/document/d/1WHerOK-VXJhGnQhDQMPlYBsMSErihFpV/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'sp',
+    number: 3,
+    title: "СП 1.3 план",
+    id: "1WHerOK-VXJhGnQhDQMPlYBsMSErihFpV",
+    tag: "sp"
   },
   {
-    id: 4,
-    title: 'Приложение 4_Строевая Т 1-4 план',
-    path: 'https://docs.google.com/document/d/1UoTkHLsUBkzkQrcf4O9-nrka8jfijb2Z/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'sp',
+    number: 4,
+    title: "СП 1.4 план",
+    id: "1UoTkHLsUBkzkQrcf4O9-nrka8jfijb2Z",
+    tag: "sp"
   },
   {
-    id: 5,
-    title: 'Приложение 5_ТП Тема 1-1 план',
-    path: 'https://docs.google.com/document/d/1PzqSHDBq9o5_6v0USmW1e1uu0GEtED9w/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'tp',
+    number: 5,
+    title: "ТП Тема 1.1 план",
+    id: "1PzqSHDBq9o5_6v0USmW1e1uu0GEtED9w",
+    tag: "tp"
   },
   {
-    id: 6,
-    title: 'Приложение 6_ТП Тема 1-2 план',
-    path: 'https://docs.google.com/document/d/15RiI_Fvkh8PilvXRmYu0Xka5D7wyt8Uq/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'tp',
+    number: 6,
+    title: "ТП Тема 1.2 план",
+    id: "15RiI_Fvkh8PilvXRmYu0Xka5D7wyt8Uq",
+    tag: "tp"
   },
   {
-    id: 7,
-    title: 'Приложение 7_ТП Тема 1-3 план',
-    path: 'https://docs.google.com/document/d/1RVPjQyKu8E7bT-se_rS_fiQF0UXJljec/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'tp',
+    number: 7,
+    title: "ТП Тема 1.3 план",
+    id: "1RVPjQyKu8E7bT-se_rS_fiQF0UXJljec",
+    tag: "tp"
   },
   {
-    id: 8,
-    title: 'Приложение 8_ТП Тема 1-4 план',
-    path: 'https://docs.google.com/document/d/1E18esTlCeR6kIfRX85Iuw4QVWdu27EzE/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'tp',
+    number: 8,
+    title: "ТП Тема 1.4 план",
+    id: "1E18esTlCeR6kIfRX85Iuw4QVWdu27EzE",
+    tag: "tp"
   },
   {
-    id: 9,
-    title: 'Приложение 9_РХБЗ Тема 1-1 план',
-    path: 'https://docs.google.com/document/d/1XDDyydFA1uiCkvUdogAJGYCkg02Us3Kz/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'rxbz',
+    number: 9,
+    title: "РХБЗ Тема 1.1 план",
+    id: "1XDDyydFA1uiCkvUdogAJGYCkg02Us3Kz",
+    tag: "rxbz"
   },
   {
-    id: 10,
-    title: 'Приложение 10_РХБЗ Тема 1-2 план',
-    path: 'https://docs.google.com/document/d/1xOIQEI9jIdgntyW0OHMyNx_CLiA6kfSC/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'rxbz',
+    number: 10,
+    title: "РХБЗ Тема 1.2 план",
+    id: "1xOIQEI9j0OHMyNx_CLiA6kfSC",
+    tag: "rxbz"
   },
   {
-    id: 11,
-    title: 'Приложение 11_ОВУ Тема 1-1 Распределение времени военнослужащих',
-    path: 'https://docs.google.com/document/d/1Lyf3WLPCvuikHTTZOIhE-VpgSKxzDBVe/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'oby',
+    number: 11,
+    title: "ОВУ Тема 1.1 Распределение времени военнослужащих",
+    id: "1Lyf3WLPCvuikHTTZOIhE-VpgSKxzDBVe",
+    tag: "oby"
   },
   {
-    id: 12,
-    title: 'Приложение 12_ОВУ Тема 2-1 Военнослужащие и взаимоотношения между ними',
-    path: 'https://docs.google.com/document/d/1lzlwT3aHiBGY4stMX85pmJk4iGXN0Ck9/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'oby',
+    number: 12,
+    title: "ОВУ Тема 2.1 Военнослужащие и взаимоотношения между ними",
+    id: "1lzlwT3aHiBGY4stMX85pmJk4iGXN0Ck9",
+    tag: "oby"
   },
   {
-    id: 13,
-    title: 'Приложение 13_ОВУ Тема 2-2 Воинские звания и знаки различия военнослужащих',
-    path: 'https://docs.google.com/document/d/1vhPKEuB9cHKn7AOI-JpYE9i4HvD1DjTb/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'oby',
+    number: 13,
+    title: "ОВУ Тема 2.2 Воинские звания и знаки различия военнослужащих",
+    id: "1vhPKEuB9cHKn7AOI-JpYE9i4HvD1DjTb",
+    tag: "oby"
   },
   {
-    id: 14,
-    title: 'Приложение 14_ОВУ Тема 2-3 Воинская дисциплина. Поощрение и дисциплинарные взыскания',
-    path: 'https://docs.google.com/document/d/1LoG-Axm6v8OvjxBIsCeIo4R1Vp4nulLk/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'oby',
+    number: 14,
+    title: "ОВУ Тема 2.3 Воинская дисциплина. Поощрение и дисциплинарные взыскания",
+    id: "1LoG-Axm6v8OvjxBIsCeIo4R1Vp4nulLk",
+    tag: "oby"
   },
   {
-    id: 15,
-    title: 'Приложение 15_ОВУ Тема 3-1 Обязанности лиц суточного наряда',
-    path: 'https://docs.google.com/document/d/16PMp_c_c2a7IfgVLU7piEcOnmy2Di2VL/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'oby',
+    number: 15,
+    title: "ОВУ Тема 3.1 Обязанности лиц суточного наряда",
+    id: "16PMp_c_c2a7IfgVLU7piEcOnmy2Di2VL",
+    tag: "oby"
   },
   {
-    id: 16,
-    title: 'Приложение 16_ОВУ Тема 3-2 Обязанности лиц суточного наряда',
-    path: 'https://docs.google.com/document/d/1iIE-c7FFAOKSBHhFY_oukQtgB7psTBfL/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'oby',
+    number: 16,
+    title: "ОВУ Тема 3.2 Обязанности лиц суточного наряда",
+    id: "1iIE-c7FFAOKSBHhFY_oukQtgB7psTBfL",
+    tag: "oby"
   },
   {
-    id: 17,
-    title: 'Приложение 17_ОВУ Тема 3-3 КХО',
-    path: 'https://docs.google.com/document/d/1NO8hKedilpdmz1Kt403AGfCkhMG8rpZ4/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'oby',
+    number: 17,
+    title: "ОВУ Тема 3.3 КХО",
+    id: "1NO8hKedilpdmz1Kt403AGfCkhMG8rpZ4",
+    tag: "oby"
   },
   {
-    id: 18,
-    title: 'Приложение 18_ОВУ Тема 3-4 Караул',
-    path: 'https://docs.google.com/document/d/1e9AlZFKtVFK5f2XbYZJsi53O89Kk5cL8/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'oby',
+    number: 18,
+    title: "ОВУ Тема 3.4 Караул",
+    id: "1e9AlZFKtVFK5f2XbYZJsi53O89Kk5cL8",
+    tag: "oby"
   },
   {
-    id: 19,
-    title: 'Приложение 19_ВМП Тема 1-1 план',
-    path: 'https://docs.google.com/document/d/1pEdE4UIFhPMVsHWO4qsb0xhVRmTwbaZF/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'vmp',
+    number: 19,
+    title: "ВМП Тема 1.1 план",
+    id: "1pEdE4UIFhPMVsHWO4qsb0xhVRmTwbaZF",
+    tag: "vmp"
   },
   {
-    id: 20,
-    title: 'Приложение 20_Огневая Тема 1-1 план',
-    path: 'https://docs.google.com/document/d/1oT-HHL9ifdbwT5Dp_i7JTRdn-aZUzUOR/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'fire',
+    number: 20,
+    title: "Огневая Тема 1.1 план",
+    id: "1oT-HHL9ifdbwT5Dp_i7JTRdn-aZUzUOR",
+    tag: "fire"
   },
   {
-    id: 21,
-    title: 'Приложение 21_Огневая Тема 1-2 план',
-    path: 'https://docs.google.com/document/d/19dFaX1G6o_1K-QgxE_NozHsuhxzjkwG1/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'fire',
+    number: 21,
+    title: "Огневая Тема 1.2 план",
+    id: "19dFaX1G6o_1K-QgxE_NozHsuhxzjkwG1",
+    tag: "fire"
   },
   {
-    id: 22,
-    title: 'Приложение 22_Огневая Тема 1-3 план',
-    path: 'https://docs.google.com/document/d/1IgS0oe1XvfzAftAGOy8DCwol_yGZeok5/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'fire',
+    number: 22,
+    title: "Огневая Тема 1.3 план",
+    id: "1IgS0oe1XvfzAftAGOy8DCwol_yGZeok5",
+    tag: "fire"
   },
   {
-    id: 23,
-    title: 'Приложение 23_Огневая Тема 2-1 план',
-    path: 'https://docs.google.com/document/d/17Q4I3FVQTr5kVckxfuj2vNOL_QQNW7jI/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'fire',
+    number: 23,
+    title: "Огневая Тема 2.1 план",
+    id: "17Q4I3FVQTr5kVckxfuj2vNOL_QQNW7jI",
+    tag: "fire"
   },
   {
-    id: 24,
-    title: 'Приложение 24_Огневая Тема 3-1 план',
-    path: 'https://docs.google.com/document/d/1xgbXJ7L08X-AjjE73Yi05W4qp5dsE3nx/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'fire',
+    number: 24,
+    title: "Огневая Тема 3.1 план",
+    id: "1xgbXJ7L08X-AjjE73Yi05W4qp5dsE3nx",
+    tag: "fire"
   },
   {
-    id: 25,
-    title: 'Приложение 25_Огневая Тема 3-2 план',
-    path: 'https://docs.google.com/document/d/1Kn7SjO20nov4rK1zxlEVfXXuZSH3TrHX/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'fire',
+    number: 25,
+    title: "Огневая Тема 3.2 план",
+    id: "1Kn7SjO20nov4rK1zxlEVfXXuZSH3TrHX",
+    tag: "fire"
   },
   {
-    id: 26,
-    title: 'Приложение 26_Огневая Тема 3-3 план',
-    path: 'https://docs.google.com/document/d/1p2sNN-zrvuqrj5hwKVw7yLqcAH69eqX8/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'fire',
+    number: 26,
+    title: "Огневая Тема 3.3 план",
+    id: "1p2sNN-zrvuqrj5hwKVw7yLqcAH69eqX8",
+    tag: "fire"
   },
   {
-    id: 27,
-    title: 'Приложение 27_Огневая Тема 4-1 план',
-    path: 'https://docs.google.com/document/d/1jDuyWgKmssFrAGO-fDGOmB-DVSeYJ5Ec/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'fire',
+    number: 27,
+    title: "Огневая Тема 4.1 план",
+    id: "1jDuyWgKmssFrAGO-fDGOmB-DVSeYJ5Ec",
+    tag: "fire"
   },
   {
-    id: 28,
-    title: 'Приложение 28_ФП Тема 1-1 план',
-    path: 'https://docs.google.com/document/d/1mWE4jnzDaXLa8WnT1tBKm2Oef11NdxFW/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'fizik',
+    number: 28,
+    title: "ФП Тема 1.1 план",
+    id: "1mWE4jnzDaXLa8WnT1tBKm2Oef11NdxFW",
+    tag: "fizik"
   },
   {
-    id: 29,
-    title: 'Приложение 29_ФП Тема 2-1 план',
-    path: 'https://docs.google.com/document/d/1CFiYxSlXHIDxkOGmrhgVpqi1gUYsEn-u/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'fizik',
+    number: 29,
+    title: "ФП Тема 2.1 план",
+    id: "1CFiYxSlXHrhgVpqi1gUYsEn-u",
+    tag: "fizik"
   },
   {
-    id: 30,
-    title: 'Приложение 30_ФП Тема 3-1 план',
-    path: 'https://docs.google.com/document/d/1Y3zRCyfg2FufseNogOGF0wDDr0mYPXrL/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'fizik',
+    number: 30,
+    title: "ФП Тема 3.1 план",
+    id: "1Y3zRCyfg2FufseNogOGF0wDDr0mYPXrL",
+    tag: "fizik"
   },
   {
-    id: 31,
-    title: 'Приложение 31_ФП Тема 4-1 план',
-    path: 'https://docs.google.com/document/d/1TleEadKpTc4TymnPJnNtu6CXeAdg5ZhH/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'fizik',
+    number: 31,
+    title: "ФП Тема 4.1 план",
+    id: "1TleEadKpTc4TymnPJnNtu6CXeAdg5ZhH",
+    tag: "fizik"
   },
   {
-    id: 32,
-    title: 'Приложение 32_ОБВС Тема 1-1 план',
-    path: 'https://docs.google.com/document/d/1jqk-nGh8RvFF14V4roR9jcjM0-dk0o92/edit?usp=sharing&ouid=109532858117889381065&rtpof=true&sd=true',
-    tag: 'obvs',
-  },
+    number: 32,
+    title: "ОБВС Тема 1.1 план",
+    id: "1jqk-nGh8RvFF14V4roR9jcjM0-dk0o92",
+    tag: "obvs"
+  }
 ]
 
-export default massConspects;
+export default massConspects

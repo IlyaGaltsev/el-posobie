@@ -1,40 +1,37 @@
-import { device } from "../../../constants/style/breakpoints"
+import { HiOutlineClipboardDocumentList } from "react-icons/hi2"
 import styled from "styled-components"
 
-export const PrezentationCard = styled.div`
+export const ConspectCard = styled.a`
   width: 100%;
-  background: blue;
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  background: url(${({ src }) => src});
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: flex-start;
   cursor: pointer;
-  flex-direction: column;
+  color: black;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  color: rgba(0, 0, 0, 0.7);
+  transition: 0.1s;
 
-  img {
-    background: #030080;
-    border-radius: 10px;
-    margin-bottom: 12px;
-    object-fit: contain;
-    height: 100%;
-    max-height: 14rem;
-    width: 100%;
-
-    @media ${device.laptopS} {
-      max-height: 10rem;
-    }
+  &:hover {
+    color: #03b361;;
+    border: 2px solid #03b361;;
+    background: #daf2e3;
   }
+`
+
+export const IconDoc = styled(HiOutlineClipboardDocumentList)`
+  width: 60px;
+  min-width: 60px;
 `
 
 export const Title = styled.p`
   font-weight: 700;
   font-size: 16px;
-  height: 42px;
+  max-width: 20rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -42,19 +39,20 @@ export const Title = styled.p`
   text-overflow: ellipsis;
 `
 
-export const PrezentationModal = styled.iframe`
+export const ConspectModal = styled.iframe`
   width: 100%;
   height: 90vh;
   max-height: 600px;
   border: none;
   border-radius: 10px;
   min-height: 300px;
+  background-color: gray;
 
-  @media ${device.mobileL} {
+  @media (max-width: 640px) {
     min-height: 200px;
     height: 200px;
     width: 100%;
-    max-height: 320px;
+    max-height: 300px;
   }
 
   &__img {

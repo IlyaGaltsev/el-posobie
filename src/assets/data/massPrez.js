@@ -17,7 +17,8 @@ import fire3 from "../images/prezentations/fire3.jpg"
 import tp1 from "../images/prezentations/tp1.png"
 import tp2 from "../images/prezentations/tp2.png"
 import tp3 from "../images/prezentations/tp3.jpg"
-const massPrez = [
+
+export const massPrez = [
   {
     id: "1E8F9WbKUQ-1PQeiT-b2gOZIcLlGxA5ab",
     title: "Тема 1: Первая медицинская помощь при ранениях и переломах",
@@ -69,16 +70,14 @@ const massPrez = [
   },
   {
     id: "1fBmSJL7-PodVYF4OazZ1PXtnk27uGSBJ",
-    title:
-      "Тема 3.2 Суточный наряд. Обязанности дежурного по роте. Порядок приема и сдачи дежурства.",
+    title: "Тема 3.2 Суточный наряд. Обязанности дежурного по роте. Порядок приема и сдачи дежурства.",
     preview: oby6,
     path: "https://docs.google.com/presentation/d/e/2PACX-1vRTI0X4HAr-t1OfoSduq592P1nu1PQaPK5kRepBZ2ztK4eElFdCaJPHaNbb5iDpDA/embed?start=false&loop=true&delayms=5000",
     tag: "ОВУ"
   },
   {
     id: "1mPJJoa5BV1N_f8QYQEUHVgJxeOz3Ef83",
-    title:
-      "Тема 3.3 Суточный наряд. Комната для хранения оружия, ее оборудование. Порядок хранения оружия и боеприпасов",
+    title: "Тема 3.3 Суточный наряд. Комната для хранения оружия, ее оборудование. Порядок хранения оружия и боеприпасов",
     preview: oby7,
     path: "https://docs.google.com/presentation/d/e/2PACX-1vTHFzC5FiO5LJ3E8hiHSNzqMbY_2CoJX2nX5pnbAb1PWCiG5sse3cA88BZ5e2gCMw/embed?start=false&loop=true&delayms=5000",
     tag: "ОВУ"
@@ -92,16 +91,14 @@ const massPrez = [
   },
   {
     id: "1NLWl92hk3x558N6wp8D_FYc59zTxvazq",
-    title:
-      "Тема 1.1 Стрелковое оружие и ручные гранаты. Назначение, боевые свойства и общее устройство АК-74",
+    title: "Тема 1.1 Стрелковое оружие и ручные гранаты. Назначение, боевые свойства и общее устройство АК-74",
     preview: fire1,
     path: "https://docs.google.com/presentation/d/e/2PACX-1vRqUB1OH8sVV-pwesqEHP6CJlFCCAFqjgi8Ml4Vd-mEKFLUh9RugvpoIvba2vy2UA/embed?start=false&loop=true&delayms=5000",
     tag: "Огневая"
   },
   {
     id: "1oi7bBsWfd4VEEA-cDRevq5WDoPJfO6Dw",
-    title:
-      "Тема 1.3 Стрелковое оружие и ручные гранаты. Назначение, ТТХ и устройство оборонительных и наступательных гранат",
+    title: "Тема 1.3 Стрелковое оружие и ручные гранаты. Назначение, ТТХ и устройство оборонительных и наступательных гранат",
     preview: fire2,
     path: "https://docs.google.com/presentation/d/e/2PACX-1vSnBMJbtDWAoezi4Y3yFtNvaJIYp92SiO0WER_BklIQkWHmXNtOQ_CkGf2tuifhZA/embed?start=false&loop=true&delayms=5000",
     tag: "Огневая"
@@ -115,16 +112,14 @@ const massPrez = [
   },
   {
     id: "1kZBOLo9Ipn9t0FyS_UbdCywEaZKKPnYM",
-    title:
-      "Тема 1.1 Действия солдата в бою. Приемы и способы передвижения личного состава отделения в бою при действиях в пешем порядке",
+    title: "Тема 1.1 Действия солдата в бою. Приемы и способы передвижения личного состава отделения в бою при действиях в пешем порядке",
     preview: tp1,
     path: "https://docs.google.com/presentation/d/e/2PACX-1vS-8kpvNxrko1gHy7V6U63z-OQ5sFzTfzlQeHqfpXZaFP9gtiePMKzXFwwGah1jcw/embed?start=false&loop=true&delayms=5000",
     tag: "ТП"
   },
   {
     id: "1UI5Derdt_rIX1gla3bUGpf97lvnveWNj",
-    title:
-      "Тема 1.2 Действия солдата в бою. Сигналы управления в бою, способы их передачи и действия по ним",
+    title: "Тема 1.2 Действия солдата в бою. Сигналы управления в бою, способы их передачи и действия по ним",
     preview: tp2,
     path: "https://docs.google.com/presentation/d/e/2PACX-1vS9ccCd6wSp9GnmXU4JCdGlkFjARHwI6NydgHTiezf-VYgOlUnyYYeI4SxLH2L7lA/embed?start=false&loop=true&delayms=5000",
     tag: "ТП"
@@ -137,4 +132,3 @@ const massPrez = [
     tag: "ТП"
   }
 ]
-export default massPrez

@@ -1,6 +1,5 @@
-import { IoMdPlayCircle } from "react-icons/io"
-import styled from "styled-components"
 import { device } from "../../../constants/style/breakpoints"
+import styled from "styled-components"
 
 export const VideoCard = styled.div`
   width: 100%;
@@ -18,7 +17,7 @@ export const VideoCard = styled.div`
   flex-direction: column;
 
   img {
-    border-radius:10px; 
+    border-radius: 10px;
     margin-bottom: 12px;
     object-fit: cover;
     max-height: 14rem;
@@ -26,30 +25,19 @@ export const VideoCard = styled.div`
 
     @media ${device.laptopS} {
       max-height: 10rem;
-    }  
+    }
   }
-`
-
-export const VideoCardTools = styled.div`
-  z-index: 1000;
-  display: flex;
-  padding: 10px 20px;
-
-  width: 100%;
-  align-items: center;
-  color: white;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(180deg, rgba(2, 0, 36, 0) 0%, rgba(0, 0, 0, 1) 100%);
-`
-
-export const IconPlay = styled(IoMdPlayCircle)`
-  width: 80px;
 `
 
 export const Title = styled.p`
   font-weight: 700;
   font-size: 16px;
   height: 42px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `
 
 export const VideoModal = styled.iframe`
