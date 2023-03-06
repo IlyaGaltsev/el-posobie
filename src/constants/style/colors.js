@@ -1,11 +1,17 @@
 // export const primaryColor = "#03b361"
-export const primaryColor = "#03b361"
-export const secondaryColor = "#001528"
+// export const primaryColor = "#03b361"
+// export const secondaryColor = "#001528"
 
-export const backgroundColor = "white"
-export const titleColor = "black"
-export const textColor = "black"
-
+// export const backgroundColor = "white"
+// export const titleColor = "black"
+// export const textColor = "black"
+export const colors = {
+  primaryColor: "#03b361",
+  secondaryColor: "#001528",
+  backgroundColor: "white",
+  titleColor: "black",
+  textColor: "black"
+}
 // --primary-100: #E6FCF3;
 // --primary-200: #BFF6E0;
 // --primary-300: #99F1CD;

@@ -2,7 +2,7 @@ import * as S from "./PrezentationCard.styled"
 import { useState } from "react"
 import { Modal } from "antd"
 
-const PrezentationCard = ({ id, path, preview, title }) => {
+const PrezentationCard = ({ id, path, preview, tag, title }) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   const showModal = () => {
@@ -17,7 +17,7 @@ const PrezentationCard = ({ id, path, preview, title }) => {
 
   return (
     <>
-      <S.PrezentationCard onClick={showModal}>
+      <S.PrezentationCard onClick={showModal} tag={tag} >
         <img
           src={preview}
           alt={title}

@@ -1,27 +1,20 @@
-import { device } from "../../../constants/style/breakpoints"
+import { device } from "../../constants/style/breakpoints"
 import styled from "styled-components"
 
-export const PrezentationCard = styled.div`
+export const VideoCard = styled.div`
   width: 100%;
-  background: blue;
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  background: url(${({ src }) => src});
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
   align-items: flex-start;
   cursor: pointer;
   flex-direction: column;
 
   img {
-    background: #030080;
     border-radius: 10px;
     margin-bottom: 12px;
-    object-fit: contain;
-    height: 100%;
+    object-fit: cover;
     max-height: 14rem;
     width: 100%;
 
@@ -42,19 +35,20 @@ export const Title = styled.p`
   text-overflow: ellipsis;
 `
 
-export const PrezentationModal = styled.iframe`
+export const VideoModal = styled.iframe`
   width: 100%;
   height: 90vh;
   max-height: 600px;
   border: none;
   border-radius: 10px;
   min-height: 300px;
+  background-color: gray;
 
-  @media ${device.mobileL} {
+  @media (max-width: 640px) {
     min-height: 200px;
     height: 200px;
     width: 100%;
-    max-height: 320px;
+    max-height: 300px;
   }
 
   &__img {

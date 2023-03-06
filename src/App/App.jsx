@@ -1,5 +1,5 @@
 import { Route, Routes, useNavigate } from "react-router-dom"
-import { primaryColor } from "../constants/style/colors"
+import { colors } from "../constants/style/colors"
 import { Header } from "../components/Header"
 import { ConfigProvider } from "antd"
 import { routes } from "../routes"
@@ -16,7 +16,7 @@ const App = () => {
     <ConfigProvider
       theme={{
         token: {
-          colorPrimary: primaryColor
+          colorPrimary: colors.primaryColor
 
           // colorBgMask: "rgba(0,0,0,0.4)",
           // colorBgElevated: "#262628",

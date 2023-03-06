@@ -1,7 +1,7 @@
 import { Button, Menu } from "antd"
 import styled from "styled-components"
 import { device } from "../../constants/style/breakpoints"
-import { primaryColor } from "../../constants/style/colors"
+import { colors } from "../../constants/style/colors"
 
 export const ToolBar = styled.div`
   width: 100%;
@@ -28,7 +28,7 @@ export const MenuButton = styled(Button)`
 export const ButtonUp = styled.div`
   position: fixed;
   bottom: 0;
-  background: ${primaryColor};
+  background: ${colors.primaryColor};
   color: white;
   align-self: flex-end;
   padding: 20px;
@@ -50,14 +50,10 @@ export const NavMenu = styled(Menu)`
   position: sticky;
   top: 60px;
   max-height: calc(100vh - 46px);
-  overflow-y: auto; 
+  overflow-y: auto;
 
   li {
     width: 300px;
-  }
-
-  @media ${device.laptopS} {
-    display: none;
   }
 
   .ant-menu-item {
@@ -70,5 +66,9 @@ export const NavMenu = styled(Menu)`
 
   .ant-menu-title-content {
     text-overflow: initial;
+  }
+
+  @media ${device.laptopS} {
+    display: none;
   }
 `
