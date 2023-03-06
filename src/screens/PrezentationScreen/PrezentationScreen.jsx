@@ -1,4 +1,4 @@
-import massPrez from "../../assets/data/massPrez"
+import {massPrez} from "../../assets/data/massPrez"
 import { PrezentationCard } from "../../components/PrezentationScreen/PrezentationCard"
 import "./PrezentationScreen.scss"
 

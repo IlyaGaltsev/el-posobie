@@ -1,4 +1,4 @@
-import { IoMdPlayCircle } from "react-icons/io"
+import { HiOutlineClipboardDocumentList } from "react-icons/hi2"
 import styled from "styled-components"
 
 export const ConspectCard = styled.a`
@@ -11,29 +11,32 @@ export const ConspectCard = styled.a`
   text-decoration: none;
   display: flex;
   align-items: center;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  color: rgba(0, 0, 0, 0.7);
+  transition: 0.1s;
+
+  &:hover {
+    color: #03b361;;
+    border: 2px solid #03b361;;
+    background: #daf2e3;
+  }
 `
 
-export const ConspectCardTools = styled.div`
-  z-index: 1000;
-  display: flex;
-  padding: 10px 20px;
-
-  width: 100%;
-  align-items: center;
-  color: white;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(180deg, rgba(2, 0, 36, 0) 0%, rgba(0, 0, 0, 1) 100%);
-`
-
-export const IconPlay = styled(IoMdPlayCircle)`
-  width: 80px;
+export const IconDoc = styled(HiOutlineClipboardDocumentList)`
+  width: 60px;
+  min-width: 60px;
 `
 
 export const Title = styled.p`
   font-weight: 700;
   font-size: 16px;
-//   height: 42px;
-// max-width: 10rem;
+  max-width: 20rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `
 
 export const ConspectModal = styled.iframe`

@@ -1,5 +1,5 @@
 import { Typography } from "antd"
-const { Paragraph, Text } = Typography
+const { Paragraph } = Typography
 
 export const tutorialSection = [
   {
