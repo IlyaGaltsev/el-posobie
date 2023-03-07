@@ -1,5 +1,5 @@
 import { ConspectCard } from "../../components/ConspectCard"
-import * as S from "../../constants/style/components.styled"
+import * as S from "../../styled/PublicComponents.styled"
 import massConspects from "../../assets/data/massConspects"
 
 

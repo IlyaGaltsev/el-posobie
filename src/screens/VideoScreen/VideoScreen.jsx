@@ -1,5 +1,5 @@
 import { VideoCard } from "../../components/VideoCard"
-import * as S from "../../constants/style/components.styled"
+import * as S from "../../styled/PublicComponents.styled"
 import massVideo from "../../assets/data/massVideo"
 
 const VideoScreen = () => {
