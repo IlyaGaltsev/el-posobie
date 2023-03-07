@@ -17,8 +17,12 @@ const PrezentationCard = ({ id, path, preview, tag, title }) => {
 
   return (
     <>
-      <S.PrezentationCard onClick={showModal} tag={tag} >
+      <S.PrezentationCard
+        onClick={showModal}
+        tag={tag}
+      >
         <img
+          id="prezentation"
           src={preview}
           alt={title}
         />
