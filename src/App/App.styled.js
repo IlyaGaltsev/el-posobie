@@ -1,3 +1,4 @@
+import { Drawer } from "@mui/material"
 import styled from "styled-components"
 import { device, maxContent } from "../constants/style/breakpoints"
 
@@ -19,3 +20,8 @@ export const Body = styled.div`
     padding: 8px 12px;
   }
 `
+
+export const DrawerBlur = styled(Drawer)(({ theme }) => ({
+  backdropFilter: "blur(5px)"
+  // other styles here...
+}))

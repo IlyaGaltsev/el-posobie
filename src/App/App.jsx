@@ -4,12 +4,21 @@ import { Header } from "../components/Header"
 import { ConfigProvider } from "antd"
 import { routes } from "../routes"
 import * as S from "./App.styled"
+import { List, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material"
+import { Box } from "@mui/system"
+
+import { useState } from "react"
+import { headerNav } from "../constants/headerNav"
 
 const App = () => {
   const navigate = useNavigate()
+  const [openNavMenu, setOpenNavMenu] = useState(false)
 
-  const onChange = ({ key }) => {
+  const onChange = key => {
     navigate(key)
+  }
+  const closeMenu = () => {
+    setOpenNavMenu(true)
   }
 
   return (
@@ -17,16 +26,41 @@ const App = () => {
       theme={{
         token: {
           colorPrimary: colors.primaryColor
-
-          // colorBgMask: "rgba(0,0,0,0.4)",
-          // colorBgElevated: "#262628",
-          // colorBgLayout: "#161618"
         }
       }}
     >
       <S.App id="main">
-        <Header onChange={onChange} />
-        <S.Body>
+        <Header
+          onChange={onChange}
+          closeMenu={closeMenu}
+        />
+        <S.Body id="sbody">
+          <S.DrawerBlur
+            container={document.getElementById("sbody")}
+            anchor={"left"}
+            open={openNavMenu}
+            onClose={() => setOpenNavMenu(false)}
+          >
+            <Box
+              sx={{ width: 250 }}
+              role="presentation"
+              onClick={() => setOpenNavMenu(false)}
+            >
+              <List>
+                {headerNav.map(({ key, icon, label }) => (
+                  <ListItem
+                    key={key}
+                    disablePadding
+                  >
+                    <ListItemButton onClick={() => onChange(key)}>
+                      <ListItemIcon>{icon}</ListItemIcon>
+                      <ListItemText primary={label} />
+                    </ListItemButton>
+                  </ListItem>
+                ))}
+              </List>
+            </Box>
+          </S.DrawerBlur>
           <Routes>
             {routes.map(route => {
               return (
