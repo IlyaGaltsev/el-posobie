@@ -1,12 +1,11 @@
+import { maxContent } from "../../constants/style/breakpoints"
+import { AppBar, IconButton, MenuItem } from "@mui/material"
 import { styled, alpha } from "@mui/material/styles"
 import InputBase from "@mui/material/InputBase"
 import Toolbar from "@mui/material/Toolbar"
-import { maxContent } from "../../constants/style/breakpoints"
-import { AppBar, Button, IconButton, MenuItem, Tab, Tabs } from "@mui/material"
 import { red } from "@mui/material/colors"
 
 export const Bar = styled(AppBar)(({ theme }) => ({
-  // background: "white",
   display: "flex",
   flexDirection: "row",
   justifyContent: "center",
@@ -31,7 +30,7 @@ export const Search = styled("div")(({ theme }) => ({
   marginLeft: 0,
   width: "100%",
 
-  [theme.breakpoints.up("sm")]: {
+  [theme.breakpoints.up("xs")]: {
     marginLeft: theme.spacing(1),
     width: "auto"
   }

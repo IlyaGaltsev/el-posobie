@@ -66,16 +66,5 @@ export const Title = styled.p`
 
 export const PrezentationModal = styled.iframe`
   width: 100%;
-  height: 90vh;
-  max-height: 600px;
-  border: none;
-  border-radius: 10px;
-  min-height: 300px;
-
-  @media ${device.mobileL} {
-    min-height: 200px;
-    height: 200px;
-    width: 100%;
-    max-height: 320px;
-  }
+  height: calc(100vh - 64px);
 `

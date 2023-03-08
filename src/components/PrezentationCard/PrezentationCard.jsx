@@ -1,6 +1,23 @@
+import { AppBar, Card, CardActionArea, Dialog, IconButton, Toolbar } from "@mui/material"
+import * as P from "../../styled/PublicComponents.styled"
+import CardContent from "@mui/material/CardContent"
+import CardMedia from "@mui/material/CardMedia"
 import * as S from "./PrezentationCard.styled"
+import { MdClose } from "react-icons/md"
+import Slide from "@mui/material/Slide"
+import { FaPlay } from "react-icons/fa"
 import { useState } from "react"
-import { Modal } from "antd"
+import * as React from "react"
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return (
+    <Slide
+      direction="up"
+      ref={ref}
+      {...props}
+    />
+  )
+})
 
 const PrezentationCard = ({ id, path, preview, tag, title }) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -11,42 +28,71 @@ const PrezentationCard = ({ id, path, preview, tag, title }) => {
   const handleOk = () => {
     setIsModalOpen(false)
   }
-  const handleCancel = () => {
-    setIsModalOpen(false)
-  }
 
   return (
     <>
-      <S.PrezentationCard
-        onClick={showModal}
-        tag={tag}
-      >
-        <img
-          id="prezentation"
-          src={preview}
-          alt={title}
-        />
-        <S.Title>{title}</S.Title>
-      </S.PrezentationCard>
-      <Modal
-        title={title}
+      <Card onClick={showModal}>
+        <CardActionArea>
+          <CardMedia
+            id="prezentation"
+            component="img"
+            alt={title}
+            height="174"
+            style={{ objectPosition: "top" }}
+            image={preview}
+          />
+          <CardContent>
+            <P.CardUnderTitle>{tag}</P.CardUnderTitle>
+            <P.CardTitle
+              gutterBottom
+              variant="h6"
+              component="div"
+            >
+              {title}
+            </P.CardTitle>
+            <P.CardButton size="small">
+              <FaPlay />
+              Воспроизвести
+            </P.CardButton>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+      <Dialog
+        fullScreen
         open={isModalOpen}
-        onOk={handleOk}
-        onCancel={handleCancel}
-        width={"100%"}
-        footer={null}
-        style={{ top: 50 }}
-        destroyOnClose={true}
+        onClose={handleOk}
+        TransitionComponent={Transition}
       >
-        <S.PrezentationModal
-          title={title}
-          src={path}
-          frameBorder="0"
-          allowFullScreen="true"
-          mozallowfullscreen="true"
-          webkitallowfullscreen="true"
-        />
-      </Modal>
+        <AppBar sx={{ position: "relative" }}>
+          <Toolbar>
+            <IconButton
+              edge="start"
+              color="inherit"
+              onClick={handleOk}
+              aria-label="close"
+            >
+              <MdClose />
+            </IconButton>
+            <P.TitleOneLine
+              sx={{ ml: 2, flex: 1 }}
+              variant="h6"
+              component="div"
+            >
+              {title}
+            </P.TitleOneLine>
+          </Toolbar>
+        </AppBar>
+        {isModalOpen && (
+          <S.PrezentationModal
+            title={title}
+            src={path}
+            frameBorder="0"
+            allowFullScreen="true"
+            mozallowfullscreen="true"
+            webkitallowfullscreen="true"
+          />
+        )}
+      </Dialog>
     </>
   )
 }

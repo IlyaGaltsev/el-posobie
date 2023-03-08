@@ -1,4 +1,6 @@
+import { Button, Card, CardActionArea, Typography } from "@mui/material"
 import { device } from "../constants/style/breakpoints"
+import { colors } from "../constants/style/colors"
 import styled from "styled-components"
 
 export const Grid = styled.div`
@@ -22,4 +24,63 @@ export const Grid = styled.div`
     row-gap: 8px;
     column-gap: 12px;
   }
+`
+export const CardUnderTitle = styled(Typography)`
+  color: ${colors.primaryColor};
+`
+
+export const CardTitle = styled(Typography)`
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`
+
+export const CardSubTitle = styled(Typography)`
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`
+
+export const CardButton = styled(Button)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  gap: 10
+}))
+
+export const CardWithTag = styled(Card)`
+  width: 100%;
+  position: relative;
+
+  &::after {
+    content: "${({ tag }) => tag}";
+    background: ${colors.primaryColor};
+    color: ${colors.secondaryColor};
+    position: absolute;
+    margin: 10px;
+    top: 0;
+    right: 0;
+    font-size: 16px;
+    font-weight: 700;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+    border-radius: 8px;
+  }
+`
+
+export const CardAction = styled(CardActionArea)(({ theme }) => ({}))
+
+export const TitleOneLine = styled(Typography)`
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `

@@ -1,9 +1,9 @@
 import { headerNav } from "../../constants/headerNav"
-import { MenuItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material"
 import { useNavigate } from "react-router-dom"
-import * as S from "./Header.styled"
-import { MdMenu } from "react-icons/md"
+import { ListItemText } from "@mui/material"
 import { FaSearch } from "react-icons/fa"
+import { MdMenu } from "react-icons/md"
+import * as S from "./Header.styled"
 
 const Header = ({ onChange, closeMenu }) => {
   const navigate = useNavigate()

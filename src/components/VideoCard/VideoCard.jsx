@@ -1,25 +1,14 @@
-import * as S from "./VideoCard.styled"
-import { useState } from "react"
-import { Modal } from "antd"
-import Card from "@mui/material/Card"
-import CardActions from "@mui/material/CardActions"
+import { AppBar, CardActionArea, Dialog, IconButton, Toolbar } from "@mui/material"
+import * as P from "../../styled/PublicComponents.styled"
 import CardContent from "@mui/material/CardContent"
 import CardMedia from "@mui/material/CardMedia"
-import Button from "@mui/material/Button"
-import Typography from "@mui/material/Typography"
 import { MdClose } from "react-icons/md"
-import {
-  AppBar,
-  Dialog,
-  IconButton,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  Toolbar
-} from "@mui/material"
 import Slide from "@mui/material/Slide"
-import * as React from "react"
+import * as S from "./VideoCard.styled"
 import { FaPlay } from "react-icons/fa"
+import Card from "@mui/material/Card"
+import { useState } from "react"
+import * as React from "react"
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return (
@@ -31,7 +20,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   )
 })
 
-const VideoCard = ({ id, promo, title }) => {
+const VideoCard = ({ id, tag, promo, title }) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   const showModal = () => {
@@ -44,36 +33,29 @@ const VideoCard = ({ id, promo, title }) => {
   return (
     <>
       <Card onClick={showModal}>
-        <CardMedia
-          id="video"
-          component="img"
-          alt={title}
-          height="174"
-          image={`//img.youtube.com/vi/${id}/hqdefault.jpg`}
-        />
-        <CardContent>
-          <S.Title
-            gutterBottom
-            variant="h6"
-            component="div"
-          >
-            {title}
-          </S.Title>
-          <S.SubTitle
-            variant="body2"
-            color="text.secondary"
-          >
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
-          </S.SubTitle>
-        </CardContent>
-        <CardActions>
-          <S.CardButton size="small">
-            <FaPlay />
-            Воспроизвести
-          </S.CardButton>
-         
-        </CardActions>
+        <CardActionArea>
+          <CardMedia
+            id="video"
+            component="img"
+            alt={title}
+            height="174"
+            image={`//img.youtube.com/vi/${id}/hqdefault.jpg`}
+          />
+          <CardContent>
+            <P.CardUnderTitle>{tag}</P.CardUnderTitle>
+            <P.CardTitle
+              gutterBottom
+              variant="h6"
+              component="div"
+            >
+              {title}
+            </P.CardTitle>
+            <P.CardButton size="small">
+              <FaPlay />
+              Воспроизвести
+            </P.CardButton>
+          </CardContent>
+        </CardActionArea>
       </Card>
       <Dialog
         fullScreen
@@ -91,13 +73,13 @@ const VideoCard = ({ id, promo, title }) => {
             >
               <MdClose />
             </IconButton>
-            <Typography
+            <P.TitleOneLine
               sx={{ ml: 2, flex: 1 }}
               variant="h6"
               component="div"
             >
               {title}
-            </Typography>
+            </P.TitleOneLine>
           </Toolbar>
         </AppBar>
         {isModalOpen && (
@@ -109,23 +91,6 @@ const VideoCard = ({ id, promo, title }) => {
           />
         )}
       </Dialog>
-      {/* <Modal
-        title={title}
-        open={isModalOpen}
-        onOk={handleOk}
-        onCancel={handleCancel}
-        width={"100%"}
-        footer={null}
-        style={{ top: 50 }}
-        destroyOnClose={true}
-      >
-        <S.VideoModal
-          title="video"
-          src={"https://www.youtube.com/embed/" + id + "?autoplay=1"}
-          allowfullscreen="true"
-          allow="autoplay"
-        />
-      </Modal> */}
     </>
   )
 }
