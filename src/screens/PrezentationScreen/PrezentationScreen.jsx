@@ -1,9 +1,8 @@
 import { PrezentationCard } from "../../components/PrezentationCard"
 import * as S from "../../styled/PublicComponents.styled"
 import { massPrez } from "../../assets/data/massPrez"
-import { useState } from "react"
-import { Spin } from "antd"
-import { useEffect } from "react"
+import { Loader } from "../../components/Loader"
+import { useEffect, useState } from "react"
 
 const PrezentationScreen = () => {
   const [loading, setLoading] = useState(true)
@@ -11,18 +10,12 @@ const PrezentationScreen = () => {
   useEffect(() => {
     document.getElementById("prezentation").onload = function () {
       setLoading(false)
-      console.log(loading)
     }
   })
 
   return (
     <S.Grid>
-      {loading && (
-        <S.CenterPage>
-          <Spin size="large" />
-        </S.CenterPage>
-      )}
-
+      {loading && <Loader />}
       {massPrez.map(item => {
         return (
           <PrezentationCard

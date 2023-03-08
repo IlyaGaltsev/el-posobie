@@ -1,41 +1,87 @@
+import { styled, alpha } from "@mui/material/styles"
+import InputBase from "@mui/material/InputBase"
+import Toolbar from "@mui/material/Toolbar"
 import { maxContent } from "../../constants/style/breakpoints"
-import { colors } from "../../constants/style/colors"
-import { AiFillEye } from "react-icons/ai"
-import styled from "styled-components"
-import { Menu } from "antd"
+import { AppBar, Button, IconButton, Tab, Tabs } from "@mui/material"
 
-export const Header = styled.header`
-  color: green;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background: ${colors.secondaryColor};
-  position: sticky;
-  top: 0;
-  z-index: 2;
-`
+export const Bar = styled(AppBar)(({ theme }) => ({
+  // background: "white",
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "center",
+  alignItems: "center",
+  width: "100%"
+}))
 
-export const Body = styled.div`
-  padding: 0 20px;
-  max-width: ${maxContent};
-  width: 100%;
-  color: green;
-  display: flex;
-  align-items: center;
-`
+export const Tool = styled(Toolbar)(({ theme }) => ({
+  maxWidth: maxContent,
+  width: "100%",
+  display: "flex",
+  justifyContent: "space-between"
+}))
 
-export const NavMenu = styled(Menu)`
-  width: 100%;
+export const Search = styled("div")(({ theme }) => ({
+  position: "relative",
+  borderRadius: theme.shape.borderRadius,
+  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  "&:hover": {
+    backgroundColor: alpha(theme.palette.common.white, 0.25)
+  },
+  marginLeft: 0,
+  width: "100%",
 
-  .ant-menu-submenu-selected {
-    border-radius: 8px;
+  [theme.breakpoints.up("sm")]: {
+    marginLeft: theme.spacing(1),
+    width: "auto"
   }
-`
+}))
 
-export const Iconeye = styled(AiFillEye)`
-  margin-right: 20px;
-  cursor: pointer;
-`
+export const SearchIconWrapper = styled("div")(({ theme }) => ({
+  padding: theme.spacing(0, 2),
+  height: "100%",
+  position: "absolute",
+  pointerEvents: "none",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center"
+}))
+
+export const StyledInputBase = styled(InputBase)(({ theme }) => ({
+  color: "inherit",
+  "& .MuiInputBase-input": {
+    padding: theme.spacing(1, 1, 1, 0),
+    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    transition: theme.transitions.create("width"),
+    width: "100%",
+
+    [theme.breakpoints.up("sm")]: {
+      width: "12ch",
+      "&:focus": {
+        width: "20ch"
+      }
+    }
+  }
+}))
+
+export const MenuButton = styled(IconButton)(({ theme }) => ({
+  display: "flex",
+
+  [theme.breakpoints.up("md")]: {
+    display: "none"
+  }
+}))
+
+export const NavLinks = styled("div")(({ theme }) => ({
+  display: "none",
+  justifyContent: "flex-start",
+
+  [theme.breakpoints.up("md")]: {
+    display: "flex"
+  }
+}))
+
+export const NavButton = styled(Button)(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  gap: 10
+}))
