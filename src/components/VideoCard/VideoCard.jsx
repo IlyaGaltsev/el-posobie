@@ -8,9 +8,18 @@ import CardMedia from "@mui/material/CardMedia"
 import Button from "@mui/material/Button"
 import Typography from "@mui/material/Typography"
 import { MdClose } from "react-icons/md"
-import { AppBar, Dialog, IconButton, Toolbar } from "@mui/material"
+import {
+  AppBar,
+  Dialog,
+  IconButton,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Toolbar
+} from "@mui/material"
 import Slide from "@mui/material/Slide"
 import * as React from "react"
+import { FaPlay } from "react-icons/fa"
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return (
@@ -31,20 +40,9 @@ const VideoCard = ({ id, promo, title }) => {
   const handleOk = () => {
     setIsModalOpen(false)
   }
-  const handleCancel = () => {
-    setIsModalOpen(false)
-  }
 
   return (
     <>
-      {/* <S.VideoCard onClick={showModal}>
-        <img
-          id="video"
-          src={`//img.youtube.com/vi/${id}/hqdefault.jpg`}
-          alt={title}
-        />
-        <S.Title>{title}</S.Title>
-      </S.VideoCard> */}
       <Card onClick={showModal}>
         <CardMedia
           id="video"
@@ -61,16 +59,20 @@ const VideoCard = ({ id, promo, title }) => {
           >
             {title}
           </S.Title>
-          <Typography
+          <S.SubTitle
             variant="body2"
             color="text.secondary"
           >
             Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
             across all continents except Antarctica
-          </Typography>
+          </S.SubTitle>
         </CardContent>
         <CardActions>
-          <Button size="small">Воспроизвести</Button>
+          <S.CardButton size="small">
+            <FaPlay />
+            Воспроизвести
+          </S.CardButton>
+         
         </CardActions>
       </Card>
       <Dialog

@@ -2,7 +2,8 @@ import { styled, alpha } from "@mui/material/styles"
 import InputBase from "@mui/material/InputBase"
 import Toolbar from "@mui/material/Toolbar"
 import { maxContent } from "../../constants/style/breakpoints"
-import { AppBar, Button, IconButton, Tab, Tabs } from "@mui/material"
+import { AppBar, Button, IconButton, MenuItem, Tab, Tabs } from "@mui/material"
+import { red } from "@mui/material/colors"
 
 export const Bar = styled(AppBar)(({ theme }) => ({
   // background: "white",
@@ -80,8 +81,9 @@ export const NavLinks = styled("div")(({ theme }) => ({
   }
 }))
 
-export const NavButton = styled(Button)(({ theme }) => ({
+export const NavItem = styled(MenuItem)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
-  gap: 10
+  gap: 10,
+  color: red
 }))

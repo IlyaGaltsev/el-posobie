@@ -1,6 +1,6 @@
 import { device } from "../../constants/style/breakpoints"
 import styled from "styled-components"
-import { Typography } from "@mui/material"
+import { Button, ListItemButton, Typography } from "@mui/material"
 
 export const VideoCard = styled.div`
   width: 100%;
@@ -64,4 +64,23 @@ export const VideoModal = styled.iframe`
   //     }
   //   }
   // }
+`
+
+export const CardButton = styled(Button)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  gap: 10
+
+  // [theme.breakpoints.up("md")]: {
+  // display: "flex"
+  // }
+}))
+
+export const SubTitle = styled(Typography)`
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `

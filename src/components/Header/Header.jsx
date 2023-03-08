@@ -21,20 +21,20 @@ const Header = ({ onChange, closeMenu }) => {
           edge="start"
           color="inherit"
           aria-label="open drawer"
-          sx={{ mr: 2 }}
+          sx={{ mr: 0 }}
           onClick={closeMenu}
         >
           <MdMenu />
         </S.MenuButton>
         <S.NavLinks>
           {headerNav.map(({ key, label, icon }) => (
-            <MenuItem
+            <S.NavItem
               key={key}
               onClick={() => handleCloseNavMenu(key)}
             >
-                      <ListItemIcon>{icon}</ListItemIcon>
-                      <ListItemText primary={label} />
-            </MenuItem>
+              {icon}
+              <ListItemText primary={label} />
+            </S.NavItem>
           ))}
         </S.NavLinks>
         <S.Search>
