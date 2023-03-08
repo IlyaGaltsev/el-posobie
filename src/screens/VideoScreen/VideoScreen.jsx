@@ -1,5 +1,5 @@
-import { VideoCard } from "../../components/VideoCard"
 import * as S from "../../styled/PublicComponents.styled"
+import { VideoCard } from "../../components/VideoCard"
 import massVideo from "../../assets/data/massVideo"
 import { Loader } from "../../components/Loader"
 import { useEffect } from "react"
@@ -16,7 +16,7 @@ const VideoScreen = () => {
 
   return (
     <S.Grid>
-      {/* {loading && <Loader />} */}
+      {loading && <Loader />}
       {massVideo.map(item => {
         return (
           <VideoCard

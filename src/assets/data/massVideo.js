@@ -32,151 +32,151 @@ const massVideo = [
   {
     id: "US3LGHxiciQ",
     title: "Проверка жгута, расположение аптечки",
-    tag: "med",
+    tag: "Медицинская подготовка",
     promo: image1
   },
   {
     id: "7IlJQKFmuVI",
     title: "Наложение жгута при ранении в верхнюю конечность",
-    tag: "med",
+    tag: "Медицинская подготовка",
     promo: image2
   },
   {
     id: "S1B4uX3iLic",
     title: "Наложение жгута из положения лёжа",
-    tag: "med",
+    tag: "Медицинская подготовка",
     promo: image3
   },
   {
     id: "7vaTrhoW5vg",
     title: "Наложение жгута сидя",
-    tag: "med",
+    tag: "Медицинская подготовка",
     promo: image4
   },
   {
     id: "-5oCoQkRYeg",
     title: "Остановка кровотечения при ранении в нижнюю конечность из положения лёжа",
-    tag: "med",
+    tag: "Медицинская подготовка",
     promo: image5
   },
   {
     id: "w8SC55Eld7s",
     title: "Правила наложения повязок",
-    tag: "med",
+    tag: "Медицинская подготовка",
     promo: image6
   },
   {
     id: "SR--kOASFMs",
     title: "Наложение артериального жгута",
-    tag: "med",
+    tag: "Медицинская подготовка",
     promo: image7
   },
   {
     id: "D0mEM_5DOFA",
     title: "Наложение закрутки",
-    tag: "med",
+    tag: "Медицинская подготовка",
     promo: image8
   },
   {
     id: "kEeSgjSK29Y",
     title: "Шапочка Гиппократа",
-    tag: "med",
+    tag: "Медицинская подготовка",
     promo: image9
   },
   {
     id: "91xQX7Nxyio",
     title: "Взаимодействие частей автомата при выстреле",
-    tag: "fire",
+    tag: "Огневая подготовка",
     promo: fire1
   },
   {
     id: "JLDhTMtJyCE",
     title: "АК 74, устройство, неполная разборка, сборка",
-    tag: "fire",
+    tag: "Огневая подготовка",
     promo: fire2
   },
   {
     id: "YVio9az3yF4",
     title: "Неполная разборка АК 74 выполнение норматива сжато",
-    tag: "fire",
+    tag: "Огневая подготовка",
     promo: fire3
   },
   {
     id: "5KQ5k1QnxDI",
     title: "Сборка АК 74 после неполной разборки выполнение норматива",
-    tag: "fire",
+    tag: "Огневая подготовка",
     promo: fire4
   },
   {
     id: "cVl6Qizc8vY",
     title: "Изготовка к бою из положения лёжа",
-    tag: "fire",
+    tag: "Огневая подготовка",
     promo: fire5
   },
   {
     id: "u45SCcyU1MQ",
     title: "Изготовка к стрельбе с колена",
-    tag: "fire",
+    tag: "Огневая подготовка",
     promo: fire6
   },
   {
     id: "6qWfQc6Q3wA",
     title: "Надевание противогаза",
-    tag: "rxb",
+    tag: "РХБ",
     promo: rxb1
   },
   {
     id: "BK52NDw4JQY",
     title: "Действия по вспышке ядерного взрыва",
-    tag: "rxb",
+    tag: "РХБ",
     promo: rxb2
   },
   {
     id: "BXDU_WvUIR4",
     title: "Действия по сигналу химическая тревога",
-    tag: "rxb",
+    tag: "РХБ",
     promo: rxb3
   },
   {
     id: "2fNIpllUSYo",
     title: "Надевание в виде плаща 4А",
-    tag: "rxb",
+    tag: "РХБ",
     promo: rxb4
   },
   {
     id: "GVDMpBreuc0",
     title: "Надевание ОЗК в виде комбинезона",
-    tag: "rxb",
+    tag: "РХБ",
     promo: rxb5
   },
   {
     id: "XjLIPcOZVMo",
     title: "Способы переползания",
-    tag: "tacktic",
+    tag: "Тактическая подготовка",
     promo: tacktic1
   },
   {
     id: "3YR8px3VFrI",
     title: "Действие подразделения в тройке",
-    tag: "tacktic",
+    tag: "Тактическая подготовка",
     promo: tacktic2
   },
   {
     id: "p11sJEgp88A",
     title: "Единая полоса препятствий Порядок и техника преодоления",
-    tag: "fizik",
+    tag: "Физическая подготовка",
     promo: fizic1
   },
   {
     id: "8Paa1InCwFk",
     title: "Комплекс РБ на 8 счетов без оружия",
-    tag: "fizik",
+    tag: "Физическая подготовка",
     promo: fizic2
   },
   {
     id: "tRKT25wOjIQ",
     title: "Комплекс РБ на 8 счетов с оружием",
-    tag: "fizik",
+    tag: "Физическая подготовка",
     promo: fizic3
   }
 ]
