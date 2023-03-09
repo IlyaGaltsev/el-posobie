@@ -5,12 +5,13 @@ import "./PageBook.scss"
 
 const { Title } = Typography
 
-const PageBook = ({ timeRead, id, title, onPrev, text, onNext, minLenght, maxLenght }) => {
+const PageBook = ({ timeRead, chapter, id, title, onPrev, text, onNext, minLenght, maxLenght }) => {
   return (
     <div className="pagebook">
       <div id="top"></div>
       <div className="pagebook__wrapper">
         <span>Читается за {timeRead} мин</span>
+        <Title level={2}>{chapter}</Title>
         <Title level={2}>{title}</Title>
         {text()}
       </div>
@@ -24,7 +25,6 @@ const PageBook = ({ timeRead, id, title, onPrev, text, onNext, minLenght, maxLen
             Назад
           </Button>
         )}
-
         {maxLenght !== id && (
           <Button
             type="primary"
