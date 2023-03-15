@@ -1,4 +1,12 @@
-import { List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
+import {
+  BottomNavigation,
+  BottomNavigationAction,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText
+} from '@mui/material'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 import { colors } from '../constants/style/colors'
 import { headerNav } from '../constants/headerNav'
@@ -12,7 +20,7 @@ import { useState } from 'react'
 const App = () => {
   const navigate = useNavigate()
   const [openNavMenu, setOpenNavMenu] = useState(false)
-
+  const [value, setValue] = useState(0)
   const onChange = (key: string) => {
     navigate(key)
   }
@@ -68,6 +76,18 @@ const App = () => {
             })}
           </Routes>
         </S.Body>
+        <BottomNavigation
+          showLabels
+          value={value}
+          onChange={(event, newValue) => {
+            console.log(newValue)
+            setValue(newValue)
+          }}
+        >
+          {headerNav.map(({ key, label, icon }) => {
+            return <BottomNavigationAction key={key} label={label} icon={icon} />
+          })}
+        </BottomNavigation>
       </S.App>
     </ConfigProvider>
   )

@@ -48,7 +48,7 @@ export const NavMenu = styled(Menu)`
   background: white;
   margin-right: 20px;
   position: sticky;
-  top: 60px;
+  top: 68px;
   max-height: calc(100vh - 46px);
   overflow-y: auto;
 

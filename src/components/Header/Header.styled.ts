@@ -82,6 +82,5 @@ export const NavLinks = styled('div')(({ theme }) => ({
 export const NavItem = styled(MenuItem)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
-  gap: 10,
-  color: 'red'
+  gap: 8
 }))
