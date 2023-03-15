@@ -7,6 +7,10 @@ import { navBook } from '../../constants/navBook'
 import * as S from './BookScreen.styled'
 import { useState } from 'react'
 import './BookScreen.scss'
+import type { MenuProps } from 'antd'
+// import { Menu } from '@mui/material'
+
+// type MenuItem = Required<MenuProps>['items'][number]
 
 const BookScreen = () => {
   const [open, setOpen] = useState(false)
@@ -32,18 +36,23 @@ const BookScreen = () => {
     setOpen(true)
   }
 
-  const selectPageBook = (e: { key: string }) => {
-    setCurrentValue(parseInt(e.key))
+  const onOpenChange: MenuProps['onOpenChange'] = keys => {
+    setOpenKeys(keys)
   }
+
+  const onClick: MenuProps['onClick'] = e => {
+    setCurrentValue(Number(e.key))
+  }
+
+  const [openKeys, setOpenKeys] = useState(['sub1'])
 
   return (
     <div className="book-screen">
       <div className="book-screen__wrapper">
         <SideBar
-          selectPageBook={selectPageBook}
+          selectPageBook={onClick}
           setOpen={setOpen}
           open={open}
-          // showDrawer={showDrawer}
           selectValue={currentValue}
         />
         <div className="book-screen__page">
@@ -55,13 +64,14 @@ const BookScreen = () => {
           </S.ToolBar>
           <S.Row>
             <S.NavMenu
-              // defaultSelectedKeys={currentValue.toString()}
-              // selectedKeys={currentValue.toString()}
-              defaultOpenKeys={['1']}
-              // mode="inline"
-              // theme="light"
               items={navBook}
-              onClick={selectPageBook}
+              onOpenChange={onOpenChange}
+              openKeys={openKeys}
+              defaultSelectedKeys={[String(currentValue)]}
+              selectedKeys={[String(currentValue)]}
+              onClick={onClick}
+              defaultOpenKeys={['1']}
+              mode="inline"
             />
             <PageBook
               {...tutorialSection[currentValue]}

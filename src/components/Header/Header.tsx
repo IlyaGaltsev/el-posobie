@@ -1,7 +1,6 @@
 import { headerNav } from '../../constants/headerNav'
 import { useNavigate } from 'react-router-dom'
 import { ListItemText } from '@mui/material'
-import { FaSearch } from 'react-icons/fa'
 import { MdMenu } from 'react-icons/md'
 import * as S from './Header.styled'
 
@@ -18,7 +17,7 @@ const Header = ({ closeMenu }: IHeader) => {
 
   return (
     <S.Bar position="sticky">
-      <S.Tool>
+      <S.Tool variant="dense">
         <S.MenuButton
           size="large"
           edge="start"
@@ -42,12 +41,6 @@ const Header = ({ closeMenu }: IHeader) => {
             </S.NavItem>
           ))}
         </S.NavLinks>
-        <S.Search>
-          <S.SearchIconWrapper>
-            <FaSearch />
-          </S.SearchIconWrapper>
-          <S.StyledInputBase placeholder="Поиск…" inputProps={{ 'aria-label': 'search' }} />
-        </S.Search>
       </S.Tool>
     </S.Bar>
   )

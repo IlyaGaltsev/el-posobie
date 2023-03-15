@@ -87,7 +87,7 @@ export const massConspects: IMassConspects[] = [
     task: 'РХБЗ',
     title: 'Тема 1.2 Средства индивидуальной защиты и пользование ими',
     subtitle: 'Прием зачетов по выполнению нормативов № 1, 4, 6 по РХБЗ Сухопутных войск ВС РФ.',
-    id: '1xOIQEI9j0OHMyNx_CLiA6kfSC',
+    id: '1xOIQEI9jIdgntyW0OHMyNx_CLiA6kfSC',
     tag: 'rxbz'
   },
   {
@@ -254,7 +254,7 @@ export const massConspects: IMassConspects[] = [
     title: 'Тема 2.1 Ускоренное передвижение',
     subtitle:
       'Организация занятий по ускоренному передвижению. Разучивание и тренировка упражнений по бегу на 60м, 100м, челночный бег 10х10м и 1 км (упражнения № 40, 41, 42 и 45 НФП-2009).',
-    id: '1CFiYxSlXHrhgVpqi1gUYsEn-u',
+    id: '1CFiYxSlXHIDxkOGmrhgVpqi1gUYsEn-u',
     tag: 'fizik'
   },
   {
