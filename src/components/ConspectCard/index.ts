@@ -1,0 +1,1 @@
+export { ConspectCard } from './ConspectCard'
