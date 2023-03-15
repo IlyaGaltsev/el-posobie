@@ -1,15 +1,18 @@
-import { headerNav } from "../../constants/headerNav"
-import { useNavigate } from "react-router-dom"
-import { ListItemText } from "@mui/material"
-import { FaSearch } from "react-icons/fa"
-import { MdMenu } from "react-icons/md"
-import * as S from "./Header.styled"
+import { headerNav } from '../../constants/headerNav'
+import { useNavigate } from 'react-router-dom'
+import { ListItemText } from '@mui/material'
+import { FaSearch } from 'react-icons/fa'
+import { MdMenu } from 'react-icons/md'
+import * as S from './Header.styled'
 
-const Header = ({ onChange, closeMenu }) => {
+interface IHeader {
+  closeMenu: () => void
+}
+
+const Header = ({ closeMenu }: IHeader) => {
   const navigate = useNavigate()
 
-  const handleCloseNavMenu = key => {
-    console.log(key)
+  const handleCloseNavMenu = (key: string) => {
     navigate(key)
   }
 
@@ -30,7 +33,9 @@ const Header = ({ onChange, closeMenu }) => {
           {headerNav.map(({ key, label, icon }) => (
             <S.NavItem
               key={key}
-              onClick={() => handleCloseNavMenu(key)}
+              onClick={() => {
+                handleCloseNavMenu(key)
+              }}
             >
               {icon}
               <ListItemText primary={label} />
@@ -41,10 +46,7 @@ const Header = ({ onChange, closeMenu }) => {
           <S.SearchIconWrapper>
             <FaSearch />
           </S.SearchIconWrapper>
-          <S.StyledInputBase
-            placeholder="Поиск…"
-            inputProps={{ "aria-label": "search" }}
-          />
+          <S.StyledInputBase placeholder="Поиск…" inputProps={{ 'aria-label': 'search' }} />
         </S.Search>
       </S.Tool>
     </S.Bar>

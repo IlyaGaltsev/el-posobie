@@ -29,7 +29,7 @@ const App = () => {
       }}
     >
       <S.App id="main">
-        <Header onChange={onChange} closeMenu={closeMenu} />
+        <Header closeMenu={closeMenu} />
         <S.Body id="sbody">
           <S.DrawerBlur
             container={document.getElementById('sbody')}

@@ -1,8 +1,9 @@
-import { Card, CardContent, CardActions } from "@mui/material"
-import * as P from "../../styled/PublicComponents.styled"
-import { MdFileCopy } from "react-icons/md"
+import { Card, CardContent, CardActions } from '@mui/material'
+import * as P from '../../styled/PublicComponents.styled'
+import { MdFileCopy } from 'react-icons/md'
+import type { IMassConspects } from '@/types'
 
-const ConspectCard = ({ id, task, title, subtitle }) => {
+const ConspectCard = ({ id, task, title, subtitle }: IMassConspects) => {
   return (
     <Card
       onClick={() =>
@@ -10,24 +11,14 @@ const ConspectCard = ({ id, task, title, subtitle }) => {
       }
     >
       <P.CardAction>
-        <CardContent style={{ height: "auto" }}>
-          <P.CardUnderTitle
-            sx={{ fontSize: 16 }}
-            gutterBottom
-          >
+        <CardContent style={{ height: 'auto' }}>
+          <P.CardUnderTitle sx={{ fontSize: 16 }} gutterBottom>
             {task}
           </P.CardUnderTitle>
-          <P.CardTitle
-            variant="h6"
-            component="div"
-            gutterBottom
-          >
+          <P.CardTitle variant="h6" gutterBottom>
             {title}
           </P.CardTitle>
-          <P.CardSubTitle
-            variant="body2"
-            color="text.secondary"
-          >
+          <P.CardSubTitle variant="body2" color="text.secondary">
             {subtitle}
           </P.CardSubTitle>
         </CardContent>

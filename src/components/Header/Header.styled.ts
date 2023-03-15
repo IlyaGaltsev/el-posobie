@@ -3,7 +3,6 @@ import { AppBar, IconButton, MenuItem } from '@mui/material'
 import { styled, alpha } from '@mui/material/styles'
 import InputBase from '@mui/material/InputBase'
 import Toolbar from '@mui/material/Toolbar'
-import { red } from '@mui/material/colors'
 
 export const Bar = styled(AppBar)(({ theme }) => ({
   display: 'flex',
@@ -84,5 +83,5 @@ export const NavItem = styled(MenuItem)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   gap: 10,
-  color: red
+  color: 'red'
 }))
