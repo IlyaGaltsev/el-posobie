@@ -1,1 +1,1 @@
-export { ConspectScreen } from './ConspectScreen'
+export { default } from './ConspectScreen'

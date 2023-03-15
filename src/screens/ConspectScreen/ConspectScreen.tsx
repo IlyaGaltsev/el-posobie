@@ -13,4 +13,4 @@ const ConspectScreen: FC = () => {
     </S.Grid>
   )
 }
-export { ConspectScreen }
+export default ConspectScreen

@@ -1,9 +1,9 @@
 import { BookScreen } from './screens/BookScreen'
-// import { ConspectScreen } from './screens/ConspectScreen'
 import { PrezentationScreen } from './screens/PrezentationScreen'
 import { VideoScreen } from './screens/VideoScreen'
 import * as routesNames from './routesNames'
-import { ConspectScreen } from 'src/screens/ConspectScreen'
+import ConspectScreen from './screens/ConspectScreen'
+// import { ConspectScreen } from './screens/ConspectScreen'
 
 export const routes = [
   {
@@ -22,4 +22,9 @@ export const routes = [
     path: routesNames.CONSPECTS_ROUTE,
     element: <ConspectScreen />
   }
+  // ,
+  // {
+  //   path: routesNames.CONSPECTS_ROUTE,
+  //   element: <ConspectScreen />
+  // }
 ]
