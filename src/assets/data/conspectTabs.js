@@ -3,55 +3,55 @@ const conspectTabs = [
     id: 0,
     flag: true,
     title: 'Все',
-    tag: '',
+    tag: ''
   },
   {
     id: 1,
     flag: false,
     title: 'Строевая подготовка',
-    tag: 'sp',
+    tag: 'sp'
   },
   {
     id: 2,
     flag: false,
     title: 'Тактическая подгтовка',
-    tag: 'tp',
+    tag: 'tp'
   },
   {
     id: 3,
     flag: false,
     title: 'РХБЗ',
-    tag: 'rxbz',
+    tag: 'rxbz'
   },
   {
     id: 4,
     flag: false,
     title: 'ОВУ',
-    tag: 'oby',
+    tag: 'oby'
   },
   {
     id: 5,
     flag: false,
     title: 'ВМП',
-    tag: 'tp',
+    tag: 'tp'
   },
   {
     id: 6,
     flag: false,
     title: 'Огневая подготовка',
-    tag: 'fire',
+    tag: 'fire'
   },
   {
     id: 7,
     flag: false,
     title: 'Физическая подготовка',
-    tag: 'fizik',
+    tag: 'fizik'
   },
   {
     id: 8,
     flag: false,
     title: 'ОБВС',
-    tag: 'obvs',
-  },
+    tag: 'obvs'
+  }
 ]
-export { conspectTabs };
+export { conspectTabs }

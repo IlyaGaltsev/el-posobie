@@ -1,1 +1,0 @@
-export { PrezentationScreen } from "./PrezentationScreen";

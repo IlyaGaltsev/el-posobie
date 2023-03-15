@@ -1,30 +1,25 @@
-import { FaBook, FaPhotoVideo, FaVideo, FaPencilAlt } from "react-icons/fa";
-import {
-  BOOK_ROUTE,
-  CONSPECTS_ROUTE,
-  PREZENTATIONS_ROUTE,
-  VIDEO_ROUTE,
-} from "../routes";
+import * as route from 'src/routesNames'
+import { FaBook, FaPhotoVideo, FaVideo, FaPencilAlt } from 'react-icons/fa'
 
 export const headerNav = [
   {
-    key: BOOK_ROUTE,
+    key: route.BOOK_ROUTE,
     icon: <FaBook className="icon" />,
-    label: "Учебник",
+    label: 'Учебник'
   },
   {
-    key: VIDEO_ROUTE,
+    key: route.VIDEO_ROUTE,
     icon: <FaVideo className="icon" />,
-    label: "Видео",
+    label: 'Видео'
   },
   {
-    key: PREZENTATIONS_ROUTE,
+    key: route.PREZENTATIONS_ROUTE,
     icon: <FaPhotoVideo className="icon" />,
-    label: "Презентации",
+    label: 'Презентации'
   },
   {
-    key: CONSPECTS_ROUTE,
+    key: route.CONSPECTS_ROUTE,
     icon: <FaPencilAlt className="icon" />,
-    label: "Конспекты",
-  },
-];
+    label: 'Конспекты'
+  }
+]

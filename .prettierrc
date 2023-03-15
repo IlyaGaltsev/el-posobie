@@ -9,5 +9,5 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "singleAttributePerLine": true
+  "singleQuote": true
 }

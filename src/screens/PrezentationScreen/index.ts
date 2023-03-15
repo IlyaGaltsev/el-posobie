@@ -1,0 +1,1 @@
+export { PrezentationScreen } from './PrezentationScreen'
