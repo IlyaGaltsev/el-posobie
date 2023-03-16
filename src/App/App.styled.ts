@@ -1,4 +1,4 @@
-import { Drawer } from '@mui/material'
+import { BottomNavigation, Drawer } from '@mui/material'
 import styled from 'styled-components'
 import { device, maxContent } from '../constants/style/breakpoints'
 
@@ -7,6 +7,12 @@ export const App = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`
+
+export const BottomTabNavigation = styled(BottomNavigation)`
+  position: sticky;
+  bottom: 0;
+  width: 100%;
 `
 
 export const Body = styled.div`

@@ -8,9 +8,6 @@ import * as S from './BookScreen.styled'
 import { useState } from 'react'
 import './BookScreen.scss'
 import type { MenuProps } from 'antd'
-// import { Menu } from '@mui/material'
-
-// type MenuItem = Required<MenuProps>['items'][number]
 
 const BookScreen = () => {
   const [open, setOpen] = useState(false)
@@ -45,6 +42,7 @@ const BookScreen = () => {
   }
 
   const [openKeys, setOpenKeys] = useState(['sub1'])
+  console.log(window.innerWidth)
 
   return (
     <div className="book-screen">
