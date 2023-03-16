@@ -1,5 +1,4 @@
 import {
-  BottomNavigation,
   BottomNavigationAction,
   List,
   ListItem,
@@ -76,18 +75,20 @@ const App = () => {
             })}
           </Routes>
         </S.Body>
-        <BottomNavigation
-          showLabels
-          value={value}
-          onChange={(event, newValue) => {
-            console.log(newValue)
-            setValue(newValue)
-          }}
-        >
-          {headerNav.map(({ key, label, icon }) => {
-            return <BottomNavigationAction key={key} label={label} icon={icon} />
-          })}
-        </BottomNavigation>
+        {window.innerWidth < 500 && (
+          <S.BottomTabNavigation
+            showLabels
+            value={value}
+            onChange={(event, newValue) => {
+              console.log(newValue)
+              setValue(newValue)
+            }}
+          >
+            {headerNav.map(({ key, label, icon }) => {
+              return <BottomNavigationAction key={key} label={label} icon={icon} />
+            })}
+          </S.BottomTabNavigation>
+        )}
       </S.App>
     </ConfigProvider>
   )
