@@ -1,13 +1,13 @@
 import { MdArrowBackIosNew, MdMenu } from 'react-icons/md'
-import { tutorialSection } from '../../assets/data/data'
 import { size } from '../../constants/style/breakpoints'
-import { PageBook } from '../../components/PageBook'
 import { SideBar } from '../../components/SideBar'
 import { navBook } from '../../constants/navBook'
 import * as S from './BookScreen.styled'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './BookScreen.scss'
 import type { MenuProps } from 'antd'
+import Book from 'src/assets/data/Book'
+// import { observer } from './findsection'
 
 const BookScreen = () => {
   const [open, setOpen] = useState(false)
@@ -17,16 +17,6 @@ const BookScreen = () => {
     document
       .getElementById('top')
       ?.scrollIntoView(window.innerWidth > size.laptopS && { block: 'center', behavior: 'smooth' })
-  }
-
-  const onPrev = () => {
-    setCurrentValue(currentValue - 1)
-    scrollToTop()
-  }
-
-  const onNext = () => {
-    setCurrentValue(currentValue + 1)
-    scrollToTop()
   }
 
   const showDrawer = () => {
@@ -43,6 +33,45 @@ const BookScreen = () => {
 
   const [openKeys, setOpenKeys] = useState(['sub1'])
   console.log(window.innerWidth)
+
+  const observer = new IntersectionObserver(
+    entries => {
+      console.log('ddd', entries)
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // ? id=""
+          console.log(entry.target.id)
+
+          onClick({
+            key: entry.target.id,
+            keyPath: [],
+            item: undefined,
+            domEvent: undefined
+          })
+          // document.querySelectorAll('.nav__link').forEach(link => {
+          //   const id = link?.getAttribute('href').replace('#', '')
+          //   if (id === entry.target.id) {
+          //     link.classList.add('nav__link--active')
+          //   } else {
+          //     link.classList.remove('nav__link--active')
+          //   }
+          // })
+        }
+      })
+    },
+    {
+      threshold: 0
+    }
+  )
+
+  useEffect(() => {
+    // console.log(observer)
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section)
+      // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
+      console.log(observer, observer.observe(section))
+    })
+  }, [])
 
   return (
     <div className="book-screen">
@@ -71,13 +100,7 @@ const BookScreen = () => {
               defaultOpenKeys={['1']}
               mode="inline"
             />
-            <PageBook
-              {...tutorialSection[currentValue]}
-              onPrev={onPrev}
-              onNext={onNext}
-              minLenght={1}
-              maxLenght={tutorialSection.length - 1}
-            />
+            <Book />
           </S.Row>
           <S.ButtonUp onClick={scrollToTop}>
             <MdArrowBackIosNew style={{ rotate: '90deg' }} />
