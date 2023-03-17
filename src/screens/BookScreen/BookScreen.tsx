@@ -31,6 +31,15 @@ const BookScreen = () => {
     setCurrentValue(Number(e.key))
   }
 
+  const onClickSidebar: MenuProps['onClick'] = e => {
+    setCurrentValue(Number(e.key))
+    document.getElementById(String(e.key))?.scrollIntoView({
+      // behavior: 'smooth',
+      block: 'start'
+      //  inline: 'nearest'
+    })
+  }
+
   const [openKeys, setOpenKeys] = useState(['sub1'])
   console.log(window.innerWidth)
 
@@ -77,7 +86,7 @@ const BookScreen = () => {
     <div className="book-screen">
       <div className="book-screen__wrapper">
         <SideBar
-          selectPageBook={onClick}
+          selectPageBook={onClickSidebar}
           setOpen={setOpen}
           open={open}
           selectValue={currentValue}
@@ -96,7 +105,7 @@ const BookScreen = () => {
               openKeys={openKeys}
               defaultSelectedKeys={[String(currentValue)]}
               selectedKeys={[String(currentValue)]}
-              onClick={onClick}
+              onClick={onClickSidebar}
               defaultOpenKeys={['1']}
               mode="inline"
             />
