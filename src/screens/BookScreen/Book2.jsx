@@ -1,326 +1,83 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
-const Book = () => {
+/* eslint-disable react/jsx-filename-extension */
+import wallpaper from '../../assets/images/title.jpg'
+import wallpaper2 from '../../assets/images/title2.jpg'
+import { massPrez } from 'src/assets/data/massPrez'
+import { massConspects } from 'src/assets/data/massConspects'
+import massVideo from 'src/assets/data/massVideo'
+import { useContext, useState } from 'react'
+import { AppContext } from 'src/context/AppContext'
+import { fontSizes } from 'src/constants/fontSizes'
+
+const Book2 = ({ linkConspects, linkVideo, linkPrezentation }) => {
+  const { fontSizeTheme } = useContext(AppContext)
   return (
-    // eslint-disable-next-line react/jsx-filename-extension
-    <div style={{ maxWidth: 700, width: window.innerWidth - 24 }}>
+    <div
+      style={{
+        maxWidth: fontSizeTheme === fontSizes[0] ? 800 : 1200,
+        width: "calc('100%' - 24 - 24)",
+        overflow: 'hidden',
+        position: 'relative'
+        // transform: 'scale(1.2)'
+      }}
+    >
       <meta content="text/html; charset=UTF-8" httpEquiv="content-type" />
       <style
         type="text/css"
         dangerouslySetInnerHTML={{
           __html:
-            '@import url(\'https://themes.googleusercontent.com/fonts/css?kit=fpjTOVmNbO4Lz34iLyptLTi9jKYd1gJzj5O2gWsEpXol-nTHck7FFkZplK5meosG\');.lst-kix_list_2-6>li:before{content:"\\0025cf  "}.lst-kix_list_2-7>li:before{content:"o  "}ul.lst-kix_list_1-0{list-style-type:none}.lst-kix_list_2-4>li:before{content:"o  "}.lst-kix_list_2-5>li:before{content:"\\0025aa  "}.lst-kix_list_2-8>li:before{content:"\\0025aa  "}.lst-kix_list_3-0>li:before{content:"\\002022  "}ul.lst-kix_list_5-7{list-style-type:none}ul.lst-kix_list_5-8{list-style-type:none}.lst-kix_list_3-1>li:before{content:"o  "}.lst-kix_list_3-2>li:before{content:"\\0025aa  "}ul.lst-kix_list_5-5{list-style-type:none}ul.lst-kix_list_3-7{list-style-type:none}ul.lst-kix_list_5-6{list-style-type:none}ul.lst-kix_list_3-8{list-style-type:none}ul.lst-kix_list_1-3{list-style-type:none}ul.lst-kix_list_3-1{list-style-type:none}.lst-kix_list_3-5>li:before{content:"\\0025aa  "}ul.lst-kix_list_5-0{list-style-type:none}ul.lst-kix_list_1-4{list-style-type:none}ul.lst-kix_list_3-2{list-style-type:none}ul.lst-kix_list_1-1{list-style-type:none}.lst-kix_list_3-4>li:before{content:"o  "}ul.lst-kix_list_1-2{list-style-type:none}ul.lst-kix_list_3-0{list-style-type:none}ul.lst-kix_list_5-3{list-style-type:none}ul.lst-kix_list_1-7{list-style-type:none}.lst-kix_list_3-3>li:before{content:"\\0025cf  "}ul.lst-kix_list_3-5{list-style-type:none}ul.lst-kix_list_5-4{list-style-type:none}ul.lst-kix_list_1-8{list-style-type:none}ul.lst-kix_list_3-6{list-style-type:none}ul.lst-kix_list_5-1{list-style-type:none}ul.lst-kix_list_1-5{list-style-type:none}ul.lst-kix_list_3-3{list-style-type:none}ul.lst-kix_list_5-2{list-style-type:none}ul.lst-kix_list_1-6{list-style-type:none}ul.lst-kix_list_3-4{list-style-type:none}.lst-kix_list_3-8>li:before{content:"\\0025aa  "}.lst-kix_list_4-0>li:before{content:"\\002022  "}.lst-kix_list_4-1>li:before{content:"o  "}.lst-kix_list_3-6>li:before{content:"\\0025cf  "}.lst-kix_list_3-7>li:before{content:"o  "}.lst-kix_list_4-4>li:before{content:"o  "}.lst-kix_list_4-3>li:before{content:"\\0025cf  "}.lst-kix_list_4-5>li:before{content:"\\0025aa  "}.lst-kix_list_4-2>li:before{content:"\\0025aa  "}.lst-kix_list_4-6>li:before{content:"\\0025cf  "}.lst-kix_list_5-0>li:before{content:"\\002022  "}.lst-kix_list_4-8>li:before{content:"\\0025aa  "}.lst-kix_list_5-3>li:before{content:"\\0025cf  "}.lst-kix_list_4-7>li:before{content:"o  "}.lst-kix_list_5-2>li:before{content:"\\0025aa  "}.lst-kix_list_5-1>li:before{content:"o  "}ul.lst-kix_list_4-8{list-style-type:none}.lst-kix_list_5-7>li:before{content:"o  "}ul.lst-kix_list_4-6{list-style-type:none}.lst-kix_list_5-6>li:before{content:"\\0025cf  "}.lst-kix_list_5-8>li:before{content:"\\0025aa  "}ul.lst-kix_list_2-8{list-style-type:none}ul.lst-kix_list_4-7{list-style-type:none}ul.lst-kix_list_4-0{list-style-type:none}ul.lst-kix_list_2-2{list-style-type:none}ul.lst-kix_list_4-1{list-style-type:none}.lst-kix_list_1-0>li:before{content:"\\0025cf  "}ul.lst-kix_list_2-3{list-style-type:none}.lst-kix_list_5-4>li:before{content:"o  "}ul.lst-kix_list_2-0{list-style-type:none}ul.lst-kix_list_2-1{list-style-type:none}ul.lst-kix_list_4-4{list-style-type:none}.lst-kix_list_5-5>li:before{content:"\\0025aa  "}ul.lst-kix_list_2-6{list-style-type:none}ul.lst-kix_list_4-5{list-style-type:none}.lst-kix_list_1-1>li:before{content:"o  "}.lst-kix_list_1-2>li:before{content:"\\0025aa  "}ul.lst-kix_list_2-7{list-style-type:none}ul.lst-kix_list_4-2{list-style-type:none}ul.lst-kix_list_2-4{list-style-type:none}ul.lst-kix_list_4-3{list-style-type:none}ul.lst-kix_list_2-5{list-style-type:none}.lst-kix_list_1-3>li:before{content:"\\0025cf  "}.lst-kix_list_1-4>li:before{content:"o  "}.lst-kix_list_1-7>li:before{content:"o  "}.lst-kix_list_1-5>li:before{content:"\\0025aa  "}.lst-kix_list_1-6>li:before{content:"\\0025cf  "}.lst-kix_list_2-0>li:before{content:"\\002022  "}.lst-kix_list_2-1>li:before{content:"o  "}.lst-kix_list_1-8>li:before{content:"\\0025aa  "}.lst-kix_list_2-2>li:before{content:"\\0025aa  "}.lst-kix_list_2-3>li:before{content:"\\0025cf  "}ol{margin:0;padding:0}table td,table th{padding:0}.c2{padding-top:0pt;text-indent:42.5pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify;height:11pt}.c1{padding-top:0pt;text-indent:35.5pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c8{padding-top:0pt;text-indent:35.5pt;padding-bottom:0pt;line-height:1.0;orphans:2;widows:2;text-align:justify}.c3{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:center;height:11pt}.c34{padding-top:2pt;padding-bottom:0pt;line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:center}.c5{padding-top:0pt;text-indent:42.5pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c15{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Times New Roman";font-style:normal}.c0{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Times New Roman";font-style:normal}.c7{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Times New Roman";font-style:normal}.c32{padding-top:0pt;padding-bottom:10pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:center}.c22{padding-top:0pt;padding-bottom:0pt;line-height:1.0999999999999999;orphans:2;widows:2;text-align:justify}.c17{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:left}.c13{-webkit-text-decoration-skip:none;color:#000000;text-decoration:underline;vertical-align:baseline;text-decoration-skip-ink:none;font-style:normal}.c9{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c35{padding-top:0pt;padding-bottom:0pt;line-height:1.0999999999999999;orphans:2;widows:2;text-align:center}.c26{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:center}.c28{font-weight:700;font-size:18pt;font-family:"Times New Roman";font-style:normal}.c27{font-weight:700;font-size:12pt;font-family:"Times New Roman";font-style:normal}.c6{font-size:14pt;font-family:"Times New Roman";font-style:italic;font-weight:400}.c42{font-weight:700;font-size:10pt;font-family:"Times New Roman";font-style:normal}.c31{font-weight:700;font-size:12pt;font-family:"Times New Roman";font-style:italic}.c40{font-weight:400;font-size:11pt;font-family:"Calibri";font-style:normal}.c29{font-weight:700;font-size:11pt;font-family:"Times New Roman";font-style:normal}.c25{font-weight:400;font-size:18pt;font-family:"Times New Roman";font-style:normal}.c24{-webkit-text-decoration-skip:none;text-decoration:underline;text-decoration-skip-ink:none}.c16{color:#000000;text-decoration:none;vertical-align:baseline}.c41{font-size:12pt;font-family:"Times New Roman";font-weight:400}.c10{font-size:14pt;font-family:"Times New Roman";font-weight:400}.c11{font-size:14pt;font-family:"Times New Roman";font-weight:700}.c37{font-size:12pt;font-family:"Times New Roman";font-weight:700}.c4{margin-left:0pt;list-style-position:inside}.c21{color:inherit;text-decoration:inherit}.c20{padding:0;margin:0}.c30{max-width:467.7pt;padding:56.7pt 42.5pt 56.7pt 85pt}.c23{text-indent:35.5pt}.c36{text-indent:36pt}.c14{height:11pt}.c18{background-color:#ffffff}.c19{background-color:#ff00ff}.c33{background-color:#ffff00}.c38{margin-left:35.5pt}.c12{text-indent:42.5pt}.c39{text-indent:-35.5pt}.title{padding-top:24pt;color:#000000;font-weight:700;font-size:36pt;padding-bottom:6pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:18pt;color:#666666;font-size:24pt;padding-bottom:4pt;font-family:"Georgia";line-height:1.1500000000000001;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Calibri"}p{margin:0;color:#000000;font-size:11pt;font-family:"Calibri"}h1{padding-top:24pt;color:#000000;font-weight:700;font-size:24pt;padding-bottom:6pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-weight:700;font-size:18pt;padding-bottom:4pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:2pt;color:#243f61;font-size:12pt;padding-bottom:0pt;font-family:"Cambria";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:12pt;color:#000000;font-weight:700;font-size:12pt;padding-bottom:2pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:11pt;color:#000000;font-weight:700;font-size:11pt;padding-bottom:2pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:10pt;color:#000000;font-weight:700;font-size:10pt;padding-bottom:2pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}'
+            fontSizeTheme === fontSizes[0]
+              ? '@import url(\'https://themes.googleusercontent.com/fonts/css?kit=fpjTOVmNbO4Lz34iLyptLTi9jKYd1gJzj5O2gWsEpXol-nTHck7FFkZplK5meosG\');.lst-kix_list_2-6>li:before{content:"\\0025cf  "}.lst-kix_list_2-7>li:before{content:"o  "}ul.lst-kix_list_1-0{list-style-type:none}.lst-kix_list_2-4>li:before{content:"o  "}.lst-kix_list_2-5>li:before{content:"\\0025aa  "}.lst-kix_list_2-8>li:before{content:"\\0025aa  "}.lst-kix_list_3-0>li:before{content:"\\002022  "}ul.lst-kix_list_5-7{list-style-type:none}ul.lst-kix_list_5-8{list-style-type:none}.lst-kix_list_3-1>li:before{content:"o  "}.lst-kix_list_3-2>li:before{content:"\\0025aa  "}ul.lst-kix_list_5-5{list-style-type:none}ul.lst-kix_list_3-7{list-style-type:none}ul.lst-kix_list_5-6{list-style-type:none}ul.lst-kix_list_3-8{list-style-type:none}ul.lst-kix_list_1-3{list-style-type:none}ul.lst-kix_list_3-1{list-style-type:none}.lst-kix_list_3-5>li:before{content:"\\0025aa  "}ul.lst-kix_list_5-0{list-style-type:none}ul.lst-kix_list_1-4{list-style-type:none}ul.lst-kix_list_3-2{list-style-type:none}ul.lst-kix_list_1-1{list-style-type:none}.lst-kix_list_3-4>li:before{content:"o  "}ul.lst-kix_list_1-2{list-style-type:none}ul.lst-kix_list_3-0{list-style-type:none}ul.lst-kix_list_5-3{list-style-type:none}ul.lst-kix_list_1-7{list-style-type:none}.lst-kix_list_3-3>li:before{content:"\\0025cf  "}ul.lst-kix_list_3-5{list-style-type:none}ul.lst-kix_list_5-4{list-style-type:none}ul.lst-kix_list_1-8{list-style-type:none}ul.lst-kix_list_3-6{list-style-type:none}ul.lst-kix_list_5-1{list-style-type:none}ul.lst-kix_list_1-5{list-style-type:none}ul.lst-kix_list_3-3{list-style-type:none}ul.lst-kix_list_5-2{list-style-type:none}ul.lst-kix_list_1-6{list-style-type:none}ul.lst-kix_list_3-4{list-style-type:none}.lst-kix_list_3-8>li:before{content:"\\0025aa  "}.lst-kix_list_4-0>li:before{content:"\\002022  "}.lst-kix_list_4-1>li:before{content:"o  "}.lst-kix_list_3-6>li:before{content:"\\0025cf  "}.lst-kix_list_3-7>li:before{content:"o  "}.lst-kix_list_4-4>li:before{content:"o  "}.lst-kix_list_4-3>li:before{content:"\\0025cf  "}.lst-kix_list_4-5>li:before{content:"\\0025aa  "}.lst-kix_list_4-2>li:before{content:"\\0025aa  "}.lst-kix_list_4-6>li:before{content:"\\0025cf  "}.lst-kix_list_5-0>li:before{content:"\\002022  "}.lst-kix_list_4-8>li:before{content:"\\0025aa  "}.lst-kix_list_5-3>li:before{content:"\\0025cf  "}.lst-kix_list_4-7>li:before{content:"o  "}.lst-kix_list_5-2>li:before{content:"\\0025aa  "}.lst-kix_list_5-1>li:before{content:"o  "}ul.lst-kix_list_4-8{list-style-type:none}.lst-kix_list_5-7>li:before{content:"o  "}ul.lst-kix_list_4-6{list-style-type:none}.lst-kix_list_5-6>li:before{content:"\\0025cf  "}.lst-kix_list_5-8>li:before{content:"\\0025aa  "}ul.lst-kix_list_2-8{list-style-type:none}ul.lst-kix_list_4-7{list-style-type:none}ul.lst-kix_list_4-0{list-style-type:none}ul.lst-kix_list_2-2{list-style-type:none}ul.lst-kix_list_4-1{list-style-type:none}.lst-kix_list_1-0>li:before{content:"\\0025cf  "}ul.lst-kix_list_2-3{list-style-type:none}.lst-kix_list_5-4>li:before{content:"o  "}ul.lst-kix_list_2-0{list-style-type:none}ul.lst-kix_list_2-1{list-style-type:none}ul.lst-kix_list_4-4{list-style-type:none}.lst-kix_list_5-5>li:before{content:"\\0025aa  "}ul.lst-kix_list_2-6{list-style-type:none}ul.lst-kix_list_4-5{list-style-type:none}.lst-kix_list_1-1>li:before{content:"o  "}.lst-kix_list_1-2>li:before{content:"\\0025aa  "}ul.lst-kix_list_2-7{list-style-type:none}ul.lst-kix_list_4-2{list-style-type:none}ul.lst-kix_list_2-4{list-style-type:none}ul.lst-kix_list_4-3{list-style-type:none}ul.lst-kix_list_2-5{list-style-type:none}.lst-kix_list_1-3>li:before{content:"\\0025cf  "}.lst-kix_list_1-4>li:before{content:"o  "}.lst-kix_list_1-7>li:before{content:"o  "}.lst-kix_list_1-5>li:before{content:"\\0025aa  "}.lst-kix_list_1-6>li:before{content:"\\0025cf  "}.lst-kix_list_2-0>li:before{content:"\\002022  "}.lst-kix_list_2-1>li:before{content:"o  "}.lst-kix_list_1-8>li:before{content:"\\0025aa  "}.lst-kix_list_2-2>li:before{content:"\\0025aa  "}.lst-kix_list_2-3>li:before{content:"\\0025cf  "}ol{margin:0;padding:0}table td,table th{padding:0}.c6{padding-top:0pt;text-indent:35.5pt;padding-bottom:0pt;line-height:1.0999999999999999;orphans:2;widows:2;text-align:justify}.c9{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Times New Roman";font-style:normal}.c0{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Times New Roman";font-style:normal}.c1{padding-top:0pt;text-indent:35.5pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c10{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:center;height:11pt}.c12{padding-top:0pt;text-indent:35.5pt;padding-bottom:0pt;line-height:1.0;orphans:2;widows:2;text-align:justify}.c18{background-color:#ffffff;padding-top:0pt;padding-bottom:0pt;line-height:1.0999999999999999;orphans:2;widows:2;text-align:center}.c20{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Times New Roman";font-style:normal}.c42{padding-top:2pt;padding-bottom:0pt;line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:center}.c4{padding-top:0pt;text-indent:42.5pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c16{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Times New Roman";font-style:normal}.c3{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Calibri";font-style:normal}.c13{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Times New Roman";font-style:normal}.c25{padding-top:0pt;padding-bottom:0pt;line-height:1.0999999999999999;orphans:2;widows:2;text-align:justify}.c24{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c22{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:center}.c38{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:left}.c36{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:right}.c37{padding-top:0pt;padding-bottom:10pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:center}.c26{font-weight:400;text-decoration:none;font-size:12pt;font-family:"Times New Roman"}.c30{color:#366091;text-decoration:none;vertical-align:baseline;font-style:normal}.c41{font-weight:700;font-size:11pt;font-family:"Calibri"}.c45{font-weight:700;font-size:20pt;font-family:"Times New Roman"}.c52{font-weight:700;font-size:11pt;font-family:"Times New Roman"}.c34{color:#000000;text-decoration:none;vertical-align:baseline}.c21{color:#000000;vertical-align:baseline;font-style:normal}.c2{font-size:14pt;font-family:"Times New Roman";font-weight:400}.c32{font-size:12pt;font-family:"Times New Roman";font-weight:700}.c54{font-weight:400;font-size:10pt;font-family:"Courier New"}.c48{font-size:12pt;font-family:"Times New Roman";font-weight:400}.c39{font-weight:700;font-size:16pt;font-family:"Times New Roman"}.c19{-webkit-text-decoration-skip:none;text-decoration:underline;text-decoration-skip-ink:none}.c50{font-weight:700;font-size:10pt;font-family:"Times New Roman"}.c11{font-size:14pt;font-family:"Times New Roman";font-weight:700}.c49{margin-left:-35.5pt;margin-right:-7.2pt}.c8{color:inherit;text-decoration:inherit}.c40{color:#000000;text-decoration:none}.c33{margin-left:35.5pt;text-indent:-35.5pt}.c5{padding:0;margin:0}.c17{margin-left:0pt;list-style-position:inside}.c44{max-width:467.7pt;padding:56.7pt 42.5pt 56.7pt 85pt}.c47{margin-left:35.5pt}.c15{height:11pt}.c46{text-indent:35.5pt}.c23{background-color:#ffff00}.c14{font-style:italic}.c53{page-break-after:avoid}.c35{background-color:#ffffff}.c28{text-indent:42.5pt}.c29{margin-left:-14.2pt}.c7{background-color:#ff00ff}.c31{font-style:normal}.c43{color:#ff0000}.c55{font-size:14pt}.c27{margin-left:-21.3pt}.c51{color:#000000}.title{padding-top:24pt;color:#000000;font-weight:700;font-size:36pt;padding-bottom:6pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:18pt;color:#666666;font-size:24pt;padding-bottom:4pt;font-family:"Georgia";line-height:1.1500000000000001;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Calibri"}p{margin:0;color:#000000;font-size:11pt;font-family:"Calibri"}h1{padding-top:12pt;color:#366091;font-size:16pt;padding-bottom:0pt;font-family:"Cambria";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-weight:700;font-size:18pt;padding-bottom:4pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:2pt;color:#243f61;font-size:12pt;padding-bottom:0pt;font-family:"Cambria";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:12pt;color:#000000;font-weight:700;font-size:12pt;padding-bottom:2pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:11pt;color:#000000;font-weight:700;font-size:11pt;padding-bottom:2pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:10pt;color:#000000;font-weight:700;font-size:10pt;padding-bottom:2pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}'
+              : '@import url(\'https://themes.googleusercontent.com/fonts/css?kit=fpjTOVmNbO4Lz34iLyptLTi9jKYd1gJzj5O2gWsEpXol-nTHck7FFkZplK5meosG\');.lst-kix_list_2-6>li:before{content:"\\0025cf  "}.lst-kix_list_2-7>li:before{content:"o  "}ul.lst-kix_list_1-0{list-style-type:none}.lst-kix_list_2-4>li:before{content:"o  "}.lst-kix_list_2-5>li:before{content:"\\0025aa  "}.lst-kix_list_2-8>li:before{content:"\\0025aa  "}.lst-kix_list_3-0>li:before{content:"\\002022  "}ul.lst-kix_list_5-7{list-style-type:none}ul.lst-kix_list_5-8{list-style-type:none}.lst-kix_list_3-1>li:before{content:"o  "}.lst-kix_list_3-2>li:before{content:"\\0025aa  "}ul.lst-kix_list_5-5{list-style-type:none}ul.lst-kix_list_3-7{list-style-type:none}ul.lst-kix_list_5-6{list-style-type:none}ul.lst-kix_list_3-8{list-style-type:none}ul.lst-kix_list_1-3{list-style-type:none}ul.lst-kix_list_3-1{list-style-type:none}.lst-kix_list_3-5>li:before{content:"\\0025aa  "}ul.lst-kix_list_5-0{list-style-type:none}ul.lst-kix_list_1-4{list-style-type:none}ul.lst-kix_list_3-2{list-style-type:none}ul.lst-kix_list_1-1{list-style-type:none}.lst-kix_list_3-4>li:before{content:"o  "}ul.lst-kix_list_1-2{list-style-type:none}ul.lst-kix_list_3-0{list-style-type:none}ul.lst-kix_list_5-3{list-style-type:none}ul.lst-kix_list_1-7{list-style-type:none}.lst-kix_list_3-3>li:before{content:"\\0025cf  "}ul.lst-kix_list_3-5{list-style-type:none}ul.lst-kix_list_5-4{list-style-type:none}ul.lst-kix_list_1-8{list-style-type:none}ul.lst-kix_list_3-6{list-style-type:none}ul.lst-kix_list_5-1{list-style-type:none}ul.lst-kix_list_1-5{list-style-type:none}ul.lst-kix_list_3-3{list-style-type:none}ul.lst-kix_list_5-2{list-style-type:none}ul.lst-kix_list_1-6{list-style-type:none}ul.lst-kix_list_3-4{list-style-type:none}.lst-kix_list_3-8>li:before{content:"\\0025aa  "}.lst-kix_list_4-0>li:before{content:"\\002022  "}.lst-kix_list_4-1>li:before{content:"o  "}.lst-kix_list_3-6>li:before{content:"\\0025cf  "}.lst-kix_list_3-7>li:before{content:"o  "}.lst-kix_list_4-4>li:before{content:"o  "}.lst-kix_list_4-3>li:before{content:"\\0025cf  "}.lst-kix_list_4-5>li:before{content:"\\0025aa  "}.lst-kix_list_4-2>li:before{content:"\\0025aa  "}.lst-kix_list_4-6>li:before{content:"\\0025cf  "}.lst-kix_list_5-0>li:before{content:"\\002022  "}.lst-kix_list_4-8>li:before{content:"\\0025aa  "}.lst-kix_list_5-3>li:before{content:"\\0025cf  "}.lst-kix_list_4-7>li:before{content:"o  "}.lst-kix_list_5-2>li:before{content:"\\0025aa  "}.lst-kix_list_5-1>li:before{content:"o  "}ul.lst-kix_list_4-8{list-style-type:none}.lst-kix_list_5-7>li:before{content:"o  "}ul.lst-kix_list_4-6{list-style-type:none}.lst-kix_list_5-6>li:before{content:"\\0025cf  "}.lst-kix_list_5-8>li:before{content:"\\0025aa  "}ul.lst-kix_list_2-8{list-style-type:none}ul.lst-kix_list_4-7{list-style-type:none}ul.lst-kix_list_4-0{list-style-type:none}ul.lst-kix_list_2-2{list-style-type:none}ul.lst-kix_list_4-1{list-style-type:none}.lst-kix_list_1-0>li:before{content:"\\0025cf  "}ul.lst-kix_list_2-3{list-style-type:none}.lst-kix_list_5-4>li:before{content:"o  "}ul.lst-kix_list_2-0{list-style-type:none}ul.lst-kix_list_2-1{list-style-type:none}ul.lst-kix_list_4-4{list-style-type:none}.lst-kix_list_5-5>li:before{content:"\\0025aa  "}ul.lst-kix_list_2-6{list-style-type:none}ul.lst-kix_list_4-5{list-style-type:none}.lst-kix_list_1-1>li:before{content:"o  "}.lst-kix_list_1-2>li:before{content:"\\0025aa  "}ul.lst-kix_list_2-7{list-style-type:none}ul.lst-kix_list_4-2{list-style-type:none}ul.lst-kix_list_2-4{list-style-type:none}ul.lst-kix_list_4-3{list-style-type:none}ul.lst-kix_list_2-5{list-style-type:none}.lst-kix_list_1-3>li:before{content:"\\0025cf  "}.lst-kix_list_1-4>li:before{content:"o  "}.lst-kix_list_1-7>li:before{content:"o  "}.lst-kix_list_1-5>li:before{content:"\\0025aa  "}.lst-kix_list_1-6>li:before{content:"\\0025cf  "}.lst-kix_list_2-0>li:before{content:"\\002022  "}.lst-kix_list_2-1>li:before{content:"o  "}.lst-kix_list_1-8>li:before{content:"\\0025aa  "}.lst-kix_list_2-2>li:before{content:"\\0025aa  "}.lst-kix_list_2-3>li:before{content:"\\0025cf  "}ol{margin:0;padding:0}table td,table th{padding:0}.c6{padding-top:0pt;text-indent:35.5pt;padding-bottom:0pt;line-height:1.0999999999999999;orphans:2;widows:2;text-align:justify}.c9{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:22pt;font-family:"Times New Roman";font-style:normal}.c0{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:22pt;font-family:"Times New Roman";font-style:normal}.c1{padding-top:0pt;text-indent:35.5pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c10{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:center;height:11pt}.c12{padding-top:0pt;text-indent:35.5pt;padding-bottom:0pt;line-height:1.0;orphans:2;widows:2;text-align:justify}.c18{background-color:#ffffff;padding-top:0pt;padding-bottom:0pt;line-height:1.0999999999999999;orphans:2;widows:2;text-align:center}.c20{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Times New Roman";font-style:normal}.c42{padding-top:2pt;padding-bottom:0pt;line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:center}.c4{padding-top:0pt;text-indent:42.5pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c16{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Times New Roman";font-style:normal}.c3{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Calibri";font-style:normal}.c13{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Times New Roman";font-style:normal}.c25{padding-top:0pt;padding-bottom:0pt;line-height:1.0999999999999999;orphans:2;widows:2;text-align:justify}.c24{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c22{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:center}.c38{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:left}.c36{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:right}.c37{padding-top:0pt;padding-bottom:10pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:center}.c26{font-weight:400;text-decoration:none;font-size:12pt;font-family:"Times New Roman"}.c30{color:#366091;text-decoration:none;vertical-align:baseline;font-style:normal}.c41{font-weight:700;font-size:11pt;font-family:"Calibri"}.c45{font-weight:700;font-size:20pt;font-family:"Times New Roman"}.c52{font-weight:700;font-size:11pt;font-family:"Times New Roman"}.c34{color:#000000;text-decoration:none;vertical-align:baseline}.c21{color:#000000;vertical-align:baseline;font-style:normal}.c2{font-size:22pt;font-family:"Times New Roman";font-weight:400}.c32{font-size:12pt;font-family:"Times New Roman";font-weight:700}.c54{font-weight:400;font-size:10pt;font-family:"Courier New"}.c48{font-size:12pt;font-family:"Times New Roman";font-weight:400}.c39{font-weight:700;font-size:16pt;font-family:"Times New Roman"}.c19{-webkit-text-decoration-skip:none;text-decoration:underline;text-decoration-skip-ink:none}.c50{font-weight:700;font-size:10pt;font-family:"Times New Roman"}.c11{font-size:22pt;font-family:"Times New Roman";font-weight:700}.c49{margin-left:-35.5pt;margin-right:-7.2pt}.c8{color:inherit;text-decoration:inherit}.c40{color:#000000;text-decoration:none}.c33{margin-left:35.5pt;text-indent:-35.5pt}.c5{padding:0;margin:0}.c17{margin-left:0pt;list-style-position:inside}.c44{max-width:467.7pt;padding:56.7pt 42.5pt 56.7pt 85pt}.c47{margin-left:35.5pt}.c15{height:11pt}.c46{text-indent:35.5pt}.c23{background-color:#ffff00}.c14{font-style:italic}.c53{page-break-after:avoid}.c35{background-color:#ffffff}.c28{text-indent:42.5pt}.c29{margin-left:-14.2pt}.c7{background-color:#ff00ff}.c31{font-style:normal}.c43{color:#ff0000}.c55{font-size:22pt}.c27{margin-left:-21.3pt}.c51{color:#000000}.title{padding-top:24pt;color:#000000;font-weight:700;font-size:36pt;padding-bottom:6pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:18pt;color:#666666;font-size:24pt;padding-bottom:4pt;font-family:"Georgia";line-height:1.1500000000000001;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Calibri"}p{margin:0;color:#000000;font-size:11pt;font-family:"Calibri"}h1{padding-top:12pt;color:#366091;font-size:16pt;padding-bottom:0pt;font-family:"Cambria";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-weight:700;font-size:18pt;padding-bottom:4pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:2pt;color:#243f61;font-size:12pt;padding-bottom:0pt;font-family:"Cambria";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:12pt;color:#000000;font-weight:700;font-size:12pt;padding-bottom:2pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:11pt;color:#000000;font-weight:700;font-size:11pt;padding-bottom:2pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:10pt;color:#000000;font-weight:700;font-size:10pt;padding-bottom:2pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}'
         }}
       />
-      <p className="c26">
-        <span className="c29 c16">МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ </span>
-      </p>
-      <p className="c26">
-        <span className="c29 c16">РОССИЙСКОЙ ФЕДЕРАЦИИ</span>
-      </p>
-      <p className="c3">
-        <span className="c0" />
-      </p>
-      <p className="c26">
-        <span className="c16 c29">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ </span>
-      </p>
-      <p className="c26">
-        <span className="c29 c16">ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ</span>
-      </p>
-      <p className="c26">
-        <span className="c29 c16">
-          «ТАМБОВСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ ИМЕНИ Г.Р. ДЕРЖАВИНА»
-        </span>
-      </p>
-      <p className="c3">
-        <span className="c0" />
-      </p>
-      <p className="c3">
-        <span className="c0" />
-      </p>
-      <p className="c3">
-        <span className="c0" />
-      </p>
-      <p className="c3">
-        <span className="c0" />
-      </p>
-      <p className="c3">
-        <span className="c0" />
-      </p>
-      <p className="c3">
-        <span className="c0" />
-      </p>
-      <p className="c3">
-        <span className="c0" />
-      </p>
-      <p className="c26">
-        <span className="c7">
-          Г.С. Богомолов, А.Н. Лосев, С.В. Новиков, С.А. Гатальский, О.В. Михайлов, А.А. Иванков
-        </span>
-      </p>
-      <p className="c3">
-        <span className="c15" />
-      </p>
-      <p className="c26">
-        <span className="c11">
-          ПОДГОТОВКА ПО ОСНОВАМ ВОЕННОЙ СЛУЖБЫ В ХОДЕ ПРОВЕДЕНИЯ УЧЕБНЫХ СБОРОВ
-        </span>
-      </p>
-      <p className="c3">
-        <span className="c28 c16" />
-      </p>
-      <p className="c3">
-        <span className="c15" />
-      </p>
-      <p className="c26">
-        <span className="c15">Учебно-методическое пособие</span>
-      </p>
-      <p className="c3">
-        <span className="c28 c16" />
-      </p>
-      <p className="c3">
-        <span className="c28 c16" />
-      </p>
-      <p className="c3">
-        <span className="c28 c16" />
-      </p>
-      <p className="c3">
-        <span className="c28 c16" />
-      </p>
-      <p className="c3">
-        <span className="c28 c16" />
-      </p>
-      <p className="c3">
-        <span className="c28 c16" />
-      </p>
-      <p className="c3">
-        <span className="c28 c16" />
-      </p>
-      <p className="c3">
-        <span className="c16 c28" />
-      </p>
-      <p className="c3">
-        <span className="c28 c16" />
-      </p>
-      <p className="c3">
-        <span className="c28 c16" />
-      </p>
-      <p className="c3">
-        <span className="c28 c16" />
-      </p>
-      <p className="c3">
-        <span className="c28 c16" />
-      </p>
-      <p className="c3">
-        <span className="c28 c16" />
-      </p>
-      <p className="c26">
-        <span className="c15">Тамбов</span>
-      </p>
-      <p className="c26">
-        <span className="c15">2022</span>
-      </p>
-      <p className="c3">
-        <span className="c15" />
-      </p>
-      <p className="c17">
-        <span className="c15">
-          УДК &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp;Рекомендовано к изданию
-        </span>
-      </p>
-      <p className="c17">
-        <span className="c15">
-          ББК &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Учебно-методическим советом{' '}
-        </span>
-      </p>
-      <p className="c17">
-        <span className="c15">
-          И21 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ТГУ
-          имени Г.Р. Державина &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{' '}
-        </span>
-      </p>
-      <p className="c17 c14">
-        <span className="c15" />
-      </p>
-      <p className="c17">
-        <span className="c15">
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        </span>
-      </p>
-      <p className="c3">
-        <span className="c25 c16" />
-      </p>
-      <p className="c26">
-        <span className="c31 c16">Рецензенты:</span>
-      </p>
-      <p className="c3">
-        <span className="c16 c31" />
-      </p>
-      <h3 className="c34">
-        <span className="c15">Заместитель начальника </span>
-      </h3>
-      <h3 className="c34">
-        <span className="c15">
-          военного учебного центра при ТГУ &nbsp;им. Г.Р. Державина по учебной части, к.в.н.
-        </span>
-      </h3>
-      <h3 className="c34">
-        <span className="c16 c27">Э.А. Инякин;</span>
-      </h3>
-      <p className="c26">
-        <span className="c15">
-          Начальник отдела призыва военного комиссариата Тамбовской области, подполковник
-        </span>
-      </p>
-      <p className="c26">
-        <span className="c37">Б.А. Цепков</span>
-      </p>
-      <p className="c3">
-        <span className="c25 c16" />
-      </p>
-      <p className="c3">
-        <span className="c25 c16" />
-      </p>
-      <p className="c3">
-        <span className="c16 c25" />
-      </p>
-      <p className="c1">
-        <span className="c27 c16">Богомолов, Г.С.</span>
-      </p>
-      <p className="c9 c38 c39">
-        <span className="c15">
-          И21 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Подготовка по основам военной службы в ходе
-          проведения учебных сборов: учебное пособие/ Г.С. Богомолов, А.Н. Лосев, С.В. Новиков, С.А.
-          Гатальский и др. (всего 6 чел.); М-во обр. и науки РФ, ФГБОУ ВО «Тамб. Гос. Ун-т им. Г.Р.
-          Державина». – Тамбов: Издательский дом ТГУ им. Г.Р. Державина, 2022. - &nbsp; &nbsp;
-          &nbsp;с.
-        </span>
-      </p>
-      <p className="c3">
-        <span className="c15" />
-      </p>
-      <p className="c17 c23">
-        <span className="c15">ISBN</span>
-      </p>
-      <p className="c3">
-        <span className="c15" />
-      </p>
-      <p className="c1 c38">
-        <span className="c15">
-          Учебное пособие содержит материалы о требованиях руководящих документов по организации и
-          методике проведения 5-дневных учебных сборов, типовые планы-конспекты занятий по
-          тактической, огневой, строевой, военно-медицинской и физической подготовке, химической и
-          биологической защите, уставам Вооруженных сил Российской Федерации.
-        </span>
-      </p>
-      <p className="c1 c38">
-        <span className="c41">
-          Пособие предназначено для учащихся университетских профильных классов и студентов СПО.
-          Методический материал, представленный в пособии, рекомендуется
-          преподавателям-организаторам ОБЖ образовательных учреждений общего и среднего
-          профессионального образования для проведения занятий.
-        </span>
-      </p>
-      <p className="c3">
-        <span className="c25 c16" />
-      </p>
-      <p className="c3">
-        <span className="c25 c16" />
-      </p>
-      <p className="c9">
-        <span className="c15">
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; УДК
-        </span>
-      </p>
-      <p className="c9">
-        <span className="c15">
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp;ББК
-        </span>
-      </p>
-      <p className="c9 c14">
-        <span className="c15" />
-      </p>
-      <p className="c9 c14">
-        <span className="c15" />
-      </p>
-      <p className="c9">
-        <span className="c37">ISBN</span>
-        <span className="c15">
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; © Богомолов
-          Г.С., Лосев А.Н., Новиков С.В., 2022
-        </span>
-      </p>
-      <p className="c9">
-        <span className="c15">
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp;© ФГОУ ВО «Тамбовский государственный университет
-        </span>
-      </p>
-      <p className="c9">
-        <span className="c15">
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;имени Г.Р. Державина», 2022
-        </span>
-      </p>
-      {/* <p className="c32" id="h.gjdgxs">
-        <span className="c7">СОДЕРЖАНИЕ</span>
-      </p>
-      <p className="c5">
-        <span className="c10">Введение. </span>
-        <span className="c10 c19">(ссылка на введение)</span>
-      </p>
-      <p className="c5">
-        <span className="c10">
+      <img
+        src={wallpaper}
+        style={{
+          width: '100%'
+        }}
+      />
+      <img
+        src={wallpaper2}
+        style={{
+          width: '100%'
+        }}
+      />
+      <p className="c37">
+        <span className="c9">СОДЕРЖАНИЕ</span>
+      </p>
+      <p className="c4">
+        <span className="c2">Введение. </span>
+        <span className="c2 c7">(ссылка на введение)</span>
+      </p>
+      <p className="c4">
+        <span className="c2">
           Раздел I. Основополагающие требования руководящих документов по организации и проведению
           учебных сборов по основам военной службы с (допризывной молодежью) гражданами Российской
           Федерации, в рамках подготовки по основам военной службы.{' '}
         </span>
-        <span className="c10 c19">(ссылка на раздел)</span>
+        <span className="c2 c7">(ссылка на раздел)</span>
       </p>
-      <p className="c5">
-        <span className="c10">
+      <p className="c4">
+        <span className="c2">
           Глава 1. Основополагающие требования Федерального закона от 28 марта 1998 г. N 53-ФЗ «О
           воинской обязанности и военной службе» к обязательной и добровольной подготовке гражданина
           к военной службе.{' '}
         </span>
-        <span className="c10 c19">(ссылка на главу)</span>
+        <span className="c2 c7">(ссылка на главу)</span>
       </p>
-      <p className="c5">
-        <span className="c10">
+      <p className="c4">
+        <span className="c2">
           Глава 2. Основополагающие требования постановления Правительства РФ от 31 декабря 1999 г.
           №&nbsp;1441 «Об утверждении Положения о подготовке граждан Российской Федерации к военной
           службе».{' '}
         </span>
-        <span className="c10 c19">(ссылка на главу)</span>
+        <span className="c2 c7">(ссылка на главу)</span>
       </p>
-      <p className="c5">
-        <span className="c10">
+      <p className="c4">
+        <span className="c2">
           Глава 3. Основополагающие требования «Инструкции об организации обучения граждан
           Российской Федерации начальным знаниям в области обороны и их подготовки по основам
           военной службы в образовательных учреждениях среднего (полного) общего образования,
@@ -328,2239 +85,2041 @@ const Book = () => {
           образования и учебных пунктах». Утверждена приказом Министра обороны Российской Федерации
           и Министра образования и науки Российской Федерации от 24 февраля 2010 года № 96/134.{' '}
         </span>
-        <span className="c10 c19">(ссылка на главу)</span>
+        <span className="c2 c7">(ссылка на главу)</span>
       </p>
-      <p className="c5">
-        <span className="c10">
+      <p className="c4">
+        <span className="c2">
           Глава 4. Учебные сборы по основам военной службы – как важнейшая форма адаптации
           допризывной молодежи к военной службе в рядах Вооруженных Сил Российской Федерации.{' '}
         </span>
-        <span className="c10 c19">(ссылка на главу)</span>
+        <span className="c2 c7">(ссылка на главу)</span>
       </p>
-      <p className="c5">
-        <span className="c10">
+      <p className="c4">
+        <span className="c2">
           Глава 5. Алгоритм деятельности образовательной организации в рамках подготовки к
           проведению учебных сборов по основам военной службы.{' '}
         </span>
-        <span className="c10 c19">(ссылка на главу)</span>
+        <span className="c2 c7">(ссылка на главу)</span>
       </p>
-      <p className="c5">
-        <span className="c10">
+      <p className="c4">
+        <span className="c2">
           Глава 6. Организационные мероприятия по выезду допризывной молодежи, привлекаемой к
           участию в учебных сборах по основам военной службы, в соединения и воинские части
           (учебно-методические центры военно-патриотического воспитания молодежи,
           оборонно-спортивные и оздоровительные лагеря) и возвращению их образовательные
           организации.{' '}
         </span>
-        <span className="c10 c19">(ссылка на главу)</span>
+        <span className="c2 c7">(ссылка на главу)</span>
       </p>
-      <p className="c5">
-        <span className="c10">
+      <p className="c4">
+        <span className="c2">
           Раздел II. Методика организации и проведения занятий в ходе проведения учебных сборов по
           основам военной службы.{' '}
         </span>
-        <span className="c10 c19">(ссылка на раздел)</span>
+        <span className="c2 c7">(ссылка на раздел)</span>
       </p>
-      <p className="c5">
-        <span className="c10">
+      <p className="c4">
+        <span className="c2">
           Глава 1. Методика организации и проведения занятий по строевой подготовке.{' '}
         </span>
-        <span className="c10 c19">(ссылка на главу)</span>
+        <span className="c2 c7">(ссылка на главу)</span>
       </p>
-      <p className="c5">
-        <span className="c10">
+      <p className="c4">
+        <span className="c2">
           Глава 2. Методика организации и проведения занятий по тактической подготовке.{' '}
         </span>
-        <span className="c10 c19">(ссылка на главу)</span>
+        <span className="c2 c7">(ссылка на главу)</span>
       </p>
-      <p className="c5">
-        <span className="c10">
+      <p className="c4">
+        <span className="c2">
           Глава 3. Методика организации и проведения занятий по радиационной, химической и
           биологической защите.{' '}
         </span>
-        <span className="c10 c19">(ссылка на главу)</span>
+        <span className="c2 c7">(ссылка на главу)</span>
       </p>
-      <p className="c5">
-        <span className="c10">
+      <p className="c4">
+        <span className="c2">
           Глава 4. Методика организации и проведения занятий по общевоинским уставам Вооруженных Сил
           Российской Федерации.{' '}
         </span>
-        <span className="c10 c19">(ссылка на главу)</span>
+        <span className="c2 c7">(ссылка на главу)</span>
       </p>
-      <p className="c5">
-        <span className="c10">
+      <p className="c4">
+        <span className="c2">
           Глава 5. Методика организации и проведения занятий по военно-медицинской подготовке.{' '}
         </span>
-        <span className="c10 c19">(ссылка на главу)</span>
+        <span className="c2 c7">(ссылка на главу)</span>
       </p>
-      <p className="c5">
-        <span className="c10">
+      <p className="c4">
+        <span className="c2">
           Глава 6. Методика организации и проведения занятий по огневой подготовке.{' '}
         </span>
-        <span className="c10 c19">(ссылка на главу)</span>
+        <span className="c2 c7">(ссылка на главу)</span>
       </p>
-      <p className="c5">
-        <span className="c10">
+      <p className="c4">
+        <span className="c2">
           Глава 7. Методика организации и проведения занятий по физической подготовке.{' '}
         </span>
-        <span className="c10 c19">(ссылка на главу)</span>
+        <span className="c2 c7">(ссылка на главу)</span>
       </p>
-      <p className="c5">
-        <span className="c10">
+      <p className="c4">
+        <span className="c2">
           Глава 8. Требования к результатам обучения на учебных сборах по основам военной службы.
           Оценка учебных сборов по основам военной службы.{' '}
         </span>
-        <span className="c10 c19">(ссылка на главу)</span>
+        <span className="c2 c7">(ссылка на главу)</span>
       </p>
-      <p className="c5">
-        <span className="c10">
+      <p className="c4">
+        <span className="c2">
           Раздел III. Примерная тематика занятий, проводимых в ходе учебных сборов. Планы проведения
           занятий и презентации к занятиям на учебных сборах по основам военной службы.{' '}
         </span>
-        <span className="c10 c19">(ссылка на раздел)</span>
+        <span className="c2 c7">(ссылка на раздел)</span>
       </p>
-      <p className="c5">
-        <span className="c10">
+      <p className="c4">
+        <span className="c2">
           Глава 1. Примерная тематика занятий и планы проведения занятий &nbsp;по строевой
           подготовке.{' '}
         </span>
-        <span className="c10 c19">(ссылка на главу)</span>
+        <span className="c2 c7">(ссылка на главу)</span>
       </p>
-      <p className="c5">
-        <span className="c10">
+      <p className="c4">
+        <span className="c2">
           Глава 2. Примерная тематика занятий, планы проведения занятий и презентации к занятиям по
           тактической подготовке.{' '}
         </span>
-        <span className="c10 c19">(ссылка на главу)</span>
+        <span className="c2 c7">(ссылка на главу)</span>
       </p>
-      <p className="c5">
-        <span className="c10">
+      <p className="c4">
+        <span className="c2">
           Глава 3. Примерная тематика занятий, планы проведения занятий и презентации к занятиям по
           радиационной, химической и биологической защите.{' '}
         </span>
-        <span className="c10 c19">(ссылка на главу)</span>
+        <span className="c2 c7">(ссылка на главу)</span>
       </p>
-      <p className="c5">
-        <span className="c10">
+      <p className="c4">
+        <span className="c2">
           Глава 4. Примерная тематика занятий, планы проведения занятий и презентации к занятиям по
           общевоинским уставам Вооруженных Сил Российской Федерации.{' '}
         </span>
-        <span className="c10 c19">(ссылка на главу)</span>
+        <span className="c2 c7">(ссылка на главу)</span>
       </p>
-      <p className="c5">
-        <span className="c10">
+      <p className="c4">
+        <span className="c2">
           Глава 5. Примерная тематика занятий, планы проведения занятий и презентации к занятиям по
           военно-медицинской подготовке.{' '}
         </span>
-        <span className="c10 c19">(ссылка на главу)</span>
+        <span className="c2 c7">(ссылка на главу)</span>
       </p>
-      <p className="c5">
-        <span className="c10">
+      <p className="c4">
+        <span className="c2">
           Глава 6. Примерная тематика занятий, планы проведения занятий и презентации к занятиям по
           огневой подготовке.{' '}
         </span>
-        <span className="c10 c19">(ссылка на главу)</span>
+        <span className="c2 c7">(ссылка на главу)</span>
       </p>
-      <p className="c5">
-        <span className="c10">
+      <p className="c4">
+        <span className="c2">
           Глава 7. Примерная тематика занятий и планы проведения занятий по физической подготовке.{' '}
         </span>
-        <span className="c10 c19">(ссылка на главу)</span>
+        <span className="c2 c7">(ссылка на главу)</span>
       </p>
-      <p className="c5">
-        <span className="c10">
+      <p className="c4">
+        <span className="c2">
           Глава 8. Примерная тематика занятий, планы проведения занятий и презентации к занятиям по
           обеспечению безопасности военной службы.{' '}
         </span>
-        <span className="c10 c19">(ссылка на главу)</span>
+        <span className="c2 c7">(ссылка на главу)</span>
       </p>
-      <p className="c5">
-        <span className="c10">Приложения. </span>
-        <span className="c10 c19">(ссылка на приложения)</span>
+      <p className="c4">
+        <span className="c2">Приложения. </span>
+        <span className="c2 c7">(ссылка на приложения)</span>
       </p>
-      <p className="c5">
-        <span className="c10">Презентации. </span>
-        <span className="c10 c19">(ссылка на презентации)</span>
+      <p className="c4">
+        <span className="c2">Презентации. </span>
+        <span className="c2 c7">(ссылка на презентации)</span>
       </p>
-      <p className="c5">
-        <span className="c10">Литература. </span>
-        <span className="c10 c19">(ссылка на литературу)</span>
-      </p> */}
-      {/* <p className="c2">
-        <span className="c7" />
+      <p className="c4">
+        <span className="c2">Литература. </span>
+        <span className="c2 c7">(ссылка на литературу)</span>
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c4 c15">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
-      </p> */}
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <section id="1">
-        <p className="c26">
-          <span className="c7">ВВЕДЕНИЕ</span>
-        </p>
-        <p className="c3">
-          <span className="c7" />
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Геополитическая обстановка, формирование нового миропорядка на основе многополярной
-            системы выводят на первый план вопросы улучшения обороноспособности Российской
-            Федерации. &nbsp;В соответствии с поправками в Федеральный закон от 28 марта 1998 г. «О
-            воинской обязанности и военной службе» с 2008 г. срок прохождения военной&nbsp;службы по
-            призыву в Российской армии составляет 1 год, при этом, в результате проведенной военной
-            реформы уровень современного вооружения в армии достиг 68%. Это высокотехнологичная
-            техника, порой основанная на новых принципах, введены новые образцы стрелкового
-            вооружения, повсеместно в армии стали применятся беспилотные летательные аппараты. Все
-            это выводит вопросы допризывной подготовки молодежи в разряд приоритетных. Понимая это
-            Министерство Обороны России, сформировало и реализует ряд инициатив по совершенствованию
-            процесса допризывной подготовки учащихся на военных учебных сборах. В рамках данных
-            сборов особое значение приобритает не только повышение качества процесса допризывной
-            подготовки, но и увеличение эффективности военно-патриотической работы с допризывной
-            молодежью. &nbsp;Представленная Министерством Обороны программа военно-патриотического
-            воспитания в процессе сборов по основам военной службы, призвана решать в первую очередь
-            решать задачи качественного выполнения воинской обязанности, формирование чувства любви
-            и верности Отечеству, готовности добросовестно служить государству и обществу.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Прохождение службы в армии для большинства призывников является серьезным жизненным
-            испытанием. Для более успешной адаптации ребят к несению службы и повышению уровня
-            подготовки допризывной молодежи к службе в Вооруженных Силах в программы курсов ОБЖ и
-            БЖД введены разделы «Основы военной службы». Основная цель данных разделов - привитие
-            необходимых знаний и навыков, а так же психологическая подготовка допризывной молодежи к
-            службе путем изучения основ военного дела.{' '}
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Основной целью изучения данного учебного материала является получение представления о
-            требованиях руководящих документов по организации и проведению 5-дневных учебных сборов,
-            методика и особенности их организации.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            В представленном пособии нами представлены с типовые план-конспекты занятий по разделам
-            программы сборов: тактической, огневой, строевой, военно-медицинской и физической
-            подготовке, по радиационной, химической и биологической защите, уставам Вооруженных сил
-            Российской Федерации.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Авторский коллектив выражает надежду, что данное пособие будет способствовать
-            эффективному осуществлению профессиональной деятельности руководителей и
-            преподавателей-организаторов ОБЖ учебных заведений при проведении 5-дневных учебных
-            сборов по основам военной службы с допризывной молодежью.
-          </span>
-        </p>
-      </section>
-      <p className="c3 c12">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3 c12">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3 c12">
-        <span className="c7" />
+      <p className="c22">
+        <span className="c9">ВВЕДЕНИЕ</span>
       </p>
-      <p className="c3 c12">
-        <span className="c7" />
+      <p className="c10">
+        <span className="c9" />
       </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <p className="c3 c12">
-        <span className="c7" />
-      </p>
-      <section id="2">
-        <p className="c1">
-          <span className="c7">
-            Раздел I. Основополагающие требования руководящих документов по организации и проведению
-            учебных сборов по основам военной службы с (допризывной молодежью) гражданами Российской
-            Федерации, в рамках подготовки по основам военной службы.{' '}
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Глава 1. Основополагающие требования Федерального закона от 28 марта 1998 г. N 53-ФЗ «О
-            воинской обязанности и военной службе» к обязательной и добровольной подготовке
-            гражданина к военной службе.{' '}
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            На основании Федерального закона от 28 марта 1998 г. № 53-ФЗ «О воинской обязанности и
-            военной службе» предусматриваются следующий перечень требований к подготовке гражданина
-            к военной службе [1].
-          </span>
-        </p>
-        <a id="id.30j0zll" />
-        <p className="c1">
-          <span className="c0">
-            Статья 11. Обязательная подготовка гражданина к военной службе.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            1. Обязательная подготовка гражданина к военной службе предусматривает:
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">получение начальных знаний в области обороны;</span>
-        </p>
-        <a id="id.1fob9te" />
-        <p className="c1">
-          <span className="c0">
-            подготовку по основам военной службы в учебных заведениях в рамках освоения
-            образовательной программы среднего общего образования или среднего профессионального
-            образования и в учебных пунктах организаций;
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">военно-патриотическое воспитание;</span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            подготовку по военно-учетным специальностям солдат, матросов, сержантов и старшин по
-            направлению военного комиссариата;
-          </span>
-        </p>
-        <a id="id.3znysh7" />
-        <p className="c1">
-          <span className="c0">медицинское освидетельствование;</span>
-        </p>
-        <a id="id.2et92p0" />
-        <p className="c1">
-          <span className="c10">
-            2. Обязательная подготовка граждан к военной службе осуществляется в{' '}
-          </span>
-          <span className="c10">порядке</span>
-          <span className="c0">, определяемом Правительством Российской Федерации.</span>
-        </p>
-        <p className="c1">
-          <span className="c0">Комментарий к статье 11.</span>
-        </p>
-        <p className="c1">
-          <span className="c10">«</span>
-          <span className="c24 c10">Комментарий к&nbsp;</span>
-          <span className="c24 c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/178405/9d78f2e21a0e8d6e5a75ac4e4a939832/%23block_21000&sa=D&source=editors&ust=1678993582656380&usg=AOvVaw1KG7Rl5ATMWNjED1XD0NRW"
-            >
-              п. 1
-            </a>
-          </span>
-          <span className="c24 c10">.</span>
-        </p>
-        <p className="c1">
-          <span className="c10">
-            1. Проводя правовое регулирование в сфере воинской обязанности с целью осуществления
-            гражданами Российской Федерации конституционного долга и обязанности по обороне
-            государства, комментируемый&nbsp;
-          </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/178405/&sa=D&source=editors&ust=1678993582657331&usg=AOvVaw2K86Fx9aajlyqX7ISXpeop"
-            >
-              Федеральный закон
-            </a>
-          </span>
-          <span className="c0">
-            , не раскрывает сущность правового понятия «подготовка гражданина к военной службе».
-          </span>
-        </p>
-        <p className="c9">
-          <span className="c10">
-            В России разделение подготовки граждан к военной службе на обязательную и добровольную
-            проведена с 1998 г. При этом лишь обязательная подготовка к военной службе на
-            основании&nbsp;
-          </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/178405/1cafb24d049dcd1e7707a22d98e9858f/%23block_10000&sa=D&source=editors&ust=1678993582657915&usg=AOvVaw29EeSDK1meD4jn3V3YNZd2"
-            >
-              п. 1 ст. 1
-            </a>
-          </span>
-          <span className="c0">
-            &nbsp;комментируемого Федерального закона входит в составную часть воинской обязанности,
-            в отличии от добровольной подготовки, содержание которой в данную конструкцию не входит.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            2. Данный пункт&nbsp;раскрывает обязательные мероприятия в сфере подготовки граждан к
-            военной службе:
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c10">- получение начальных знаний в области обороны (</span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/178405/b6e02e45ca70d110df0019b9fe339c70/%23block_12&sa=D&source=editors&ust=1678993582658539&usg=AOvVaw1pat5iHMtPPACFqJDYzigk"
-            >
-              ст. 12
-            </a>
-          </span>
-          <span className="c0">);</span>
-        </p>
-        <p className="c1">
-          <span className="c10">
-            - подготовка по основам военной службы в образовательном учреждении среднего (полного)
-            общего образования, образовательном учреждении начального профессионального и среднего
-            профессионального образования и в учебных пунктах организаций (
-          </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/178405/4d6cc5b8235f826b2c67847b967f8695/%23block_13&sa=D&source=editors&ust=1678993582659062&usg=AOvVaw12lWRbiizIsQmV6pwIdeeG"
-            >
-              ст. 13
-            </a>
-          </span>
-          <span className="c0">);</span>
-        </p>
-        <p className="c1">
-          <span className="c10">- военно-патриотическое воспитание (</span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/178405/888134b28b1397ffae87a0ab1e117954/%23block_14&sa=D&source=editors&ust=1678993582659578&usg=AOvVaw1N3agWDIOZrHVfAlBm61Ge"
-            >
-              ст. 14
-            </a>
-          </span>
-          <span className="c0">);</span>
-        </p>
-        <p className="c1">
-          <span className="c10">
-            - подготовка по военно-учетным специальностям солдат, матросов, сержантов и старшин по
-            направлению военного комиссариата (
-          </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/178405/36bfb7176e3e8bfebe718035887e4efc/%23block_15&sa=D&source=editors&ust=1678993582660084&usg=AOvVaw0U0pdX3E6vt67bQ0_4xHX8"
-            >
-              ст. 15
-            </a>
-          </span>
-          <span className="c0">);</span>
-        </p>
-        <p className="c1">
-          <span className="c0">- медицинское освидетельствование.</span>
-        </p>
-        <p className="c1">
-          <span className="c10">
-            3. Формирование у обучающихся начальных знаний об обороне страны, о воинской обязанности
-            граждан и обретение ими навыков в сфере гражданской обороны, а также осуществление
-            подготовки учащихся – граждан мужского пола, не прошедших военной службы, по основам
-            военной службы осуществляется в образовательных учреждениях среднего (полного) общего
-            образования, образовательных учреждениях начального профессионального и среднего
-            профессионального образования в соответствии с государственными образовательными
-            стандартами в порядке, предусмотренном законами и иными нормативными правовыми актами
-            Российской Федерации, законами и иными нормативными правовыми актами субъектов
-            Российской Федерации (
-          </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/10164235/888134b28b1397ffae87a0ab1e117954/%23block_147&sa=D&source=editors&ust=1678993582660767&usg=AOvVaw0B6uLmBlQOp_IefOQZQ4Vc"
-            >
-              ч. 7 ст. 14
-            </a>
-          </span>
-          <span className="c10">
-            &nbsp;Закона Российской Федерации «Об образовании» от 10 июля 1992 г. N 3266-I).
-            Соответствующий порядок установлен{' '}
-          </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/181486/&sa=D&source=editors&ust=1678993582661117&usg=AOvVaw0I09M8UjXlo3q6HlSYbci-"
-            >
-              постановлением
-            </a>
-          </span>
-          <span className="c0">
-            &nbsp;Правительства Российской Федерации «Об утверждении Положения о подготовке граждан
-            Российской Федерации к военной службе» от 31 декабря 1999 г. N 1441.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c10">
-            4. Граждане мужского пола получают начальные знания в области обороны в соответствии с
-            примерной программой обучения, согласованной с Министерством обороны Российской
-            Федерации (
-          </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/181486/30704895c5cec97addba6e34afc1525c/%23block_1004&sa=D&source=editors&ust=1678993582661703&usg=AOvVaw3983p4F0ecCxp9yjF-RHGv"
-            >
-              п. 4
-            </a>
-          </span>
-          <span className="c0">
-            &nbsp;Положения о подготовке граждан Российской Федерации к военной службе). Для
-            реализации данного нормативного предписания издан совместный приказ Министра обороны
-            Российской Федерации и министра образования и науки Российской Федерации «Об утверждении
-            Инструкции об организации обучения граждан Российской Федерации начальным знаниям в
-            области обороны и их подготовки по основам военной службы в образовательных учреждениях
-            среднего (полного) общего образования, образовательных учреждениях начального
-            профессионального и среднего профессионального образования и учебных пунктах» от 24
-            февраля 2010 г. № 96/134.Данный документ задачи, функции органов военного управления и
-            органов управления образования, порядок организации обучения граждан Российской
-            Федерации начальным знаниям в сфере обороны.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c10">5. В соответствии с </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/181486/30704895c5cec97addba6e34afc1525c/%23block_5&sa=D&source=editors&ust=1678993582662364&usg=AOvVaw1un_XxTteXJQjUas6CxBjo"
-            >
-              п. 5
-            </a>
-          </span>
-          <span className="c0">
-            &nbsp;Положения о подготовке граждан Российской Федерации к военной службе подготовка по
-            основам военной службы предусматривается для граждан мужского пола и проводится в
-            образовательных учреждениях среднего (полного) общего образования, образовательных
-            учреждениях начального профессионального и среднего профессионального образования в
-            течение последних двух лет обучения и в учебных пунктах. Обучение основам военной службы
-            в учебных пунктах проходят граждане, достигшие 16-летнего возраста, не проходящие
-            обучение в образовательных учреждениях и не работающие в организациях по направлению
-            военных комиссариатов.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            &nbsp;6. Одно из составляющих частей обязательной подготовки граждан &nbsp;к военной
-            службе является военно-патриотическое воспитание. Воспитательная работа в данной сфере
-            организуется органами исполнительной власти субъектов Российской Федерации и органами
-            местного самоуправления во взаимодействии с Министерством обороны Российской Федерации и
-            федеральными органами исполнительной власти, в которых законом предусмотрена военная
-            служба, и проводится в образовательных учреждениях основного общего образования,
-            среднего (полного) общего образования, начального профессионального, среднего
-            профессионального и высшего профессионального образования, в учебных пунктах, а также
-            военно-патриотических молодежных и детских объединениях. Допускается при решении задач
-            военно-патриотического воспитания граждан привлекать общественные и религиозные
-            объединения, деятельность которых разрешена на территории Российской Федерации.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c10">
-            7. Закрепление медицинского освидетельствования законодателем в качестве мероприятия
-            основной подготовки гражданина к военной службе, на практике относится к составляющей
-            воинского учета. Что отражается в дополнении комментируемого Федерального закона{' '}
-          </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/178405/1d4de6df358849bd0ce3002fa717e45b/%23block_5151&sa=D&source=editors&ust=1678993582663270&usg=AOvVaw2qg9CqRTGCHwC_EWWo1xR4"
-            >
-              ст. 5.1
-            </a>
-          </span>
-          <span className="c10">, которая в соответствии со </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/12144089/a573badcfa856325a7f6c5597efaaedf/%23block_183&sa=D&source=editors&ust=1678993582663702&usg=AOvVaw34VVMHbFSr5SjNfDlNxBzE"
-            >
-              ст. 18
-            </a>
-          </span>
-          <span className="c10">
-            &nbsp;Федерального закона «О внесении изменений в отдельные законодательные акты
-            Российской Федерации в связи с совершенствованием разграничения полномочий» от 31
-            декабря 2005 г. N 199-ФЗ{' '}
-          </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/12144089/b23370569959e214330dd17deaeacd10/%23block_35351&sa=D&source=editors&ust=1678993582664112&usg=AOvVaw1taycqWSav5L-94MqUmzxi"
-            >
-              вступила в силу
-            </a>
-          </span>
-          <span className="c0">
-            &nbsp;с 1 января 2006 г. &nbsp;В соответствии со ст. 5.1 комментируемого Федерального
-            закона граждане при постановке на воинский учет, призыве или поступлении на военную
-            службу по контракту, поступлении в военные образовательные учреждения профессионального
-            образования, призыве на военные сборы, а также граждане, ранее признанные ограниченно
-            годными к военной службе по состоянию здоровья, проходят медицинское освидетельствование
-            врачами-специалистами: терапевтом, хирургом, невропатологом, психиатром, окулистом,
-            оториноларингологом, стоматологом, а в случае необходимости – врачами других
-            специальностей.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c10">
-            В категорию лиц в приведенной выше норме, не входят граждане, проходящие обязательную
-            подготовку к военной службе. «
-          </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/12123634/f7ee959fd36b5699076b35abf4f52c5c/%23block_2000&sa=D&source=editors&ust=1678993582664715&usg=AOvVaw13ZvlEZIQ8ZBE5zmlFYlrB"
-            >
-              Инструкция
-            </a>
-          </span>
-          <span className="c10">
-            &nbsp;о порядке проведения медицинского освидетельствования, обследования (лечения)
-            граждан Российской Федерации при первоначальной постановке на воинский учет и
-            лечебно-оздоровительных мероприятий среди граждан, поставленных на воинский учет», и «
-          </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/12123634/3e22e51c74db8e0b182fad67b502e640/%23block_3000&sa=D&source=editors&ust=1678993582665281&usg=AOvVaw3BO_MAihJr1NjF2F08P5eM"
-            >
-              Инструкция
-            </a>
-          </span>
-          <span className="c10">
-            &nbsp;о порядке проведения медицинского освидетельствования, обследования (лечения)
-            граждан Российской Федерации при призыве на военную службу и лечебно-оздоровительных
-            мероприятий среди граждан Российской Федерации, получивших отсрочки от призыва на
-            военную службу по состоянию здоровья», утвержденные{' '}
-          </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/12123634/&sa=D&source=editors&ust=1678993582665789&usg=AOvVaw2hcKB68fc8pumgqFPHCrqn"
-            >
-              приказом
-            </a>
-          </span>
-          <span className="c0">
-            &nbsp;министра обороны Российской Федерации и Министерства здравоохранения Российской
-            Федерации от 23 мая 2001 г. N 240/168, также не определяют граждан, проходящих
-            обязательную подготовку к военной службе в качестве субъектов медицинского
-            освидетельствования.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c10">При этом </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/12123634/53f89421bbdaf741eb2d1ecc4ddb4c33/%23block_1000&sa=D&source=editors&ust=1678993582666407&usg=AOvVaw1DuvAHrOeSwXs6Fx83XkYR"
-            >
-              Инструкция
-            </a>
-          </span>
-          <span className="c10">, утвержденная </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/12123634/&sa=D&source=editors&ust=1678993582666816&usg=AOvVaw0DQrAVinKag_FaCdCW8aGL"
-            >
-              приказом
-            </a>
-          </span>
-          <span className="c0">
-            &nbsp;Министра обороны Российской Федерации и Министром здравоохранения Российской
-            Федерации от 23 мая 2001 г. N 240/168, предусмотрела проведение ежегодных
-            профилактических медицинских осмотров, лечения, диспансерного наблюдения за состоянием
-            здоровья и физическим развитием граждан до их первоначальной постановки на воинский
-            учет, которые включают в себя:
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            - выявление на ранней стадии функциональных нарушений, заболеваний, отклонений в
-            физическом и психическом развитии юношей, а также факторов медико-социального риска
-            возникновения заболеваний (условий учебы, труда, быта и т.д.);
-          </span>
-        </p>
-        <p className="c9">
-          <span className="c0">
-            - разработка и проведение профилактической работы с юношами в образовательных
-            учреждениях и по месту жительства с динамическим врачебным наблюдением за юношами,
-            имеющими отклонения в состоянии здоровья, проведение нуждающимся лечебно-оздоровительных
-            мероприятий;
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            - систематический анализ состояния здоровья и физического развития юношей, качества и
-            эффективности медицинского наблюдения, разработку и осуществление мероприятий по
-            совершенствованию медицинского обеспечения.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Все проводимые медицинские процедуры, в рамках обязательной подготовки граждан к военной
-            службе, носят термин «медицинское обеспечение», а в контексте комментируемого пункта -
-            «медицинское освидетельствование».{' '}
-          </span>
-        </p>
-        <p className="c1 c14">
-          <span className="c0" />
-        </p>
-        <p className="c1">
-          <span className="c24 c10">Комментарий к </span>
-          <span className="c24 c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/178405/9d78f2e21a0e8d6e5a75ac4e4a939832/%23block_1102&sa=D&source=editors&ust=1678993582668048&usg=AOvVaw2oVlN59hd1IZSepWaSGRo4"
-            >
-              п. 2
-            </a>
-          </span>
-          <span className="c13 c10">.</span>
-        </p>
-        <p className="c1">
-          <span className="c10">
-            8. Правительство Российской Федерации, являясь высшим коллегиальным органом
-            исполнительной власти в соответствии с Конституцией Российской Федерации (
-          </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/10103000/61be80f84cf4d95f84aeddb3178a7797/%23block_11001&sa=D&source=editors&ust=1678993582668626&usg=AOvVaw3D3ksMXuGNcJLCclwZSlDj"
-            >
-              ч. 1 ст. 110
-            </a>
-          </span>
-          <span className="c10">
-            ), принимает меры по обеспечению обороны страны, государственной безопасности России (
-          </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/10103000/79e1105747e4b4d7487471312237be1c/%23block_11405&sa=D&source=editors&ust=1678993582669001&usg=AOvVaw3aV47N3dgdZtJ1ZxRDSukk"
-            >
-              п. «д» ч. 1 ст. 114
-            </a>
-          </span>
-          <span className="c10">), которые отнесены к федеративному ведению (</span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/10103000/4fc81bd708668197a291fdc62307ca74/%23block_7112&sa=D&source=editors&ust=1678993582669374&usg=AOvVaw3XA2VShqGUlAo4wQUl0fw9"
-            >
-              п. «м» ст. 71
-            </a>
-          </span>
-          <span className="c10">
-            ), в том числе издает в этой области постановления и распоряжения, а также обеспечивает
-            их исполнение (
-          </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/10103000/285ce44b84d86a34d278103083ce77fe/%23block_11501&sa=D&source=editors&ust=1678993582669752&usg=AOvVaw0EfUnHkDG7OJ8n8FPjvKdQ"
-            >
-              ч. 1 ст. 115
-            </a>
-          </span>
-          <span className="c10">). Действуя в рамках обозначенных </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/12106440/9e3305d0d08ff111955ebd93afd10878/%23block_20&sa=D&source=editors&ust=1678993582670114&usg=AOvVaw2RVmOWlhDYon_G6nBC3f4b"
-            >
-              ст. 20
-            </a>
-          </span>
-          <span className="c0">
-            &nbsp;Федерального конституционного закона «О Правительстве Российской Федерации» от 17
-            декабря 1997 г. N 2-ФКЗ полномочий по обеспечению обороны и государственной безопасности
-            страны, Правительство Российской Федерации реализует выполнение государственных целевых
-            программ и планов развития вооружения, а также программ подготовки граждан по
-            военно-учетным специальностям.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c10">
-            Проводя реализацию комплекса мер по подготовке к вооруженной защите Российской
-            Федерации, целостности и неприкосновенности ее территории, Правительство Российской
-            Федерации на основании{' '}
-          </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/135907/8b7b3c1c76e91f88d33c08b3736aa67a/%23block_617&sa=D&source=editors&ust=1678993582670837&usg=AOvVaw2llgOj8i1nZtwOGm-b7noY"
-            >
-              пп. 17
-            </a>
-          </span>
-          <span className="c10">, </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/135907/8b7b3c1c76e91f88d33c08b3736aa67a/%23block_618&sa=D&source=editors&ust=1678993582671317&usg=AOvVaw0tDZn4uCZE6uqbVB11xhU5"
-            >
-              18 ст. 6
-            </a>
-          </span>
-          <span className="c0">
-            &nbsp;Федерального закона «Об обороне» от 31 мая 1996 г. N 61-ФЗ определяет порядок
-            выполнения федеральными органами исполнительной власти, органами исполнительной власти
-            субъектов Российской Федерации, органами местного самоуправления, организациями
-            независимо от форм собственности процедуры по подготовке граждан Российской Федерации к
-            военной службе, воинского учета, призыва на военную службу и альтернативную гражданскую
-            службу, проведения военно-врачебной экспертизы и военных сборов и утверждает положения о
-            воинском учете, призыве на военную службу, подготовке граждан Российской Федерации к
-            военной службе, проведении военных сборов, военно-врачебной экспертизе, а также перечень
-            военно-учетных специальностей.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c10">
-            На основании вышеизложенного следует, что обязательная подготовка граждан к военной
-            службе осуществляется в порядке, определяемом Правительством Российской Федерации, и
-            реализовано в «
-          </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/181486/30704895c5cec97addba6e34afc1525c/%23block_1000&sa=D&source=editors&ust=1678993582672035&usg=AOvVaw2LFP6RXaoAi-nMk8IpRDDu"
-            >
-              Положении
-            </a>
-          </span>
-          <span className="c10">
-            &nbsp;о подготовке граждан Российской Федерации к военной службе», утвержденном{' '}
-          </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/181486/&sa=D&source=editors&ust=1678993582672398&usg=AOvVaw24JiFCUpp0Cy9T6DdwKDaH"
-            >
-              постановлением
-            </a>
-          </span>
-          <span className="c0">
-            &nbsp;Правительства Российской Федерации от 31 декабря 1999 г. N 1441.» [2,3].
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Статья 12. Получение гражданами начальных знаний в области обороны.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c10">Федеральными государственными образовательными стандартами</span>
-          <span className="c0">
-            &nbsp;среднего общего образования, федеральными государственными образовательными
-            стандартами среднего профессионального образования предусматривается получение
-            гражданами начальных знаний об обороне государства, о воинской обязанности граждан, а
-            также приобретение гражданами навыков в области гражданской обороны.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">Комментарий к статье 12 </span>
-        </p>
-        <p className="c1">
-          <span className="c10">«</span>
-          <span className="c24 c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/178405/b6e02e45ca70d110df0019b9fe339c70/%23block_12&sa=D&source=editors&ust=1678993582673624&usg=AOvVaw2e__X9IK6B2N6aDqhrnejs"
-            >
-              Статья 12.
-            </a>
-          </span>
-          <span className="c13 c10">
-            &nbsp;Получение гражданами начальных знаний в области обороны
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c10">
-            1. Образовательная реформа, проводимая в Российской Федерации привела к изменениям в
-            федеральном законодательстве.{' '}
-          </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/188402/&sa=D&source=editors&ust=1678993582674211&usg=AOvVaw36UHwnKzIORFXUGXp13jU7"
-            >
-              Федеральным законом
-            </a>
-          </span>
-          <span className="c10">
-            &nbsp;«О внесении изменений в Федеральный закон «О воинской обязанности и военной
-            службе» и статью 14 Закона Российской Федерации «Об образовании» от 21 июля 2005 г. N
-            100-ФЗ» привились в соответствие нормы комментируемого{' '}
-          </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/178405/&sa=D&source=editors&ust=1678993582674561&usg=AOvVaw3uaH3mstMvTrPkM3GWnTHR"
-            >
-              Федерального закона
-            </a>
-          </span>
-          <span className="c10">&nbsp;и </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/10164235/&sa=D&source=editors&ust=1678993582674882&usg=AOvVaw1AYKMrhkvPib3PPI-sywVo"
-            >
-              Закона
-            </a>
-          </span>
-          <span className="c0">
-            &nbsp;Российской Федерации «Об образовании» в сфере обязательной и добровольной
-            подготовки граждан к военной службе. Указывается, что в образовательных учреждениях
-            среднего (полного) общего образования, образовательных учреждениях начального
-            профессионального и среднего профессионального образования в соответствии с
-            государственными образовательными стандартами осуществляется получение обучающимися
-            начальных знаний об обороне государства, о воинской обязанности граждан и приобретение
-            обучающимися навыков в области гражданской обороны, а также подготовка обучающихся –
-            граждан мужского пола, не прошедших военной службы, по основам военной службы.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            На современном этапе получение гражданами начальных знаний об обороне государства, о
-            воинской обязанности и приобретение навыков в области гражданской обороны определено
-            государственными образовательными стандартами:
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">- среднего (полного) общего образования;</span>
-        </p>
-        <p className="c1">
-          <span className="c0">- начального профессионального образования;</span>
-        </p>
-        <p className="c1">
-          <span className="c0">- среднего профессионального образования.</span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            2. Общее образование включает в себя три ступени, соответствующие уровням
-            образовательных программ: начальное общее, основное общее, среднее (полное) общее
-            образование. Образовательные программы дошкольного, начального общего, основного общего
-            и среднего (полного) общего образования являются преемственными, т.е. каждая последующая
-            программа базируется на предыдущей. Граждане получают начальные знания и навыки в сфере
-            обороны государства в процессе третьей ступени общего образования – среднего (полного)
-            общего образования.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Статья 13. Подготовка граждан по основам военной службы в учебных заведениях в рамках
-            освоения образовательной программы среднего общего образования или среднего
-            профессионального образования и в учебных пунктах организаций.
-          </span>
-        </p>
-        <a id="id.tyjcwt" />
-        <p className="c1">
-          <span className="c0">
-            1. До призыва на военную службу граждане мужского пола проходят подготовку по основам
-            военной службы в учебных заведениях в рамках освоения образовательной программы среднего
-            общего образования или среднего профессионального образования.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c10">
-            Подготовка граждан мужского пола по основам военной службы осуществляется
-            педагогическими работниками указанных образовательных организаций в соответствии с{' '}
-          </span>
-          <span className="c10">федеральными государственными образовательными стандартами</span>
-          <span className="c0">.</span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Подготовка граждан мужского пола по основам военной службы включает проведение с данными
-            гражданами учебных сборов.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c10">
-            2. Граждане мужского пола, достигшие возраста 16 лет, работающие в организациях и не
-            прошедшие подготовку по основам военной службы в рамках освоения образовательной
-            программы среднего общего образования или среднего профессионального образования
-            привлекаются к занятиям по основам военной службы в учебных пунктах, создаваемых в{' '}
-          </span>
-          <span className="c11">порядке</span>
-          <span className="c0">
-            , устанавливаемом уполномоченным федеральным органом исполнительной власти.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">Комментарий к статье 13.</span>
-        </p>
-        <p className="c1">
-          <span className="c10">«</span>
-          <span className="c24 c10">Комментарий к </span>
-          <span className="c24 c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/178405/4d6cc5b8235f826b2c67847b967f8695/%23block_1301&sa=D&source=editors&ust=1678993582677719&usg=AOvVaw1xwAEzZGrvdv5crjpMY9WC"
-            >
-              п. 1
-            </a>
-          </span>
-          <span className="c13 c10">.</span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            1. Организационно-образовательные мероприятия в сфере военной подготовки граждан,
-            предусмотренные для граждан мужского пола, реализуются в форме обязательной военной
-            подготовки по основам военной службы в образовательных учреждениях среднего (полного)
-            общего образования, образовательных учреждениях начального профессионального и среднего
-            профессионального образования.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c10">
-            Действие законодательства Российской Федерации в сфере образования распространяется на
-            все образовательные учреждения, на территории Российской Федерации независимо от их
-            организационно-правовых форм и подчиненности (
-          </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/10164235/b6e02e45ca70d110df0019b9fe339c70/%23block_12&sa=D&source=editors&ust=1678993582678590&usg=AOvVaw1YhfiNnLcVc8Y6v76o2rOt"
-            >
-              ст. 12
-            </a>
-          </span>
-          <span className="c0">&nbsp;Закона Российской Федерации «Об образовании»).</span>
-        </p>
-        <p className="c1">
-          <span className="c10">
-            2. Подготовка граждан Российской Федерации мужского пола по основам военной службы
-            осуществляется в вышеуказанных образовательных учреждениях на основании федеральных
-            законов «
-          </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/135907/&sa=D&source=editors&ust=1678993582679115&usg=AOvVaw24YhzL9fv5YWLmHUlIAfJG"
-            >
-              Об обороне
-            </a>
-          </span>
-          <span className="c10">»,</span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/178405/&sa=D&source=editors&ust=1678993582679454&usg=AOvVaw1zBEe3ygrR2e7gHEGwEKd1"
-            >
-              &nbsp;«О воинской обязанности и военной службе
-            </a>
-          </span>
-          <span className="c10">», «</span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/10164235/&sa=D&source=editors&ust=1678993582679778&usg=AOvVaw1nwgBR6Ti-mjJ9nFE2NRil"
-            >
-              Об образовании
-            </a>
-          </span>
-          <span className="c10">», «</span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/181486/30704895c5cec97addba6e34afc1525c/%23block_1000&sa=D&source=editors&ust=1678993582680173&usg=AOvVaw0qFiVBIRiBIVkzf_Ps4b7V"
-            >
-              Положением
-            </a>
-          </span>
-          <span className="c10">
-            &nbsp;о подготовке граждан Российской Федерации к военной службе», утвержденным{' '}
-          </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/181486/&sa=D&source=editors&ust=1678993582680630&usg=AOvVaw1Ge7Lrhk5334IV0RzJzIHC"
-            >
-              постановлением
-            </a>
-          </span>
-          <span className="c0">
-            &nbsp;Правительства Российской Федерации от 31 декабря 1999 г. N 1441, «Инструкцией об
-            организации обучения граждан Российской Федерации начальным знаниям в области обороны и
-            их подготовки по основам военной службы в образовательных учреждениях среднего (полного)
-            общего образования, образовательных учреждениях начального профессионального и среднего
-            профессионального образования и учебных пунктах», утвержденной приказом министра обороны
-            РФ и Министерства образования РФ от 24 февраля 2010 г. № 96/134, и иными нормативными
-            правовыми актами.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            3. Подготовка по основам военной службы предусматривается для граждан мужского пола до
-            призыва на военную службу. Решение о призыве граждан на военную службу может быть
-            принято только после достижения ими возраста 18 лет.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c10">
-            Конкретные задачи, на достижение которых направлен образовательный процесс в рамках
-            обязательной подготовки граждан к военной службе, определены{' '}
-          </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/183452/%23block_200&sa=D&source=editors&ust=1678993582681385&usg=AOvVaw18DWNYGTQvPdS73CTjfklc"
-            >
-              разделом II
-            </a>
-          </span>
-          <span className="c0">
-            &nbsp;Инструкции об организации обучения граждан Российской Федерации начальным знаниям
-            в области обороны и их подготовки по основам военной службы в образовательных
-            учреждениях среднего (полного) общего образования, образовательных учреждениях
-            начального профессионального и среднего профессионального образования и учебных пунктах.
-            Среди них выделяются:
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            - формирование морально-психологических и физических качеств гражданина, необходимых для
-            прохождения военной службы;
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            - воспитание патриотизма, уважения к историческому и культурному прошлому России и ее
-            Вооруженным Силам;
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            - изучение гражданами основных положений законодательства Российской Федерации в области
-            обороны государства, о воинской обязанности и воинском учете, обязательной и
-            добровольной подготовке к военной службе, о прохождении военной службы по призыву и в
-            добровольном порядке (по контракту), о пребывании в запасе, о правах, обязанностях и
-            ответственности военнослужащих и граждан, находящихся в запасе;
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">- приобретение навыков в области гражданской обороны;</span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            - изучение основ безопасности военной службы, конструкции и правил обращения с боевым
-            ручным стрелковым оружием, основ тактической, медицинской, строевой подготовки, вопросов
-            радиационной, химической и биологической защиты войск и населения;
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            - практическое закрепление полученных знаний в ходе учебных сборов;
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            - проведение военно-профессиональной ориентации на овладение военно-учетными
-            специальностями и выбор профессии офицера.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c10">
-            4. Особые требования предъявляются к педагогическому составу, привлекаемого к проведению
-            подготовки граждан к военной службе. &nbsp;В соответствии с «
-          </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/181486/30704895c5cec97addba6e34afc1525c/%23block_1000&sa=D&source=editors&ust=1678993582682644&usg=AOvVaw2JQ2-NlG8mq-ENM-tSmomz"
-            >
-              Положением
-            </a>
-          </span>
-          <span className="c10">
-            &nbsp;о подготовке граждан Российской Федерации к военной службе», утвержденным{' '}
-          </span>
-          <span className="c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/181486/&sa=D&source=editors&ust=1678993582683033&usg=AOvVaw2i6LYBpv7AzmuUnyEKYNuO"
-            >
-              постановлением
-            </a>
-          </span>
-          <span className="c0">
-            &nbsp;Правительства Российской Федерации от 31 декабря 1999 г. N 1441, преподаватели,
-            проводящие подготовку граждан по основам военной службы, как правило, из числа офицеров,
-            пребывающих в запасе, имеющих высшее или среднее военное образование, а также
-            выпускников военных кафедр педагогических образовательных учреждений высшего
-            профессионального образования, обладающих необходимыми знаниями и высокими
-            морально-деловыми качествами, а при отсутствии возможности заместить штатную должность
-            преподавателя лицом, имеющим звание офицера и пребывающим в запасе, разрешается, в виде
-            исключения, назначать на эту должность пребывающих в запасе прапорщиков, мичманов,
-            сержантов, старшин, солдат или матросов, имеющих высшее или среднее профессиональное
-            образование.{' '}
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Подбор кандидатов на должности преподавателей, осуществляющих подготовку по основам
-            военной службы, проводиться руководителем образовательного учреждения совместно с
-            соответствующим военным комиссаром района. Их подготовка, переподготовка и повышение
-            квалификации осуществляются в образовательных учреждениях высшего профессионального
-            образования и дополнительного профессионального образования.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            5. Подготовка граждан мужского пола по основам военной службы осуществляется в
-            соответствии с государственными образовательными стандартами на учебно-материальной базе
-            образовательных учреждениях, которая включает в себя: предметный кабинет, спортивный
-            городок, элементы полосы препятствий, учебных и наглядных пособий, технических средств
-            обучения.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            При желании граждан, углубленно изучить военное дело, организовываются факультативные
-            занятия по дополнительным программам, имеющим целью военно-профессиональную ориентацию
-            граждан.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            По окончании подготовки, военные комиссариаты районов вносят сведения о ее прохождении
-            гражданами в графу «Образование» учетной карты призывника.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            6. Проведение учебно-тренировочных сборов в рамках обучения граждан основам военной
-            службы, предусмотренных комментируемым пунктом, осуществляется в любой год его обучения,
-            а не в конце последнего года обучения, как было установлено ранее, что позволяет
-            обучающимся не отвлекаться от подготовки к выпускным и вступительным экзаменам.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Порядок организации и проведения учебно-тренировочных сборов определяется совместными
-            нормативными правовыми актами Министерства обороны Российской Федерации и Министерства
-            образования Российской Федерации. В настоящее время действует Инструкция по организации
-            обучения граждан Российской Федерации базовым знаниям в области обороны и их обучению
-            основам военной службы в образовательных учреждениях среднего (полного) общего
-            образования, образовательных учреждениях начального профессионального и среднего
-            специального образования и учебных центрах, утвержденная приказ Министра обороны
-            Российской Федерации и Министерства образования Российской Федерации от 24 февраля 2010
-            года № 96/134.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            7. Организация учебно-тренировочных сборов осуществляется в соответствии с решением
-            руководителя органа исполнительной власти субъекта Российской Федерации или органа
-            местного самоуправления, согласованного с начальником военного гарнизона, и планом
-            подготовки к учебно-тренировочным сборам. На основании принятого решения руководитель
-            местного (муниципального) органа управления образованием издает приказ об организации и
-            проведении учебно-тренировочных сборов, согласованный с военным комиссаром района.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Для проведения сборов назначаются ответственные руководители. В состав администрации
-            сборов входят: руководитель сборов, его заместители – по воспитательной работе и по
-            хозяйственной части, начальник штаба сборов и врач.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Решение руководителя органа исполнительной власти субъекта Российской Федерации или
-            органа местного самоуправления о проведении учебно-тренировочных сборов, согласованное с
-            начальником военного гарнизона и планом подготовки к учебно-тренировочным сборам, должно
-            включать:
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">- место и время проведения тренировочных сборов;</span>
-        </p>
-        <p className="c1">
-          <span className="c0">- методическое обеспечение сборов;</span>
-        </p>
-        <p className="c1">
-          <span className="c0">- вопросы взаимодействия с воинскими частями;</span>
-        </p>
-        <p className="c1">
-          <span className="c0">- порядок финансирования;</span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            - вопросы организации жизни и быта граждан в учебном лагере (размещение, питание,
-            медицинское обслуживание, доставка граждан к месту обучения).
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Во время учебных сборов граждане проживают на территориях воинских частей, которые
-            закреплены за учебными заведениями (учебными центрами), расположенными на территории
-            гарнизона, на основании указаний штаба военного округа совместно с военным комиссаром
-            округа и начальником гарнизона. Обеспечение палаточным фондом и постельными
-            принадлежностями для размещения обучаемых в полевых условиях производится за счет
-            имущества воинских частей, бывшего в употреблении, пригодного для дальнейшей
-            эксплуатации, путем выдачи его во временное пользование.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Питание граждан, участвующих в прохождении сборов, организованных на базе воинских
-            частей, осуществляется в соответствии с Положением о продовольственном обеспечении
-            Вооруженных Сил Российской Федерации на мирное время, по действующим нормам с
-            предварительной оплатой стоимости продовольственных пайков по фиксированным ценам и
-            расходов на приготовление пищи в размере 20% от стоимости пайков (без хлеба), а при
-            проведении сборов в учебных заведениях в других организациях – силами и средствами,
-            определенными решением главы органа местного самоуправления.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Медицинское обслуживание обучаемых во время учебно-тренировочных сборов, организованных
-            на базе воинских частей, других воинских формирований и органов, осуществляется в
-            соответствии с порядком, установленным Приказом Министра обороны Российской «Федерации
-            Об организации медицинской помощи в военно-медицинских частях, соединениях и учреждениях
-            Министерства Министерства обороны Российской Федерации» от 16 января 2006 г. № 20,
-            штатными силами и средствами медицинской службы, а при проведении сборов в учебных
-            заведениях, в других организациях - силами и средствами, определенными решением главы
-            органа местного самоуправления.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Перевозка учащихся к местам занятий и обратно может осуществляться автомобильным
-            транспортом воинской части, на базе которой проводятся учебные сборы. Отпуск
-            горюче-смазочных материалов для этих целей осуществляется после предварительной оплаты
-            их стоимости.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Организационные и правовые вопросы учитываются штабом воинской части при разработке
-            плана боевой подготовки воинской части на новый учебный год. Один из его разделов
-            включает мероприятия по проведению учебно-тренировочных сборов с учащимися в
-            образовательных учреждениях среднего (полного) общего образования, начального
-            профессионального и средне-специального образования и учебных центрах организаций,
-            закрепленных за воинской частью приказом начальника гарнизона. В приложении к указанному
-            плану отдельной строкой указан расход боеприпасов во время стрельбы со студентами.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            При составлении документации тренировочного лагеря особое внимание уделяется соблюдению
-            требований безопасности, которые подразделяются следующим образом:
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">- требования безопасности во время стрельб;</span>
-        </p>
-        <p className="c1">
-          <span className="c0">- требования безопасности во время военно-спортивных игр;</span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            - требования безопасности при перевозке подготовленных граждан;
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            - требования безопасности при проведении занятий физической культурой;
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            - требования безопасности при организации купания и занятий на воде;
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">- требования пожарной, электрической и взрывобезопасности.</span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Несоблюдение требований безопасности влечет за собой ответственность руководителей
-            сборов. Так, согласно приговору Сургутского гарнизонного военного суда от 5 ноября 2004
-            года, подполковник З. осужден по пункту "в" части 3 статьи 286 Уголовного кодекса
-            Российской Федерации к лишению свободы сроком на четыре года с лишением права занимать
-            должности, связанные с образованием и профессиональной подготовки призывной молодежи в
-            течение двух лет при следующих обстоятельствах.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            З., являясь начальником 2-го отдела объединенного военного комиссариата Советского
-            района Ханты-Мансийского автономного округа, исполнял обязанности руководителя
-            учебно-тренировочных сборов, проводимых с учащимися средних учебных заведений Советского
-            района Тюменской области, в военно-спортивном лагере "Чайка", расположенном в поселке
-            Малиновский указанного района. Вопреки требованиям статей 20, 41 Конституции Российской
-            Федерации, 51 Федерального закона «Об образовании», ст. 49, 50 «Инструкции по
-            организации обучения граждан Российской Федерации базовым знаниям в области обороны и их
-            обучению основам военной службы», утвержденной совместным приказом Министра обороны
-            Российской Федерации и Министерства образования Российской Федерации от 3 мая, 2001 №
-            203/1936, которые не предусматривают занятий, в том числе тактических, похожих на марш,
-            из ложно понятых интересов службы, 5 сентября 2003 года около 20 часов. 30 мин., в
-            личное время студентов, он провел марш около 10 км с элементами радиационной,
-            химической, биологической защиты, а также тактической и физической подготовки,
-            результатом чего стал периодический ускоренный бег, частое использование противогазов
-            при беговых движениях, движения в полусидячем положении, что явилось очевидным и
-            значительным превышением уровней физической активности, предусмотренной действующими
-            учебными планами для учащихся 10-11 классов, а также Пособием по физической культуре и
-            спорту в Вооруженных Силах Российской Федерации. Подполковник З. в то же время не
-            контролировал степень физической активности и не принимал мер безопасности для ее
-            снижения. В ходе этого урока студента Б. вырвало от хронической, но впервые проявившейся
-            надпочечниковой недостаточности на почве вышеупомянутого физического перенапряжения, и
-            рвотные массы, попав в дыхательные пути, вызвали остановку дыхания и смерть
-            пострадавшего.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            8. К участию в учебно-тренировочных сборах приглашаются все граждане, обучающиеся в
-            образовательных учреждениях среднего (полного) общего образования, начального
-            профессионального и средне-специального образования и в учебных центрах, за исключением
-            тех, кто имеет освобождение от занятий по состоянию здоровья.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Тренировочные сборы обычно организуются на базе воинских частей в течение пяти дней (35
-            учебных часов). В местах, где нет воинских частей, учебные сборы организуются при
-            образовательных учреждениях, военно-патриотических молодежных и детских общественных
-            объединениях, а также на базе военно-спортивных оздоровительных лагерей. В ходе
-            учебно-тренировочных сборов изучаются следующие предметы: размещение и быт
-            военнослужащих, организация караульной и внутренней служб, элементы боевой, огневой,
-            тактической, физической и медицинской подготовки, а также вопросы радиационной,
-            химической и биологической защиты войск. В ходе учебно-тренировочных сборов проводятся
-            военно-профессиональные ориентационные мероприятия.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Учебный процесс на сборах организован в зависимости от количества слушателей, которые
-            разделены на учебные группы (взводы). Расписание занятий планируется исходя из
-            количества учебных мест и количества учебных групп (взводов) с указанием группы
-            (взвода), места и времени обучения. Учебный процесс во время тренировочного сбора
-            организован в соответствии с учебными планами и распорядком дня.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Военный комиссар округа определяет время и место обучения учащихся стрельбе из боевого
-            ручного стрелкового оружия и доводит его до руководителей учебных заведений. Обучение
-            студентов стрельбе из боевого ручного стрелкового оружия организуется и проводится в
-            установленном порядке командирами воинских частей на стрельбищах или в тирах. Для
-            проведения стрельб командиры воинских частей назначают ответственных должностных лиц и
-            обеспечивают оружием и боеприпасами.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            9. Во время тренировочных занятий в лагере деятельность студентов оценивается по
-            следующим направлениям:
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            - на строевой - строевая стойка, повороты на месте и в движении, строевой шаг, воинское
-            приветствие на месте и в движении, построение отделения, взвод;
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            - по радиационной, химической и биологической защите - приемы и способы радиационной,
-            химической и биологической защиты;
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            - преодоление участка местности, зараженного радиоактивными (токсичными) веществами -
-            действия военнослужащего по сигналам предупреждения и вспышке ядерного взрыва,
-            выполнение нормативов надевания средств индивидуальной защиты;
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            - для медицинского обучения - остановка кровотечения, наложение повязок на раны верхних
-            и нижних конечностей;
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            - физическая подготовка - в объеме требований к новому пополнению воинских частей и к
-            кандидатам, поступающим в военные учебные заведения.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Индивидуальная оценка каждого студента состоит из оценок, полученных за выполнение
-            каждого этапа. Общая оценка студентов за обучение заносится в классный журнал с пометкой
-            «Учебные сборы» и учитывается при выставлении итоговой оценки за курс ОБЖ.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Для студентов, не прошедших учебные сборы по уважительным причинам, могут быть
-            организованы дополнительные занятия и сдача теста по вопросам, предусмотренным
-            программой сборов (по желанию студентов).
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            В случае отказа отдельных учащихся по религиозным соображениям от участия в стрельбе и
-            изучении боевого ручного стрелкового оружия, решение об освобождении от прохождения
-            данной темы занятий принимается руководителем образовательного учреждения на основании
-            мотивированного заявления родителей (законных представителей), которое должно быть
-            подано руководителю образовательного учреждения.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c24 c10">Комментарий к </span>
-          <span className="c24 c10">
-            <a
-              className="c21"
-              href="https://www.google.com/url?q=https://base.garant.ru/178405/4d6cc5b8235f826b2c67847b967f8695/%23block_22000&sa=D&source=editors&ust=1678993582689696&usg=AOvVaw2WzRZodBPRA0sehggb-x4t"
-            >
-              п. 2
-            </a>
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            10. Граждане мужского пола, достигшие 16-летнего возраста, работающие в организациях и
-            не прошедшие обучение основам военной службы в образовательных учреждениях, указанных в
-            пункте 1 комментируемой статьи, привлекаются к занятиям по основам военной службы в
-            учебных центрах, созданных в порядке, установленном правительство Российской Федерации.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Данный порядок установлен Положением о подготовке граждан Российской Федерации к военной
-            службе, утвержденным Постановлением Правительства Российской Федерации от 31 декабря
-            1999г. № 1441, и «Инструкции по организации обучения граждан Российской Федерации
-            базовым знаниям в области обороны и их обучению основам военной службы в образовательных
-            учреждениях среднего (полного) общего образования, образовательных учреждениях
-            начального профессионального и средне-специального образования и учебных центрах»,
-            изданной в его развитии, утвержденная приказом Министра обороны Российской Федерации и
-            Министерства образования Российской Федерации от 24 февраля 2010 года №96/134.{' '}
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Учебные центры создаются по решению главы органа местного самоуправления на базе одной
-            организации, состоящей не менее чем из 20 граждан, подлежащих призыву на военную службу
-            и не прошедших обучение основам военной службы, или нескольких организаций (объединенные
-            районные или городские учебные центры). Ответственность за организацию учебных центров
-            возлагается на руководителей организаций, на базе которых они созданы.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            11. Создание и совершенствование учебно-материальной базы обязательного обучения граждан
-            мужского пола, достигших 16-летнего возраста, работающих в организациях и не прошедших
-            обучение основам военной службы в образовательных учреждениях, указанных в пункте 1
-            комментируемой статьи, обеспечивается организациями, в которых учебные центры были
-            созданы.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Учебный центр должен иметь специально оборудованный кабинет для организации и проведения
-            занятий по основам военной службы, оснащенный наглядными пособиями и стендами в
-            соответствии с программой обучения.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            В соответствии с Правилами возмещения расходов, понесенных организациями и гражданами
-            Российской Федерации в связи с реализацией Федерального закона «О воинской обязанности и
-            военной службе», утвержденными Постановлением Правительства Российской Федерации от
-            &nbsp; &nbsp; &nbsp; 1 декабря 2004 года № 704, возмещению подлежат расходы организаций,
-            связанные с обучением граждан основам военной службы в учебных центрах организаций
-            (кроме федеральных учреждений). Выплата производится путем перечисления денежных средств
-            на счета получателей компенсации в пределах бюджетных обязательств и объема
-            финансирования расходов по соответствующим кодам бюджетной классификации Российской
-            Федерации, зафиксированным в лицевом счете получателя средств федерального бюджета,
-            открытом в территориальном органе Российской Федерации, из Федерального казначейства в
-            соответствующий военный комиссариат.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            12. Направление граждан в учебные центры (совместные учебные центры) для преподавания
-            базовых знаний в области обороны и обучения основам военной службы, комплектование
-            учебных групп и контроль за прохождением обучения осуществляются военными комиссариатами
-            округов.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Идентификация граждан, подлежащих обучению, осуществляется военным комиссариатом округа
-            при первоначальной постановке граждан на воинский учет. Для этих граждан составляется
-            персональный список. Список граждан, направляемых на учебу в учебный центр, составляется
-            приказом военного комиссара округа (района).
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            13. Учебные группы создаются для проведения занятий в учебном центре. Учебные группы
-            комплектуются гражданами с учетом сроков их призыва на военную службу. Количество
-            граждан в учебной группе (в зависимости от общего количества в учебном центре)
-            устанавливается от 20 до 30 человек.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Для обеспечения обучения граждан в учебном центре издается приказ руководителя
-            организации об организации и порядке проведения занятий, разрабатывается учебный план на
-            весь период обучения и расписание занятий на месяц. Список граждан, направленных на
-            обучение, прилагается к приказу.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Занятия в учебных центрах проводятся 2-3 раза в неделю по 2-3 часа. Обучение граждан в
-            учебных центрах осуществляется в соответствии с обязательным минимумом содержания,
-            требованиями к их уровню подготовки и примерным учебным планом по обучению граждан
-            базовым знаниям в области обороны и их обучению основам военной службы.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Руководство организацией обучения граждан основам военной службы в учебном центре
-            возлагается на внештатного начальника учебного центра и его заместителя по
-            воспитательной работе, а непосредственная организация и проведение занятий с гражданами
-            возлагается на внештатного инструктора-преподавателя. Они назначаются на должности
-            руководителем организации, на базе которой создается учебный центр, в том числе
-            совместный, по согласованию с органом местного самоуправления и военным комиссариатом
-            округа (района) из числа офицеров, прапорщиков, мичманов, сержантов и старшин,
-            работающих в организации.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            В конце обучения проводятся тесты. Для получения зачетов создается комиссия, состоящая
-            из представителя органа местного самоуправления (председателя комиссии), представителей
-            военного комиссариата округа (района), отвечающего за подготовку граждан к военной
-            службе, и территориальных органов, управляющих гражданской обороной.
-          </span>
-        </p>
-        <a id="id.3dy6vkm" />
-        <p className="c1">
-          <span className="c0">
-            14. Результаты обучения основам военной службы отражаются в соответствующем
-            свидетельстве об обучении, которое вручается гражданам. Списки граждан, прошедших
-            обучение в учебных центрах, с результатами сдачи тестов по основам военной службы,
-            направляются в военные комиссариаты по месту воинского учета граждан. Сотрудники
-            военного комиссариата вносят соответствующие записи в регистрационные карточки
-            призывников и удостоверения граждан, подлежащих призыву на военную службу [2,3].
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">Статья 14. Военно-патриотическое воспитание граждан.</span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            1. Правительство Российской Федерации, органы исполнительной власти субъектов Российской
-            Федерации и органы местного самоуправления совместно с Министерством обороны Российской
-            Федерации, федеральными органами исполнительной власти, в которых настоящим Федеральным
-            законом предусмотрена военная служба, и должностными лицами организаций обязаны
-            систематически осуществлять проведение работы по военно-патриотическому воспитанию
-            граждан.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            2. Подготовка, полученная гражданами в военно-патриотических молодежных и детских
-            объединениях, учитывается призывными комиссиями при определении рода войск Вооруженных
-            Сил Российской Федерации, а также других войск, воинских формирований и органов, в
-            которых они будут проходить военную службу по призыву.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Положение об этих объединениях утверждается уполномоченным федеральным органом
-            исполнительной власти.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            3. Финансирование военно-патриотического воспитания граждан осуществляется за счет
-            средств федерального бюджета. Дополнительное финансирование данной деятельности может
-            осуществляться за счет бюджетов субъектов Российской Федерации, местных бюджетов и
-            внебюджетных фондов с согласия владельцев этих средств.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">Комментарий к статье 14.</span>
-        </p>
-        <p className="c1">
-          <span className="c0">«Комментарий к пункту 1.</span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            1. Введение военно-патриотического воспитания граждан в рамках обязательной подготовки к
-            военной службе является новшеством российского законодательства, поскольку ранее в
-            правовом пространстве, регулирующем отношения в сфере воинской обязанности, не было
-            упоминания об этом виде деятельности. В то же время этому посвящена отдельная статья
-            комментируемого Федерального закона (статья 14).
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            4 марта 1998 года было принято обращение Государственной Думы Федерального Собрания
-            Российской Федерации «О нравственном и военно-патриотическом воспитании молодежи и
-            повышении уровня культуры военнослужащих, правоохранительных органов и силовых структур»
-            № 2240-II Государственной Думы. В нем говорилось, что Вооруженные Силы Российской
-            Федерации, другие войска, воинские формирования, органы, в которых федеральным законом
-            предусмотрена военная служба, в том числе правоохранительные органы и службы
-            безопасности, пополняются молодыми людьми, в сознании которых размыты представления о
-            духовных ценностях народа. Государство в настоящее время не в состоянии в полной мере
-            противостоять разрушению культурных традиций. Многие средства массовой информации, в
-            первую очередь теле- и радиовещание, формируют негативное представление о современности
-            и истории страны, о жизни военнослужащих. Государственная Дума призвала Совет Федерации
-            Федерального Собрания Российской Федерации, Президента Российской Федерации,
-            Правительство Российской Федерации, законодательные и исполнительные органы власти
-            субъектов Российской Федерации, политические партии и другие общественные объединения,
-            профсоюзы, средства массовой информации, культурные организации и учреждения, деятелям
-            культуры и искусства способствовать объединению всех здоровых сил общества, созданию
-            условий, в котором личность будет формироваться в атмосфере гордости за славную историю
-            Отечества и его Вооруженных Сил. Она обратилась ко всем заинтересованным органам,
-            организациям и учреждениям культуры, деятелям культуры и искусства с призывом возродить
-            и развивать традиции шефской работы в воинских коллективах, активного участия общества в
-            формировании подрастающего поколения. В обращении отмечалось, что Государственная Дума
-            считает целесообразным создать государственную программу нравственного и
-            военно-патриотического воспитания молодежи.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            2. Государство управляет системой патриотического воспитания, широко используя при этом
-            общественные институты.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Федеральные органы исполнительной власти, органы исполнительной власти субъектов
-            Российской Федерации и органы местного самоуправления, управляя процессом
-            патриотического воспитания, действуют в пределах своих полномочий и объединяют усилия
-            для обеспечения его эффективного функционирования.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Федеральные органы исполнительной власти обеспечивают реализацию решений Правительства
-            Российской Федерации, положений вышеупомянутой Концепции и государственных программ
-            патриотического воспитания граждан, разрабатывают ведомственные программы (планы)
-            патриотического воспитания в пределах своей компетенции и организуют их реализацию.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Органы исполнительной власти субъектов Российской Федерации взаимодействуют с
-            федеральными органами исполнительной власти в целях обеспечения реализации положений
-            настоящей Концепции, государственных программ и планов по патриотическому воспитанию.
-            Они вносят предложения по совершенствованию системы патриотического воспитания,
-            разрабатывают долгосрочные региональные программы (планы) патриотического воспитания и
-            реализуют их, совместно с органами местного самоуправления проводят мероприятия по
-            привлечению общественных и религиозных объединений и организаций к решению задач
-            патриотического воспитания, обеспечивают финансирование деятельности региональных
-            программы.
-          </span>
-        </p>
-        <p className="c5">
-          <span className="c0">
-            4. Формы военно-патриотической работы в настоящее время не закреплены в действующем
-            законодательстве, что позволяет определять их в зависимости от поставленных целей и
-            имеющихся финансовых возможностей.
-          </span>
-        </p>
-        <p className="c5">
-          <span className="c0">
-            На федеральном уровне запланированы следующие военно-патриотические мероприятия:
-          </span>
-        </p>
-        <p className="c5">
-          <span className="c0">- всероссийские научно-практические конференции;</span>
-        </p>
-        <p className="c5">
-          <span className="c0">- выставки в музеях Российской Федерации;</span>
-        </p>
-        <p className="c5">
-          <span className="c0">
-            - виртуальные исторические и документальные выставки в Интернете;
-          </span>
-        </p>
-        <p className="c5">
-          <span className="c0">- фестивали и конкурсы патриотической песни;</span>
-        </p>
-        <p className="c5">
-          <span className="c0">- литературные и концертные программы;</span>
-        </p>
-        <p className="c5">
-          <span className="c0">- слет спортсменов-автомобилистов в городах-героях;</span>
-        </p>
-        <p className="c5">
-          <span className="c0">- марширующие парады муниципальных и военных оркестров;</span>
-        </p>
-        <p className="c5">
-          <span className="c0">- конкурсы на лучший учебник по военной истории Отечества;</span>
-        </p>
-        <p className="c5">
-          <span className="c0">
-            - эстафеты пропагандистских поездов по территории Российской Федерации;
-          </span>
-        </p>
-        <p className="c5">
-          <span className="c0">
-            - поисковые операции на полях сражений Великой Отечественной войны 1941-1945 годов;
-          </span>
-        </p>
-        <p className="c5">
-          <span className="c0">- спортивные состязания, спортивные игры и конкурсы;</span>
-        </p>
-        <p className="c5">
-          <span className="c0">- создание фильмов;</span>
-        </p>
-        <p className="c5">
-          <span className="c0">- учреждение наград и т.д.</span>
-        </p>
-        <p className="c5">
-          <span className="c0">
-            На региональном уровне формами военно-патриотической работы являются:
-          </span>
-        </p>
-        <p className="c5">
-          <span className="c0">
-            - создание специализированных центров военно-патриотического воспитания,
-            военно-патриотических организаций и клубов;
-          </span>
-        </p>
-        <p className="c5">
-          <span className="c0">
-            - установление патронажных отношений между городами и военными организациями;
-          </span>
-        </p>
-        <p className="c5">
-          <span className="c0">
-            - конкурсы журналистских работ на военно-патриотическую тематику;
-          </span>
-        </p>
-        <p className="c5">
-          <span className="c0">- фестивали военно-патриотической песни;</span>
-        </p>
-        <p className="c5">
-          <span className="c0">- конкурсы военно-патриотических теле- и радиопрограмм;</span>
-        </p>
-        <p className="c5">
-          <span className="c0">- проведение игр;</span>
-        </p>
-        <p className="c5">
-          <span className="c0">- военно-патриотические автопробеги;</span>
-        </p>
-        <p className="c5">
-          <span className="c0">
-            - конкурсы по военно-патриотическому воспитанию, проводимые среди образовательных
-            учреждений и военных организаций;
-          </span>
-        </p>
-        <p className="c5">
-          <span className="c0">- учреждение наград.</span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            5. Отличительной особенностью организации военно-патриотической работы в Вооруженных
-            Силах Российской Федерации является проведение в соответствии со статьей 5 Федерального
-            закона "О днях воинской славы (Днях Победы)" От 13 марта 1995 г. № 32-ФЗ воинских
-            ритуалов, торжеств и праздничных салютов в последующие дни:
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            18 апреля – День Победы русских воинов князя Александра Невского над немецкими рыцарями
-            на Чудском озере (Ледовое побоище, 1242);
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            21 сентября - Русские полки во главе с великим князем Дмитрием Донским одержали победу
-            над монголо–татарскими войсками в Куликовской битве (1380);
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            7 ноября - День военного парада на Красной площади в Москве в ознаменование двадцать
-            четвертой годовщины Великой Октябрьской Социалистической революции (1941);
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            10 июля – День Победы русской армии под командованием Петра Великого над шведами в
-            Полтавской битве (1709);
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            9 августа – День первой в российской истории морской победы русского флота под
-            командованием Петра Великого над шведами у мыса Гангут (1714);
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            24 декабря - Русские войска под командованием А.В. Суворова взяли турецкую крепость
-            Измаил (1790);
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            11 сентября – День победы русской эскадры под командованием Ф.Ф. Ушакова над турецкой
-            эскадрой у мыса Тендра (1790);
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            8 сентября – День Бородинского сражения русской армии под командованием М.И. Кутузова с
-            французской армией (1812);
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            1 декабря – День победы русской эскадры под командованием П.С. Нахимова над турецкой
-            эскадрой у мыса Синоп (1853);
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">23 февраля – День защитника Отечества;</span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            5 декабря – День начала советских контрнаступлений против немецко-фашистских войск в
-            битве за Москву (1941);
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            2 февраля – День разгрома советскими войсками немецко-фашистских войск в Сталинградской
-            битве (1943);
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            23 августа - День разгрома советскими войсками немецко-фашистских войск в Курской битве
-            (1943);
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">27 января - День снятия блокады Ленинграда (1944);</span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            9 мая - День Победы Советского народа в Великой Отечественной войне 1941-1945 годов
-            (1945);
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">4 ноября - День национального единства.</span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Данные мероприятия проводятся в соответствии с порядком,
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;порядке проведения дней воинской
-            славы (Дней победы) России в Вооруженных Силах Российской Федерации и других войсках» от
-            4 декабря 1995 года № 1183. Содержание, порядок подготовки и проведения торжественных
-            мероприятий определяются в соответствии с законодательством Российской Федерации и
-            уставами Вооруженных Сил Российской Федерации" [2,3].
-          </span>
-        </p>
-      </section>
-      <section id="2">
-        <p className="c1">
-          <span className="c24 c10 c33">Глава 2.</span>
-          <span className="c13 c10">
-            &nbsp;Требования постановления Правительства РФ от 31 декабря 1999г. №&nbsp;1441 «Об
-            утверждении Положения «О подготовке граждан Российской Федерации к военной службе».
-          </span>
-        </p>
-        <a id="id.1t3h5sf" />
-        <p className="c1">
-          <span className="c0">
-            Постановлением Правительства Российской Федерации № 1441 от 31 декабря 1999 года введено
-            в действие Положение «О подготовке граждан Российской Федерации к военной службе»,
-            определяющее порядок обучения граждан мужского и женского пола основам военной службы в
-            образовательных организациях общего и профессионального образования [4].
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">Рассмотрим выдержки из положения.</span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            5. Обучение основам военной службы предусмотрено для граждан мужского пола и проводится
-            в образовательных организациях в рамках освоения образовательной программы среднего
-            общего образования или среднего профессионального образования в течение последних 2 лет
-            обучения и в учебных центрах.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            В учебных центрах граждане, достигшие 16-летнего возраста, не обучающиеся в организациях
-            образования и не работающие в организациях, проходят обучение основам военной службы по
-            направлению военных комиссариатов.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            6. Обучение граждан основам военной службы осуществляется в соответствии с федеральными
-            государственными образовательными стандартами.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            7. Отбор преподавателей, обучающих граждан основам военной службы, осуществляется, как
-            правило, из числа офицеров, находящихся в запасе, имеющих высшее или среднее
-            профессиональное образование по программам подготовки специалистов среднего звена, а
-            также выпускников военных кафедр педагогических образовательных организаций с высшим
-            образованием, обладающие необходимыми знаниями и высокими моральными и деловыми
-            качествами.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Если невозможно заменить штатную должность преподавателя лицом, имеющим офицерское
-            звание и находящимся в запасе, разрешается в виде исключения назначать на эту должность
-            прапорщиков, мичманов, сержантов, старшин, солдат или матросов, имеющих высшее
-            образование или среднее профессиональное обучение по программам подготовки специалистов
-            среднего звена.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            16. С гражданами женского пола в общеобразовательных организациях и профессиональных
-            образовательных организациях занятия по углубленному изучению основ медицинских знаний
-            проводятся отдельно от граждан мужского пола.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            Отбор преподавателей для проведения занятий по основам медицинских знаний осуществляется
-            руководителями образовательных организаций совместно с органами здравоохранения из числа
-            подготовленных медицинских работников, а также преподавателей, прошедших обучение по
-            программе подготовки медицинских сестер.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            17. Порядок организации и проведения учебно-тренировочных сборов определяется
-            совместными нормативными правовыми актами Министерства обороны Российской Федерации и
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            18. Военно-патриотическое воспитание, являющееся неотъемлемой частью обязательной
-            подготовки граждан к военной службе, организуется органами исполнительной власти
-            субъектов Российской Федерации и органами местного самоуправления совместно с
-            Министерством обороны Российской Федерации и федеральными органами исполнительной
-            власти, в которых военная служба предусмотрена законом, и проводится в
-            общеобразовательных организациях, реализующих образовательные программы основного общего
-            и среднего общего образования, профессиональных образовательных организациях и высших
-            учебных заведениях, в учебных центрах, а также военно-патриотических молодежных и
-            детских объединениях.
-          </span>
-        </p>
-        <p className="c1">
-          <span className="c0">
-            19. В военно-патриотическом воспитании граждан могут принимать участие общественные и
-            религиозные объединения, деятельность которых разрешена на территории Российской
-            Федерации.
-          </span>
-        </p>
-        <p className="c9 c14">
-          <span className="c0" />
-        </p>
-      </section>
       <p className="c1">
-        <span className="c13 c10">
+        <span className="c0">
+          Геополитическая обстановка, формирование нового миропорядка на основе многополярной
+          системы выводят на первый план вопросы улучшения обороноспособности Российской Федерации.
+          &nbsp;В соответствии с поправками в Федеральный закон от 28 марта 1998 г. «О воинской
+          обязанности и военной службе» с 2008 г. срок прохождения военной&nbsp;службы по призыву в
+          Российской армии составляет 1 год, при этом, в результате проведенной военной реформы
+          уровень современного вооружения в армии достиг 68% [1]. Это высокотехнологичная техника,
+          порой основанная на новых принципах, введены новые образцы стрелкового вооружения,
+          повсеместно в армии стали применятся беспилотные летательные аппараты. Все это выводит
+          вопросы допризывной подготовки молодежи в разряд приоритетных. Понимая это Министерство
+          Обороны России, сформировало и реализует ряд инициатив по совершенствованию процесса
+          допризывной подготовки учащихся на военных учебных сборах. В рамках данных сборов особое
+          значение приобритает не только повышение качества процесса допризывной подготовки, но и
+          увеличение эффективности военно-патриотической работы с допризывной молодежью.
+          &nbsp;Представленная Министерством Обороны программа военно-патриотического воспитания в
+          процессе сборов по основам военной службы, призвана решать в первую очередь решать задачи
+          качественного выполнения воинской обязанности, формирование чувства любви и верности
+          Отечеству, готовности добросовестно служить государству и обществу.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Прохождение службы в армии для большинства призывников является серьезным жизненным
+          испытанием. Для более успешной адаптации ребят к несению службы и повышению уровня
+          подготовки допризывной молодежи к службе в Вооруженных Силах в программы курсов ОБЖ и БЖД
+          введены разделы «Основы военной службы». Основная цель данных разделов - привитие
+          необходимых знаний и навыков, а также психологическая подготовка допризывной молодежи к
+          службе путем изучения основ военного дела.{' '}
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Основной целью изучения данного учебного материала является получение представления о
+          требованиях руководящих документов по организации и проведению 5-дневных учебных сборов,
+          методика и особенности их организации.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          В представленном пособии нами представлены с типовые план-конспекты занятий по разделам
+          программы сборов: тактической, огневой, строевой, военно-медицинской и физической
+          подготовке, по радиационной, химической и биологической защите, уставам Вооруженных сил
+          Российской Федерации.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Авторский коллектив выражает надежду, что данное пособие будет способствовать эффективному
+          осуществлению профессиональной деятельности руководителей и преподавателей-организаторов
+          ОБЖ учебных заведений при проведении 5-дневных учебных сборов по основам венной службы с
+          допризывной молодежью.
+        </span>
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c10 c28">
+        <span className="c9" />
+      </p>
+      <p className="c1">
+        <span className="c9">
+          Раздел I. Основополагающие требования руководящих документов по организации и проведению
+          учебных сборов по основам военной службы с (допризывной молодежью) гражданами Российской
+          Федерации, в рамках подготовки по основам военной службы.{' '}
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Глава 1. Основополагающие требования Федерального закона от 28 марта 1998 г. N 53-ФЗ «О
+          воинской обязанности и военной службе» к обязательной и добровольной подготовке гражданина
+          к военной службе.{' '}
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          На основании Федерального закона от 28 марта 1998 г. № 53-ФЗ «О воинской обязанности и
+          военной службе» предусматриваются следующий перечень требований к подготовке гражданина к
+          военной службе [1].
+        </span>
+      </p>
+      <a id="id.gjdgxs" />
+      <p className="c1">
+        <span className="c0">Статья 11. Обязательная подготовка гражданина к военной службе.</span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          1. Обязательная подготовка гражданина к военной службе предусматривает:
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">получение начальных знаний в области обороны;</span>
+      </p>
+      <a id="id.30j0zll" />
+      <p className="c1">
+        <span className="c0">
+          подготовку по основам военной службы в учебных заведениях в рамках освоения
+          образовательной программы среднего общего образования или среднего профессионального
+          образования и в учебных пунктах организаций;
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">военно-патриотическое воспитание;</span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          подготовку по военно-учетным специальностям солдат, матросов, сержантов и старшин по
+          направлению военного комиссариата;
+        </span>
+      </p>
+      <a id="id.1fob9te" />
+      <p className="c1">
+        <span className="c0">медицинское освидетельствование;</span>
+      </p>
+      <a id="id.3znysh7" />
+      <p className="c1">
+        <span className="c2">
+          2. Обязательная подготовка граждан к военной службе осуществляется в{' '}
+        </span>
+        <span className="c2">порядке</span>
+        <span className="c0">, определяемом Правительством Российской Федерации.</span>
+      </p>
+      <p className="c1">
+        <span className="c0">Комментарий к статье 11.</span>
+      </p>
+      <p className="c1">
+        <span className="c2">«</span>
+        <span className="c2 c19">Комментарий к&nbsp;</span>
+        <span className="c2 c19">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/178405/9d78f2e21a0e8d6e5a75ac4e4a939832/%23block_21000&sa=D&source=editors&ust=1679828544739243&usg=AOvVaw02KD4UpzXaoI_xUw79oply"
+          >
+            п. 1
+          </a>
+        </span>
+        <span className="c2 c19">.</span>
+      </p>
+      <p className="c1">
+        <span className="c2">
+          1. Проводя правовое регулирование в сфере воинской обязанности с целью осуществления
+          гражданами Российской Федерации конституционного долга и обязанности по обороне
+          государства, комментируемый&nbsp;
+        </span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/178405/&sa=D&source=editors&ust=1679828544739763&usg=AOvVaw2Lg2z4ib9bqC_3p_JDXo0L"
+          >
+            Федеральный закон
+          </a>
+        </span>
+        <span className="c0">
+          , не раскрывает сущность правового понятия «подготовка гражданина к военной службе» [3].
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c2">
+          В России разделение подготовки граждан к военной службе на обязательную и добровольную
+          проведена с 1998 г. При этом лишь обязательная подготовка к военной службе на
+          основании&nbsp;
+        </span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/178405/1cafb24d049dcd1e7707a22d98e9858f/%23block_10000&sa=D&source=editors&ust=1679828544740234&usg=AOvVaw3YWoOVQMa-aU9FmqvRADQW"
+          >
+            п. 1 ст. 1
+          </a>
+        </span>
+        <span className="c0">
+          &nbsp;комментируемого Федерального закона входит в составную часть воинской обязанности, в
+          отличии от добровольной подготовки, содержание которой в данную конструкцию не входит.{' '}
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          2. Данный пункт&nbsp;раскрывает обязательные мероприятия в сфере подготовки граждан к
+          военной службе:
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c2">- получение начальных знаний в области обороны (</span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/178405/b6e02e45ca70d110df0019b9fe339c70/%23block_12&sa=D&source=editors&ust=1679828544740769&usg=AOvVaw2b38XLpCtFML7mKEwM9lgc"
+          >
+            ст. 12
+          </a>
+        </span>
+        <span className="c0">);</span>
+      </p>
+      <p className="c1">
+        <span className="c2">
+          - подготовка по основам военной службы в образовательном учреждении среднего (полного)
+          общего образования, образовательном учреждении начального профессионального и среднего
+          профессионального образования и в учебных пунктах организаций (
+        </span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/178405/4d6cc5b8235f826b2c67847b967f8695/%23block_13&sa=D&source=editors&ust=1679828544741235&usg=AOvVaw0oCpOqMnW3L3ByLhElNApF"
+          >
+            ст. 13
+          </a>
+        </span>
+        <span className="c0">);</span>
+      </p>
+      <p className="c1">
+        <span className="c2">- военно-патриотическое воспитание (</span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/178405/888134b28b1397ffae87a0ab1e117954/%23block_14&sa=D&source=editors&ust=1679828544741666&usg=AOvVaw2KoFuD-BSPx4ttGU-hB9Aa"
+          >
+            ст. 14
+          </a>
+        </span>
+        <span className="c0">);</span>
+      </p>
+      <p className="c1">
+        <span className="c2">
+          - подготовка по военно-учетным специальностям солдат, матросов, сержантов и старшин по
+          направлению военного комиссариата (
+        </span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/178405/36bfb7176e3e8bfebe718035887e4efc/%23block_15&sa=D&source=editors&ust=1679828544742113&usg=AOvVaw0IbkW9nV1GFH_2MwJPXt9S"
+          >
+            ст. 15
+          </a>
+        </span>
+        <span className="c0">);</span>
+      </p>
+      <p className="c1">
+        <span className="c0">- медицинское освидетельствование.</span>
+      </p>
+      <p className="c1">
+        <span className="c2">
+          3. Формирование у обучающихся начальных знаний об обороне страны, о воинской обязанности
+          граждан и обретение ими навыков в сфере гражданской обороны, а также осуществление
+          подготовки учащихся – граждан мужского пола, не прошедших военной службы, по основам
+          военной службы осуществляется в образовательных учреждениях среднего (полного) общего
+          образования, образовательных учреждениях начального профессионального и среднего
+          профессионального образования в соответствии с государственными образовательными
+          стандартами в порядке, предусмотренном законами и иными нормативными правовыми актами
+          Российской Федерации, законами и иными нормативными правовыми актами субъектов Российской
+          Федерации (
+        </span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/10164235/888134b28b1397ffae87a0ab1e117954/%23block_147&sa=D&source=editors&ust=1679828544742699&usg=AOvVaw1FbRx8o3UTUQkhOED-gXWv"
+          >
+            ч. 7 ст. 14
+          </a>
+        </span>
+        <span className="c2">
+          &nbsp;Закона Российской Федерации «Об образовании» от 10 июля 1992 г. N 3266-I).
+          Соответствующий порядок установлен{' '}
+        </span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/181486/&sa=D&source=editors&ust=1679828544742933&usg=AOvVaw3fpzAHfjJfHp1GkIjJqqx1"
+          >
+            постановлением
+          </a>
+        </span>
+        <span className="c0">
+          &nbsp;Правительства Российской Федерации «Об утверждении Положения о подготовке граждан
+          Российской Федерации к военной службе» от 31 декабря 1999 г. N 1441 [6].
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c2">
+          4. Граждане мужского пола получают начальные знания в области обороны в соответствии с
+          примерной программой обучения, согласованной с Министерством обороны Российской Федерации
+          (
+        </span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/181486/30704895c5cec97addba6e34afc1525c/%23block_1004&sa=D&source=editors&ust=1679828544743266&usg=AOvVaw1CmSSYLolBKl5V9FvPJURe"
+          >
+            п. 4
+          </a>
+        </span>
+        <span className="c0">
+          &nbsp;Положения о подготовке граждан Российской Федерации к военной службе). Для
+          реализации данного нормативного предписания издан совместный приказ Министра обороны
+          Российской Федерации и министра образования и науки Российской Федерации «Об утверждении
+          Инструкции об организации обучения граждан Российской Федерации начальным знаниям в
+          области обороны и их подготовки по основам военной службы в образовательных учреждениях
+          среднего (полного) общего образования, образовательных учреждениях начального
+          профессионального и среднего профессионального образования и учебных пунктах» от 24
+          февраля 2010 г. № 96/134 [7]. Данный документ содержит задачи, функции органов военного
+          управления и органов управления образования, порядок организации обучения граждан
+          Российской Федерации начальным знаниям в сфере обороны.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c2">5. В соответствии с </span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/181486/30704895c5cec97addba6e34afc1525c/%23block_5&sa=D&source=editors&ust=1679828544743674&usg=AOvVaw1XasFQWtaeByn7w-IgvKK2"
+          >
+            п. 5
+          </a>
+        </span>
+        <span className="c0">
+          &nbsp;Положения о подготовке граждан Российской Федерации к военной службе подготовка по
+          основам военной службы предусматривается для граждан мужского пола и проводится в
+          образовательных учреждениях среднего (полного) общего образования, образовательных
+          учреждениях начального профессионального и среднего профессионального образования в
+          течение последних двух лет обучения и в учебных пунктах. Обучение основам военной службы в
+          учебных пунктах проходят граждане, достигшие 16-летнего возраста, не проходящие обучение в
+          образовательных учреждениях и не работающие в организациях по направлению военных
+          комиссариатов.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          &nbsp;6. Одно из составляющих частей обязательной подготовки граждан к военной службе
+          является военно-патриотическое воспитание. Воспитательная работа в данной сфере
+          организуется органами исполнительной власти субъектов Российской Федерации и органами
+          местного самоуправления во взаимодействии с Министерством обороны Российской Федерации и
+          федеральными органами исполнительной власти, в которых законом предусмотрена военная
+          служба, и проводится в образовательных учреждениях основного общего образования, среднего
+          (полного) общего образования, начального профессионального, среднего профессионального и
+          высшего профессионального образования, в учебных пунктах, а также военно-патриотических
+          молодежных и детских объединениях. Допускается при решении задач военно-патриотического
+          воспитания граждан привлекать общественные и религиозные объединения, деятельность которых
+          разрешена на территории Российской Федерации.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c2 c19">Комментарий к </span>
+        <span className="c2 c19">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/178405/9d78f2e21a0e8d6e5a75ac4e4a939832/%23block_1102&sa=D&source=editors&ust=1679828544744218&usg=AOvVaw3JWwNwLKJLEPqiTm3Ghe05"
+          >
+            п. 2
+          </a>
+        </span>
+        <span className="c21 c2 c19">.</span>
+      </p>
+      <p className="c1">
+        <span className="c2">
+          8. Правительство Российской Федерации, являясь высшим коллегиальным органом исполнительной
+          власти в соответствии с Конституцией Российской Федерации (
+        </span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/10103000/61be80f84cf4d95f84aeddb3178a7797/%23block_11001&sa=D&source=editors&ust=1679828544744575&usg=AOvVaw0sZj1_WeydUgVyln3kPl9T"
+          >
+            ч. 1 ст. 110
+          </a>
+        </span>
+        <span className="c2">
+          ), принимает меры по обеспечению обороны страны, государственной безопасности России (
+        </span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/10103000/79e1105747e4b4d7487471312237be1c/%23block_11405&sa=D&source=editors&ust=1679828544744830&usg=AOvVaw1-ML2ux283QK9OxWJ0HYJq"
+          >
+            п. «д» ч. 1 ст. 114
+          </a>
+        </span>
+        <span className="c2">), которые отнесены к федеративному ведению (</span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/10103000/4fc81bd708668197a291fdc62307ca74/%23block_7112&sa=D&source=editors&ust=1679828544745050&usg=AOvVaw2S1UeESgH0XfRlFGLtTVIY"
+          >
+            п. «м» ст. 71
+          </a>
+        </span>
+        <span className="c2">
+          ), в том числе издает в этой области постановления и распоряжения, а также обеспечивает их
+          исполнение (
+        </span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/10103000/285ce44b84d86a34d278103083ce77fe/%23block_11501&sa=D&source=editors&ust=1679828544745292&usg=AOvVaw06ZHP01VmAaH0bu5eWfV30"
+          >
+            ч. 1 ст. 115
+          </a>
+        </span>
+        <span className="c2">) [8]. Действуя в рамках обозначенных </span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/12106440/9e3305d0d08ff111955ebd93afd10878/%23block_20&sa=D&source=editors&ust=1679828544745504&usg=AOvVaw2p4E6l90RK5e2mO-k0eAzA"
+          >
+            ст. 20
+          </a>
+        </span>
+        <span className="c0">
+          &nbsp;Федерального конституционного закона «О Правительстве Российской Федерации» от 17
+          декабря 1997 г. N 2-ФКЗ полномочий по обеспечению обороны и государственной безопасности
+          страны, Правительство Российской Федерации реализует выполнение государственных целевых
+          программ и планов развития вооружения, а также программ подготовки граждан по
+          военно-учетным специальностям [9].
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c2">
+          Проводя реализацию комплекса мер по подготовке к вооруженной защите Российской Федерации,
+          целостности и неприкосновенности ее территории, Правительство Российской Федерации на
+          основании{' '}
+        </span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/135907/8b7b3c1c76e91f88d33c08b3736aa67a/%23block_617&sa=D&source=editors&ust=1679828544745860&usg=AOvVaw3MEBjxAb_GIdtowvsF2Xxn"
+          >
+            пп. 17
+          </a>
+        </span>
+        <span className="c2">, </span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/135907/8b7b3c1c76e91f88d33c08b3736aa67a/%23block_618&sa=D&source=editors&ust=1679828544746188&usg=AOvVaw12frSe01Vq8ib4SrG0cwiu"
+          >
+            18 ст. 6
+          </a>
+        </span>
+        <span className="c0">
+          &nbsp;Федерального закона «Об обороне» от 31 мая 1996 г. N 61-ФЗ определяет порядок
+          выполнения федеральными органами исполнительной власти, органами исполнительной власти
+          субъектов Российской Федерации, органами местного самоуправления, организациями независимо
+          от форм собственности процедуры по подготовке граждан Российской Федерации к военной
+          службе, воинского учета, призыва на военную службу и альтернативную гражданскую службу,
+          проведения военно-врачебной экспертизы и военных сборов и утверждает положения о воинском
+          учете, призыве на военную службу, подготовке граждан Российской Федерации к военной
+          службе, проведении военных сборов, военно-врачебной экспертизе, а также перечень
+          военно-учетных специальностей [9].
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c2">
+          На основании вышеизложенного следует, что обязательная подготовка граждан к военной службе
+          осуществляется в порядке, определяемом Правительством Российской Федерации, и реализовано
+          в «
+        </span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/181486/30704895c5cec97addba6e34afc1525c/%23block_1000&sa=D&source=editors&ust=1679828544746681&usg=AOvVaw1Ksz9e9ZCJ9Jlkli3TGtbn"
+          >
+            Положении
+          </a>
+        </span>
+        <span className="c2">
+          &nbsp;о подготовке граждан Российской Федерации к военной службе», утвержденном{' '}
+        </span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/181486/&sa=D&source=editors&ust=1679828544746910&usg=AOvVaw0H2BdwvYivH6UNub9Xhqdq"
+          >
+            постановлением
+          </a>
+        </span>
+        <span className="c0">
+          &nbsp;Правительства Российской Федерации от 31 декабря 1999 г. N 1441.» [4,5].
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Статья 12. Получение гражданами начальных знаний в области обороны.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c2">Федеральными государственными образовательными стандартами</span>
+        <span className="c0">
+          &nbsp;среднего общего образования, федеральными государственными образовательными
+          стандартами среднего профессионального образования предусматривается получение гражданами
+          начальных знаний об обороне государства, о воинской обязанности граждан, а также
+          приобретение гражданами навыков в области гражданской обороны.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">Комментарий к статье 12 </span>
+      </p>
+      <p className="c1">
+        <span className="c2">«</span>
+        <span className="c2 c19">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/178405/b6e02e45ca70d110df0019b9fe339c70/%23block_12&sa=D&source=editors&ust=1679828544747599&usg=AOvVaw0-9HScbvWTBujA5HRcvj3_"
+          >
+            Статья 12.
+          </a>
+        </span>
+        <span className="c21 c2 c19">
+          &nbsp;Получение гражданами начальных знаний в области обороны
+        </span>
+      </p>
+      <p className="c1" id="h.2et92p0">
+        <span className="c2">
+          1. Образовательная реформа, проводимая в Российской Федерации привела к изменениям в
+          федеральном законодательстве.{' '}
+        </span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/188402/&sa=D&source=editors&ust=1679828544748003&usg=AOvVaw110E-xaLXRtHzQGf6pwiof"
+          >
+            Федеральным законом
+          </a>
+        </span>
+        <span className="c2">
+          &nbsp;«О внесении изменений в Федеральный закон «О воинской обязанности и военной службе»
+          и статью 14 Закона Российской Федерации «Об образовании» от 21 июля 2005 г. N 100-ФЗ»
+          приведены в соответствие нормы комментируемого{' '}
+        </span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/178405/&sa=D&source=editors&ust=1679828544748237&usg=AOvVaw1i1v7NyinAfGoIkhZl7dCg"
+          >
+            Федерального закона
+          </a>
+        </span>
+        <span className="c2">&nbsp;и </span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/10164235/&sa=D&source=editors&ust=1679828544748457&usg=AOvVaw1MXwhyOz86syq69aoOiF9W"
+          >
+            Закона
+          </a>
+        </span>
+        <span className="c0">
+          &nbsp;Российской Федерации «Об образовании» в сфере обязательной и добровольной подготовки
+          граждан к военной службе[2]. Указывается, что в образовательных учреждениях среднего
+          (полного) общего образования, образовательных учреждениях начального профессионального и
+          среднего профессионального образования в соответствии с государственными образовательными
+          стандартами осуществляется получение обучающимися начальных знаний об обороне государства,
+          о воинской обязанности граждан и приобретение обучающимися навыков в области гражданской
+          обороны, а также подготовка обучающихся – граждан мужского пола, не прошедших военной
+          службы, по основам военной службы.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          На современном этапе получение гражданами начальных знаний об обороне государства, о
+          воинской обязанности и приобретение навыков в области гражданской обороны определено
+          государственными образовательными стандартами:
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">- среднего (полного) общего образования;</span>
+      </p>
+      <p className="c1">
+        <span className="c0">- начального профессионального образования;</span>
+      </p>
+      <p className="c1">
+        <span className="c0">- среднего профессионального образования.</span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          2. Общее образование включает в себя три ступени, соответствующие уровням образовательных
+          программ: начальное общее, основное общее, среднее (полное) общее образование.
+          Образовательные программы дошкольного, начального общего, основного общего и среднего
+          (полного) общего образования являются преемственными, т.е. каждая последующая программа
+          базируется на предыдущей. Граждане получают начальные знания и навыки в сфере обороны
+          государства в процессе третьей ступени общего образования – среднего (полного) общего
+          образования.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Статья 13. Подготовка граждан по основам военной службы в учебных заведениях в рамках
+          освоения образовательной программы среднего общего образования или среднего
+          профессионального образования и в учебных пунктах организаций.
+        </span>
+      </p>
+      <a id="id.tyjcwt" />
+      <p className="c1">
+        <span className="c0">
+          1. До призыва на военную службу граждане мужского пола проходят подготовку по основам
+          военной службы в учебных заведениях в рамках освоения образовательной программы среднего
+          общего образования или среднего профессионального образования.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c2">
+          Подготовка граждан мужского пола по основам военной службы осуществляется педагогическими
+          работниками указанных образовательных организаций в соответствии с{' '}
+        </span>
+        <span className="c2">федеральными государственными образовательными стандартами</span>
+        <span className="c0">.</span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Подготовка граждан мужского пола по основам военной службы включает проведение с данными
+          гражданами учебных сборов.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c2">
+          2. Граждане мужского пола, достигшие возраста 16 лет, работающие в организациях и не
+          прошедшие подготовку по основам военной службы в рамках освоения образовательной программы
+          среднего общего образования или среднего профессионального образования привлекаются к
+          занятиям по основам военной службы в учебных пунктах, создаваемых в{' '}
+        </span>
+        <span className="c2">порядке</span>
+        <span className="c0">
+          , устанавливаемом уполномоченным федеральным органом исполнительной власти.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">Комментарий к статье 13.</span>
+      </p>
+      <p className="c1">
+        <span className="c2">«</span>
+        <span className="c2 c19">Комментарий к </span>
+        <span className="c2 c19">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/178405/4d6cc5b8235f826b2c67847b967f8695/%23block_1301&sa=D&source=editors&ust=1679828544750597&usg=AOvVaw29F1rOGEPiKjOXaCf55Mmy"
+          >
+            п. 1
+          </a>
+        </span>
+        <span className="c2 c19 c21">.</span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          1. Организационно-образовательные мероприятия в сфере военной подготовки граждан,
+          предусмотренные для граждан мужского пола, реализуются в форме обязательной военной
+          подготовки по основам военной службы в образовательных учреждениях среднего (полного)
+          общего образования, образовательных учреждениях начального профессионального и среднего
+          профессионального образования.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c2">
+          Действие законодательства Российской Федерации в сфере образования распространяется на все
+          образовательные учреждения, на территории Российской Федерации независимо от их
+          организационно-правовых форм и подчиненности (
+        </span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/10164235/b6e02e45ca70d110df0019b9fe339c70/%23block_12&sa=D&source=editors&ust=1679828544751340&usg=AOvVaw3BcrimGXnr8pYHWT18W8Mn"
+          >
+            ст. 12
+          </a>
+        </span>
+        <span className="c0">&nbsp;Закона Российской Федерации «Об образовании») [11].</span>
+      </p>
+      <p className="c1">
+        <span className="c2">
+          2. Подготовка граждан Российской Федерации мужского пола по основам военной службы
+          осуществляется в вышеуказанных образовательных учреждениях на основании федеральных
+          законов «
+        </span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/135907/&sa=D&source=editors&ust=1679828544751662&usg=AOvVaw0b4i5E0q4UT-bI5-62D5gB"
+          >
+            Об обороне
+          </a>
+        </span>
+        <span className="c2">»,</span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/178405/&sa=D&source=editors&ust=1679828544751840&usg=AOvVaw0cqyEJdgHkcfT-Rxj3mVqz"
+          >
+            &nbsp;«О воинской обязанности и военной службе
+          </a>
+        </span>
+        <span className="c2">», «</span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/10164235/&sa=D&source=editors&ust=1679828544752001&usg=AOvVaw2CnVZYk_J-y1Tl4ElI-Rnl"
+          >
+            Об образовании
+          </a>
+        </span>
+        <span className="c2">», «</span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/181486/30704895c5cec97addba6e34afc1525c/%23block_1000&sa=D&source=editors&ust=1679828544752204&usg=AOvVaw2W9mq7MCkNm9-pa7dfcyC8"
+          >
+            Положением
+          </a>
+        </span>
+        <span className="c2">
+          &nbsp;о подготовке граждан Российской Федерации к военной службе», утвержденным{' '}
+        </span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/181486/&sa=D&source=editors&ust=1679828544752377&usg=AOvVaw1L5awCTGNd4FQXtrLFGEF6"
+          >
+            постановлением
+          </a>
+        </span>
+        <span className="c0">
+          &nbsp;Правительства Российской Федерации от 31 декабря 1999 г. N 1441, «Инструкцией об
+          организации обучения граждан Российской Федерации начальным знаниям в области обороны и их
+          подготовки по основам военной службы в образовательных учреждениях среднего (полного)
+          общего образования, образовательных учреждениях начального профессионального и среднего
+          профессионального образования и учебных пунктах», утвержденной приказом министра обороны
+          РФ и Министерства образования РФ от 24 февраля 2010 г. № 96/134, и иными нормативными
+          правовыми актами.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          3. Подготовка по основам военной службы предусматривается для граждан мужского пола до
+          призыва на военную службу. Решение о призыве граждан на военную службу может быть принято
+          только после достижения ими возраста 18 лет.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c2">
+          Конкретные задачи, на достижение которых направлен образовательный процесс в рамках
+          обязательной подготовки граждан к военной службе, определены{' '}
+        </span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/183452/%23block_200&sa=D&source=editors&ust=1679828544752752&usg=AOvVaw1HUOlLfmpFBT8XR4tZnwtL"
+          >
+            разделом II
+          </a>
+        </span>
+        <span className="c0">
+          &nbsp;Инструкции об организации обучения граждан Российской Федерации начальным знаниям в
+          области обороны и их подготовки по основам военной службы в образовательных учреждениях
+          среднего (полного) общего образования, образовательных учреждениях начального
+          профессионального и среднего профессионального образования и учебных пунктах. Среди них
+          выделяются:
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          - формирование морально-психологических и физических качеств гражданина, необходимых для
+          прохождения военной службы;
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          - воспитание патриотизма, уважения к историческому и культурному прошлому России и ее
+          Вооруженным Силам;
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          - изучение гражданами основных положений законодательства Российской Федерации в области
+          обороны государства, о воинской обязанности и воинском учете, обязательной и добровольной
+          подготовке к военной службе, о прохождении военной службы по призыву и в добровольном
+          порядке (по контракту), о пребывании в запасе, о правах, обязанностях и ответственности
+          военнослужащих и граждан, находящихся в запасе;
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">- приобретение навыков в области гражданской обороны;</span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          - изучение основ безопасности военной службы, конструкции и правил обращения с боевым
+          ручным стрелковым оружием, основ тактической, медицинской, строевой подготовки, вопросов
+          радиационной, химической и биологической защиты войск и населения;
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          - практическое закрепление полученных знаний в ходе учебных сборов;
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          - проведение военно-профессиональной ориентации на овладение военно-учетными
+          специальностями и выбор профессии офицера.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c2">
+          4. Особые требования предъявляются к педагогическому составу, привлекаемого к проведению
+          подготовки граждан к военной службе. &nbsp;В соответствии с «
+        </span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/181486/30704895c5cec97addba6e34afc1525c/%23block_1000&sa=D&source=editors&ust=1679828544753591&usg=AOvVaw2KXaTaPZyhLUhH2--gEH1Q"
+          >
+            Положением
+          </a>
+        </span>
+        <span className="c2">
+          &nbsp;о подготовке граждан Российской Федерации к военной службе», утвержденным{' '}
+        </span>
+        <span className="c2">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/181486/&sa=D&source=editors&ust=1679828544753794&usg=AOvVaw26C6YSwpdONfttyToXMexk"
+          >
+            постановлением
+          </a>
+        </span>
+        <span className="c0">
+          &nbsp;Правительства Российской Федерации от 31 декабря 1999 г. N 1441, преподаватели,
+          проводящие подготовку граждан по основам военной службы, как правило, из числа офицеров,
+          пребывающих в запасе, имеющих высшее или среднее военное образование, а также выпускников
+          военных кафедр педагогических образовательных учреждений высшего профессионального
+          образования, обладающих необходимыми знаниями и высокими морально-деловыми качествами, а
+          при отсутствии возможности заместить штатную должность преподавателя лицом, имеющим звание
+          офицера и пребывающим в запасе, разрешается, в виде исключения, назначать на эту должность
+          пребывающих в запасе прапорщиков, мичманов, сержантов, старшин, солдат или матросов,
+          имеющих высшее или среднее профессиональное образование.{' '}
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Подбор кандидатов на должности преподавателей, осуществляющих подготовку по основам
+          военной службы, проводиться руководителем образовательного учреждения совместно с
+          соответствующим военным комиссаром района. Их подготовка, переподготовка и повышение
+          квалификации осуществляются в образовательных учреждениях высшего профессионального
+          образования и дополнительного профессионального образования.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          5. Подготовка граждан мужского пола по основам военной службы осуществляется в
+          соответствии с государственными образовательными стандартами на учебно-материальной базе
+          образовательных учреждениях, которая включает в себя: предметный кабинет, спортивный
+          городок, элементы полосы препятствий, учебных и наглядных пособий, технических средств
+          обучения.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          При желании граждан, углубленно изучить военное дело, организовываются факультативные
+          занятия по дополнительным программам, имеющим целью военно-профессиональную ориентацию
+          граждан.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          По окончании подготовки, военные комиссариаты районов вносят сведения о ее прохождении
+          гражданами в графу «Образование» учетной карты призывника.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          6. Проведение учебно-тренировочных сборов в рамках обучения граждан основам военной
+          службы, предусмотренных комментируемым пунктом, осуществляется в любой год его обучения, а
+          не в конце последнего года обучения, как было установлено ранее, что позволяет обучающимся
+          не отвлекаться от подготовки к выпускным и вступительным экзаменам.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Порядок организации и проведения учебно-тренировочных сборов определяется совместными
+          нормативными правовыми актами Министерства обороны Российской Федерации и Министерства
+          образования Российской Федерации. В настоящее время действует Инструкция по организации
+          обучения граждан Российской Федерации базовым знаниям в области обороны и их обучению
+          основам военной службы в образовательных учреждениях среднего (полного) общего
+          образования, образовательных учреждениях начального профессионального и среднего
+          специального образования и учебных центрах, утвержденная приказ Министра обороны
+          Российской Федерации и Министерства образования Российской Федерации от 24 февраля 2010
+          года № 96/134.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          7. Организация учебно-тренировочных сборов осуществляется в соответствии с решением
+          руководителя органа исполнительной власти субъекта Российской Федерации или органа
+          местного самоуправления, согласованного с начальником военного гарнизона, и планом
+          подготовки к учебно-тренировочным сборам. На основании принятого решения руководитель
+          местного (муниципального) органа управления образованием издает приказ об организации и
+          проведении учебно-тренировочных сборов, согласованный с военным комиссаром района.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Для проведения сборов назначаются ответственные руководители. В состав администрации
+          сборов входят: руководитель сборов, его заместители – по воспитательной работе и по
+          хозяйственной части, начальник штаба сборов и врач.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Решение руководителя органа исполнительной власти субъекта Российской Федерации или органа
+          местного самоуправления о проведении учебно-тренировочных сборов, согласованное с
+          начальником военного гарнизона и планом подготовки к учебно-тренировочным сборам, должно
+          включать:
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">- место и время проведения тренировочных сборов;</span>
+      </p>
+      <p className="c1">
+        <span className="c0">- методическое обеспечение сборов;</span>
+      </p>
+      <p className="c1">
+        <span className="c0">- вопросы взаимодействия с воинскими частями;</span>
+      </p>
+      <p className="c1">
+        <span className="c0">- порядок финансирования;</span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          - вопросы организации жизни и быта граждан в учебном лагере (размещение, питание,
+          медицинское обслуживание, доставка граждан к месту обучения).
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Во время учебных сборов граждане проживают на территориях воинских частей, которые
+          закреплены за учебными заведениями (учебными центрами), расположенными на территории
+          гарнизона, на основании указаний штаба военного округа совместно с военным комиссаром
+          округа и начальником гарнизона. Обеспечение палаточным фондом и постельными
+          принадлежностями для размещения обучаемых в полевых условиях производится за счет
+          имущества воинских частей, бывшего в употреблении, пригодного для дальнейшей эксплуатации,
+          путем выдачи его во временное пользование.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Питание граждан, участвующих в прохождении сборов, организованных на базе воинских частей,
+          осуществляется в соответствии с Положением о продовольственном обеспечении Вооруженных Сил
+          Российской Федерации на мирное время, по действующим нормам с предварительной оплатой
+          стоимости продовольственных пайков по фиксированным ценам и расходов на приготовление пищи
+          в размере 20% от стоимости пайков (без хлеба), а при проведении сборов в учебных
+          заведениях в других организациях – силами и средствами, определенными решением главы
+          органа местного самоуправления.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Медицинское обслуживание обучаемых во время учебно-тренировочных сборов, организованных на
+          базе воинских частей, других воинских формирований и органов, осуществляется в
+          соответствии с порядком, установленным Приказом Министра обороны Российской «Федерации Об
+          организации медицинской помощи в военно-медицинских частях, соединениях и учреждениях
+          Министерства Министерства обороны Российской Федерации» от 16 января 2006 г. № 20,
+          штатными силами и средствами медицинской службы, а при проведении сборов в учебных
+          заведениях, в других организациях - силами и средствами, определенными решением главы
+          органа местного самоуправления [12].
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Перевозка учащихся к местам занятий и обратно может осуществляться автомобильным
+          транспортом воинской части, на базе которой проводятся учебные сборы. Отпуск
+          горюче-смазочных материалов для этих целей осуществляется после предварительной оплаты их
+          стоимости.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Организационные и правовые вопросы учитываются штабом воинской части при разработке плана
+          боевой подготовки воинской части на новый учебный год. Один из его разделов включает
+          мероприятия по проведению учебно-тренировочных сборов с учащимися в образовательных
+          учреждениях среднего (полного) общего образования, начального профессионального и
+          средне-специального образования и учебных центрах организаций, закрепленных за воинской
+          частью приказом начальника гарнизона. В приложении к указанному плану отдельной строкой
+          указан расход боеприпасов во время стрельбы со студентами.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          При составлении документации тренировочного лагеря особое внимание уделяется соблюдению
+          требований безопасности, которые подразделяются следующим образом:
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">- требования безопасности во время стрельб;</span>
+      </p>
+      <p className="c1">
+        <span className="c0">- требования безопасности во время военно-спортивных игр;</span>
+      </p>
+      <p className="c1">
+        <span className="c0">- требования безопасности при перевозке подготовленных граждан;</span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          - требования безопасности при проведении занятий физической культурой;
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          - требования безопасности при организации купания и занятий на воде;
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">- требования пожарной, электрической и взрывобезопасности.</span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Несоблюдение требований безопасности влечет за собой ответственность руководителей сборов.{' '}
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          8. К участию в учебно-тренировочных сборах приглашаются все граждане, обучающиеся в
+          образовательных учреждениях среднего (полного) общего образования, начального
+          профессионального и средне-специального образования и в учебных центрах, за исключением
+          тех, кто имеет освобождение от занятий по состоянию здоровья.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Тренировочные сборы обычно организуются на базе воинских частей в течение пяти дней (35
+          учебных часов). В местах, где нет воинских частей, учебные сборы организуются при
+          образовательных учреждениях, военно-патриотических молодежных и детских общественных
+          объединениях, а также на базе военно-спортивных оздоровительных лагерей. В ходе
+          учебно-тренировочных сборов изучаются следующие предметы: размещение и быт военнослужащих,
+          организация караульной и внутренней служб, элементы боевой, огневой, тактической,
+          физической и медицинской подготовки, а также вопросы радиационной, химической и
+          биологической защиты войск. В ходе учебно-тренировочных сборов проводятся
+          военно-профессиональные ориентационные мероприятия.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Учебный процесс на сборах организован в зависимости от количества слушателей, которые
+          разделены на учебные группы (взводы). Расписание занятий планируется исходя из количества
+          учебных мест и количества учебных групп (взводов) с указанием группы (взвода), места и
+          времени обучения. Учебный процесс во время тренировочного сбора организован в соответствии
+          с учебными планами и распорядком дня.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Военный комиссар округа определяет время и место обучения учащихся стрельбе из боевого
+          ручного стрелкового оружия и доводит его до руководителей учебных заведений. Обучение
+          студентов стрельбе из боевого ручного стрелкового оружия организуется и проводится в
+          установленном порядке командирами воинских частей на стрельбищах или в тирах. Для
+          проведения стрельб командиры воинских частей назначают ответственных должностных лиц и
+          обеспечивают оружием и боеприпасами.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          9. Во время тренировочных занятий в лагере деятельность студентов оценивается по следующим
+          направлениям:
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          - на строевой - строевая стойка, повороты на месте и в движении, строевой шаг, воинское
+          приветствие на месте и в движении, построение отделения, взвод;
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          - по радиационной, химической и биологической защите - приемы и способы радиационной,
+          химической и биологической защиты;
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          - преодоление участка местности, зараженного радиоактивными (токсичными) веществами -
+          действия военнослужащего по сигналам предупреждения и вспышке ядерного взрыва, выполнение
+          нормативов надевания средств индивидуальной защиты;
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          - для медицинского обучения - остановка кровотечения, наложение повязок на раны верхних и
+          нижних конечностей;
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          - физическая подготовка - в объеме требований к новому пополнению воинских частей и к
+          кандидатам, поступающим в военные учебные заведения.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Индивидуальная оценка каждого студента состоит из оценок, полученных за выполнение каждого
+          этапа. Общая оценка студентов за обучение заносится в классный журнал с пометкой «Учебные
+          сборы» и учитывается при выставлении итоговой оценки за курс ОБЖ.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Для студентов, не прошедших учебные сборы по уважительным причинам, могут быть
+          организованы дополнительные занятия и сдача теста по вопросам, предусмотренным программой
+          сборов (по желанию студентов).
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          В случае отказа отдельных учащихся по религиозным соображениям от участия в стрельбе и
+          изучении боевого ручного стрелкового оружия, решение об освобождении от прохождения данной
+          темы занятий принимается руководителем образовательного учреждения на основании
+          мотивированного заявления родителей (законных представителей), которое должно быть подано
+          руководителю образовательного учреждения.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c2 c19">Комментарий к </span>
+        <span className="c2 c19">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/178405/4d6cc5b8235f826b2c67847b967f8695/%23block_22000&sa=D&source=editors&ust=1679828544758492&usg=AOvVaw1b1yv7kwy2F1LS882baPet"
+          >
+            п. 2
+          </a>
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          10. Граждане мужского пола, достигшие 16-летнего возраста, работающие в организациях и не
+          прошедшие обучение основам военной службы в образовательных учреждениях, указанных в
+          пункте 1 комментируемой статьи, привлекаются к занятиям по основам военной службы в
+          учебных центрах, созданных в порядке, установленном правительство Российской Федерации.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Данный порядок установлен Положением о подготовке граждан Российской Федерации к военной
+          службе, утвержденным Постановлением Правительства Российской Федерации от 31 декабря
+          1999г. № 1441, и «Инструкции по организации обучения граждан Российской Федерации базовым
+          знаниям в области обороны и их обучению основам военной службы в образовательных
+          учреждениях среднего (полного) общего образования, образовательных учреждениях начального
+          профессионального и средне-специального образования и учебных центрах», изданной в его
+          развитии, утвержденная приказом Министра обороны Российской Федерации и Министерства
+          образования Российской Федерации от 24 февраля 2010 года №96/134.{' '}
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Учебные центры создаются по решению главы органа местного самоуправления на базе одной
+          организации, состоящей не менее чем из 20 граждан, подлежащих призыву на военную службу и
+          не прошедших обучение основам военной службы, или нескольких организаций (объединенные
+          районные или городские учебные центры). Ответственность за организацию учебных центров
+          возлагается на руководителей организаций, на базе которых они созданы.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          11. Создание и совершенствование учебно-материальной базы обязательного обучения граждан
+          мужского пола, достигших 16-летнего возраста, работающих в организациях и не прошедших
+          обучение основам военной службы в образовательных учреждениях, указанных в пункте 1
+          комментируемой статьи, обеспечивается организациями, в которых учебные центры были
+          созданы.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Учебный центр должен иметь специально оборудованный кабинет для организации и проведения
+          занятий по основам военной службы, оснащенный наглядными пособиями и стендами в
+          соответствии с программой обучения.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          В соответствии с Правилами возмещения расходов, понесенных организациями и гражданами
+          Российской Федерации в связи с реализацией Федерального закона «О воинской обязанности и
+          военной службе», утвержденными Постановлением Правительства Российской Федерации от &nbsp;
+          &nbsp; &nbsp; 1 декабря 2004 года № 704, возмещению подлежат расходы организаций,
+          связанные с обучением граждан основам военной службы в учебных центрах организаций (кроме
+          федеральных учреждений). Выплата производится путем перечисления денежных средств на счета
+          получателей компенсации в пределах бюджетных обязательств и объема финансирования расходов
+          по соответствующим кодам бюджетной классификации Российской Федерации, зафиксированным в
+          лицевом счете получателя средств федерального бюджета, открытом в территориальном органе
+          Российской Федерации, из Федерального казначейства в соответствующий военный комиссариат.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          12. Направление граждан в учебные центры (совместные учебные центры) для преподавания
+          базовых знаний в области обороны и обучения основам военной службы, комплектование учебных
+          групп и контроль за прохождением обучения осуществляются военными комиссариатами округов.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Идентификация граждан, подлежащих обучению, осуществляется военным комиссариатом округа
+          при первоначальной постановке граждан на воинский учет. Для этих граждан составляется
+          персональный список. Список граждан, направляемых на учебу в учебный центр, составляется
+          приказом военного комиссара округа (района).
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          13. Учебные группы создаются для проведения занятий в учебном центре. Учебные группы
+          комплектуются гражданами с учетом сроков их призыва на военную службу. Количество граждан
+          в учебной группе (в зависимости от общего количества в учебном центре) устанавливается от
+          20 до 30 человек.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Для обеспечения обучения граждан в учебном центре издается приказ руководителя организации
+          об организации и порядке проведения занятий, разрабатывается учебный план на весь период
+          обучения и расписание занятий на месяц. Список граждан, направленных на обучение,
+          прилагается к приказу.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Занятия в учебных центрах проводятся 2-3 раза в неделю по 2-3 часа. Обучение граждан в
+          учебных центрах осуществляется в соответствии с обязательным минимумом содержания,
+          требованиями к их уровню подготовки и примерным учебным планом по обучению граждан базовым
+          знаниям в области обороны и их обучению основам военной службы.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Руководство организацией обучения граждан основам военной службы в учебном центре
+          возлагается на внештатного начальника учебного центра и его заместителя по воспитательной
+          работе, а непосредственная организация и проведение занятий с гражданами возлагается на
+          внештатного инструктора-преподавателя. Они назначаются на должности руководителем
+          организации, на базе которой создается учебный центр, в том числе совместный, по
+          согласованию с органом местного самоуправления и военным комиссариатом округа (района) из
+          числа офицеров, прапорщиков, мичманов, сержантов и старшин, работающих в организации.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          В конце обучения проводятся тесты. Для получения зачетов создается комиссия, состоящая из
+          представителя органа местного самоуправления (председателя комиссии), представителей
+          военного комиссариата округа (района), отвечающего за подготовку граждан к военной службе,
+          и территориальных органов, управляющих гражданской обороной.
+        </span>
+      </p>
+      <a id="id.3dy6vkm" />
+      <p className="c1">
+        <span className="c0">
+          14. Результаты обучения основам военной службы отражаются в соответствующем свидетельстве
+          об обучении, которое вручается гражданам. Списки граждан, прошедших обучение в учебных
+          центрах, с результатами сдачи тестов по основам военной службы, направляются в военные
+          комиссариаты по месту воинского учета граждан. Сотрудники военного комиссариата вносят
+          соответствующие записи в регистрационные карточки призывников и удостоверения граждан,
+          подлежащих призыву на военную службу.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">Статья 14. Военно-патриотическое воспитание граждан.</span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          1. Правительство Российской Федерации, органы исполнительной власти субъектов Российской
+          Федерации и органы местного самоуправления совместно с Министерством обороны Российской
+          Федерации, федеральными органами исполнительной власти, в которых настоящим Федеральным
+          законом предусмотрена военная служба, и должностными лицами организаций обязаны
+          систематически осуществлять проведение работы по военно-патриотическому воспитанию
+          граждан.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          2. Подготовка, полученная гражданами в военно-патриотических молодежных и детских
+          объединениях, учитывается призывными комиссиями при определении рода войск Вооруженных Сил
+          Российской Федерации, а также других войск, воинских формирований и органов, в которых они
+          будут проходить военную службу по призыву.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Положение об этих объединениях утверждается уполномоченным федеральным органом
+          исполнительной власти.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          3. Финансирование военно-патриотического воспитания граждан осуществляется за счет средств
+          федерального бюджета. Дополнительное финансирование данной деятельности может
+          осуществляться за счет бюджетов субъектов Российской Федерации, местных бюджетов и
+          внебюджетных фондов с согласия владельцев этих средств.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">Комментарий к статье 14.</span>
+      </p>
+      <p className="c1">
+        <span className="c0">«Комментарий к пункту 1.</span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          1. Введение военно-патриотического воспитания граждан в рамках обязательной подготовки к
+          военной службе является новшеством российского законодательства, поскольку ранее в
+          правовом пространстве, регулирующем отношения в сфере воинской обязанности, не было
+          упоминания об этом виде деятельности. В то же время этому посвящена отдельная статья
+          комментируемого Федерального закона (статья 14).
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          4 марта 1998 года было принято обращение Государственной Думы Федерального Собрания
+          Российской Федерации «О нравственном и военно-патриотическом воспитании молодежи и
+          повышении уровня культуры военнослужащих, правоохранительных органов и силовых структур» №
+          2240-II Государственной Думы [14]. В нем говорилось, что Вооруженные Силы Российской
+          Федерации, другие войска, воинские формирования, органы, в которых федеральным законом
+          предусмотрена военная служба, в том числе правоохранительные органы и службы безопасности,
+          пополняются молодыми людьми, в сознании которых размыты представления о духовных ценностях
+          народа. Государство в настоящее время не в состоянии в полной мере противостоять
+          разрушению культурных традиций. Многие средства массовой информации, в первую очередь
+          теле- и радиовещание, формируют негативное представление о современности и истории страны,
+          о жизни военнослужащих. Государственная Дума призвала Совет Федерации Федерального
+          Собрания Российской Федерации, Президента Российской Федерации, Правительство Российской
+          Федерации, законодательные и исполнительные органы власти субъектов Российской Федерации,
+          политические партии и другие общественные объединения, профсоюзы, средства массовой
+          информации, культурные организации и учреждения, деятелям культуры и искусства
+          способствовать объединению всех здоровых сил общества, созданию условий, в котором
+          личность будет формироваться в атмосфере гордости за славную историю Отечества и его
+          Вооруженных Сил. Она обратилась ко всем заинтересованным органам, организациям и
+          учреждениям культуры, деятелям культуры и искусства с призывом возродить и развивать
+          традиции шефской работы в воинских коллективах, активного участия общества в формировании
+          подрастающего поколения. В обращении отмечалось, что Государственная Дума считает
+          целесообразным создать государственную программу нравственного и военно-патриотического
+          воспитания молодежи.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          2. Государство управляет системой патриотического воспитания, широко используя при этом
+          общественные институты.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Федеральные органы исполнительной власти, органы исполнительной власти субъектов
+          Российской Федерации и органы местного самоуправления, управляя процессом патриотического
+          воспитания, действуют в пределах своих полномочий и объединяют усилия для обеспечения его
+          эффективного функционирования.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Федеральные органы исполнительной власти обеспечивают реализацию решений Правительства
+          Российской Федерации, положений вышеупомянутой Концепции и государственных программ
+          патриотического воспитания граждан, разрабатывают ведомственные программы (планы)
+          патриотического воспитания в пределах своей компетенции и организуют их реализацию.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Органы исполнительной власти субъектов Российской Федерации взаимодействуют с федеральными
+          органами исполнительной власти в целях обеспечения реализации положений настоящей
+          Концепции, государственных программ и планов по патриотическому воспитанию. Они вносят
+          предложения по совершенствованию системы патриотического воспитания, разрабатывают
+          долгосрочные региональные программы (планы) патриотического воспитания и реализуют их,
+          совместно с органами местного самоуправления проводят мероприятия по привлечению
+          общественных и религиозных объединений и организаций к решению задач патриотического
+          воспитания, обеспечивают финансирование деятельности региональных программы.
+        </span>
+      </p>
+      <p className="c4">
+        <span className="c0">
+          4. Формы военно-патриотической работы в настоящее время не закреплены в действующем
+          законодательстве, что позволяет определять их в зависимости от поставленных целей и
+          имеющихся финансовых возможностей.
+        </span>
+      </p>
+      <p className="c4">
+        <span className="c0">
+          На федеральном уровне запланированы следующие военно-патриотические мероприятия:
+        </span>
+      </p>
+      <p className="c4">
+        <span className="c0">- всероссийские научно-практические конференции;</span>
+      </p>
+      <p className="c4">
+        <span className="c0">- выставки в музеях Российской Федерации;</span>
+      </p>
+      <p className="c4">
+        <span className="c0">
+          - виртуальные исторические и документальные выставки в Интернете;
+        </span>
+      </p>
+      <p className="c4">
+        <span className="c0">- фестивали и конкурсы патриотической песни;</span>
+      </p>
+      <p className="c4">
+        <span className="c0">- литературные и концертные программы;</span>
+      </p>
+      <p className="c4">
+        <span className="c0">- слет спортсменов-автомобилистов в городах-героях;</span>
+      </p>
+      <p className="c4">
+        <span className="c0">- марширующие парады муниципальных и военных оркестров;</span>
+      </p>
+      <p className="c4">
+        <span className="c0">- конкурсы на лучший учебник по военной истории Отечества;</span>
+      </p>
+      <p className="c4">
+        <span className="c0">
+          - эстафеты пропагандистских поездов по территории Российской Федерации;
+        </span>
+      </p>
+      <p className="c4">
+        <span className="c0">
+          - поисковые операции на полях сражений Великой Отечественной войны 1941-1945 годов;
+        </span>
+      </p>
+      <p className="c4">
+        <span className="c0">- спортивные состязания, спортивные игры и конкурсы;</span>
+      </p>
+      <p className="c4">
+        <span className="c0">- создание фильмов;</span>
+      </p>
+      <p className="c4">
+        <span className="c0">- учреждение наград и т.д.</span>
+      </p>
+      <p className="c4">
+        <span className="c0">
+          На региональном уровне формами военно-патриотической работы являются:
+        </span>
+      </p>
+      <p className="c4">
+        <span className="c0">
+          - создание специализированных центров военно-патриотического воспитания,
+          военно-патриотических организаций и клубов;
+        </span>
+      </p>
+      <p className="c4">
+        <span className="c0">
+          - установление патронажных отношений между городами и военными организациями;
+        </span>
+      </p>
+      <p className="c4">
+        <span className="c0">
+          - конкурсы журналистских работ на военно-патриотическую тематику;
+        </span>
+      </p>
+      <p className="c4">
+        <span className="c0">- фестивали военно-патриотической песни;</span>
+      </p>
+      <p className="c4">
+        <span className="c0">- конкурсы военно-патриотических теле- и радиопрограмм;</span>
+      </p>
+      <p className="c4">
+        <span className="c0">- проведение игр;</span>
+      </p>
+      <p className="c4">
+        <span className="c0">- военно-патриотические автопробеги;</span>
+      </p>
+      <p className="c4">
+        <span className="c0">
+          - конкурсы по военно-патриотическому воспитанию, проводимые среди образовательных
+          учреждений и военных организаций;
+        </span>
+      </p>
+      <p className="c4">
+        <span className="c0">- учреждение наград.</span>
+      </p>
+      <p className="c1">
+        <span className="c2 c43">5.</span>
+        <span className="c0">
+          &nbsp;Отличительной особенностью организации военно-патриотической работы в Вооруженных
+          Силах Российской Федерации является проведение в соответствии со статьей 5 Федерального
+          закона "О днях воинской славы (Днях Победы)" От 13 марта 1995 г. № 32-ФЗ воинских
+          ритуалов, торжеств и праздничных салютов в последующие дни [15]:
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          18 апреля – День Победы русских воинов князя Александра Невского над немецкими рыцарями на
+          Чудском озере (Ледовое побоище, 1242);
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          21 сентября - Русские полки во главе с великим князем Дмитрием Донским одержали победу над
+          монголо–татарскими войсками в Куликовской битве (1380);
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          7 ноября - День военного парада на Красной площади в Москве в ознаменование двадцать
+          четвертой годовщины Великой Октябрьской Социалистической революции (1941);
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          10 июля – День Победы русской армии под командованием Петра Великого над шведами в
+          Полтавской битве (1709);
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          9 августа – День первой в российской истории морской победы русского флота под
+          командованием Петра Великого над шведами у мыса Гангут (1714);
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          24 декабря - Русские войска под командованием А.В. Суворова взяли турецкую крепость Измаил
+          (1790);
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          11 сентября – День победы русской эскадры под командованием Ф.Ф. Ушакова над турецкой
+          эскадрой у мыса Тендра (1790);
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          8 сентября – День Бородинского сражения русской армии под командованием М.И. Кутузова с
+          французской армией (1812);
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          1 декабря – День победы русской эскадры под командованием П.С. Нахимова над турецкой
+          эскадрой у мыса Синоп (1853);
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">23 февраля – День защитника Отечества;</span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          5 декабря – День начала советских контрнаступлений против немецко-фашистских войск в битве
+          за Москву (1941);
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          2 февраля – День разгрома советскими войсками немецко-фашистских войск в Сталинградской
+          битве (1943);
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          23 августа - День разгрома советскими войсками немецко-фашистских войск в Курской битве
+          (1943);
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">27 января - День снятия блокады Ленинграда (1944);</span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          9 мая - День Победы Советского народа в Великой Отечественной войне 1941-1945 годов
+          (1945);
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">4 ноября - День национального единства.</span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Данные мероприятия проводятся в соответствии с порядком, установленным Постановлением
+          Правительства РФ от 27.11.2006 N716 (ред. от 17.04.2021) «О порядке проведения дней
+          воинской славы России и мероприятий, посвященных памятным датам России». Содержание,
+          порядок подготовки и проведения торжественных мероприятий определяются в соответствии с
+          законодательством Российской Федерации и уставами Вооруженных Сил Российской Федерации"
+          [16,20].
+        </span>
+      </p>
+      <p className="c1 c15">
+        <span className="c0" />
+      </p>
+      <p className="c1">
+        <span className="c21 c2 c19">
+          Глава 2. Требования постановления Правительства РФ от 31 декабря 1999г. №&nbsp;1441 «Об
+          утверждении Положения «О подготовке граждан Российской Федерации к военной службе».
+        </span>
+      </p>
+      <a id="id.1t3h5sf" />
+      <p className="c1">
+        <span className="c0">
+          Постановлением Правительства Российской Федерации № 1441 от 31 декабря 1999 года введено в
+          действие Положение «О подготовке граждан Российской Федерации к военной службе»,
+          определяющее порядок обучения граждан мужского и женского пола основам военной службы в
+          образовательных организациях общего и профессионального образования [5].
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">Рассмотрим выдержки из положения.</span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          5. Обучение основам военной службы предусмотрено для граждан мужского пола и проводится в
+          образовательных организациях в рамках освоения образовательной программы среднего общего
+          образования или среднего профессионального образования в течение последних 2 лет обучения
+          и в учебных центрах.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          В учебных центрах граждане, достигшие 16-летнего возраста, не обучающиеся в организациях
+          образования и не работающие в организациях, проходят обучение основам военной службы по
+          направлению военных комиссариатов.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          6. Обучение граждан основам военной службы осуществляется в соответствии с федеральными
+          государственными образовательными стандартами.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          7. Отбор преподавателей, обучающих граждан основам военной службы, осуществляется, как
+          правило, из числа офицеров, находящихся в запасе, имеющих высшее или среднее
+          профессиональное образование по программам подготовки специалистов среднего звена, а также
+          выпускников военных кафедр педагогических образовательных организаций с высшим
+          образованием, обладающие необходимыми знаниями и высокими моральными и деловыми
+          качествами.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Если невозможно заменить штатную должность преподавателя лицом, имеющим офицерское звание
+          и находящимся в запасе, разрешается в виде исключения назначать на эту должность
+          прапорщиков, мичманов, сержантов, старшин, солдат или матросов, имеющих высшее образование
+          или среднее профессиональное обучение по программам подготовки специалистов среднего
+          звена.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          16. С гражданами женского пола в общеобразовательных организациях и профессиональных
+          образовательных организациях занятия по углубленному изучению основ медицинских знаний
+          проводятся отдельно от граждан мужского пола.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          Отбор преподавателей для проведения занятий по основам медицинских знаний осуществляется
+          руководителями образовательных организаций совместно с органами здравоохранения из числа
+          подготовленных медицинских работников, а также преподавателей, прошедших обучение по
+          программе подготовки медицинских сестер.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          17. Порядок организации и проведения учебно-тренировочных сборов определяется совместными
+          нормативными правовыми актами Министерства обороны Российской Федерации и
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          18. Военно-патриотическое воспитание, являющееся неотъемлемой частью обязательной
+          подготовки граждан к военной службе, организуется органами исполнительной власти субъектов
+          Российской Федерации и органами местного самоуправления совместно с Министерством обороны
+          Российской Федерации и федеральными органами исполнительной власти, в которых военная
+          служба предусмотрена законом, и проводится в общеобразовательных организациях, реализующих
+          образовательные программы основного общего и среднего общего образования, профессиональных
+          образовательных организациях и высших учебных заведениях, в учебных центрах, а также
+          военно-патриотических молодежных и детских объединениях.
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          19. В военно-патриотическом воспитании граждан могут принимать участие общественные и
+          религиозные объединения, деятельность которых разрешена на территории Российской
+          Федерации.
+        </span>
+      </p>
+      <p className="c24 c15">
+        <span className="c0" />
+      </p>
+      <p className="c1">
+        <span className="c21 c2 c19">
           Глава 3. Требования «Инструкции об организации обучения граждан Российской Федерации
           начальным знаниям в области обороны и их подготовки по основам военной службы в
           образовательных учреждениях среднего (полного) общего образования, образовательных
@@ -2576,11 +2135,11 @@ const Book = () => {
           утверждении Инструкции по организации обучения граждан Российской Федерации базовым
           знаниям в области обороны и их обучение основам военной службы в образовательных
           учреждениях среднего (полного) общего образования, образовательных учреждениях начального
-          профессионального и среднего профессионального образования и учебных центрах» [5].
+          профессионального и среднего профессионального образования и учебных центрах» [6].
         </span>
       </p>
       <p className="c1">
-        <span className="c0">Рассмотрим выдержки из Инструкции [6].</span>
+        <span className="c0">Рассмотрим выдержки из Инструкции [7].</span>
       </p>
       <p className="c1">
         <span className="c0">
@@ -2654,11 +2213,11 @@ const Book = () => {
           и сдача тестов.
         </span>
       </p>
-      <p className="c2">
+      <p className="c4 c15">
         <span className="c0" />
       </p>
       <p className="c1">
-        <span className="c13 c10">
+        <span className="c21 c2 c19">
           Глава 4. Учебные сборы – важная форма адаптации юношей к службе в рядах Вооруженных Сил
           Российской Федерации.{' '}
         </span>
@@ -2828,12 +2387,12 @@ const Book = () => {
       <p className="c1">
         <span className="c0">
           Еще Д .Локк отмечал в своих работах, что формирование нравственных привычек играет важную
-          роль в воспитании [7]. К.Д.Ушинский пишет об ужасной силе, которую может иметь привычка:
+          роль в воспитании [17]. К.Д.Ушинский пишет об ужасной силе, которую может иметь привычка:
           «Сколько прекрасных начинаний и даже сколько превосходных людей пали под бременем дурных
           привычек! Если бы одновременных, хотя и самых энергичных усилий над собой было достаточно,
           чтобы искоренить вредные привычки, то избавиться от них было бы нетрудно. Разве нет
           случая, чтобы человек готов был отрезать себе руку или ногу, если при этом они отрежут
-          вредную привычку, отравляющую ему жизнь» [8].
+          вредную привычку, отравляющую ему жизнь» [18].
         </span>
       </p>
       <p className="c1">
@@ -2850,7 +2409,7 @@ const Book = () => {
           работы и для новых побед». «Привычка - это тот же навык, но только на более высоком уровне
           автоматизма. Если воспитателю удалось отобрать все необходимые действия, которые нужно
           сделать привычными, если он мастер формирования полезных привычек, его дело обеспечено», -
-          писала Н.Д. Виноградова [9].
+          писала Н.Д. Виноградова [19].
         </span>
       </p>
       <p className="c1">
@@ -3014,11 +2573,11 @@ const Book = () => {
           распорядком дня.
         </span>
       </p>
-      <p className="c9 c14">
+      <p className="c24 c15">
         <span className="c0" />
       </p>
-      <p className="c5">
-        <span className="c13 c10">
+      <p className="c4">
+        <span className="c21 c2 c19">
           Глава 5. Последовательность работы образовательной организации при подготовке к проведению
           учебных сборов.{' '}
         </span>
@@ -3077,7 +2636,7 @@ const Book = () => {
         </span>
       </p>
       <p className="c1">
-        <span className="c13 c10">1. Уяснение полученной задачи.</span>
+        <span className="c21 c2 c19">1. Уяснение полученной задачи.</span>
       </p>
       <p className="c1">
         <span className="c0">Разбираясь в полученном задании, необходимо понимать:</span>
@@ -3127,8 +2686,10 @@ const Book = () => {
         <span className="c0">- маршрут до воинской части и обратно.</span>
       </p>
       <p className="c1">
-        <span className="c10">2. </span>
-        <span className="c13 c10">Подготовка и утверждение Плана подготовки к учебным сборам.</span>
+        <span className="c2">2. </span>
+        <span className="c21 c2 c19">
+          Подготовка и утверждение Плана подготовки к учебным сборам.
+        </span>
       </p>
       <p className="c1">
         <span className="c0">
@@ -3142,8 +2703,8 @@ const Book = () => {
         </span>
       </p>
       <p className="c1">
-        <span className="c10">3. </span>
-        <span className="c24 c10">Проведение служебного совещания</span>
+        <span className="c2">3. </span>
+        <span className="c2 c19">Проведение служебного совещания</span>
         <span className="c0">.</span>
       </p>
       <p className="c1">
@@ -3192,8 +2753,8 @@ const Book = () => {
         </span>
       </p>
       <p className="c1">
-        <span className="c10">5. </span>
-        <span className="c24 c10">
+        <span className="c2">5. </span>
+        <span className="c2 c19">
           Организация медицинского освидетельствования участников учебно-тренировочных сборов
         </span>
         <span className="c0">.</span>
@@ -3221,8 +2782,8 @@ const Book = () => {
         </span>
       </p>
       <p className="c1">
-        <span className="c10">6. </span>
-        <span className="c24 c10">Проведение родительских собраний.</span>
+        <span className="c2">6. </span>
+        <span className="c2 c19">Проведение родительских собраний.</span>
       </p>
       <p className="c1">
         <span className="c0">
@@ -3262,8 +2823,8 @@ const Book = () => {
         </span>
       </p>
       <p className="c1">
-        <span className="c10">7. </span>
-        <span className="c24 c10">
+        <span className="c2">7. </span>
+        <span className="c2 c19">
           Подготовка и заключение договора с поставщиком услуг на проведение учебных сборов.
         </span>
       </p>
@@ -3275,8 +2836,8 @@ const Book = () => {
         </span>
       </p>
       <p className="c1">
-        <span className="c10">8. </span>
-        <span className="c24 c10">Подготовка студентов к учебным сборам.</span>
+        <span className="c2">8. </span>
+        <span className="c2 c19">Подготовка студентов к учебным сборам.</span>
       </p>
       <p className="c1">
         <span className="c0">
@@ -3302,8 +2863,8 @@ const Book = () => {
         <span className="c0">- пожарная, электро- и взрывобезопасность и другие.</span>
       </p>
       <p className="c1">
-        <span className="c10">9. </span>
-        <span className="c24 c10">Подготовка документации для учебных сборов</span>
+        <span className="c2">9. </span>
+        <span className="c2 c19">Подготовка документации для учебных сборов</span>
         <span className="c0">.</span>
       </p>
       <p className="c1">
@@ -3339,11 +2900,11 @@ const Book = () => {
       <p className="c1">
         <span className="c0">- сводный оценочный лист студентов по учебным сборам.</span>
       </p>
-      <p className="c9 c14">
+      <p className="c24 c15">
         <span className="c0" />
       </p>
-      <p className="c5">
-        <span className="c10 c13">
+      <p className="c4">
+        <span className="c21 c2 c19">
           Глава 6. Организация выезда учащихся, привлекаемых к проведению учебных сборов, в
           соединения и воинские части (оборонно-спортивные и оздоровительные лагеря) и возвращения в
           образовательную организацию.{' '}
@@ -3454,67 +3015,67 @@ const Book = () => {
           ГИБДД.
         </span>
       </p>
-      <p className="c1 c14">
+      <p className="c1 c15">
         <span className="c0" />
       </p>
-      <p className="c5">
-        <span className="c7">
+      <p className="c4">
+        <span className="c9">
           Раздел II. Методика организации и проведения занятий в ходе проведения учебных сборов по
           основам военной службы.
         </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">Подготовка руководителя к занятию включает следующие этапы: </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">1. Уяснение темы занятия и его цели. </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">2. Изучение содержания данного занятия. </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">3. Изучение наставлений, инструкций и руководств. </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">
           4. Определение последовательности проведения занятия и использования материального
           обеспечения.{' '}
         </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">5. Определение методических приемов проведения занятия.</span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">6. Составление плана-конспекта (плана, опорного конспекта). </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">
           7. Подготовка материального обеспечения занятия и места проведения занятия.{' '}
         </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">8. Определение требований безопасности при проведении занятия. </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">
           9. Утверждение плана-конспекта (плана) у руководителя образовательной организации.{' '}
         </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">
           10. Проведение ИМЗ (инструктажа) с помощниками руководителя занятия.{' '}
         </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">
           12. Организация самостоятельной подготовки помощников руководителя занятия.{' '}
         </span>
       </p>
-      <p className="c2">
+      <p className="c4 c15">
         <span className="c0" />
       </p>
-      <p className="c5">
-        <span className="c13 c10">
+      <p className="c4">
+        <span className="c21 c2 c19">
           Глава 1. Методические рекомендации по организации и проведению занятий по общевоинским
           уставам ВС РФ.{' '}
         </span>
@@ -3523,7 +3084,7 @@ const Book = () => {
         <span className="c0">
           Занятия по общевойсковым уставам не могут сводиться только к чтению и пересказу отдельных
           статей или заучиванию устава, они должны обеспечивать формирование у обучаемых навыков
-          правильного выполнения требований уставов на практике.
+          правильного выполнения требований уставов на практике [20].
         </span>
       </p>
       <p className="c1">
@@ -3734,28 +3295,28 @@ const Book = () => {
           четко, громко, лаконично и в полном соответствии с уставами.
         </span>
       </p>
-      <p className="c9 c14">
+      <p className="c24 c15">
         <span className="c0" />
       </p>
-      <p className="c5">
-        <span className="c13 c10">
+      <p className="c4">
+        <span className="c21 c2 c19">
           Глава 2. Методические рекомендации по организации и проведению занятий по строевой
           подготовке.{' '}
         </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">
           В строевой подготовке используются следующие методы: рассказ (объяснение), демонстрация,
           тренировка, самостоятельное изучение техники или действия при выполнении строевых приемов.
         </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">
           Место преподавателя во время строевой подготовки должно обеспечивать контроль за
           действиями обучаемых, чтобы своевременно реагировать на допущенные ими ошибки.
         </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">
           Следует учитывать наиболее подходящее расстояние от строя подразделения: для командиров
           отделений - три–четыре шага; для руководителей классов - пять-семь шагов и более.
@@ -3763,7 +3324,7 @@ const Book = () => {
           выполнять команды.
         </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">
           Большое значение в строевой подготовке имеет умение преподавателей (командиров) четко и
           громко отдавать команды. Предварительная команда должна быть отдана четко и протяжно,
@@ -3774,55 +3335,55 @@ const Book = () => {
           принять стойку «смирно». Это прививает подчиненным дисциплину и уважение к строевизации.
         </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">
           Обучение приемам строевой подготовки должно проводиться в следующей последовательности:{' '}
         </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">ознакомление с приемом; </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">разучивание приема; </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">тренировка. </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">
           Для ознакомления с приемом классный руководитель (командир) должен:{' '}
         </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">назвать прием и указать, где и с какой целью он используется; </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">подать команду, по которой выполняется прием; </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">
           показать строго по строевому уставу, как выполняется прием в целом, а затем в медленном
           темпе по разделениям с кратким пояснением порядка его выполнения.{' '}
         </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">
           В зависимости от сложности упражнения его разучивание может осуществляться:{' '}
         </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">в целом, если прием простой; </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">по разделениям, если прием сложный; </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">
           с помощью подготовительных упражнений, если прием сложный и его отдельные элементы трудно
           усваиваются.{' '}
         </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">
           Чтобы ознакомиться с техникой выполнения строевого приема, преподаватель образцово
           показывает обучаемым порядок его выполнения в целом, а затем по элементам (по
@@ -3836,39 +3397,39 @@ const Book = () => {
           на то, от чего зависит правильность выполнения упражнения или действия.
         </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">
           После ознакомления с упражнением или действием процесс формирования навыка как целостного
           действия включает в себя три взаимосвязанных основных этапа.{' '}
         </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">
           Первый этап состоит в разделении приема или действия на элементы и выполнении приема или
           действия по частям.{' '}
         </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">
           Второй этап последовательно объединяет элементы в группы, а затем в единое целое.{' '}
         </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">
           Третий этап сводится к выработке навыков выполнения того или иного приема или действия.{' '}
         </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">
           Выполнение приема путем многократного повторения (тренировки) доводится до автоматизма. В
           то же время преподаватель (командир) должен следить за тем, чтобы все приемы выполнялись
           правильно, быстро, красиво и четко.
         </span>
       </p>
-      <p className="c5">
-        <span className="c13 c10">Порядок проведения занятия. </span>
+      <p className="c4">
+        <span className="c21 c2 c19">Порядок проведения занятия. </span>
       </p>
-      <p className="c5">
+      <p className="c4">
         <span className="c0">
           Преподаватель обязан стремиться к тому, чтобы каждое занятие по строевой подготовке
           максимально увеличивало подготовку слушателей. Это достигается при условии, что занятие
@@ -3940,11 +3501,11 @@ const Book = () => {
           правильность и четкость выполнения строевых приемов и действий.
         </span>
       </p>
-      <p className="c2">
-        <span className="c6 c16" />
+      <p className="c4 c15">
+        <span className="c34 c2 c14" />
       </p>
       <p className="c1">
-        <span className="c13 c10">
+        <span className="c21 c2 c19">
           Глава 3. Методические рекомендации по организации и проведению занятий по тактической
           подготовке.
         </span>
@@ -3985,7 +3546,7 @@ const Book = () => {
         </span>
       </p>
       <p className="c1">
-        <span className="c24 c10">Проведение тактических и строевых учений</span>
+        <span className="c2 c19">Проведение тактических и строевых учений</span>
         <span className="c0">. </span>
       </p>
       <p className="c1">
@@ -4008,8 +3569,8 @@ const Book = () => {
         <span className="c0">
           По прибытии в район проведения урока преподаватель выстраивает подразделение в две
           шеренги, объявляет тему, образовательные цели урока, порядок его проведения и первый
-          учебный вопрос. Есть возможность проверить знание учащихся теоретических положений по теме
-          предстоящего занятия.
+          учебный вопрос. Есть возможность проверить знание обучающихся теоретических положений по
+          теме предстоящего занятия.
         </span>
       </p>
       <p className="c1">
@@ -4076,11 +3637,11 @@ const Book = () => {
           по устранению выявленных недостатков.
         </span>
       </p>
-      <p className="c1 c14">
+      <p className="c1 c15">
         <span className="c0" />
       </p>
       <p className="c1">
-        <span className="c13 c10">
+        <span className="c21 c2 c19">
           Глава 4. Методические рекомендации по организации и проведению занятий по радиационной,
           химической и биологической защите.{' '}
         </span>
@@ -4154,7 +3715,7 @@ const Book = () => {
       </p>
       <p className="c1">
         <span className="c0">
-          Преподаватель объявляет обучаемым тему и цель предстоящего урока, подчеркивая при этом,
+          Преподаваеть объявляет обучаемым тему и цель предстоящего урока, подчеркивая при этом,
           какие знания и навыки, приобретенные ранее, могут пригодиться при изучении вопросов
           предстоящего урока. Он доводит до обучаемых требования мер безопасности при обращении с
           оружием, средствами индивидуальной защиты и имитационными средствами, используемыми на
@@ -4212,11 +3773,11 @@ const Book = () => {
           индивидуальной защиты и снаряжения.
         </span>
       </p>
-      <p className="c2">
+      <p className="c4 c15">
         <span className="c0" />
       </p>
-      <p className="c5">
-        <span className="c13 c10">
+      <p className="c4">
+        <span className="c21 c2 c19">
           Глава 5. Методические рекомендации по организации и проведению занятий по
           военно-медицинской подготовке.{' '}
         </span>
@@ -4266,7 +3827,7 @@ const Book = () => {
         </span>
       </p>
       <p className="c1">
-        <span className="c13 c10">Организация урока.</span>
+        <span className="c21 c2 c19">Организация урока.</span>
       </p>
       <p className="c1">
         <span className="c0">
@@ -4334,11 +3895,11 @@ const Book = () => {
           самоподготовку и организует возвращение обучаемых с урока.
         </span>
       </p>
-      <p className="c9 c14">
+      <p className="c24 c15">
         <span className="c0" />
       </p>
-      <p className="c5">
-        <span className="c13 c10">
+      <p className="c4">
+        <span className="c21 c2 c19">
           Глава 6. Методические рекомендации по организации и проведению занятий по физической
           подготовке.{' '}
         </span>
@@ -4360,7 +3921,7 @@ const Book = () => {
         </span>
       </p>
       <p className="c1">
-        <span className="c13 c10">Методика проведения подготовительной части урока. </span>
+        <span className="c21 c2 c19">Методика проведения подготовительной части урока. </span>
       </p>
       <p className="c1">
         <span className="c0">
@@ -4432,7 +3993,7 @@ const Book = () => {
         </span>
       </p>
       <p className="c1">
-        <span className="c24 c10">Методика проведения основной части урока</span>
+        <span className="c2 c19">Методика проведения основной части урока</span>
         <span className="c0">. </span>
       </p>
       <p className="c1">
@@ -4518,7 +4079,7 @@ const Book = () => {
         </span>
       </p>
       <p className="c1">
-        <span className="c24 c10">Методика проведения заключительной части урока</span>
+        <span className="c2 c19">Методика проведения заключительной части урока</span>
         <span className="c0">.</span>
       </p>
       <p className="c1">
@@ -4538,7 +4099,7 @@ const Book = () => {
         </span>
       </p>
       <p className="c1">
-        <span className="c24 c10">Меры по предотвращению травматизма</span>
+        <span className="c2 c19">Меры по предотвращению травматизма</span>
         <span className="c0">.</span>
       </p>
       <p className="c1">
@@ -4578,11 +4139,11 @@ const Book = () => {
           тренажерах.
         </span>
       </p>
-      <p className="c9 c14">
+      <p className="c24 c15">
         <span className="c0" />
       </p>
       <p className="c1">
-        <span className="c13 c10">
+        <span className="c21 c2 c19">
           Глава 7. Методические рекомендации по организации и проведению занятий по огневой
           подготовке.{' '}
         </span>
@@ -4684,7 +4245,7 @@ const Book = () => {
         </span>
       </p>
       <p className="c1">
-        <span className="c24 c10">Особенности отработки нормативов по огневой подготовке</span>
+        <span className="c2 c19">Особенности отработки нормативов по огневой подготовке</span>
         <span className="c0">. </span>
       </p>
       <p className="c1">
@@ -4738,16 +4299,15 @@ const Book = () => {
           выполнения норматива и доклада учащегося о его выполнении.
         </span>
       </p>
-      <p className="c5">
-        <span className="c13 c10">
+      <p className="c4">
+        <span className="c21 c2 c19">
           Глава 8. Требования к результатам обучения на учебных сборах по основам военной службы.
           Оценка учебных сборов по основам военной службы.
         </span>
       </p>
       <p className="c1">
-        <span className="c10 c33">8.1. Требования</span>
         <span className="c0">
-          &nbsp;к результатам обучения на учебных сборах по основам военной службы.
+          8.1. Требования к результатам обучения на учебных сборах по основам военной службы.
         </span>
       </p>
       <p className="c1">
@@ -4764,22 +4324,22 @@ const Book = () => {
       <p className="c1">
         <span className="c0">знать</span>
       </p>
-      <ul className="c20 lst-kix_list_1-0 start">
-        <li className="c1 c4">
+      <ul className="c5 lst-kix_list_1-0 start">
+        <li className="c1 c17">
           <span className="c0">сигналы управления подразделениями в бою; </span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">что такое походный, предбоевой и боевой порядок &nbsp;взвода;</span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">способы передвижения на поле боя;</span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">
             нормативы № 1,7,10, 11 по тактической подготовке Сухопутных войск ВС РФ;
           </span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">
             нормативы № 1 и 6 по военной топографии Сухопутных войск ВС РФ.
           </span>
@@ -4788,22 +4348,22 @@ const Book = () => {
       <p className="c1">
         <span className="c0">уметь</span>
       </p>
-      <ul className="c20 lst-kix_list_1-0">
-        <li className="c1 c4">
+      <ul className="c5 lst-kix_list_1-0">
+        <li className="c1 c17">
           <span className="c0">выбрать место для стрельбы;</span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">действовать на поле боя в составе отделения-взвода;</span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">преодолевать &nbsp;МВЗ;</span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">
             выполнять нормативы № 1,7 по тактической подготовке Сухопутных войск ВС РФ;
           </span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">
             выполнять нормативы № 1 и 6 по военной топографии Сухопутных войск ВС РФ.
           </span>
@@ -4813,39 +4373,39 @@ const Book = () => {
         <span className="c0">8.1.2. Огневая подготовка:</span>
       </p>
       <p className="c1">
-        <span className="c10">знать</span>
+        <span className="c2">знать</span>
       </p>
-      <ul className="c20 lst-kix_list_2-0 start">
-        <li className="c1 c4">
+      <ul className="c5 lst-kix_list_2-0 start">
+        <li className="c1 c17">
           <span className="c0">
             назначение, боевые свойства, общее устройство, назначение частей и механизмов АК-74;
           </span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">порядок чистки и смазки оружия;</span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">
             требования безопасности при проведении стрельб и обращении со стрелковым оружием;
           </span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">
             назначение, ТТХ и устройство оборонительных и наступательных гранат;
           </span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">требование безопасности при &nbsp;обращении с гранатами;</span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">
             приемы и способы ведения огня из автомата по неподвижной и появляющимся целям;
           </span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">знать основы и правила стрельбы, условия выполнения 2 УНС;</span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">
             нормативы № 1, 13, 14, 16 по огневой подготовке Сухопутных войск ВС РФ.
           </span>
@@ -4854,23 +4414,23 @@ const Book = () => {
       <p className="c1">
         <span className="c0">уметь</span>
       </p>
-      <ul className="c20 lst-kix_list_1-0">
-        <li className="c1 c4">
+      <ul className="c5 lst-kix_list_1-0">
+        <li className="c1 c17">
           <span className="c0">проводить неполную разборку и сборку автомата;</span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">изготавливаться к бою;</span>
         </li>
       </ul>
-      <ul className="c20 lst-kix_list_2-0">
-        <li className="c1 c4">
+      <ul className="c5 lst-kix_list_2-0">
+        <li className="c1 c17">
           <span className="c0">
             выполнять нормативы № 1, 13, 14, 16 по огневой подготовке Сухопутных войск ВС РФ;
           </span>
         </li>
       </ul>
-      <ul className="c20 lst-kix_list_1-0">
-        <li className="c1 c4">
+      <ul className="c5 lst-kix_list_1-0">
+        <li className="c1 c17">
           <span className="c0">выполнять 2-е УНС из АК-74М.</span>
         </li>
       </ul>
@@ -4878,32 +4438,32 @@ const Book = () => {
         <span className="c0">8.1.3. Радиационная, химическая и биологическая защита</span>
       </p>
       <p className="c1">
-        <span className="c10">знать</span>
+        <span className="c2">знать</span>
       </p>
-      <ul className="c20 lst-kix_list_3-0 start">
-        <li className="c1 c4">
+      <ul className="c5 lst-kix_list_3-0 start">
+        <li className="c1 c17">
           <span className="c0">назначение, устройство средств индивидуальной защиты;</span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">
             способы действий в условиях &nbsp;радиационного, химического и биологического заражения;
           </span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">нормативов № 1,4,6, по РХБЗ Сухопутных войск ВС РФ.</span>
         </li>
       </ul>
       <p className="c1">
         <span className="c0">уметь</span>
       </p>
-      <ul className="c20 lst-kix_list_4-0 start">
-        <li className="c1 c4">
+      <ul className="c5 lst-kix_list_4-0 start">
+        <li className="c1 c17">
           <span className="c0">действовать по сигналам оповещения;</span>
         </li>
-        <li className="c1 c4">
-          <span className="c10">практически выполнять нормативы </span>
-          <span className="c6">&nbsp;</span>
-          <span className="c10">№ 1, 4, 6.</span>
+        <li className="c1 c17">
+          <span className="c2">практически выполнять нормативы </span>
+          <span className="c2 c14">&nbsp;</span>
+          <span className="c2">№ 1, 4, 6.</span>
         </li>
       </ul>
       <p className="c1">
@@ -4912,28 +4472,28 @@ const Book = () => {
       <p className="c1">
         <span className="c0">знать</span>
       </p>
-      <ul className="c20 lst-kix_list_1-0">
-        <li className="c1 c4">
+      <ul className="c5 lst-kix_list_1-0">
+        <li className="c1 c17">
           <span className="c0">общие положения строевого устава ВС РФ; </span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">обязанности военнослужащего перед построением и в строю;</span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">способы передвижения на поле боя;</span>
         </li>
       </ul>
       <p className="c1">
         <span className="c0">уметь</span>
       </p>
-      <ul className="c20 lst-kix_list_4-0">
-        <li className="c1 c4">
+      <ul className="c5 lst-kix_list_4-0">
+        <li className="c1 c17">
           <span className="c0">
             выполнять команды: «Становись», «Равняйсь», «Смирно», «Вольно», «Заправиться»,
             «Разойдись», «Отделение, в одну (две) шеренгу становись», «Отделение, разойдись»;{' '}
           </span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">
             выполнять строевые приемы и движения без оружия: «Строевая стойка», «Повороты на месте»,
             «Движение строевым шагом», «Повороты в движении», «Выполнение воинского приветствия на
@@ -4946,18 +4506,18 @@ const Book = () => {
         <span className="c0">8.1.5. Физическая подготовка</span>
       </p>
       <p className="c1">
-        <span className="c10">знать</span>
+        <span className="c2">знать</span>
       </p>
-      <ul className="c20 lst-kix_list_2-0">
-        <li className="c1 c4">
+      <ul className="c5 lst-kix_list_2-0">
+        <li className="c1 c17">
           <span className="c0">
             требования безопасности при проведении занятий по физической подготовке;{' '}
           </span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">комплекс рукопашного боя РБ-1;</span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">
             условия выполнения упражнений &nbsp;№ 4, 41, 42 и 45 согласно НФП -2009.
           </span>
@@ -4966,14 +4526,14 @@ const Book = () => {
       <p className="c1">
         <span className="c0">уметь</span>
       </p>
-      <ul className="c20 lst-kix_list_2-0">
-        <li className="c1 c4">
+      <ul className="c5 lst-kix_list_2-0">
+        <li className="c1 c17">
           <span className="c0">выполнять подход и отход к спортивному снаряду;</span>
         </li>
-        <li className="c1 c4">
-          <span className="c0">выполнять &nbsp;наскок и соскок со спортивного снаряда;</span>
+        <li className="c1 c17">
+          <span className="c0">выполнять &nbsp;наскок и соскок со спортивного cнаряда;</span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">
             выполнять &nbsp;упражнения &nbsp;№ 4, 41, 42 и 45 согласно НФП 2009.
           </span>
@@ -4985,34 +4545,34 @@ const Book = () => {
       <p className="c1">
         <span className="c0">знать</span>
       </p>
-      <ul className="c20 lst-kix_list_2-0">
-        <li className="c1 c4">
+      <ul className="c5 lst-kix_list_2-0">
+        <li className="c1 c17">
           <span className="c0">
             общие требования по размещению военнослужащих, распределению времени и повседневному
             порядку;{' '}
           </span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">
             воинские звания, кто такие командиры и начальники, старшие и младшие;
           </span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">что такое приказ (приказание), порядок его выполнения;</span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">порядок действия при посещении старшим начальником;</span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">
             порядок ответа на приветствие командира и прощание, ответа на поздравление и
             благодарность;
           </span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">что такое воинская вежливость;</span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">
             правила поведения в казарме, столовой, клубе и других общественных местах.
           </span>
@@ -5021,14 +4581,14 @@ const Book = () => {
       <p className="c1">
         <span className="c0">уметь</span>
       </p>
-      <ul className="c20 lst-kix_list_2-0">
-        <li className="c1 c4">
+      <ul className="c5 lst-kix_list_2-0">
+        <li className="c1 c17">
           <span className="c0">выполнять мероприятия распорядка дня;</span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">обращаться к командирам;</span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">выполнять воинское приветствие в строю и вне строя.</span>
         </li>
       </ul>
@@ -5036,35 +4596,35 @@ const Book = () => {
         <span className="c0">8.1.7. Военно-медицинская подготовка</span>
       </p>
       <p className="c1">
-        <span className="c10">знать</span>
+        <span className="c2">знать</span>
       </p>
-      <ul className="c20 lst-kix_list_5-0 start">
-        <li className="c1 c4">
+      <ul className="c5 lst-kix_list_5-0 start">
+        <li className="c1 c17">
           <span className="c0">правила личной гигиены и профилактики; </span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">правила оказания первой &nbsp;помощи на поле боя;</span>
         </li>
       </ul>
-      <p className="c9 c38">
+      <p className="c24 c47">
         <span className="c0">уметь</span>
       </p>
-      <ul className="c20 lst-kix_list_5-0">
-        <li className="c1 c4">
+      <ul className="c5 lst-kix_list_5-0">
+        <li className="c1 c17">
           <span className="c0">выполнять правила личной гигиены;</span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">оказать первую &nbsp;помощь на поле боя;</span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">
             пользоваться аптечкой индивидуальной АИ, пакетом перевязочным индивидуальным;
           </span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">проводить неотложные &nbsp;реанимационные мероприятия.</span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">
             выполнить &nbsp;нормативы № 1, 2, 4, 8 по военно-медицинской подготовке Сухопутных войск
             ВС РФ..
@@ -5077,14 +4637,14 @@ const Book = () => {
       <p className="c1">
         <span className="c0">знать</span>
       </p>
-      <ul className="c20 lst-kix_list_2-0">
-        <li className="c1 c4">
+      <ul className="c5 lst-kix_list_2-0">
+        <li className="c1 c17">
           <span className="c0">
             обязанности военнослужащего по соблюдению требований безопасности военной службы и по
             предупреждению заболеваний, травм и поражений;{' '}
           </span>
         </li>
-        <li className="c1 c4">
+        <li className="c1 c17">
           <span className="c0">
             требования безопасности при отработке упражнений и нормативов по предметам обучения;
           </span>
@@ -5093,8 +4653,8 @@ const Book = () => {
       <p className="c1">
         <span className="c0">уметь</span>
       </p>
-      <ul className="c20 lst-kix_list_2-0">
-        <li className="c1 c4">
+      <ul className="c5 lst-kix_list_2-0">
+        <li className="c1 c17">
           <span className="c0">
             выполнять требования безопасности при отработке упражнений и нормативов по предметам
             обучения.
@@ -5102,7 +4662,7 @@ const Book = () => {
         </li>
       </ul>
       <p className="c1">
-        <span className="c13 c10">8.2. Оценка учебных сборов по основам военной службы</span>
+        <span className="c21 c2 c19">8.2. Оценка учебных сборов по основам военной службы</span>
       </p>
       <p className="c1">
         <span className="c0">Оценке подлежат:</span>
@@ -5114,7 +4674,7 @@ const Book = () => {
         <span className="c0">- &nbsp; подразделения.</span>
       </p>
       <p className="c1">
-        <span className="c10">
+        <span className="c2">
           Оценка обучаемых по предмету обучения осущесвляется по следующим критериям:
         </span>
       </p>
@@ -5146,19 +4706,19 @@ const Book = () => {
           нормативам – положительно оценены два, при этом один из них &nbsp;не ниже «4».
         </span>
       </p>
-      <p className="c1 c18">
+      <p className="c1 c35">
         <span className="c0">
           Оценка подготовки отделения (взвода) по предмету обучения слагается из оценок, полученных
           обучаемыми &nbsp;и определяется:
         </span>
       </p>
-      <p className="c1 c18">
+      <p className="c1 c35">
         <span className="c0">«5» – не менее 90% положительных оценок, при этом более 50% «5»;</span>
       </p>
-      <p className="c1 c18">
+      <p className="c1 c35">
         <span className="c0">«4» – не менее 80% положительных оценок, при этом более 50% «4»;</span>
       </p>
-      <p className="c1 c18">
+      <p className="c1 c35">
         <span className="c0">«3» – если получено не менее 70% положительных.</span>
       </p>
       <p className="c1">
@@ -5203,22 +4763,22 @@ const Book = () => {
       <p className="c1">
         <span className="c0">«2» - не выполнены условия на оценку «3».</span>
       </p>
-      <p className="c1 c18">
+      <p className="c1 c35">
         <span className="c0">
           Оценка физической подготовки отделения (взвода) слагается из оценок, полученных обучаемыми
           &nbsp;и определяется:
         </span>
       </p>
-      <p className="c1 c18">
+      <p className="c1 c35">
         <span className="c0">«5» – не менее 90% положительных оценок, при этом более 50% «5»;</span>
       </p>
-      <p className="c1 c18">
+      <p className="c1 c35">
         <span className="c0">«4» – не менее 80% положительных оценок, при этом более 50% «4»;</span>
       </p>
-      <p className="c1 c18">
+      <p className="c1 c35">
         <span className="c0">«3» – если получено не менее 70% положительных.</span>
       </p>
-      <p className="c1 c18">
+      <p className="c1 c35">
         <span className="c0">8.2.3. Огневая подготовка</span>
       </p>
       <p className="c1">
@@ -5242,19 +4802,19 @@ const Book = () => {
       <p className="c1">
         <span className="c0">«удовлетворительно» — выбито 15 очков.</span>
       </p>
-      <p className="c1 c18">
+      <p className="c1 c35">
         <span className="c0">
           Оценка огневой подготовки отделения (взвода) слагается из оценок, полученных обучаемыми
           &nbsp;и определяется:
         </span>
       </p>
-      <p className="c1 c18">
+      <p className="c1 c35">
         <span className="c0">«5» – не менее 90% положительных оценок, при этом более 50% «5»;</span>
       </p>
-      <p className="c1 c18">
+      <p className="c1 c35">
         <span className="c0">«4» – не менее 80% положительных оценок, при этом более 50% «4»;</span>
       </p>
-      <p className="c1 c18">
+      <p className="c1 c35">
         <span className="c0">«3» – если получено не менее 70% положительных.</span>
       </p>
       <p className="c1">
@@ -5271,14 +4831,14 @@ const Book = () => {
         <span className="c0">Индивидуальная оценка строевой выучки обучаемого определяется:</span>
       </p>
       <p className="c1">
-        <span className="c10">«5</span>
+        <span className="c2">«5</span>
         <span className="c11">» -</span>
         <span className="c0">
           &nbsp;если 50 % &nbsp;строевых приемов выполнены на «5», &nbsp;остальные - на «4»;
         </span>
       </p>
       <p className="c1">
-        <span className="c10">«4</span>
+        <span className="c2">«4</span>
         <span className="c11">» -</span>
         <span className="c0">
           &nbsp;если не менее 50 % &nbsp;строевых приемов выполнены на «5» и «4», а остальные – на
@@ -5286,17 +4846,17 @@ const Book = () => {
         </span>
       </p>
       <p className="c1">
-        <span className="c10">«3</span>
+        <span className="c2">«3</span>
         <span className="c11">» -</span>
         <span className="c0">
           &nbsp;если не менее 80 % &nbsp;строевых приемов выполнено &nbsp;не ниже «3».
         </span>
       </p>
       <p className="c1">
-        <span className="c10">Оценка одиночной строевой выучки отделения (взвода):</span>
+        <span className="c2">Оценка одиночной строевой выучки отделения (взвода):</span>
       </p>
       <p className="c1">
-        <span className="c10">«5»</span>
+        <span className="c2">«5»</span>
         <span className="c11">&nbsp;-</span>
         <span className="c0">
           &nbsp;если не менее 90% получили положительные оценки, при этом половина проверенных
@@ -5304,7 +4864,7 @@ const Book = () => {
         </span>
       </p>
       <p className="c1">
-        <span className="c10">«4</span>
+        <span className="c2">«4</span>
         <span className="c11">» -</span>
         <span className="c0">
           &nbsp;если не менее 80% &nbsp;получили положительные оценки, при этом половина проверенных
@@ -5313,13 +4873,13 @@ const Book = () => {
       </p>
       <p className="c1">
         <span className="c11">«</span>
-        <span className="c10">3</span>
+        <span className="c2">3</span>
         <span className="c11">» -</span>
         <span className="c0">&nbsp;если не менее 70% получили положительные оценки;</span>
       </p>
       <p className="c1">
         <span className="c11">«</span>
-        <span className="c10">2</span>
+        <span className="c2">2</span>
         <span className="c11">» - </span>
         <span className="c0">
           &nbsp;если не выполнены требования на оценку «удовлетворительно».
@@ -5351,19 +4911,19 @@ const Book = () => {
       <p className="c1">
         <span className="c0">«2» - &nbsp;если не выполнены требования на оценку «3».</span>
       </p>
-      <p className="c1 c18">
+      <p className="c1 c35">
         <span className="c0">
           Оценка по уставам &nbsp;ВС РФ &nbsp;отделения (взвода) слагается из оценок, полученных
           обучаемыми &nbsp;и определяется:
         </span>
       </p>
-      <p className="c1 c18">
+      <p className="c1 c35">
         <span className="c0">«5» – не менее 90% положительных оценок, при этом более 50% «5»;</span>
       </p>
-      <p className="c1 c18">
+      <p className="c1 c35">
         <span className="c0">«4» – не менее 80% положительных оценок, при этом более 50% «4»;</span>
       </p>
-      <p className="c1 c18">
+      <p className="c1 c35">
         <span className="c0">«3» – если получено не менее 70% положительных.</span>
       </p>
       <p className="c1">
@@ -5384,7 +4944,7 @@ const Book = () => {
         <span className="c0">«3» - получено не менее 70% положительных оценок</span>
       </p>
       <p className="c1">
-        <span className="c10">«2» - не выполнены требования на оценку «3»</span>
+        <span className="c2">«2» - не выполнены требования на оценку «3»</span>
       </p>
       <p className="c1">
         <span className="c0">8.2.7. Оценка подразделений (отделение, взвод):</span>
@@ -5399,45 +4959,39 @@ const Book = () => {
         <span className="c0">«3» - получено не менее 70% положительных оценок</span>
       </p>
       <p className="c1">
-        <span className="c10">«2» - не выполнены требования на оценку «3»</span>
+        <span className="c2">«2» - не выполнены требования на оценку «3»</span>
       </p>
-      <p className="c9">
+      <p className="c24">
         <span className="c11">
           Общая оценка за учебные сборы не может быть выше, чем оценка за тактическую и огневую
           подготовку
         </span>
         <span className="c0">&nbsp;при примерном или удовлетворительном поведении.</span>
       </p>
-      <p className="c9 c14">
-        <span className="c0" />
+      <p className="c4 c15">
+        <span className="c21 c19 c11" />
       </p>
-      <p className="c2">
-        <span className="c13 c11" />
-      </p>
-      <p className="c2">
-        <span className="c13 c11" />
-      </p>
-      <p className="c5">
-        <span className="c13 c11">
+      <p className="c4">
+        <span className="c21 c19 c11">
           Раздел III. Примерная тематика занятий, проводимых в ходе учебных сборов. Планы проведения
           занятий и презентации к занятиям на учебных сборах по основам военной службы.
         </span>
       </p>
-      <p className="c2">
-        <span className="c0 c33" />
+      <p className="c4 c15">
+        <span className="c0 c23" />
       </p>
-      <p className="c5">
-        <span className="c13 c10">
+      <p className="c4">
+        <span className="c21 c2 c19">
           Глава 1. Примерная тематика занятий и планы проведения занятий &nbsp;по строевой
           подготовке.
         </span>
       </p>
-      <p className="c8">
-        <span className="c24 c11">Тема 1:</span>
-        <span className="c24 c10">&nbsp;Строевые приемы и движения без оружия.</span>
+      <p className="c12">
+        <span className="c19 c11">Тема 1:</span>
+        <span className="c2 c19">&nbsp;Строевые приемы и движения без оружия.</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 1. </span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 1. </span>
         <span className="c0">
           Практическое – 1 час. Выполнение команд – «Становись», «Равняйсь», «Смирно», «Вольно»,
           «Заправиться», «Разойдись», «Отделение, в одну (две) шеренгу становись», «Отделение,
@@ -5445,59 +4999,57 @@ const Book = () => {
           тренировка в выполнении строевого приема «Повороты на месте» по разделениям и в целом.
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении1{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c8">
-        <span className="c10">Видео выполнения строевых прие</span>
-        <span className="c10 c19">а</span>
-        <span className="c10">мов </span>
-        <span className="c10 c19">(ссылка н видео)</span>
+      <p className="c12">
+        <span className="c2">Видео выполнения строевых приемов </span>
+        <span className="c2 c7">(ссылка на видео)</span>
         <span className="c0">.</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 2. </span>
-        <span className="c10">Практическое – 1 час. Строевой шаг. Движение руками на два </span>
-        <span className="c6">&nbsp;</span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 2. </span>
+        <span className="c2">Практическое – 1 час. Строевой шаг. Движение руками на два </span>
+        <span className="c2 c14">&nbsp;</span>
         <span className="c0">
           счета. Шаг на месте. Движение строевым шагом &nbsp;по разделениям на четыре и два счета.
           Тренировка в движении строевым шагом в темпе 50-60 шагов в минуту. Движение строевым шагом
           &nbsp;в темпе 110-120 шагов в минуту. Повороты в движении.
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 2{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c8">
-        <span className="c10">Видео выполнения строевых приемов </span>
-        <span className="c10 c19">(ссылка на видео)</span>
+      <p className="c12">
+        <span className="c2">Видео выполнения строевых приемов </span>
+        <span className="c2 c7">(ссылка на видео)</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 3. </span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 3. </span>
         <span className="c0">
           Практическое – 1 час. Выполнение воинского приветствия на месте и в движении. Разучивание
           элемента «Выполнение воинского приветствия на месте и в движении» по разделениям и в
           целом. Выход из строя и возвращение в строй. Подход к начальнику и отход от него.{' '}
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 3{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c8">
-        <span className="c10">Видео выполнения строевых приемов </span>
-        <span className="c10 c19">(ссылка на видео)</span>
+      <p className="c12">
+        <span className="c2">Видео выполнения строевых приемов </span>
+        <span className="c2 c7">(ссылка на видео)</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 4.</span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 4.</span>
         <span className="c0">
           &nbsp;Практическое – 1 час. Строи подразделений в пешем порядке. Развернутый и походный
           строй взвода. Построения, перестроения, повороты, перемена направления движения.
@@ -5505,75 +5057,75 @@ const Book = () => {
           взвода.
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 4{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c8">
-        <span className="c10">Видео выполнения строевых приемов </span>
-        <span className="c10 c19">(ссылка на видео)</span>
+      <p className="c12">
+        <span className="c2">Видео выполнения строевых приемов </span>
+        <span className="c2 c7">(ссылка на видео)</span>
       </p>
-      <p className="c8 c14">
+      <p className="c12 c15">
         <span className="c0" />
       </p>
-      <p className="c5">
-        <span className="c13 c10">
+      <p className="c4">
+        <span className="c21 c2 c19">
           Глава 2. Примерная тематика занятий, планы проведения занятий и презентации к занятиям по
           тактической подготовке.
         </span>
       </p>
-      <p className="c8 c14">
-        <span className="c13 c11" />
+      <p className="c12 c15">
+        <span className="c21 c19 c11" />
       </p>
-      <p className="c8">
-        <span className="c24 c11">Тема 1</span>
-        <span className="c24 c10">. Действия солдата в бою</span>
+      <p className="c12">
+        <span className="c19 c11">Тема 1</span>
+        <span className="c2 c19">. Действия солдата в бою</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 1. </span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 1. </span>
         <span className="c0">
           Практическое – 2 часа. Приемы и способы передвижения личного состава отделения в бою при
           действиях в пешем порядке.
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию </span>
+        <span className="c0 c7">(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Видео выполнения норматива № 1 по тактической подготовке Сухопутных войск ВС РФ{' '}
         </span>
-        <span className="c10 c19">(ссылка на видео)</span>
+        <span className="c2 c7">(ссылка на видео)</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Видео выполнения норматива № 7 по тактической подготовке Сухопутных войск ВС РФ{' '}
         </span>
-        <span className="c10 c19">(ссылка на видео)</span>
+        <span className="c2 c7">(ссылка на видео)</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Видео выполнения норматива № 10 по тактической подготовке Сухопутных войск ВС РФ{' '}
         </span>
-        <span className="c10 c19">(ссылка на видео)</span>
+        <span className="c2 c7">(ссылка на видео)</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Видео выполнения норматива № 11 по тактической подготовке Сухопутных войск ВС РФ{' '}
         </span>
-        <span className="c10 c19">(ссылка на видео)</span>
+        <span className="c2 c7">(ссылка на видео)</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 5{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 2. </span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 2. </span>
         <span className="c0">
           Практическое – 2 часа. Сигналы управления в бою, способы их передачи и действия по ним.
           Походный, предбоевой и боевой порядок &nbsp;взвода. Тренировка в развертывании из
@@ -5581,141 +5133,141 @@ const Book = () => {
           места для стрельбы.
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию </span>
+        <span className="c0 c7">(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 6{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 3. </span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 3. </span>
         <span className="c0">
           Практическое – 2 часа. Способы передвижения на поле боя. Отработка нормативов № 1, 7, 10,
           11 по тактической подготовке Сухопутных войск ВС РФ. Прием зачетов по нормативам.
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию </span>
+        <span className="c0 c7">(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 7{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 4.</span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 4.</span>
         <span className="c0">
           &nbsp;Практическое – 2 часа. Ориентирование на местности. Движение по азимуту. Выполнение
           нормативов № 1 и 6 по военной топографии Сухопутных войск ВС РФ.
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию </span>
+        <span className="c0 c7">(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Видео выполнения норматива № 1 по военной топографии Сухопутных войск ВС РФ{' '}
         </span>
-        <span className="c10 c19">(ссылка на видео)</span>
+        <span className="c2 c7">(ссылка на видео)</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия апредствален в приложении 8{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c2">
-        <span className="c0 c33" />
+      <p className="c4 c15">
+        <span className="c0 c23" />
       </p>
-      <p className="c5">
-        <span className="c13 c10">
+      <p className="c4">
+        <span className="c21 c2 c19">
           Глава 3. Примерная тематика занятий, планы проведения занятий и презентации к занятиям по
           радиационной, химической и биологической защите.
         </span>
       </p>
-      <p className="c8">
-        <span className="c24 c11">Тема 1.</span>
-        <span className="c13 c10">&nbsp;Средства индивидуальной защиты и пользование ими.</span>
+      <p className="c12">
+        <span className="c19 c11">Тема 1.</span>
+        <span className="c21 c2 c19">&nbsp;Средства индивидуальной защиты и пользование ими.</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 1. </span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 1. </span>
         <span className="c0">
           Практическое – 2 часа. Способы действий личного состава в условиях &nbsp;радиационного,
           химического и биологического заражения. Тренировка в выполнении нормативов по РХБЗ № 1, 4,
           6 по РХБЗ Сухопутных войск ВС РФ.
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию </span>
+        <span className="c0 c7">(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">Видео выполнения норматива № 1 по РХБЗ Сухопутных войск ВС РФ </span>
-        <span className="c10 c19">(ссылка на видео)</span>
+      <p className="c12">
+        <span className="c2">Видео выполнения норматива № 1 по РХБЗ Сухопутных войск ВС РФ </span>
+        <span className="c2 c7">(ссылка на видео)</span>
       </p>
-      <p className="c8">
-        <span className="c10">Видео выполнения норматива № 4а по РХБЗ Сухопутных войск ВС РФ </span>
-        <span className="c10 c19">(ссылка на видео)</span>
+      <p className="c12">
+        <span className="c2">Видео выполнения норматива № 4а по РХБЗ Сухопутных войск ВС РФ </span>
+        <span className="c2 c7">(ссылка на видео)</span>
       </p>
-      <p className="c8">
-        <span className="c10">Видео выполнения норматива № 4б по РХБЗ Сухопутных войск ВС РФ </span>
-        <span className="c10 c19">(ссылка на видео)</span>
+      <p className="c12">
+        <span className="c2">Видео выполнения норматива № 4б по РХБЗ Сухопутных войск ВС РФ </span>
+        <span className="c2 c7">(ссылка на видео)</span>
       </p>
-      <p className="c8">
-        <span className="c10">Видео выполнения норматива № 6 по РХБЗ Сухопутных войск ВС РФ </span>
-        <span className="c10 c19">(ссылка на видео)</span>
+      <p className="c12">
+        <span className="c2">Видео выполнения норматива № 6 по РХБЗ Сухопутных войск ВС РФ </span>
+        <span className="c2 c7">(ссылка на видео)</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 9{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 2.</span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 2.</span>
         <span className="c0">
           &nbsp;Практическое – 1 час. Прием зачетов по выполнению нормативов № 1, 4, 6 по РХБЗ
           Сухопутных войск ВС РФ.{' '}
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию </span>
+        <span className="c0 c7">(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 10{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c2">
-        <span className="c6 c16" />
+      <p className="c4 c15">
+        <span className="c2 c14 c34" />
       </p>
-      <p className="c5">
-        <span className="c13 c10">
+      <p className="c4">
+        <span className="c21 c2 c19">
           Глава 4. Примерная тематика занятий, планы проведения занятий и презентации к занятиям по
           общевоинским уставам Вооруженных Сил Российской Федерации.
         </span>
       </p>
-      <p className="c2">
+      <p className="c4 c15">
         <span className="c0" />
       </p>
-      <p className="c8">
-        <span className="c24 c11">Тема 1:</span>
-        <span className="c13 c10">
+      <p className="c12">
+        <span className="c19 c11">Тема 1:</span>
+        <span className="c21 c2 c19">
           &nbsp;Распределение времени и внутренний порядок в повседневной деятельности
           военнослужащих.
         </span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 1</span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 1</span>
         <span className="c0">
           . Групповое – 2 часа. Распределение времени и внутренний порядок. Распорядок дня и
           регламент служебного времени. Общие требования по размещению военнослужащих, распределению
@@ -5723,426 +5275,426 @@ const Book = () => {
           состава, утренней физической зарядки, умывания, заправки постелей и утреннего осмотра.{' '}
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию </span>
+        <span className="c0 c7">(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 11{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c8 c14">
+      <p className="c12 c15">
         <span className="c0" />
       </p>
-      <p className="c8">
-        <span className="c24 c11">Тема 2:</span>
-        <span className="c13 c10">&nbsp;Взаимоотношения между военнослужащими.</span>
+      <p className="c12">
+        <span className="c19 c11">Тема 2:</span>
+        <span className="c21 c2 c19">&nbsp;Взаимоотношения между военнослужащими.</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 1</span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 1</span>
         <span className="c0">
           . Групповое – 1 час. Военнослужащие Вооруженных Сил Российской Федерации и взаимоотношения
           между ними. Командиры (начальники) и подчиненные. Старшие и младшие. Приказ (приказание),
           порядок его отдачи и выполнения.{' '}
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию </span>
+        <span className="c0 c7">(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 12{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 2.</span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 2.</span>
         <span className="c0">
           &nbsp;Групповое – 1 час. Воинские звания и знаки различия военнослужащих.
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию</span>
-        <span className="c0 c19">&nbsp;(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию</span>
+        <span className="c0 c7">&nbsp;(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 13{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 3.</span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 3.</span>
         <span className="c0">
           &nbsp;Групповое – 1 час. Воинская дисциплина. Поощрение и дисциплинарные взыскания. Права
           военнослужащих. Дисциплинарная, административная и уголовная ответственность
           военнослужащих.
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию </span>
+        <span className="c0 c7">(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 14{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c8 c14">
-        <span className="c6 c16" />
+      <p className="c12 c15">
+        <span className="c34 c2 c14" />
       </p>
-      <p className="c8">
-        <span className="c24 c11">Тема 3:</span>
-        <span className="c24 c10">&nbsp;Суточный наряд.</span>
+      <p className="c12">
+        <span className="c19 c11">Тема 3:</span>
+        <span className="c2 c19">&nbsp;Суточный наряд.</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 1.</span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 1.</span>
         <span className="c0">
           &nbsp;Групповое – 1 час. Обязанности лиц суточного наряда. Назначение суточного наряда,
           его состав и вооружение. Подчиненность и обязанности дневального по роте. Обязанности
           дневального свободной смены.
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию </span>
+        <span className="c0 c7">(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 15{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 2.</span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 2.</span>
         <span className="c0">
           &nbsp;Групповое – 1 час. Обязанности дежурного по роте. Порядок приема и сдачи дежурства.
           Действия при подъеме по тревоге. Действия по прибытии в роту командиров (начальников) и
           военнослужащих не своего подразделения.{' '}
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию </span>
+        <span className="c0 c7">(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 16{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 3.</span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 3.</span>
         <span className="c0">
           &nbsp;Групповое – 1 час. Комната для хранения оружия, ее оборудование. Порядок хранения
           оружия и боеприпасов. Допуск личного состава в комнату для хранения оружия. Порядок выдачи
           оружия и боеприпасов.
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию </span>
+        <span className="c0 c7">(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 17{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 4.</span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 4.</span>
         <span className="c0">
           &nbsp;Групповое – 1 час. Назначение караула, его состав и вооружение. Обязанности
           часового. Действия часового в различных условиях обстановки.
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию </span>
+        <span className="c0 c7">(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 18{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c2">
-        <span className="c0 c33" />
+      <p className="c4 c15">
+        <span className="c0 c23" />
       </p>
-      <p className="c5">
-        <span className="c13 c10">
+      <p className="c4">
+        <span className="c21 c2 c19">
           Глава 5. Примерная тематика занятий, планы проведения занятий и презентации к занятиям по
           военно-медицинской подготовке.
         </span>
       </p>
-      <p className="c2">
-        <span className="c13 c10" />
+      <p className="c4 c15">
+        <span className="c21 c2 c19" />
       </p>
-      <p className="c8">
-        <span className="c24 c11">Тема 1: </span>
-        <span className="c24 c10">Первая медицинская помощь при ранениях и переломах.</span>
+      <p className="c12">
+        <span className="c19 c11">Тема 1: </span>
+        <span className="c2 c19">Первая медицинская помощь при ранениях и переломах.</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 1.</span>
-        <span className="c10">&nbsp;Практическое – 2 часа. </span>
-        <span className="c6">&nbsp;</span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 1.</span>
+        <span className="c2">&nbsp;Практическое – 2 часа. </span>
+        <span className="c2 c14">&nbsp;</span>
         <span className="c0">
           Оказание первой &nbsp;помощи. Неотложные &nbsp;реанимационные мероприятия. Выполнение
           &nbsp;нормативов № 1, 2, &nbsp;4, &nbsp;8 по военно-медицинской подготовке Сухопутных
           войск ВС РФ.{' '}
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию </span>
+        <span className="c0 c7">(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Видео выполнения норматива № 1 по военно-медицинской подготовке Сухопутных войск ВС РФ{' '}
         </span>
-        <span className="c10 c19">(ссылка на видео)</span>
+        <span className="c2 c7">(ссылка на видео)</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Видео выполнения норматива № 2 по военно-медицинской подготовке Сухопутных войск ВС РФ{' '}
         </span>
-        <span className="c10 c19">(ссылка на видео)</span>
+        <span className="c2 c7">(ссылка на видео)</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Видео выполнения норматива № 4 по военно-медицинской подготовке Сухопутных войск ВС РФ{' '}
         </span>
-        <span className="c10 c19">(ссылка на видео)</span>
+        <span className="c2 c7">(ссылка на видео)</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Видео выполнения норматива № 8 по военно-медицинской подготовке Сухопутных войск ВС РФ{' '}
         </span>
-        <span className="c10 c19">(ссылка на видео)</span>
+        <span className="c2 c7">(ссылка на видео)</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 19{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c2">
+      <p className="c4 c15">
         <span className="c0" />
       </p>
-      <p className="c5">
-        <span className="c13 c10">
+      <p className="c4">
+        <span className="c21 c2 c19">
           Глава 6. Примерная тематика занятий, планы проведения занятий и презентации к занятиям по
           огневой подготовке.
         </span>
       </p>
-      <p className="c2">
+      <p className="c4 c15">
         <span className="c0" />
       </p>
-      <p className="c8">
-        <span className="c24 c11">Тема 1: </span>
-        <span className="c24 c10">Стрелковое оружие и ручные гранаты</span>
+      <p className="c12">
+        <span className="c19 c11">Тема 1: </span>
+        <span className="c2 c19">Стрелковое оружие и ручные гранаты</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 1. </span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 1. </span>
         <span className="c0">
           Групповое – 1 час. &nbsp;Назначение, боевые свойства и общее устройство АК-74. Назначение
           частей и механизмов АК-74. Порядок чистки и смазки оружия. Требования безопасности при
           проведении стрельб и обращении со стрелковым оружием и боеприпасами.
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию </span>
+        <span className="c0 c7">(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 20{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 2. &nbsp;</span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 2. &nbsp;</span>
         <span className="c0">
           Практическое – 2 час. Неполная разборка и сборка автомата. Отработка нормативов № 1, 13,
           14, 16 по огневой подготовке Сухопутных войск ВС РФ.
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию </span>
+        <span className="c0 c7">(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Видео выполнения норматива № 1 по огневой подготовке Сухопутных войск ВС РФ{' '}
         </span>
-        <span className="c10 c19">(ссылка на видео)</span>
+        <span className="c2 c7">(ссылка на видео)</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Видео выполнения норматива № 13 по огневой подготовке Сухопутных войск ВС РФ{' '}
         </span>
-        <span className="c10 c19">(ссылка на видео)</span>
+        <span className="c2 c7">(ссылка на видео)</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Видео выполнения норматива № 14 по огневой подготовке Сухопутных войск ВС РФ{' '}
         </span>
-        <span className="c10 c19">(ссылка на видео)</span>
+        <span className="c2 c7">(ссылка на видео)</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Видео выполнения норматива № 16 по огневой подготовке Сухопутных войск ВС РФ{' '}
         </span>
-        <span className="c10 c19">(ссылка на видео)</span>
+        <span className="c2 c7">(ссылка на видео)</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 21{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 3. &nbsp;</span>
-        <span className="c10">Групповое – 1 час.</span>
-        <span className="c6">&nbsp;</span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 3. &nbsp;</span>
+        <span className="c2">Групповое – 1 час.</span>
+        <span className="c2 c14">&nbsp;</span>
         <span className="c0">
           Назначение, ТТХ и устройство оборонительных и наступательных гранат. Требования
           безопасности при обращении с гранатами. &nbsp;Отработка действий по метанию гранаты.
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию </span>
+        <span className="c0 c7">(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 22{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c8 c14">
+      <p className="c12 c15">
         <span className="c0" />
       </p>
-      <p className="c8">
-        <span className="c24 c11">Тема 2:</span>
-        <span className="c13 c10">&nbsp;Основы и правила стрельбы.</span>
+      <p className="c12">
+        <span className="c19 c11">Тема 2:</span>
+        <span className="c21 c2 c19">&nbsp;Основы и правила стрельбы.</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 1. </span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 1. </span>
         <span className="c0">
           Практическое – 2 часа. Тренировка в изготовке к бою. Тренировка &nbsp;нормативов №
           &nbsp;1, 13, 14, 16 по огневой подготовке Сухопутных войск ВС РФ.
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию </span>
+        <span className="c0 c7">(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 23{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c8 c14">
-        <span className="c13 c11" />
+      <p className="c12 c15">
+        <span className="c21 c19 c11" />
       </p>
-      <p className="c8">
-        <span className="c24 c11">Тема 3: </span>
-        <span className="c24 c10">
+      <p className="c12">
+        <span className="c19 c11">Тема 3: </span>
+        <span className="c2 c19">
           Приемы и способы ведения огня из автомата по неподвижной и появляющимся целям
         </span>
-        <span className="c24 c11">.</span>
+        <span className="c19 c11">.</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 1.</span>
-        <span className="c10">&nbsp;Групповое – 1 час.</span>
-        <span className="c6">&nbsp;</span>
-        <span className="c10">&nbsp;Изучение</span>
-        <span className="c6">&nbsp;</span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 1.</span>
+        <span className="c2">&nbsp;Групповое – 1 час.</span>
+        <span className="c2 c14">&nbsp;</span>
+        <span className="c2">&nbsp;Изучение</span>
+        <span className="c2 c14">&nbsp;</span>
         <span className="c0">2 УНС, мер безопасности при стрельбе.</span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию </span>
+        <span className="c0 c7">(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 24{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 2. </span>
-        <span className="c10">Групповое – 1 час</span>
-        <span className="c6">.</span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 2. </span>
+        <span className="c2">Групповое – 1 час</span>
+        <span className="c2 c14">.</span>
         <span className="c0">&nbsp;Прием зачетов по знанию ТТХ АК-74, 2 УУС, МБ при стрельбе.</span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию </span>
+        <span className="c0 c7">(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 25{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 3. </span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 3. </span>
         <span className="c0">Практическое – 1 час. Выполнение 2-го УНС из АК-74.</span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию </span>
+        <span className="c0 c7">(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 26{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c8 c14">
+      <p className="c12 c15">
         <span className="c0" />
       </p>
-      <p className="c8">
-        <span className="c24 c11">Тема 4:</span>
-        <span className="c13 c10">&nbsp;Практическая стрельба из пневматической винтовки.</span>
+      <p className="c12">
+        <span className="c19 c11">Тема 4:</span>
+        <span className="c21 c2 c19">&nbsp;Практическая стрельба из пневматической винтовки.</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 1.</span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 1.</span>
         <span className="c0">
           &nbsp;Практическое – 2 часа. Выполнение упражнения стрельб из пневматической винтовки.
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию </span>
+        <span className="c0 c7">(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 27{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c2">
+      <p className="c4 c15">
         <span className="c0" />
       </p>
-      <p className="c5">
-        <span className="c13 c10">
+      <p className="c4">
+        <span className="c21 c2 c19">
           Глава 7. Примерная тематика занятий и планы проведения занятий по физической подготовке.
         </span>
       </p>
-      <p className="c8">
-        <span className="c24 c11">Тема 1: </span>
-        <span className="c24 c10">Гимнастика.</span>
+      <p className="c12">
+        <span className="c19 c11">Тема 1: </span>
+        <span className="c2 c19">Гимнастика.</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 1</span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 1</span>
         <span className="c0">
           . Практическое – 1 час. Требования безопасности при проведении занятий по физической
           подготовке. Разучивание и тренировка положений наскока и соскока со cнаряда. Разучивание и
@@ -6150,208 +5702,269 @@ const Book = () => {
           перекладине) и 5 (Поднос ног к перекладине).
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию </span>
+        <span className="c0 c7">(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">Видео выполнения упражнения № 1 НФП-2009 ВС РФ </span>
-        <span className="c10 c19">(ссылка на видео)</span>
+      <p className="c12">
+        <span className="c2">Видео выполнения упражнения № 1 НФП-2009 ВС РФ </span>
+        <span className="c2 c7">(ссылка на видео)</span>
       </p>
-      <p className="c8">
-        <span className="c10">Видео выполнения упражнения № 4 НФП-2009 ВС РФ </span>
-        <span className="c10 c19">(ссылка на видео)</span>
+      <p className="c12">
+        <span className="c2">Видео выполнения упражнения № 4 НФП-2009 ВС РФ </span>
+        <span className="c2 c7">(ссылка на видео)</span>
       </p>
-      <p className="c8">
-        <span className="c10">Видео выполнения упражнения № 5 НФП-2009 ВС РФ </span>
-        <span className="c10 c19">(ссылка на видео)</span>
+      <p className="c12">
+        <span className="c2">Видео выполнения упражнения № 5 НФП-2009 ВС РФ </span>
+        <span className="c2 c7">(ссылка на видео)</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 28{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c8 c14">
+      <p className="c12 c15">
         <span className="c0" />
       </p>
-      <p className="c8">
-        <span className="c24 c11">Тема 2: </span>
-        <span className="c24 c10">Ускоренное передвижение.</span>
+      <p className="c12">
+        <span className="c19 c11">Тема 2: </span>
+        <span className="c2 c19">Ускоренное передвижение.</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 1</span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 1</span>
         <span className="c0">
           . Практическое – 1 час. Организация занятий по ускоренному передвижению. Разучивание и
           тренировка упражнений &nbsp;по бегу на 60м, 100м, челночный бег 10х10м и 1 км (упражнения
           &nbsp;№ 40, 41, 42 и 45 НФП-2009).{' '}
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию </span>
+        <span className="c0 c7">(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 29{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c8 c14">
+      <p className="c12 c15">
         <span className="c0" />
       </p>
-      <p className="c8">
-        <span className="c11 c24">Тема 3: </span>
-        <span className="c24 c10">Контрольные занятия.</span>
+      <p className="c12">
+        <span className="c19 c11">Тема 3: </span>
+        <span className="c2 c19">Контрольные занятия.</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 1.</span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 1.</span>
         <span className="c0">
           &nbsp;Практическое – 1 час. Прием зачетов по выполнению упражнения № 4, 41 (42), 45
           НФП-2009.{' '}
         </span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 30{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c8 c14">
+      <p className="c12 c15">
         <span className="c0" />
       </p>
-      <p className="c8">
-        <span className="c24 c11">Тема 4:</span>
-        <span className="c13 c10">&nbsp;Комплексы рукопашного боя</span>
+      <p className="c12">
+        <span className="c19 c11">Тема 4:</span>
+        <span className="c21 c2 c19">&nbsp;Комплексы рукопашного боя</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 1.</span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 1.</span>
         <span className="c0">&nbsp;Комплекс рукопашного боя РБ-1</span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию </span>
+        <span className="c0 c7">(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">Видео выполнения комплекса РБ-1 </span>
-        <span className="c10 c19">(ссылка на видео)</span>
+      <p className="c12">
+        <span className="c2">Видео выполнения комплекса РБ-1 </span>
+        <span className="c2 c7">(ссылка на видео)</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 31{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c2">
+      <p className="c4 c15">
         <span className="c0" />
       </p>
-      <p className="c5">
-        <span className="c13 c10">
+      <p className="c4">
+        <span className="c21 c2 c19">
           Глава 8. Примерная тематика занятий, планы проведения занятий и презентации к занятиям по
           обеспечению безопасности военной службы.
         </span>
       </p>
-      <p className="c8">
-        <span className="c24 c11">Тема 1: </span>
-        <span className="c24 c10">
+      <p className="c12">
+        <span className="c19 c11">Тема 1: </span>
+        <span className="c2 c19">
           Основные мероприятия по обеспечению безопасности военной службы
         </span>
-        <span className="c24 c11">.</span>
+        <span className="c19 c11">.</span>
       </p>
-      <p className="c8">
-        <span className="c6">Занятие 1.</span>
+      <p className="c12">
+        <span className="c2 c14">Занятие 1.</span>
         <span className="c0">&nbsp;Комплексное практическое занятие по ОБВС – 1 час.</span>
       </p>
-      <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+      <p className="c12">
+        <span className="c2">Вариант презентации к занятию </span>
+        <span className="c0 c7">(ссылка на презентацию).</span>
       </p>
-      <p className="c8">
-        <span className="c10">
+      <p className="c12">
+        <span className="c2">
           Вариант план-конспекта проведения занятия представлен в приложении 32{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c2 c7">(ссылка на план-конспект).</span>
       </p>
-      <p className="c9 c14">
+      <p className="c24 c15">
         <span className="c0" />
       </p>
-      <p className="c1 c14">
+      <p className="c1 c15">
         <span className="c0" />
       </p>
-      <p className="c1 c14">
+      <p className="c1 c15">
         <span className="c0" />
       </p>
-      <p className="c1 c14">
+      <p className="c1 c15">
         <span className="c0" />
       </p>
-      <p className="c1 c14">
+      <p className="c1 c15">
         <span className="c0" />
       </p>
-      <p className="c1 c14">
+      <p className="c1 c15">
         <span className="c0" />
       </p>
-      <p className="c1 c14">
+      <p className="c1 c15">
         <span className="c0" />
       </p>
-      <p className="c1 c14">
+      <p className="c1 c15">
         <span className="c0" />
       </p>
-      <p className="c1 c14">
+      <p className="c1 c15">
         <span className="c0" />
       </p>
-      <p className="c1 c14">
+      <p className="c1 c15">
         <span className="c0" />
       </p>
-      <p className="c1 c14">
+      <p className="c1 c15">
         <span className="c0" />
       </p>
-      <p className="c35 c18">
-        <span className="c7">Список используемой литературы</span>
+      <p className="c1 c15">
+        <span className="c0" />
       </p>
-      <p className="c14 c18 c35">
-        <span className="c16 c42" />
+      <p className="c1 c15">
+        <span className="c0" />
       </p>
-      <p className="c22 c23">
+      <p className="c1 c15">
+        <span className="c0" />
+      </p>
+      <p className="c1 c15">
+        <span className="c0" />
+      </p>
+      <p className="c1 c15">
+        <span className="c0" />
+      </p>
+      <p className="c1 c15">
+        <span className="c0" />
+      </p>
+      <p className="c1 c15">
+        <span className="c0" />
+      </p>
+      <p className="c1 c15">
+        <span className="c0" />
+      </p>
+      <p className="c1 c15">
+        <span className="c0" />
+      </p>
+      <p className="c1 c15">
+        <span className="c0" />
+      </p>
+      <p className="c1 c15">
+        <span className="c0" />
+      </p>
+      <p className="c1 c15">
+        <span className="c0" />
+      </p>
+      <p className="c1 c15">
+        <span className="c0" />
+      </p>
+      <p className="c1 c15">
+        <span className="c0" />
+      </p>
+      <p className="c1 c15">
+        <span className="c0" />
+      </p>
+      <p className="c18">
+        <span className="c9">Список используемой литературы</span>
+      </p>
+      <p className="c18 c15">
+        <span className="c34 c31 c50" />
+      </p>
+      <p className="c6">
         <span className="c0">
-          1. Федерального закона от 28 марта 1998 г. N 53-ФЗ «О воинской обязанности и военной
-          службе» к обязательной и добровольной подготовке гражданина к военной службе. URL:
+          1. Федеральный закон от 28 марта 1998 г. N 53-ФЗ «О воинской обязанности и военной службе»
+          к обязательной и добровольной подготовке гражданина к военной службе (с изменениями и
+          дополнениями). URL:
         </span>
       </p>
-      <p className="c22">
-        <span className="c0">&nbsp;https://duma.consultant.ru/page.aspx?1105514</span>
-      </p>
-      <p className="c22 c23">
-        <span className="c10">
-          2. Исайчева Е.А. Комментарий к Федеральному закону «О воинской обязанности и военной
-          службе»
-        </span>
-        <span>/ </span>
-        <span className="c0">
-          Е. А. Исайчева, Л. В. Смолина. - Москва : Экзамен, Чеховский полиграфкомбинат. - 255 с.
-          URL:
+      <p className="c25">
+        <span className="c2 c19 c51">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://duma.consultant.ru/page.aspx?1105514&sa=D&source=editors&ust=1679828544833892&usg=AOvVaw20hAUX9VpVENcsHdboCwuP"
+          >
+            https://duma.consultant.ru/page.aspx?1105514
+          </a>
         </span>
       </p>
-      <p className="c22">
+      <p className="c6">
+        <span className="c2">
+          2. Федеральный закон «О внесении изменений в отдельные законодательные акты Российской
+          Федерации в связи с совершенствованием разграничения полномочий» от 31 декабря 2005 г. N
+          199-ФЗ. URL:
+        </span>
         <span>&nbsp;</span>
-        <span className="c10">https://search.rsl.ru/ru/record/01002952541</span>
+        <span className="c0">https://base.garant.ru/12144089/</span>
       </p>
-      <p className="c22 c23">
+      <p className="c6">
         <span className="c0">
           3. Зорин А.С. Комментарии к закону «О воинской обязанности и военной службе». – «За права
           военнослужащих». 2009. URL: http://ivo.garant.ru{' '}
         </span>
       </p>
-      <p className="c22 c23">
-        <span className="c10">
-          4. Постановление Правительства РФ от 31 декабря 1999г. №&nbsp;1441 «Об утверждении
+      <p className="c6">
+        <span className="c2">
+          4. Исайчева Е.А. Комментарий к Федеральному закону «О воинской обязанности и военной
+          службе»
+        </span>
+        <span>/ </span>
+        <span className="c2">
+          Е. А. Исайчева, Л. В. Смолина. - Москва: Экзамен, 2006, (Чехов (Моск. обл.):
+        </span>
+        <span className="c55">&nbsp;</span>
+        <span className="c2">Чеховский полиграфкомбинат). - 255 с. URL: </span>
+        <span>&nbsp;</span>
+        <span className="c2">https://search.rsl.ru/ru/record/01002952541</span>
+      </p>
+      <p className="c6">
+        <span className="c2">
+          5. Постановление Правительства РФ от 31 декабря 1999г. №&nbsp;1441 «Об утверждении
           Положения «О подготовке граждан Российской Федерации к военной службе». URL:
         </span>
         <span>&nbsp;</span>
         <span className="c0">https://base.garant.ru/181486/</span>
       </p>
-      <p className="c22 c23">
+      <p className="c6">
         <span className="c0">
-          5. Приказ Министра обороны Российской Федерации и Министерства образования и науки
+          6. Приказ Министра обороны Российской Федерации и Министерства образования и науки
           Российской Федерации от 24 февраля 2010 года № 96/134 «Об утверждении Инструкции об
           организации обучения граждан Российской Федерации начальным знаниям в области обороны и их
           подготовки по основам военной службы в образовательных учреждениях среднего (полного)
@@ -6359,152 +5972,282 @@ const Book = () => {
           профессионального образования и учебных пунктах». URL: https://base.garant.ru/198025/
         </span>
       </p>
-      <p className="c22 c23">
-        <span className="c0">
-          6. «Инструкции об организации обучения граждан Российской Федерации начальным знаниям в
+      <p className="c1">
+        <span className="c2">
+          7. «Инструкции об организации обучения граждан Российской Федерации начальным знаниям в
           области обороны и их подготовки по основам военной службы в образовательных учреждениях
           среднего (полного) общего образования, образовательных учреждениях начального
           профессионального и среднего профессионального образования и учебных пунктах»,
           утверждённой приказом Министра обороны Российской Федерации и Министра образования и науки
-          Российской Федерации от 24 февраля 2010 года № 96/134. &nbsp;URL:
-          https://base.garant.ru/198025
+          Российской Федерации от 24 февраля 2010 года № 96/134. &nbsp;URL:{' '}
+        </span>
+        <span className="c2 c40">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=https://base.garant.ru/198025&sa=D&source=editors&ust=1679828544834926&usg=AOvVaw27qrJT0ICogyuVJzTpTiV3"
+          >
+            https://base.garant.ru/198025
+          </a>
         </span>
       </p>
-      <p className="c22 c23">
-        <span className="c10">
-          7. Д. Локк Сочинения в трёх томах: Т. 3.- М.: Мысль, 1988, 668с.
+      <p className="c6">
+        <span className="c2">8. Конституция Российской Федерации URL:</span>
+        <span>&nbsp;</span>
+        <span className="c0">http://www.constitution.ru/</span>
+      </p>
+      <p className="c6">
+        <span className="c2">
+          9. Федеральный конституционный закон «О Правительстве Российской Федерации» от 17 декабря
+          1997 г. N 2-ФКЗ (с изменениями и дополнениями) URL:
+        </span>
+        <span>&nbsp;</span>
+        <span className="c2 c40">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=http://www.consultant.ru/document/cons_doc_LAW_17107/&sa=D&source=editors&ust=1679828544835451&usg=AOvVaw0_AI7ZA_IVk7WpeTD3uQ2b"
+          >
+            http://www.consultant.ru/document/cons_doc_LAW_17107/
+          </a>
+        </span>
+      </p>
+      <p className="c6">
+        <span className="c0">
+          10. Федеральный закон «Об обороне» от 31 мая 1996 г. N 61-ФЗ (с изменениями и
+          дополнениями) URL: &nbsp; &nbsp;
+        </span>
+      </p>
+      <p className="c25">
+        <span className="c2 c40">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=http://www.consultant.ru/document/cons_doc_LAW_10591/&sa=D&source=editors&ust=1679828544835797&usg=AOvVaw0TLHIrXfUhVUGNTc38FLnm"
+          >
+            http://www.consultant.ru/document/cons_doc_LAW_10591/
+          </a>
+        </span>
+      </p>
+      <p className="c6">
+        <span className="c2">11. Федеральный </span>
+        <span className="c2 c31">закон</span>
+        <span className="c2">&nbsp;"Об </span>
+        <span className="c2 c31">образовании</span>
+        <span className="c2">&nbsp;в </span>
+        <span className="c2 c31">Российской Федерации</span>
+        <span className="c2">" от 29.12.2012 N 273-ФЗ (с изменениями и дополнениями). URL:</span>
+        <span>&nbsp;</span>
+        <span className="c0">http://www.consultant.ru/document/cons_doc_LAW_140174/ </span>
+      </p>
+      <p className="c6">
+        <span className="c0">
+          12. Приказ Министра обороны Российской «Федерации Об организации медицинской помощи в
+          военно-медицинских частях, соединениях и учреждениях Министерства Министерства обороны
+          Российской Федерации» от 16 января 2006 г. № 20 (с изменениями и дополнениями). URL:
+          https://doc.mil.ru/documents/quick_search/more.htm?id=10325876@egNPA{' '}
+        </span>
+      </p>
+      <p className="c6">
+        <span className="c2">
+          13. Правила возмещения расходов, понесенных организациями и гражданами Российской
+          Федерации в связи с реализацией Федерального закона «О воинской обязанности и военной
+          службе», утверждены Постановлением Правительства Российской Федерации от 1 декабря 2004
+          года № 704. URL:
+        </span>
+        <span>&nbsp;</span>
+        <span className="c0">https://base.garant.ru/187613/</span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          14. Обращение Государственной Думы Федерального Собрания Российской Федерации «О
+          нравственном и военно-патриотическом воспитании молодежи и повышении уровня культуры
+          военнослужащих, правоохранительных органов и силовых структур» № 2240-II ГД, Москва 4
+          марта 1998 года. URL:
+        </span>
+        <span className="c34 c31 c54">&nbsp;</span>
+        <span className="c0">
+          <a
+            className="c8"
+            href="https://www.google.com/url?q=http://pravo.gov.ru/proxy/ips/?docbody%3D%26link_id%3D8%26nd&sa=D&source=editors&ust=1679828544836618&usg=AOvVaw1e8iTLVMiWEz77tNpd9VXz"
+          >
+            http://pravo.gov.ru/proxy/ips/?docbody=&amp;link_id=8&amp;nd
+          </a>
+        </span>
+      </p>
+      <p className="c1">
+        <span className="c0">
+          15. Федеральный закон «О днях воинской славы и памятных датах России» От 13 марта 1995 г.
+          № 32-ФЗ. URL:
+        </span>
+      </p>
+      <p className="c24">
+        <span className="c0">http://www.consultant.ru/document/cons_doc_LAW_5978/</span>
+      </p>
+      <h1 className="c1 c53">
+        <span className="c0">
+          16. Постановление Правительства РФ от 27.11.2006 N716 (ред. от 17.04.2021) «О порядке
+          проведения дней воинской славы России и мероприятий, посвященных памятным датам России».
+          URL:{' '}
+        </span>
+      </h1>
+      <h1 className="c24 c53">
+        <span className="c2 c51">http://www.consultant.ru/document/cons_doc_LAW_92099/</span>
+      </h1>
+      <p className="c6">
+        <span className="c2">
+          17. Д. Локк Сочинения в трёх томах: Т. 3.- М.: Мысль, 1988, 668с.
         </span>
         <span>&nbsp;</span>
         <span className="c0">URL: https://bookree.org/reader?file=1329917&amp;pg=86</span>
       </p>
-      <p className="c22 c23">
+      <p className="c6">
         <span className="c0">
-          8. Ушинский К.Д. Избранные педагогические сочинения: В 2 т. – Т. 1. – М., 1953, 637с. URL:
+          18. Ушинский К.Д. Избранные педагогические сочинения: В 2 т. – Т. 1. – М., 1953, 637с.
+          URL:
         </span>
       </p>
-      <p className="c22">
+      <p className="c25">
         <span className="c0">
           &nbsp;https://imwerden.de/pdf/ushinsky_sobranie_sochineny_tom02_1948_text.pdf
         </span>
       </p>
-      <p className="c22 c23">
+      <p className="c6">
         <span className="c0">
-          9. Виноградова Н.Д. Привычка – основа нравственного воспитания //Педагогика № 5. 1997.
+          19. Виноградова Н.Д. Привычка – основа нравственного воспитания //Педагогика № 5. 1997.
           С.91-96. URL:
         </span>
       </p>
-      <p className="c22">
-        <span className="c10">&nbsp;</span>
-        <span className="c10">
+      <p className="c25">
+        <span className="c2">&nbsp;</span>
+        <span className="c2">
           <a
-            className="c21"
-            href="https://www.google.com/url?q=https://www.bibliofond.ru/view.aspx?id%3D51351%23text&sa=D&source=editors&ust=1678993582797562&usg=AOvVaw3nz8kgdBWZkmObylHS4hGm"
+            className="c8"
+            href="https://www.google.com/url?q=https://www.bibliofond.ru/view.aspx?id%3D51351%23text&sa=D&source=editors&ust=1679828544837594&usg=AOvVaw0grpVoC_wzZSs0GlWfIaiP"
           >
             https://www.bibliofond.ru/view.aspx?id=51351#text
           </a>
         </span>
       </p>
-      <p className="c22 c23">
+      <p className="c6">
         <span className="c0">
-          10. Строевой устав Вооруженных Сил Российской Федерации. М.: Воениздат, 2015.
+          20. Строевой устав Вооруженных Сил Российской Федерации. М.: Воениздат, 2015.
         </span>
       </p>
-      <p className="c26">
-        <span className="c15">У ч е б н о е &nbsp; э л е к т р о н н о е &nbsp; и з д а н и е</span>
+      <p className="c10">
+        <span className="c26 c21" />
       </p>
-      <p className="c3">
+      <p className="c10">
+        <span className="c26 c21" />
+      </p>
+      <p className="c10">
+        <span className="c26 c21" />
+      </p>
+      <p className="c10">
+        <span className="c26 c21" />
+      </p>
+      <p className="c10">
+        <span className="c26 c21" />
+      </p>
+      <p className="c10">
+        <span className="c26 c21" />
+      </p>
+      <p className="c10">
+        <span className="c21 c26" />
+      </p>
+      <p className="c10">
+        <span className="c26 c21" />
+      </p>
+      <p className="c10">
+        <span className="c26 c21" />
+      </p>
+      <p className="c10">
+        <span className="c26 c21" />
+      </p>
+      <p className="c22">
+        <span className="c26 c21">
+          У ч е б н о е &nbsp; э л е к т р о н н о е &nbsp; и з д а н и е
+        </span>
+      </p>
+      <p className="c10">
         <span className="c0" />
       </p>
-      <p className="c14 c32">
+      <p className="c37 c15">
         <span className="c0" />
       </p>
-      <p className="c32 c14">
+      <p className="c37 c15">
         <span className="c0" />
       </p>
-      <p className="c32">
+      <p className="c37">
         <span className="c0">Авторы составители:</span>
       </p>
-      <p className="c26">
+      <p className="c22">
         <span className="c0">Богомолов Герман Семенович</span>
       </p>
-      <p className="c3">
+      <p className="c10">
         <span className="c0" />
       </p>
-      <p className="c26">
+      <p className="c22">
         <span className="c0">Лосев Андрей Николаевич</span>
       </p>
-      <p className="c3">
+      <p className="c10">
         <span className="c0" />
       </p>
-      <p className="c26">
+      <p className="c22">
         <span className="c0">Новиков Сергей Владимирович</span>
       </p>
-      <p className="c3">
+      <p className="c10">
         <span className="c0" />
       </p>
-      <p className="c26">
+      <p className="c22">
         <span className="c0">Гатальский Сергей Анатольевич</span>
       </p>
-      <p className="c3">
+      <p className="c10">
         <span className="c0" />
       </p>
-      <p className="c26">
+      <p className="c22">
         <span className="c0">Михайлов Олег Вячеславович</span>
       </p>
-      <p className="c3">
+      <p className="c10">
         <span className="c0" />
       </p>
-      <p className="c26 c36">
+      <p className="c22">
         <span className="c0">Иванков Александр Александрович</span>
       </p>
-      <p className="c3">
-        <span className="c15" />
+      <p className="c10">
+        <span className="c26 c21" />
       </p>
-      <p className="c3">
-        <span className="c15" />
+      <p className="c10">
+        <span className="c26 c21" />
       </p>
-      <p className="c3">
-        <span className="c15" />
+      <p className="c10">
+        <span className="c26 c21" />
       </p>
-      <p className="c3">
-        <span className="c15" />
+      <p className="c10">
+        <span className="c26 c21" />
       </p>
-      <p className="c26">
+      <p className="c22">
         <span className="c11">
           ПОДГОТОВКА ПО ОСНОВАМ ВОЕННОЙ СЛУЖБЫ В ХОДЕ ПРОВЕДЕНИЯ УЧЕБНЫХ СБОРОВ
         </span>
       </p>
-      <p className="c3">
-        <span className="c28 c16" />
+      <p className="c10">
+        <span className="c16" />
       </p>
-      <p className="c3">
-        <span className="c28 c16" />
+      <p className="c10">
+        <span className="c16" />
       </p>
-      <p className="c26">
-        <span className="c7">Учебно-методическое пособие</span>
+      <p className="c22">
+        <span className="c11">Электронное учебно-методическое пособие</span>
       </p>
-      <p className="c3">
-        <span className="c28 c16" />
-      </p>
-      <p className="c3">
+      <p className="c1 c15">
         <span className="c0" />
       </p>
-      <p className="c3">
+      <p className="c1 c15">
         <span className="c0" />
       </p>
-      <p className="c9 c14">
-        <span className="c40 c16" />
-      </p>
-      <p className="c1 c14">
-        <span className="c0" />
-      </p>
-      <p className="c1 c14">
-        <span className="c0" />
-      </p>
-      <p className="c9 c14">
-        <span className="c16 c40" />
+      <p className="c24 c15">
+        <span className="c3" />
       </p>
     </div>
   )
 }
-export default Book
+
+export default Book2

@@ -2,6 +2,7 @@ import { Button, Menu } from 'antd'
 import styled from 'styled-components'
 import { device } from '../../constants/style/breakpoints'
 import { colors } from '../../constants/style/colors'
+import { Fab } from '@mui/material'
 
 export const ToolBar = styled.div`
   width: 100%;
@@ -13,6 +14,7 @@ export const ToolBar = styled.div`
 export const Row = styled.div`
   display: flex;
   width: 100%;
+  justify-content: center;
 `
 
 export const MenuButton = styled(Button)`
@@ -25,21 +27,13 @@ export const MenuButton = styled(Button)`
   }
 `
 
-export const ButtonUp = styled.div`
+export const ButtonUp = styled(Fab)`
   position: fixed;
-  bottom: 0;
+  bottom: 20;
   background: ${colors.primaryColor};
   color: white;
   align-self: flex-end;
-  padding: 20px;
-  border-radius: 8px 8px 0 0;
   cursor: pointer;
-
-  &:hover {
-  }
-
-  &:active {
-  }
 `
 
 export const NavMenu = styled(Menu)`
@@ -69,6 +63,6 @@ export const NavMenu = styled(Menu)`
   }
 
   @media ${device.laptopS} {
-    display: none;
+    // display: none;
   }
 `

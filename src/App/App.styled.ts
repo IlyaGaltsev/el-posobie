@@ -27,7 +27,7 @@ export const Body = styled.div`
   }
 `
 
-export const DrawerBlur = styled(Drawer)(({ theme }) => ({
+export const DrawerBlur = styled(Drawer)(() => ({
   backdropFilter: 'blur(5px)'
   // other styles here...
 }))
