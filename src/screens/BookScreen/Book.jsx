@@ -1,7 +1,13 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
-const Book = () => {
+/* eslint-disable react/jsx-filename-extension */
+import { massPrez } from 'src/assets/data/massPrez'
+import { massConspects } from 'src/assets/data/massConspects'
+import massVideo from 'src/assets/data/massVideo'
+
+const Book = ({ linkConspects, linkVideo, linkPrezentation }) => {
   return (
-    // eslint-disable-next-line react/jsx-filename-extension
     <div style={{ maxWidth: 700, width: window.innerWidth - 24 }}>
       <meta content="text/html; charset=UTF-8" httpEquiv="content-type" />
       <style
@@ -2456,7 +2462,7 @@ const Book = () => {
       </section>
       <section id="2">
         <p className="c1">
-          <span className="c24 c10 c33">Глава 2.</span>
+          <span className="c24 c10">Глава 2.</span>
           <span className="c13 c10">
             &nbsp;Требования постановления Правительства РФ от 31 декабря 1999г. №&nbsp;1441 «Об
             утверждении Положения «О подготовке граждан Российской Федерации к военной службе».
@@ -4778,7 +4784,7 @@ const Book = () => {
         </span>
       </p>
       <p className="c1">
-        <span className="c10 c33">8.1. Требования</span>
+        <span className="c10">8.1. Требования</span>
         <span className="c0">
           &nbsp;к результатам обучения на учебных сборах по основам военной службы.
         </span>
@@ -5480,15 +5486,16 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении1{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[0])}>приложении 1</a>{' '}
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
+        <span className="c10"> </span>
       </p>
       <p className="c8">
-        <span className="c10">Видео выполнения строевых прие</span>
-        <span className="c10 c19">а</span>
-        <span className="c10">мов </span>
-        <span className="c10 c19">(ссылка н видео)</span>
+        <span className="c10">
+          {/* <a onClick={() => linkVideo(massVideo[0])}>Видео выполнения строевых приемов</a> */}
+        </span>
+        <span className="c10"> </span>
         <span className="c0">.</span>
       </p>
       <p className="c8">
@@ -5503,14 +5510,11 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 2{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[1])}>приложении 2</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
-      <p className="c8">
-        <span className="c10">Видео выполнения строевых приемов </span>
-        <span className="c10 c19">(ссылка на видео)</span>
-      </p>
+      <p className="c8">{/* <span className="c10">Видео выполнения строевых приемов </span> */}</p>
       <p className="c8">
         <span className="c6">Занятие 3. </span>
         <span className="c0">
@@ -5521,13 +5525,9 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 3{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[2])}>приложении 3</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
-      </p>
-      <p className="c8">
-        <span className="c10">Видео выполнения строевых приемов </span>
-        <span className="c10 c19">(ссылка на видео)</span>
       </p>
       <p className="c8">
         <span className="c6">Занятие 4.</span>
@@ -5540,13 +5540,9 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 4{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[3])}>приложении 4</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
-      </p>
-      <p className="c8">
-        <span className="c10">Видео выполнения строевых приемов </span>
-        <span className="c10 c19">(ссылка на видео)</span>
       </p>
       <p className="c8 c14">
         <span className="c0" />
@@ -5572,8 +5568,9 @@ const Book = () => {
         </span>
       </p>
       <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+        <span className="c10">
+          <a onClick={() => linkPrezentation(massPrez[13])}>Вариант презентации к занятию</a>
+        </span>
       </p>
       <p className="c8">
         <span className="c10">
@@ -5601,9 +5598,9 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 5{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[4])}>приложении 5</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
       <p className="c8">
         <span className="c6">Занятие 2. </span>
@@ -5615,14 +5612,15 @@ const Book = () => {
         </span>
       </p>
       <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+        <span className="c10">
+          <a onClick={() => linkPrezentation(massPrez[14])}>Вариант презентации к занятию</a>
+        </span>
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 6{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[5])}>приложении 6</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
       <p className="c8">
         <span className="c6">Занятие 3. </span>
@@ -5632,14 +5630,15 @@ const Book = () => {
         </span>
       </p>
       <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+        <span className="c10">
+          <a onClick={() => linkPrezentation(massPrez[2])}>Вариант презентации к занятию</a>
+        </span>
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 7{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[6])}>приложении 7</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
       <p className="c8">
         <span className="c6">Занятие 4.</span>
@@ -5649,8 +5648,9 @@ const Book = () => {
         </span>
       </p>
       <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+        <span className="c10">
+          <a onClick={() => linkPrezentation(massPrez[15])}>Вариант презентации к занятию</a>
+        </span>
       </p>
       <p className="c8">
         <span className="c10">
@@ -5660,9 +5660,9 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия апредствален в приложении 8{' '}
+          Вариант план-конспекта проведения занятия предствален в{' '}
+          <a onClick={() => linkConspects(massConspects[7])}>приложении 8</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
       <p className="c2">
         <span className="c0 c33" />
@@ -5707,7 +5707,9 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 9{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[8])}>приложении 9</a>
+
         </span>
         <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
@@ -5724,9 +5726,9 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 10{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[9])}>приложении 10</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
       <p className="c2">
         <span className="c6 c16" />
@@ -5762,9 +5764,9 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 11{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[10])}>приложении 11</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
       <p className="c8 c14">
         <span className="c0" />
@@ -5787,9 +5789,9 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 12{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[11])}>приложении 12</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
       <p className="c8">
         <span className="c6">Занятие 2.</span>
@@ -5803,7 +5805,8 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 13{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[12])}>приложении 13</a>
         </span>
         <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
@@ -5821,9 +5824,9 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 14{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[13])}>приложении 14</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
       <p className="c8 c14">
         <span className="c6 c16" />
@@ -5846,9 +5849,9 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 15{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[14])}>приложении 15</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
       <p className="c8">
         <span className="c6">Занятие 2.</span>
@@ -5864,9 +5867,9 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 16{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[15])}>приложении 16</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
       <p className="c8">
         <span className="c6">Занятие 3.</span>
@@ -5882,9 +5885,9 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 17{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[16])}>приложении 17</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
       <p className="c8">
         <span className="c6">Занятие 4.</span>
@@ -5899,9 +5902,9 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 18{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[17])}>приложении 18</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
       <p className="c2">
         <span className="c0 c33" />
@@ -5959,9 +5962,9 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 19{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[18])}>приложении 19</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
       <p className="c2">
         <span className="c0" />
@@ -5993,9 +5996,9 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 20{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[19])}>приложении 20</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
       <p className="c8">
         <span className="c6">Занятие 2. &nbsp;</span>
@@ -6034,9 +6037,9 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 21{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[20])}>приложении 21</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
       <p className="c8">
         <span className="c6">Занятие 3. &nbsp;</span>
@@ -6053,9 +6056,9 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 22{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[21])}>приложении 22</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
       <p className="c8 c14">
         <span className="c0" />
@@ -6077,9 +6080,9 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 23{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[22])}>приложении 23</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
       <p className="c8 c14">
         <span className="c13 c11" />
@@ -6105,9 +6108,9 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 24{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[23])}>приложении 24</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
       <p className="c8">
         <span className="c6">Занятие 2. </span>
@@ -6121,9 +6124,9 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 25{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[24])}>приложении 25</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
       <p className="c8">
         <span className="c6">Занятие 3. </span>
@@ -6135,9 +6138,9 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 26{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[25])}>приложении 26</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
       <p className="c8 c14">
         <span className="c0" />
@@ -6158,9 +6161,9 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 27{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[26])}>приложении 27</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
       <p className="c2">
         <span className="c0" />
@@ -6201,9 +6204,9 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 28{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[27])}>приложении 28</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
       <p className="c8 c14">
         <span className="c0" />
@@ -6226,9 +6229,9 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 29{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[28])}>приложении 29</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
       <p className="c8 c14">
         <span className="c0" />
@@ -6246,9 +6249,9 @@ const Book = () => {
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 30{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[29])}>приложении 30</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
       <p className="c8 c14">
         <span className="c0" />
@@ -6266,14 +6269,19 @@ const Book = () => {
         <span className="c0 c19">(ссылка на презентацию).</span>
       </p>
       <p className="c8">
-        <span className="c10">Видео выполнения комплекса РБ-1 </span>
-        <span className="c10 c19">(ссылка на видео)</span>
+        <span className="c10">
+          <a onClick={() => linkVideo(massVideo[23])}>Видео выполнения комплекса РБ-1 без оружия</a>
+
+          <br />
+
+          <a onClick={() => linkVideo(massVideo[24])}>Видео выполнения комплекса РБ-1 с оружием</a>
+        </span>
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 31{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[30])}>приложении 31</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
       <p className="c2">
         <span className="c0" />
@@ -6296,14 +6304,15 @@ const Book = () => {
         <span className="c0">&nbsp;Комплексное практическое занятие по ОБВС – 1 час.</span>
       </p>
       <p className="c8">
-        <span className="c10">Вариант презентации к занятию </span>
-        <span className="c0 c19">(ссылка на презентацию).</span>
+        <span className="c10">
+          <a onClick={() => linkPrezentation(massPrez[1])}>Вариант презентации к занятию</a>
+        </span>
       </p>
       <p className="c8">
         <span className="c10">
-          Вариант план-конспекта проведения занятия представлен в приложении 32{' '}
+          Вариант план-конспекта проведения занятия представлен в{' '}
+          <a onClick={() => linkConspects(massConspects[31])}>приложении 32</a>
         </span>
-        <span className="c10 c19">(ссылка на план-конспект).</span>
       </p>
       <p className="c9 c14">
         <span className="c0" />
@@ -6482,12 +6491,12 @@ const Book = () => {
         <span className="c0" />
       </p>
       <p className="c26">
-        <span className="c0">Михайлов Олег Вячеславович</span>
+        <span className="c0">Лосева Маргарита Николаевна</span>
       </p>
       <p className="c3">
         <span className="c0" />
       </p>
-      <p className="c26 c36">
+      <p className="c26">
         <span className="c0">Иванков Александр Александрович</span>
       </p>
       <p className="c3">

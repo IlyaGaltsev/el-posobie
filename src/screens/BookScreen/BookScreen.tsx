@@ -1,22 +1,27 @@
-import { MdArrowBackIosNew, MdMenu } from 'react-icons/md'
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/jsx-filename-extension */
+import { MdMenu } from 'react-icons/md'
 import { size } from '../../constants/style/breakpoints'
 import { SideBar } from '../../components/SideBar'
 import { navBook } from '../../constants/navBook'
-import * as S from './BookScreen.styled'
 import { useEffect, useState } from 'react'
-import './BookScreen.scss'
+import * as S from './BookScreen.styled'
 import type { MenuProps } from 'antd'
-import Book from 'src/assets/data/Book'
-// import { observer } from './findsection'
+import './BookScreen.scss'
+import Book2 from './Book2'
+import { FaArrowUp } from 'react-icons/fa'
 
 const BookScreen = () => {
   const [open, setOpen] = useState(false)
   const [currentValue, setCurrentValue] = useState(0)
 
   const scrollToTop = () => {
-    document
-      .getElementById('top')
-      ?.scrollIntoView(window.innerWidth > size.laptopS && { block: 'center', behavior: 'smooth' })
+    console.log(document.getElementById('boxtop'))
+    document.getElementById('boxtop')?.scrollIntoView({ block: 'start', behavior: 'smooth' })
+    // ?.scrollIntoView(window.innerWidth > size.laptopS && { block: 'center', behavior: 'smooth' })
   }
 
   const showDrawer = () => {
@@ -27,16 +32,10 @@ const BookScreen = () => {
     setOpenKeys(keys)
   }
 
-  const onClick: MenuProps['onClick'] = e => {
-    setCurrentValue(Number(e.key))
-  }
-
   const onClickSidebar: MenuProps['onClick'] = e => {
     setCurrentValue(Number(e.key))
     document.getElementById(String(e.key))?.scrollIntoView({
-      // behavior: 'smooth',
       block: 'start'
-      //  inline: 'nearest'
     })
   }
 
@@ -48,23 +47,9 @@ const BookScreen = () => {
       console.log('ddd', entries)
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          // ? id=""
           console.log(entry.target.id)
 
-          onClick({
-            key: entry.target.id,
-            keyPath: [],
-            item: undefined,
-            domEvent: undefined
-          })
-          // document.querySelectorAll('.nav__link').forEach(link => {
-          //   const id = link?.getAttribute('href').replace('#', '')
-          //   if (id === entry.target.id) {
-          //     link.classList.add('nav__link--active')
-          //   } else {
-          //     link.classList.remove('nav__link--active')
-          //   }
-          // })
+          setCurrentValue(Number(entry.target.id))
         }
       })
     },
@@ -82,41 +67,41 @@ const BookScreen = () => {
     })
   }, [])
 
+  const linkConspects = (data: any) => {
+    console.log('openModal:', data)
+  }
+
+  const linkVideo = (data: any) => {
+    console.log('openVideo', data)
+  }
+
+  const linkPrezentation = (data: any) => {
+    console.log('linkPrezentation', data)
+  }
+
   return (
     <div className="book-screen">
       <div className="book-screen__wrapper">
-        <SideBar
-          selectPageBook={onClickSidebar}
-          setOpen={setOpen}
-          open={open}
-          selectValue={currentValue}
-        />
-        <div className="book-screen__page">
-          <S.ToolBar>
-            <S.MenuButton type="primary" onClick={showDrawer}>
-              <MdMenu style={{ marginRight: 10 }} />
-              Оглавление
-            </S.MenuButton>
-          </S.ToolBar>
-          <S.Row>
-            <S.NavMenu
-              items={navBook}
-              onOpenChange={onOpenChange}
-              openKeys={openKeys}
-              defaultSelectedKeys={[String(currentValue)]}
-              selectedKeys={[String(currentValue)]}
-              onClick={onClickSidebar}
-              defaultOpenKeys={['1']}
-              mode="inline"
-            />
-            <Book />
-          </S.Row>
-          <S.ButtonUp onClick={scrollToTop}>
-            <MdArrowBackIosNew style={{ rotate: '90deg' }} />
-          </S.ButtonUp>
-        </div>
+        <S.Row>
+          <Book2
+            linkConspects={linkConspects}
+            linkVideo={linkVideo}
+            linkPrezentation={linkPrezentation}
+          />
+        </S.Row>
+        <S.ButtonUp
+          onClick={scrollToTop}
+          style={{
+            position: 'fixed',
+            bottom: 20,
+            right: 20
+          }}
+        >
+          <FaArrowUp />
+        </S.ButtonUp>
       </div>
     </div>
+    // </div>
   )
 }
 export { BookScreen }

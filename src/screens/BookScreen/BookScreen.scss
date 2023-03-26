@@ -1,5 +1,12 @@
 @import '../../assets/scss/Main.scss';
 
+.c10 {
+  a {
+    color: #1a75d2;
+    text-decoration: underline;
+  }
+}
+
 #main {
   transition: margin-left 0.5s;
   position: relative;

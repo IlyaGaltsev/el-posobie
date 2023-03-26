@@ -4,15 +4,16 @@ import { styled, alpha } from '@mui/material/styles'
 import InputBase from '@mui/material/InputBase'
 import Toolbar from '@mui/material/Toolbar'
 
-export const Bar = styled(AppBar)(({ theme }) => ({
+export const Bar = styled(AppBar)(() => ({
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'center',
   alignItems: 'center',
-  width: '100%'
+  width: '100%',
+  background: '#556832'
 }))
 
-export const Tool = styled(Toolbar)(({ theme }) => ({
+export const Tool = styled(Toolbar)(() => ({
   maxWidth: maxContent,
   width: '100%',
   display: 'flex',
