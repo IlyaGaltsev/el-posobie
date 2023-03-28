@@ -77,9 +77,6 @@ const PrezentationCard = ({ id, path, preview, tag, title }: IPrezentationCard) 
             title={title}
             src={path}
             frameBorder="0"
-            // allowFullScreen="true"
-            // mozallowfullscreen="true"
-            // webkitallowfullscreen="true"
           />
         )}
       </Dialog>
