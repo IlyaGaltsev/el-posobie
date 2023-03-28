@@ -20,8 +20,10 @@ const BookScreen = () => {
 
   const scrollToTop = () => {
     console.log(document.getElementById('boxtop'))
-    document.getElementById('boxtop')?.scrollIntoView({ block: 'start', behavior: 'smooth' })
-    // ?.scrollIntoView(window.innerWidth > size.laptopS && { block: 'center', behavior: 'smooth' })
+    document
+      .getElementById('boxtop')
+      ?.scrollIntoView(window.innerWidth > size.laptopS && { block: 'start', behavior: 'smooth' })
+    // ?.scrollIntoView
   }
 
   const showDrawer = () => {
@@ -82,26 +84,57 @@ const BookScreen = () => {
   return (
     <div className="book-screen">
       <div className="book-screen__wrapper">
-        <S.Row>
-          <Book2
-            linkConspects={linkConspects}
-            linkVideo={linkVideo}
-            linkPrezentation={linkPrezentation}
-          />
-        </S.Row>
-        <S.ButtonUp
-          onClick={scrollToTop}
-          style={{
-            position: 'fixed',
-            bottom: 20,
-            right: 20
-          }}
-        >
-          <FaArrowUp />
-        </S.ButtonUp>
+        <SideBar
+          selectPageBook={onClickSidebar}
+          setOpen={setOpen}
+          open={open}
+          selectValue={currentValue}
+        />
+        <div className="book-screen__page">
+          <S.ToolBar>
+            <S.MenuButton type="primary" onClick={showDrawer}>
+              <MdMenu style={{ marginRight: 10 }} />
+              Оглавление
+            </S.MenuButton>
+          </S.ToolBar>
+          <S.Row>
+            <S.NavMenu
+              items={navBook}
+              onOpenChange={onOpenChange}
+              openKeys={openKeys}
+              defaultSelectedKeys={[String(currentValue)]}
+              selectedKeys={[String(currentValue)]}
+              onClick={onClickSidebar}
+              defaultOpenKeys={['1']}
+              mode="inline"
+            />
+            <div
+              style={{
+                display: 'flex',
+                width: '100%',
+                justifyContent: 'center'
+              }}
+            >
+              <Book2
+                linkConspects={linkConspects}
+                linkVideo={linkVideo}
+                linkPrezentation={linkPrezentation}
+              />
+            </div>
+          </S.Row>
+          <S.ButtonUp
+            onClick={scrollToTop}
+            style={{
+              position: 'fixed',
+              bottom: 20,
+              right: 20
+            }}
+          >
+            <FaArrowUp />
+          </S.ButtonUp>
+        </div>
       </div>
     </div>
-    // </div>
   )
 }
 export { BookScreen }

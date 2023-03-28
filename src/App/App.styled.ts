@@ -18,16 +18,15 @@ export const BottomTabNavigation = styled(BottomNavigation)`
 export const Body = styled.div`
   max-width: ${maxContent};
   width: 100%;
-  padding: 10px 20px;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
 
   @media ${device.tablet} {
-    padding: 8px 12px;
+    padding: 0px 12px;
   }
 `
 
 export const DrawerBlur = styled(Drawer)(() => ({
   backdropFilter: 'blur(5px)'
-  // other styles here...
 }))
