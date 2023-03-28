@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/el-posobie/static/css/main.a8ad5777.css",
-    "main.js": "/el-posobie/static/js/main.7408f5e8.js",
+    "main.css": "/el-posobie/static/css/main.eeed84d8.css",
+    "main.js": "/el-posobie/static/js/main.98b8d84d.js",
     "static/js/787.2a0eb5cd.chunk.js": "/el-posobie/static/js/787.2a0eb5cd.chunk.js",
     "static/media/title.jpg": "/el-posobie/static/media/title.676feb223a9169f5e3b1.jpg",
     "static/media/title2.jpg": "/el-posobie/static/media/title2.8413f04b2705c7834e8e.jpg",
@@ -46,12 +46,12 @@
     "static/media/tp3.jpg": "/el-posobie/static/media/tp3.057dc642bc79174dde1f.jpg",
     "static/media/oby3.jpg": "/el-posobie/static/media/oby3.44054616a608a14d96fe.jpg",
     "index.html": "/el-posobie/index.html",
-    "main.a8ad5777.css.map": "/el-posobie/static/css/main.a8ad5777.css.map",
-    "main.7408f5e8.js.map": "/el-posobie/static/js/main.7408f5e8.js.map",
+    "main.eeed84d8.css.map": "/el-posobie/static/css/main.eeed84d8.css.map",
+    "main.98b8d84d.js.map": "/el-posobie/static/js/main.98b8d84d.js.map",
     "787.2a0eb5cd.chunk.js.map": "/el-posobie/static/js/787.2a0eb5cd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8ad5777.css",
-    "static/js/main.7408f5e8.js"
+    "static/css/main.eeed84d8.css",
+    "static/js/main.98b8d84d.js"
   ]
 }
