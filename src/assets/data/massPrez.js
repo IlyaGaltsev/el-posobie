@@ -71,7 +71,7 @@ export const massPrez = [
   },
   {
     id: '1uz3HfnQnlNaM_OPOSek3oVzCbD8ymeVm',
-    title: 'Тема 3.1 Приемы и способы ведения огня из автомата по неподвижной и появляющимся целям',
+    title: 'Тема 3.1 Суточный наряд. Обязанности лиц суточного наряда, его состав и вооружение.',
     preview: oby5,
     path: 'https://docs.google.com/presentation/d/e/2PACX-1vQLKUlAiStXBtSciS0m0mHwfGIlWPhSyr3R_Fqm_JFd12bS7FzZ_G-YHxKKY83I9w/embed?start=false&loop=false&delayms=5000',
     tag: 'Общевоинские уставы'
