@@ -26,6 +26,7 @@ section {
     width: 100%;
     display: flex;
   }
+  
   &__navigation {
     max-width: 400px;
     width: 100%;
@@ -33,6 +34,7 @@ section {
 
     ul {
       list-style-type: none;
+
       li {
         display: block;
         width: 100%;
@@ -54,6 +56,7 @@ section {
     position: relative;
     display: flex;
     flex-direction: column;
+    width: 100%;
     // font-family: "Times New Roman", Times, serif;
     // font-size: 14px;
     // line-height: 1.5;
