@@ -16,6 +16,22 @@ section {
   scroll-margin: 56px;
 }
 
+.book-buttons {
+  position: absolute;
+  width: 100%;
+  top: 200px;
+  left: auto;
+  right: auto;
+  z-index: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  @media (max-width: 916px) {
+    top: 14%
+  }
+}
+
 .book-screen {
   display: flex;
   align-items: center;

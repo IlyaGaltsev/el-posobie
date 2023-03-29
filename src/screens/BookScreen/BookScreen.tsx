@@ -3,27 +3,43 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/jsx-filename-extension */
-import { MdMenu } from 'react-icons/md'
+import { MdClose, MdMenu } from 'react-icons/md'
 import { size } from '../../constants/style/breakpoints'
 import { SideBar } from '../../components/SideBar'
 import { navBook } from '../../constants/navBook'
 import { useEffect, useState } from 'react'
 import * as S from './BookScreen.styled'
+import * as P from 'src/styled/PublicComponents.styled'
 import type { MenuProps } from 'antd'
 import './BookScreen.scss'
 import Book2 from './Book2'
 import { FaArrowUp } from 'react-icons/fa'
+import { AppBar, Dialog, IconButton, Toolbar } from '@mui/material'
 
 const BookScreen = () => {
   const [open, setOpen] = useState(false)
   const [currentValue, setCurrentValue] = useState(0)
-
+  const [isModalOpen, setModalOpen] = useState(false)
   const scrollToTop = () => {
     console.log(document.getElementById('boxtop'))
     document
       .getElementById('boxtop')
       ?.scrollIntoView(window.innerWidth > size.laptopS && { block: 'start', behavior: 'smooth' })
     // ?.scrollIntoView
+  }
+  const [dataModal, setDataModal] = useState({
+    title: '',
+    path: ''
+  })
+
+  const handleOk = () => {
+    setModalOpen(false)
+
+    setDataModal({
+      title: '',
+      path: ''
+    })
+    console.log('eeee')
   }
 
   const showDrawer = () => {
@@ -70,15 +86,28 @@ const BookScreen = () => {
   }, [])
 
   const linkConspects = (data: any) => {
-    console.log('openModal:', data)
+    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+    window.location.href = `https://docs.google.com/document/d/${data.id}/edit?usp=sharing&ou32858117889381065&rtpof=true&sd=true`
   }
 
   const linkVideo = (data: any) => {
     console.log('openVideo', data)
+    setDataModal({
+      title: data.title,
+      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+      path: `https://www.youtube.com/embed/${data.id}?autoplay=1`
+    })
+    setModalOpen(true)
   }
 
   const linkPrezentation = (data: any) => {
     console.log('linkPrezentation', data)
+
+    setDataModal({
+      title: data.title,
+      path: data.path
+    })
+    setModalOpen(true)
   }
 
   return (
@@ -94,7 +123,7 @@ const BookScreen = () => {
           <S.ToolBar>
             <S.MenuButton type="primary" onClick={showDrawer}>
               <MdMenu style={{ marginRight: 10 }} />
-              Оглавление
+              Содержание
             </S.MenuButton>
           </S.ToolBar>
           <S.Row>
@@ -134,6 +163,21 @@ const BookScreen = () => {
           </S.ButtonUp>
         </div>
       </div>
+      <Dialog fullScreen open={isModalOpen} onClose={handleOk}>
+        <AppBar sx={{ position: 'relative' }}>
+          <Toolbar>
+            <IconButton edge="start" color="inherit" onClick={handleOk} aria-label="close">
+              <MdClose />
+            </IconButton>
+            <P.TitleOneLine sx={{ ml: 2, flex: 1 }} variant="h6">
+              {dataModal?.title}
+            </P.TitleOneLine>
+          </Toolbar>
+        </AppBar>
+        {isModalOpen && (
+          <P.ContentModal title={dataModal?.title} src={dataModal?.path} frameBorder="0" />
+        )}
+      </Dialog>
     </div>
   )
 }
