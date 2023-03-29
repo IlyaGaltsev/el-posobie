@@ -87,3 +87,8 @@ export const TitleOneLine = styled(Typography)`
   overflow: hidden;
   text-overflow: ellipsis;
 `
+
+export const ContentModal = styled.iframe`
+  width: 100%;
+  height: calc(100vh - 64px);
+`
