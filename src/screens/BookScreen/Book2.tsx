@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
@@ -13,10 +14,10 @@ import { fontSizes } from 'src/constants/fontSizes'
 import { colors } from 'src/constants/style/colors'
 import { Button } from 'antd'
 
-const Book2 = ({ linkConspects, linkVideo, linkPrezentation }) => {
+const Book2 = ({ linkConspects, linkVideo, linkPrezentation }:any) => {
   const { fontSizeTheme } = useContext(AppContext)
 
-  const navigateTo = id => {
+  const navigateTo = (id:any) => {
     console.log(document.getElementById(id))
     document.getElementById(id)?.scrollIntoView({ block: 'start', behavior: 'smooth' })
   }
