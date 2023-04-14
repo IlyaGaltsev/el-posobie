@@ -3,9 +3,14 @@ import { PrezentationScreen } from './screens/PrezentationScreen'
 import { VideoScreen } from './screens/VideoScreen'
 import * as routesNames from './routesNames'
 import ConspectScreen from './screens/ConspectScreen'
+import { FirstScreen } from './screens/FirstScreen'
 // import { ConspectScreen } from './screens/ConspectScreen'
 
 export const routes = [
+  {
+    path: routesNames.FIRST_ROUTE,
+    element: <FirstScreen />
+  },
   {
     path: routesNames.BOOK_ROUTE,
     element: <BookScreen />
