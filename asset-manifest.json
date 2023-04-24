@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/el-posobie/static/css/main.e3f3914a.css",
-    "main.js": "/el-posobie/static/js/main.2da5576d.js",
-    "static/js/787.2a0eb5cd.chunk.js": "/el-posobie/static/js/787.2a0eb5cd.chunk.js",
+    "main.css": "/el-posobie/static/css/main.ab1b69fb.css",
+    "main.js": "/el-posobie/static/js/main.ad60469e.js",
+    "static/js/787.f066138e.chunk.js": "/el-posobie/static/js/787.f066138e.chunk.js",
     "static/media/tp2.png": "/el-posobie/static/media/tp2.fb6ef3081dafd83dfb3b.png",
     "static/media/med9.png": "/el-posobie/static/media/med9.69d982c577f9196384f8.png",
     "static/media/med8.png": "/el-posobie/static/media/med8.f74e7ad2a6b6207beeb7.png",
+    "static/media/illustrationbackground.png": "/el-posobie/static/media/illustrationbackground.caf82314dca1337584a9.png",
     "static/media/tp1.png": "/el-posobie/static/media/tp1.1caccb1db56a22bd55e4.png",
     "static/media/med2.png": "/el-posobie/static/media/med2.4c8adbed04b14780971e.png",
     "static/media/med7.png": "/el-posobie/static/media/med7.99021a491464de1d48ee.png",
@@ -15,8 +16,6 @@
     "static/media/med1.png": "/el-posobie/static/media/med1.39b56a6103ce0bb418db.png",
     "static/media/fire1.png": "/el-posobie/static/media/fire1.f70062a38a768a6228fe.png",
     "static/media/med6.png": "/el-posobie/static/media/med6.5b681e292df86fc1d56f.png",
-    "static/media/title.webp": "/el-posobie/static/media/title.985b47139806f06d4e22.webp",
-    "static/media/title2.webp": "/el-posobie/static/media/title2.c084e8708f7d421c7617.webp",
     "static/media/tacktic1.jpg": "/el-posobie/static/media/tacktic1.02753d0d8d55e1003ac0.jpg",
     "static/media/oby1.jpg": "/el-posobie/static/media/oby1.a59b463c8e1e6c774398.jpg",
     "static/media/fire2.png": "/el-posobie/static/media/fire2.a8b586047c055bc7acc4.png",
@@ -46,12 +45,12 @@
     "static/media/tp3.jpg": "/el-posobie/static/media/tp3.057dc642bc79174dde1f.jpg",
     "static/media/oby3.jpg": "/el-posobie/static/media/oby3.44054616a608a14d96fe.jpg",
     "index.html": "/el-posobie/index.html",
-    "main.e3f3914a.css.map": "/el-posobie/static/css/main.e3f3914a.css.map",
-    "main.2da5576d.js.map": "/el-posobie/static/js/main.2da5576d.js.map",
-    "787.2a0eb5cd.chunk.js.map": "/el-posobie/static/js/787.2a0eb5cd.chunk.js.map"
+    "main.ab1b69fb.css.map": "/el-posobie/static/css/main.ab1b69fb.css.map",
+    "main.ad60469e.js.map": "/el-posobie/static/js/main.ad60469e.js.map",
+    "787.f066138e.chunk.js.map": "/el-posobie/static/js/787.f066138e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e3f3914a.css",
-    "static/js/main.2da5576d.js"
+    "static/css/main.ab1b69fb.css",
+    "static/js/main.ad60469e.js"
   ]
 }
