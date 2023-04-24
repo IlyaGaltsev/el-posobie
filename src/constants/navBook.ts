@@ -1,9 +1,9 @@
-interface INavBookChildren {
+export interface INavBookChildren {
   key: number
   label: string
 }
 
-interface INavBook {
+export interface INavBook {
   key: number
   label: string
   children?: INavBookChildren[]

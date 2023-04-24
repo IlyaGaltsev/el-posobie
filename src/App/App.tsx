@@ -1,15 +1,18 @@
 import { List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 import { colors } from '../constants/style/colors'
-import { headerNav } from '../constants/headerNav'
 import { Header } from '../components/Header'
 import { ConfigProvider } from 'antd'
 import { routes } from '../routes'
-import * as S from './App.styled'
+import './App.scss'
 import { Box } from '@mui/system'
 import { useLayoutEffect, useState } from 'react'
 import { fontSizes } from 'src/constants/fontSizes'
 import { AppContext } from 'src/context/AppContext'
+import { BookScreen } from 'src/screens/BookScreen'
+import { Book } from 'src/layouts/Book'
+import { FirstScreen } from 'src/screens/FirstScreen'
+import { PageBook } from 'src/screens/PageBook'
 
 const App = () => {
   const navigate = useNavigate()
@@ -40,48 +43,20 @@ const App = () => {
           }
         }}
       >
-        <S.App id="main">
-          <Header closeMenu={closeMenu} setFontSizeTheme={setFontSizeTheme} />
-          <div id="boxtop" />
-          <S.Body id="sbody">
-            <S.DrawerBlur
-              container={document.getElementById('sbody')}
-              anchor={'left'}
-              open={openNavMenu}
-              onClose={() => {
-                setOpenNavMenu(false)
-              }}
-            >
-              <Box
-                sx={{ width: 250 }}
-                role="presentation"
-                onClick={() => {
-                  setOpenNavMenu(false)
-                }}
-              >
-                <List>
-                  {headerNav.map(({ key, icon, label }) => (
-                    <ListItem key={key} disablePadding>
-                      <ListItemButton
-                        onClick={() => {
-                          onChange(key)
-                        }}
-                      >
-                        <ListItemIcon>{icon}</ListItemIcon>
-                        <ListItemText primary={label} />
-                      </ListItemButton>
-                    </ListItem>
-                  ))}
-                </List>
-              </Box>
-            </S.DrawerBlur>
-            <Routes>
-              {routes.map(route => {
-                return <Route key={route.path} {...route} />
-              })}
-            </Routes>
-          </S.Body>
-        </S.App>
+        <div className="app-wrapper">
+          <Routes>
+            <Route path="/" element={<FirstScreen />} />
+            <Route path="/book" element={<Book />}>
+              <Route path="/book/content" element={<BookScreen />}>
+                <Route index path="/book/content/:id" element={<PageBook/>} />
+              </Route>
+
+              <Route path="/book/videos" element={<h1>Видео</h1>} />
+              <Route path="/book/prezentations" element={<h1>Презентации</h1>} />
+              <Route path="/book/abstract" element={<h1>Конспекты</h1>} />
+            </Route>
+          </Routes>
+        </div>
       </ConfigProvider>
     </AppContext.Provider>
   )

@@ -1,0 +1,41 @@
+.header {
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    background: #556832;
+    padding: 0px 32px;
+    position: sticky;
+    top: 0;
+    z-index: 4;
+  }
+
+  &-nav-links {
+    gap: 16px;
+
+    a {
+      text-decoration: none;
+      font-family: 'Arial';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 20px;
+      padding: 12px 0;
+      color: #ffffff;
+    }
+
+    a.active {
+        border-bottom: 2px solid #ffa500;
+  
+    }
+  }
+
+  &-buttons {
+    gap: 12px;
+  }
+
+  &-nav-links,
+  &-buttons {
+    display: flex;
+    align-items: center;
+  }
+}
