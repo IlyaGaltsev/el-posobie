@@ -5,20 +5,19 @@
 /* eslint-disable react/jsx-filename-extension */
 import { MdClose, MdMenu } from 'react-icons/md'
 import { size } from '../../constants/style/breakpoints'
-import { SideBar } from '../../components/SideBar'
+// import { Sidebar } from '../../components/Sidebar'
 import { navBook } from '../../constants/navBook'
 import { useEffect, useState } from 'react'
 import * as S from './BookScreen.styled'
 import * as P from 'src/styled/PublicComponents.styled'
 import type { MenuProps } from 'antd'
 import './BookScreen.scss'
-import Book2 from './Book2'
-import { FaArrowUp } from 'react-icons/fa'
-import { AppBar, Dialog, IconButton, Toolbar } from '@mui/material'
+import { Link, Outlet } from 'react-router-dom'
+import { Sidebar } from 'src/components/Sidebar'
 
 const BookScreen = () => {
   const [open, setOpen] = useState(false)
-  const [currentValue, setCurrentValue] = useState(0)
+  // const [currenpatValue, setCurrentValue] = useState(0)
   const [isModalOpen, setModalOpen] = useState(false)
   const scrollToTop = () => {
     console.log(document.getElementById('boxtop'))
@@ -50,40 +49,33 @@ const BookScreen = () => {
     setOpenKeys(keys)
   }
 
-  const onClickSidebar: MenuProps['onClick'] = e => {
-    setCurrentValue(Number(e.key))
-    document.getElementById(String(e.key))?.scrollIntoView({
-      block: 'start'
-    })
-  }
-
   const [openKeys, setOpenKeys] = useState(['sub1'])
-  console.log(window.innerWidth)
+  // console.log(window.innerWidth)
 
-  const observer = new IntersectionObserver(
-    entries => {
-      console.log('ddd', entries)
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          console.log(entry.target.id)
+  // const observer = new IntersectionObserver(
+  //   entries => {
+  //     console.log('ddd', entries)
+  //     entries.forEach(entry => {
+  //       if (entry.isIntersecting) {
+  //         console.log(entry.target.id)
 
-          setCurrentValue(Number(entry.target.id))
-        }
-      })
-    },
-    {
-      threshold: 0
-    }
-  )
+  //         // setCurrentValue(Number(entry.target.id))
+  //       }
+  //     })
+  //   },
+  //   {
+  //     threshold: 0
+  //   }
+  // )
 
-  useEffect(() => {
-    // console.log(observer)
-    document.querySelectorAll('section').forEach(section => {
-      observer.observe(section)
-      // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
-      console.log(observer, observer.observe(section))
-    })
-  }, [])
+  // useEffect(() => {
+  //   // console.log(observer)
+  //   document.querySelectorAll('section').forEach(section => {
+  //     observer.observe(section)
+  //     // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
+  //     console.log(observer, observer.observe(section))
+  //   })
+  // }, [])
 
   const linkConspects = (data: any) => {
     // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
@@ -113,71 +105,19 @@ const BookScreen = () => {
   return (
     <div className="book-screen">
       <div className="book-screen__wrapper">
-        <SideBar
-          selectPageBook={onClickSidebar}
-          setOpen={setOpen}
-          open={open}
-          selectValue={currentValue}
-        />
+        <Sidebar />
         <div className="book-screen__page">
-          <S.ToolBar>
-            <S.MenuButton type="primary" onClick={showDrawer}>
-              <MdMenu style={{ marginRight: 10 }} />
-              Содержание
-            </S.MenuButton>
-          </S.ToolBar>
-          <S.Row>
-            <S.NavMenu
-              items={navBook}
-              onOpenChange={onOpenChange}
-              openKeys={openKeys}
-              defaultSelectedKeys={[String(currentValue)]}
-              selectedKeys={[String(currentValue)]}
-              onClick={onClickSidebar}
-              defaultOpenKeys={['1']}
-              mode="inline"
-            />
-            <div
-              style={{
-                display: 'flex',
-                width: '100%',
-                justifyContent: 'center'
-              }}
-            >
-              <Book2
-                linkConspects={linkConspects}
-                linkVideo={linkVideo}
-                linkPrezentation={linkPrezentation}
-              />
-            </div>
-          </S.Row>
-          <S.ButtonUp
-            onClick={scrollToTop}
-            style={{
-              position: 'fixed',
-              bottom: 20,
-              right: 20
+          <meta content="text/html; charset=UTF-8" httpEquiv="content-type" />
+          <style
+            type="text/css"
+            dangerouslySetInnerHTML={{
+              __html:
+                '@import url(\'https://themes.googleusercontent.com/fonts/css?kit=fpjTOVmNbO4Lz34iLyptLTi9jKYd1gJzj5O2gWsEpXol-nTHck7FFkZplK5meosG\');.lst-kix_list_2-6>li:before{content:"\\0025cf  "}.lst-kix_list_2-7>li:before{content:"o  "}ul.lst-kix_list_1-0{list-style-type:none}.lst-kix_list_2-4>li:before{content:"o  "}.lst-kix_list_2-5>li:before{content:"\\0025aa  "}.lst-kix_list_2-8>li:before{content:"\\0025aa  "}.lst-kix_list_3-0>li:before{content:"\\002022  "}ul.lst-kix_list_5-7{list-style-type:none}ul.lst-kix_list_5-8{list-style-type:none}.lst-kix_list_3-1>li:before{content:"o  "}.lst-kix_list_3-2>li:before{content:"\\0025aa  "}ul.lst-kix_list_5-5{list-style-type:none}ul.lst-kix_list_3-7{list-style-type:none}ul.lst-kix_list_5-6{list-style-type:none}ul.lst-kix_list_3-8{list-style-type:none}ul.lst-kix_list_1-3{list-style-type:none}ul.lst-kix_list_3-1{list-style-type:none}.lst-kix_list_3-5>li:before{content:"\\0025aa  "}ul.lst-kix_list_5-0{list-style-type:none}ul.lst-kix_list_1-4{list-style-type:none}ul.lst-kix_list_3-2{list-style-type:none}ul.lst-kix_list_1-1{list-style-type:none}.lst-kix_list_3-4>li:before{content:"o  "}ul.lst-kix_list_1-2{list-style-type:none}ul.lst-kix_list_3-0{list-style-type:none}ul.lst-kix_list_5-3{list-style-type:none}ul.lst-kix_list_1-7{list-style-type:none}.lst-kix_list_3-3>li:before{content:"\\0025cf  "}ul.lst-kix_list_3-5{list-style-type:none}ul.lst-kix_list_5-4{list-style-type:none}ul.lst-kix_list_1-8{list-style-type:none}ul.lst-kix_list_3-6{list-style-type:none}ul.lst-kix_list_5-1{list-style-type:none}ul.lst-kix_list_1-5{list-style-type:none}ul.lst-kix_list_3-3{list-style-type:none}ul.lst-kix_list_5-2{list-style-type:none}ul.lst-kix_list_1-6{list-style-type:none}ul.lst-kix_list_3-4{list-style-type:none}.lst-kix_list_3-8>li:before{content:"\\0025aa  "}.lst-kix_list_4-0>li:before{content:"\\002022  "}.lst-kix_list_4-1>li:before{content:"o  "}.lst-kix_list_3-6>li:before{content:"\\0025cf  "}.lst-kix_list_3-7>li:before{content:"o  "}.lst-kix_list_4-4>li:before{content:"o  "}.lst-kix_list_4-3>li:before{content:"\\0025cf  "}.lst-kix_list_4-5>li:before{content:"\\0025aa  "}.lst-kix_list_4-2>li:before{content:"\\0025aa  "}.lst-kix_list_4-6>li:before{content:"\\0025cf  "}.lst-kix_list_5-0>li:before{content:"\\002022  "}.lst-kix_list_4-8>li:before{content:"\\0025aa  "}.lst-kix_list_5-3>li:before{content:"\\0025cf  "}.lst-kix_list_4-7>li:before{content:"o  "}.lst-kix_list_5-2>li:before{content:"\\0025aa  "}.lst-kix_list_5-1>li:before{content:"o  "}ul.lst-kix_list_4-8{list-style-type:none}.lst-kix_list_5-7>li:before{content:"o  "}ul.lst-kix_list_4-6{list-style-type:none}.lst-kix_list_5-6>li:before{content:"\\0025cf  "}.lst-kix_list_5-8>li:before{content:"\\0025aa  "}ul.lst-kix_list_2-8{list-style-type:none}ul.lst-kix_list_4-7{list-style-type:none}ul.lst-kix_list_4-0{list-style-type:none}ul.lst-kix_list_2-2{list-style-type:none}ul.lst-kix_list_4-1{list-style-type:none}.lst-kix_list_1-0>li:before{content:"\\0025cf  "}ul.lst-kix_list_2-3{list-style-type:none}.lst-kix_list_5-4>li:before{content:"o  "}ul.lst-kix_list_2-0{list-style-type:none}ul.lst-kix_list_2-1{list-style-type:none}ul.lst-kix_list_4-4{list-style-type:none}.lst-kix_list_5-5>li:before{content:"\\0025aa  "}ul.lst-kix_list_2-6{list-style-type:none}ul.lst-kix_list_4-5{list-style-type:none}.lst-kix_list_1-1>li:before{content:"o  "}.lst-kix_list_1-2>li:before{content:"\\0025aa  "}ul.lst-kix_list_2-7{list-style-type:none}ul.lst-kix_list_4-2{list-style-type:none}ul.lst-kix_list_2-4{list-style-type:none}ul.lst-kix_list_4-3{list-style-type:none}ul.lst-kix_list_2-5{list-style-type:none}.lst-kix_list_1-3>li:before{content:"\\0025cf  "}.lst-kix_list_1-4>li:before{content:"o  "}.lst-kix_list_1-7>li:before{content:"o  "}.lst-kix_list_1-5>li:before{content:"\\0025aa  "}.lst-kix_list_1-6>li:before{content:"\\0025cf  "}.lst-kix_list_2-0>li:before{content:"\\002022  "}.lst-kix_list_2-1>li:before{content:"o  "}.lst-kix_list_1-8>li:before{content:"\\0025aa  "}.lst-kix_list_2-2>li:before{content:"\\0025aa  "}.lst-kix_list_2-3>li:before{content:"\\0025cf  "}ol{margin:0;padding:0}table td,table th{padding:0}.c6{padding-top:0pt;text-indent:35.5pt;padding-bottom:0pt;line-height:1.0999999999999999;orphans:2;widows:2;text-align:justify}.c9{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Times New Roman";font-style:normal}.c0{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Times New Roman";font-style:normal}.c1{padding-top:0pt;text-indent:35.5pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c10{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:center;height:11pt}.c12{padding-top:0pt;text-indent:35.5pt;padding-bottom:0pt;line-height:1.0;orphans:2;widows:2;text-align:justify}.c18{background-color:#ffffff;padding-top:0pt;padding-bottom:0pt;line-height:1.0999999999999999;orphans:2;widows:2;text-align:center}.c20{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Times New Roman";font-style:normal}.c42{padding-top:2pt;padding-bottom:0pt;line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:center}.c4{padding-top:0pt;text-indent:42.5pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c16{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Times New Roman";font-style:normal}.c3{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Calibri";font-style:normal}.c13{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Times New Roman";font-style:normal}.c25{padding-top:0pt;padding-bottom:0pt;line-height:1.0999999999999999;orphans:2;widows:2;text-align:justify}.c24{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:justify}.c22{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:center}.c38{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:left}.c36{padding-top:0pt;padding-bottom:0pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:right}.c37{padding-top:0pt;padding-bottom:10pt;line-height:1.1500000000000001;orphans:2;widows:2;text-align:center}.c26{font-weight:400;text-decoration:none;font-size:12pt;font-family:"Times New Roman"}.c30{color:#366091;text-decoration:none;vertical-align:baseline;font-style:normal}.c41{font-weight:700;font-size:11pt;font-family:"Calibri"}.c45{font-weight:700;font-size:20pt;font-family:"Times New Roman"}.c52{font-weight:700;font-size:11pt;font-family:"Times New Roman"}.c34{color:#000000;text-decoration:none;vertical-align:baseline}.c21{color:#000000;vertical-align:baseline;font-style:normal}.c2{font-size:14pt;font-family:"Times New Roman";font-weight:400}.c32{font-size:12pt;font-family:"Times New Roman";font-weight:700}.c54{font-weight:400;font-size:10pt;font-family:"Courier New"}.c48{font-size:12pt;font-family:"Times New Roman";font-weight:400}.c39{font-weight:700;font-size:16pt;font-family:"Times New Roman"}.c19{-webkit-text-decoration-skip:none;text-decoration:underline;text-decoration-skip-ink:none}.c50{font-weight:700;font-size:10pt;font-family:"Times New Roman"}.c11{font-size:14pt;font-family:"Times New Roman";font-weight:700}.c49{margin-left:-35.5pt;margin-right:-7.2pt}.c8{color:inherit;text-decoration:inherit}.c40{color:#000000;text-decoration:none}.c33{margin-left:35.5pt;text-indent:-35.5pt}.c5{padding:0;margin:0}.c17{margin-left:0pt;list-style-position:inside}.c44{max-width:467.7pt;padding:56.7pt 42.5pt 56.7pt 85pt}.c47{margin-left:35.5pt}.c15{height:11pt}.c46{text-indent:35.5pt}.c23{background-color:#ffff00}.c14{font-style:italic}.c53{page-break-after:avoid}.c35{background-color:#ffffff}.c28{text-indent:42.5pt}.c29{margin-left:-14.2pt}.c7{background-color:#ff00ff}.c31{font-style:normal}.c43{color:#ff0000}.c55{font-size:14pt}.c27{margin-left:-21.3pt}.c51{color:#000000}.title{padding-top:24pt;color:#000000;font-weight:700;font-size:36pt;padding-bottom:6pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:18pt;color:#666666;font-size:24pt;padding-bottom:4pt;font-family:"Georgia";line-height:1.1500000000000001;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Calibri"}p{margin:0;color:#000000;font-size:11pt;font-family:"Calibri"}h1{padding-top:12pt;color:#366091;font-size:16pt;padding-bottom:0pt;font-family:"Cambria";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-weight:700;font-size:18pt;padding-bottom:4pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:2pt;color:#243f61;font-size:12pt;padding-bottom:0pt;font-family:"Cambria";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:12pt;color:#000000;font-weight:700;font-size:12pt;padding-bottom:2pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:11pt;color:#000000;font-weight:700;font-size:11pt;padding-bottom:2pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:10pt;color:#000000;font-weight:700;font-size:10pt;padding-bottom:2pt;font-family:"Calibri";line-height:1.1500000000000001;page-break-after:avoid;orphans:2;widows:2;text-align:left}'
             }}
-          >
-            <FaArrowUp />
-          </S.ButtonUp>
+          />
+          <Outlet />
         </div>
       </div>
-      <Dialog fullScreen open={isModalOpen} onClose={handleOk}>
-        <AppBar sx={{ position: 'relative' }}>
-          <Toolbar>
-            <IconButton edge="start" color="inherit" onClick={handleOk} aria-label="close">
-              <MdClose />
-            </IconButton>
-            <P.TitleOneLine sx={{ ml: 2, flex: 1 }} variant="h6">
-              {dataModal?.title}
-            </P.TitleOneLine>
-          </Toolbar>
-        </AppBar>
-        {isModalOpen && (
-          <P.ContentModal title={dataModal?.title} src={dataModal?.path} frameBorder="0" />
-        )}
-      </Dialog>
     </div>
   )
 }

@@ -1,49 +1,21 @@
-import { navBook } from '../../constants/navBook'
-import * as S from './SideBar.styled'
+import { BOOK_ROUTE } from 'src/routesNames'
+import { NavLink } from 'react-router-dom'
+import { navBook } from 'src/constants/navBook'
+import { Dropdown } from '../Dropdown'
+import './Sidebar.scss'
 
-interface ISideBar {
-  selectPageBook: any
-  selectValue: any
-  setOpen: any
-  open: boolean
-}
-
-const SideBar = ({ selectPageBook, selectValue, setOpen, open }: ISideBar) => {
-  const onClose = () => {
-    setOpen(false)
-  }
-
-  const setWidthLeftMenu = () => {
-    let width = 400
-
-    if (window.innerWidth < 440) {
-      width = 280
-    }
-    return width
-  }
-
+const Sidebar = () => {
   return (
-    <>
-      <S.LeftMenu
-        title="Оглавление"
-        closable={false}
-        onClose={onClose}
-        width={setWidthLeftMenu()}
-        placement="left"
-        open={open}
-      >
-        <S.NavMenu
-          defaultSelectedKeys={selectValue.toString()}
-          selectedKeys={selectValue.toString()}
-          defaultOpenKeys={['1']}
-          mode="inline"
-          theme="light"
-          items={navBook}
-          onClick={selectPageBook}
-        />
-      </S.LeftMenu>
-    </>
+    <div className="sidebar">
+      <div className="sidebar-wrapper">
+        {navBook.map(({ key, label, children }: any) => {
+          if (!children?.length) return <NavLink key={key} className="sidebar-wrapper-navlink" to={`${BOOK_ROUTE}/${key}`}>{label}</NavLink>
+
+          return <Dropdown key={key} label={label} options={children} />
+        })}
+      </div>
+    </div>
   )
 }
 
-export { SideBar }
+export { Sidebar }
