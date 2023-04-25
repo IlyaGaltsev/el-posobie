@@ -4,6 +4,7 @@ import './PageBook.scss'
 import { BOOK_ROUTE } from 'src/routesNames'
 import { useEffect, useState } from 'react'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
+import { FaArrowUp } from 'react-icons/fa'
 const PageBook = () => {
   const params = useParams()
   const bookPage = bookPages.find((item: any) => item.key === Number(params.id))
@@ -23,22 +24,25 @@ const PageBook = () => {
       [5, 'V'],
       [4, 'IV'],
       [1, 'I']
-    ]);
-  
-    let result = '';
-  
+    ])
+
+    let result = ''
+
     romanNumeralMap.forEach((value, key) => {
       while (arabicNumber >= key) {
-        result += value;
-        arabicNumber -= key;
+        result += value
+        arabicNumber -= key
       }
-    });
-  
-    return result;
+    })
+
+    return result
   }
 
-  useEffect(() => {
+  const scrollOnPageTop = () => {
     if (document !== null) document?.getElementById(String(bookPage?.key) ?? '0')?.scrollIntoView()
+  }
+  useEffect(() => {
+    scrollOnPageTop()
   }, [bookPage])
 
   const [isVisible, setIsVisible] = useState(false)
@@ -50,27 +54,42 @@ const PageBook = () => {
       setIsVisible((scrollPosition ?? 0) > 100)
     }
 
-    if (document !== null) document?.querySelector('.page-book')?.addEventListener('scroll', handleScroll)
+    if (document !== null)
+      document?.querySelector('.page-book')?.addEventListener('scroll', handleScroll)
     return () => document?.querySelector('.page-book')?.removeEventListener('scroll', handleScroll)
   }, [])
-
 
   return (
     <div className="page-book">
       {isVisible && (
         <p className="page-book__title">
-          {bookPage?.chapter ? `Раздел ${arabicToRoman(bookPage?.chapter ?? 0)} >` : ''} {bookPage?.title}
+          {bookPage?.chapter ? `Раздел ${arabicToRoman(bookPage?.chapter ?? 0)} >` : ''}{' '}
+          {bookPage?.title}
         </p>
       )}
 
       {bookPage?.content() ?? 'Выберите страницу'}
       <div className="book-screen__page-actions">
-        <Link to={`${BOOK_ROUTE}/${(bookPage?.key ?? 1) - 1}`} className="primary-button">
+        <Link
+          to={`${BOOK_ROUTE}/${(bookPage?.key ?? 1) - 1}`}
+          className="primary-button"
+          style={bookPage?.key === 0 ? { display: 'none' } : {}}
+        >
           <AiOutlineArrowLeft /> Назад
         </Link>
-        <Link to={`${BOOK_ROUTE}/${(bookPage?.key ?? -1) + 1}`} className="primary-button">
+
+        <div />
+
+        <Link
+          to={`${BOOK_ROUTE}/${(bookPage?.key ?? -1) + 1}`}
+          className="primary-button"
+          style={bookPage?.key === 23 ? { display: 'none' } : {}}
+        >
           Далее <AiOutlineArrowRight />
         </Link>
+      </div>
+      <div className="page-book__up-button" onClick={scrollOnPageTop}>
+        <FaArrowUp size={20} />
       </div>
     </div>
   )
