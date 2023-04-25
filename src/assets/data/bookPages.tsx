@@ -96,7 +96,8 @@ export const bookPages = [
   },
   {
     key: 1,
-    title: 'Раздел I',
+    title: 'Глава 1',
+    chapter: 1,
     content: () => {
       return (
         <section id="1">
@@ -1625,6 +1626,7 @@ export const bookPages = [
       {
         key: 2,
         title: 'Глава 2',
+        chapter: 1,
         content: () => {
           return  <section id="2">
           <p className="c1">
@@ -1737,6 +1739,7 @@ export const bookPages = [
       {
         key: 3,
         title: 'Глава 3',
+        chapter: 1,
         content: () => {
           return <section id="3">
           <p className="c1">
@@ -1844,6 +1847,7 @@ export const bookPages = [
       {
         key: 4,
         title: 'Глава 4',
+        chapter: 1,
         content: () => {
           return  <section id="4">
           <p className="c1">
@@ -2217,6 +2221,7 @@ export const bookPages = [
       {
         key: 5,
         title: 'Глава 5',
+        chapter: 1,
         content: () => {
           return <section id="5">
           <p className="c4">
@@ -2556,6 +2561,7 @@ export const bookPages = [
       {
         key: 6,
         title: 'Глава 6',
+        chapter: 1,
         content: () => {
           return   <section id="6">
           <p className="c4">
@@ -5708,7 +5714,7 @@ export const bookPages = [
       },
       {
         key: 23,
-        title: 'Список импользованных источников',
+        title: 'Список используемой литературы',
         content: () => {
           return <section id="23">
           <p className="c18">

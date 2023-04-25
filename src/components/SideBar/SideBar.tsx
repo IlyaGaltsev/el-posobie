@@ -1,24 +1,27 @@
 import { BOOK_ROUTE } from 'src/routesNames'
-import { NavLink, useNavigate, useParams } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom'
 import { navBook } from 'src/constants/navBook'
 import { Dropdown } from '../Dropdown'
 import './Sidebar.scss'
-import { useEffect, useLayoutEffect, useState } from 'react'
+import { useLayoutEffect, useState } from 'react'
 
 const Sidebar = () => {
-  const navigate = useNavigate()
   const params = useParams()
-
-  const [defaultOpen, setDefaultOpen] = useState([false, false, false])
-  // let defaultOpen: boolean[] = [false, false, false]
+  let defaultValue = [false, false, false]
+  const [defaultOpen, setDefaultOpen] = useState(defaultValue)
 
   useLayoutEffect(() => {
     if (Number(params?.id) >= 1 && Number(params?.id) <= 6) setDefaultOpen([true, false, false])
     if (Number(params?.id) >= 7 && Number(params?.id) <= 14) setDefaultOpen([false, true, false])
     if (Number(params?.id) >= 15 && Number(params?.id) <= 22) setDefaultOpen([false, false, true])
 
-    // console.log(params.id, defaultOpen)
   }, [params.id])
+
+  const handleOnClickDropDown = (key: number) => {
+    if (key === 1) setDefaultOpen([!defaultOpen[0], defaultOpen[1], defaultOpen[2]])
+    if (key === 2) setDefaultOpen([defaultOpen[0], !defaultOpen[1], defaultOpen[2]])
+    if (key === 3) setDefaultOpen([defaultOpen[0], defaultOpen[1], !defaultOpen[2]])
+  }
 
   return (
     <div className="sidebar">
@@ -33,10 +36,12 @@ const Sidebar = () => {
 
           return (
             <Dropdown
-              key={key}
+              key={index}
+              id={index}
+              isOpen={defaultOpen[index - 1]}
               label={label}
+              onClick={handleOnClickDropDown}
               options={children}
-              defaultOpen={defaultOpen[2]}
             />
           )
         })}
