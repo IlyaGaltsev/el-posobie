@@ -1,18 +1,16 @@
 import { Header } from 'src/components/Header'
-import { Outlet } from 'react-router-dom'
-import { useEffect, useState } from 'react'
-import { fontSizes } from 'src/constants/fontSizes'
+import { Outlet, useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
+import { BOOK_ROUTE } from 'src/routesNames'
 
 const Book = () => {
-  const [fontSizeTheme, setFontSizeTheme] = useState(fontSizes[0])
+  const navigate = useNavigate()
 
   useEffect(() => {
-    const fontSizeThemeLocal = localStorage.getItem('fontSizeTheme')
-
-    if (fontSizeThemeLocal != null) {
-      setFontSizeTheme(fontSizeThemeLocal)
+    if (window.location.hash === `#${BOOK_ROUTE}`) {
+      navigate(`${BOOK_ROUTE}/0`)
     }
-  }, [fontSizeTheme])
+  }, [navigate])
 
   return (
     <div>

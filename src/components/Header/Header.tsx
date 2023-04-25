@@ -9,21 +9,23 @@ const Header = () => {
   const navigate = useNavigate()
 
   return (
-    <div className="header-wrapper">
-      <div className="header-nav-links">
-        {navigation.map(({ key, label }) => (
-          <NavLink key={key} to={key}>
-            {label}
-          </NavLink>
-        ))}
+    <header>
+      <div className="header-wrapper">
+        <div className="header-nav-links">
+          {navigation.map(({ key, label }) => (
+            <NavLink key={key} to={key}>
+              {label}
+            </NavLink>
+          ))}
+        </div>
+        <div className="header-buttons">
+          <button onClick={() => navigate('/')} className="primary-button">
+            Титульная страница
+          </button>
+          <button className="primary-button">О проекте</button>
+        </div>
       </div>
-      <div className="header-buttons">
-        <button onClick={() => navigate('/')} className="primary-button">
-          Титульная страница
-        </button>
-        <button className="primary-button">О проекте</button>
-      </div>
-    </div>
+    </header>
   )
 }
 
