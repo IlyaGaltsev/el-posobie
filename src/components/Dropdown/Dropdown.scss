@@ -8,12 +8,19 @@
   &__header {
     width: 100%;
     background: #465945;
-    padding: 12px 12px 12px 32px;
+    padding: 12px 12px 12px 72px;
     cursor: pointer;
+    position: relative;
 
     &:hover {
       background: #647e63;
     }
+  }
+
+  &__header-icon {
+    position: absolute;
+    top: 14px;
+    left: 32px;
   }
 
   &__options {
@@ -34,7 +41,7 @@
     }
 
     li > a {
-      padding: 12px 12px 12px 32px;
+      padding: 12px 12px 12px 72px;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 17px;
       line-height: 21px;

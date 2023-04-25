@@ -38,6 +38,18 @@ h2 {
   color: #010101;
   padding: 4px 20px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.primary-button:hover {
+  background: #ff9900;
+}
+
+.primary-button:active {
+  background: rgb(240, 161, 14);
 }
 
 .grid-screen__wrapper {

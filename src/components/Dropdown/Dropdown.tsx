@@ -1,28 +1,26 @@
 import { BOOK_ROUTE } from 'src/routesNames'
-import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import './Dropdown.scss'
 import type { INavBookChildren } from 'src/constants/navBook'
+import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai'
 
 interface IDropdown {
   id?: number
   label: string
-  options: INavBookChildren[],
-  defaultOpen: boolean
+  isOpen: boolean
+  options: INavBookChildren[]
+  onClick: Function
 }
 
-const Dropdown = ({ label, options, defaultOpen }: IDropdown) => {
-  console.log('defaultOpen', defaultOpen)
-  const [isOpen, setIsOpen] = useState(defaultOpen ?? false)
-
+const Dropdown = ({ id, label, options, isOpen, onClick }: IDropdown) => {
   return (
     <div className="dropdown">
-      <div
-        className="dropdown__header"
-        onClick={() => {
-          setIsOpen(!isOpen)
-        }}
-      >
+      <div className="dropdown__header" onClick={() => onClick(id)}>
+        {isOpen ? (
+          <AiOutlinePlus className="dropdown__header-icon" />
+        ) : (
+          <AiOutlineMinus className="dropdown__header-icon" />
+        )}
         {label}
         <i className={`fa fa-caret-${isOpen ? 'up' : 'down'}`}></i>
       </div>

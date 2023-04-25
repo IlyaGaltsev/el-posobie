@@ -16,97 +16,51 @@ import { Link, Outlet } from 'react-router-dom'
 import { Sidebar } from 'src/components/Sidebar'
 
 const BookScreen = () => {
-  const [open, setOpen] = useState(false)
-  // const [currenpatValue, setCurrentValue] = useState(0)
-  const [isModalOpen, setModalOpen] = useState(false)
-  const scrollToTop = () => {
-    console.log(document.getElementById('boxtop'))
-    document
-      .getElementById('boxtop')
-      ?.scrollIntoView(window.innerWidth > size.laptopS && { block: 'start', behavior: 'smooth' })
-    // ?.scrollIntoView
-  }
-  const [dataModal, setDataModal] = useState({
-    title: '',
-    path: ''
-  })
+  // const [open, setOpen] = useState(false)
+  // const [isModalOpen, setModalOpen] = useState(false)
 
-  const handleOk = () => {
-    setModalOpen(false)
+  // const scrollToTop = () => {
+  //   console.log(document.getElementById('boxtop'))
+  //   document
+  //     .getElementById('boxtop')
+  //     ?.scrollIntoView(window.innerWidth > size.laptopS && { block: 'start', behavior: 'smooth' })
+  //   // ?.scrollIntoView
+  // }
+  // const [dataModal, setDataModal] = useState({
+  //   title: '',
+  //   path: ''
+  // })
 
-    setDataModal({
-      title: '',
-      path: ''
-    })
-    console.log('eeee')
-  }
+  // const linkConspects = (data: any) => {
+  //   // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+  //   window.location.href = `https://docs.google.com/document/d/${data.id}/edit?usp=sharing&ou32858117889381065&rtpof=true&sd=true`
+  // }
 
-  const showDrawer = () => {
-    setOpen(true)
-  }
-
-  const onOpenChange: MenuProps['onOpenChange'] = keys => {
-    setOpenKeys(keys)
-  }
-
-  const [openKeys, setOpenKeys] = useState(['sub1'])
-  // console.log(window.innerWidth)
-
-  // const observer = new IntersectionObserver(
-  //   entries => {
-  //     console.log('ddd', entries)
-  //     entries.forEach(entry => {
-  //       if (entry.isIntersecting) {
-  //         console.log(entry.target.id)
-
-  //         // setCurrentValue(Number(entry.target.id))
-  //       }
-  //     })
-  //   },
-  //   {
-  //     threshold: 0
-  //   }
-  // )
-
-  // useEffect(() => {
-  //   // console.log(observer)
-  //   document.querySelectorAll('section').forEach(section => {
-  //     observer.observe(section)
-  //     // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
-  //     console.log(observer, observer.observe(section))
+  // const linkVideo = (data: any) => {
+  //   console.log('openVideo', data)
+  //   setDataModal({
+  //     title: data.title,
+  //     // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+  //     path: `https://www.youtube.com/embed/${data.id}?autoplay=1`
   //   })
-  // }, [])
+  //   setModalOpen(true)
+  // }
 
-  const linkConspects = (data: any) => {
-    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-    window.location.href = `https://docs.google.com/document/d/${data.id}/edit?usp=sharing&ou32858117889381065&rtpof=true&sd=true`
-  }
+  // const linkPrezentation = (data: any) => {
+  //   console.log('linkPrezentation', data)
 
-  const linkVideo = (data: any) => {
-    console.log('openVideo', data)
-    setDataModal({
-      title: data.title,
-      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-      path: `https://www.youtube.com/embed/${data.id}?autoplay=1`
-    })
-    setModalOpen(true)
-  }
-
-  const linkPrezentation = (data: any) => {
-    console.log('linkPrezentation', data)
-
-    setDataModal({
-      title: data.title,
-      path: data.path
-    })
-    setModalOpen(true)
-  }
+  //   setDataModal({
+  //     title: data.title,
+  //     path: data.path
+  //   })
+  //   setModalOpen(true)
+  // }
 
   return (
     <div className="book-screen">
       <div className="book-screen__wrapper">
         <Sidebar />
-        <div className="book-screen__page">
+        {/* <div className="book-screen__page"> */}
           <meta content="text/html; charset=UTF-8" httpEquiv="content-type" />
           <style
             type="text/css"
@@ -116,7 +70,7 @@ const BookScreen = () => {
             }}
           />
           <Outlet />
-        </div>
+        {/* </div> */}
       </div>
     </div>
   )

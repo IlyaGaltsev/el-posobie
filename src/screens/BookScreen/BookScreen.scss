@@ -54,6 +54,7 @@ section {
       li {
         display: block;
         width: 100%;
+
         button {
           border: none;
           background: none;
@@ -61,29 +62,14 @@ section {
           color: $fontColorPrimary;
           padding: 10px;
         }
+
         ul {
           background: $tertiary;
         }
       }
     }
   }
-  &__page {
-    text-align: justify;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    overflow-y: auto;
-    height: calc(100vh - 46px);
-    // font-family: "Times New Roman", Times, serif;
-    // font-size: 14px;
-    // line-height: 1.5;
-    padding: 20px;
-    section {
-      max-width: 800px;
-    }
-  }
+ 
 
   &__page-actions {
     display: flex;
