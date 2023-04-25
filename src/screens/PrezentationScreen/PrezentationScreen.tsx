@@ -17,12 +17,11 @@ const PrezentationScreen: FC = () => {
   })
 
   return (
-    <S.Grid>
-      {loading && <Loader />}
+    <div className='grid-screen__wrapper'>
       {massPrez.map(item => {
         return <PrezentationCard key={item.title} {...item} />
       })}
-    </S.Grid>
+    </div>
   )
 }
 export { PrezentationScreen }

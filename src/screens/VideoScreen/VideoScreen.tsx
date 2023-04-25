@@ -3,6 +3,7 @@ import { VideoCard } from '../../components/VideoCard'
 import massVideo from '../../assets/data/massVideo'
 import { Loader } from '../../components/Loader'
 import { type FC, useEffect, useState } from 'react'
+import './VideoScreen.scss'
 
 const VideoScreen: FC = () => {
   const [loading, setLoading] = useState(true)
@@ -17,12 +18,12 @@ const VideoScreen: FC = () => {
   })
 
   return (
-    <S.Grid>
+    <div className="grid-screen__wrapper">
       {loading && <Loader />}
       {massVideo.map(item => {
         return <VideoCard key={item.id} {...item} />
       })}
-    </S.Grid>
+    </div>
   )
 }
 export { VideoScreen }

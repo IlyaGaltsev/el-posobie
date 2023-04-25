@@ -13,6 +13,9 @@ import { BookScreen } from 'src/screens/BookScreen'
 import { Book } from 'src/layouts/Book'
 import { FirstScreen } from 'src/screens/FirstScreen'
 import { PageBook } from 'src/screens/PageBook'
+import { VideoScreen } from 'src/screens/VideoScreen'
+import { PrezentationScreen } from 'src/screens/PrezentationScreen'
+import ConspectScreen from 'src/screens/ConspectScreen'
 
 const App = () => {
   const navigate = useNavigate()
@@ -51,9 +54,9 @@ const App = () => {
                 <Route index path="/book/content/:id" element={<PageBook/>} />
               </Route>
 
-              <Route path="/book/videos" element={<h1>Видео</h1>} />
-              <Route path="/book/prezentations" element={<h1>Презентации</h1>} />
-              <Route path="/book/abstract" element={<h1>Конспекты</h1>} />
+              <Route path="/book/videos" element={<VideoScreen/>} />
+              <Route path="/book/prezentations" element={<PrezentationScreen/>} />
+              <Route path="/book/abstract" element={<ConspectScreen/>} />
             </Route>
           </Routes>
         </div>

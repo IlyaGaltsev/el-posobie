@@ -6,11 +6,11 @@ import { type FC } from 'react'
 
 const ConspectScreen: FC = () => {
   return (
-    <S.Grid>
+    <div className='grid-screen__wrapper'>
       {massConspects.map((item: IMassConspects) => {
         return <ConspectCard key={item.id} {...item} />
       })}
-    </S.Grid>
+    </div>
   )
 }
 export default ConspectScreen

@@ -7,11 +7,13 @@ import type { INavBookChildren } from 'src/constants/navBook'
 interface IDropdown {
   id?: number
   label: string
-  options: INavBookChildren[]
+  options: INavBookChildren[],
+  defaultOpen: boolean
 }
 
-const Dropdown = ({ label, options }: IDropdown) => {
-  const [isOpen, setIsOpen] = useState(false)
+const Dropdown = ({ label, options, defaultOpen }: IDropdown) => {
+  console.log('defaultOpen', defaultOpen)
+  const [isOpen, setIsOpen] = useState(defaultOpen ?? false)
 
   return (
     <div className="dropdown">

@@ -9,8 +9,6 @@ const PageBook = () => {
   const bookPage = bookPages.find((item: any) => item.key === Number(params.id))
 
   useEffect(() => {
-    // window.scrollTo(0, 0);
-    console.log('up')
     if (document !== null) document?.getElementById(String(bookPage?.key) ?? "0")?.scrollIntoView() 
   }, [bookPage])
 
