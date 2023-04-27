@@ -10,8 +10,9 @@ import Card from '@mui/material/Card'
 import { useState } from 'react'
 import * as React from 'react'
 import type { TransitionProps } from '@mui/material/transitions'
+import { useNavigate } from 'react-router-dom'
 
-const Transition = React.forwardRef(function Transition (
+const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
     children: React.ReactElement<any, any>
   },
@@ -29,6 +30,7 @@ interface IVideoCard {
 
 const VideoCard = ({ id, tag, promo, title }: IVideoCard) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const navigate = useNavigate()
 
   const showModal = () => {
     setIsModalOpen(true)
@@ -38,49 +40,27 @@ const VideoCard = ({ id, tag, promo, title }: IVideoCard) => {
   }
 
   return (
-    <>
-      <Card onClick={showModal}>
-        <CardActionArea>
-          <CardMedia
-            id="video"
-            component="img"
-            alt={title}
-            height="174"
-            image={`//img.youtube.com/vi/${id}/hqdefault.jpg`}
-          />
-          <CardContent>
-            <P.CardUnderTitle>{tag}</P.CardUnderTitle>
-            <P.CardTitle gutterBottom variant="h6">
-              {title}
-            </P.CardTitle>
-            <P.CardButton size="small">
-              <FaPlay />
-              Воспроизвести
-            </P.CardButton>
-          </CardContent>
-        </CardActionArea>
-      </Card>
-      <Dialog fullScreen open={isModalOpen} onClose={handleOk} TransitionComponent={Transition}>
-        <AppBar sx={{ position: 'relative' }}>
-          <Toolbar>
-            <IconButton edge="start" color="inherit" onClick={handleOk} aria-label="close">
-              <MdClose />
-            </IconButton>
-            <P.TitleOneLine sx={{ ml: 2, flex: 1 }} variant="h6">
-              {title}
-            </P.TitleOneLine>
-          </Toolbar>
-        </AppBar>
-        {isModalOpen && (
-          <S.VideoModal
-            title="video"
-            src={`https://www.youtube.com/embed/${id}?autoplay=1`}
-            // allowFullScreen="true"
-            allow="autoplay"
-          />
-        )}
-      </Dialog>
-    </>
+    <Card onClick={() => navigate(`/book/videos/${id}`)}>
+      <CardActionArea>
+        <CardMedia
+          id="video"
+          component="img"
+          alt={title}
+          height="174"
+          image={`//img.youtube.com/vi/${id}/hqdefault.jpg`}
+        />
+        <CardContent>
+          <P.CardUnderTitle>{tag}</P.CardUnderTitle>
+          <P.CardTitle gutterBottom variant="h6">
+            {title}
+          </P.CardTitle>
+          <P.CardButton size="small">
+            <FaPlay />
+            Воспроизвести
+          </P.CardButton>
+        </CardContent>
+      </CardActionArea>
+    </Card>
   )
 }
 export { VideoCard }
