@@ -46,3 +46,32 @@ header {
     align-items: center;
   }
 }
+
+
+
+.bvi-panel-close, .bvi-open{
+  padding: 10px 0;
+  width:100%;
+  text-align: center;
+  display: flex;
+  gap:20px;
+  background: #2C4964 !important;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Arimo', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px !important;
+  line-height: 120%;
+  /* or 19px */
+
+  letter-spacing: 0.02em;
+
+  color: #FFFFFF !important;
+  svg{
+    fill:white;
+  }
+}
+html body .bvi-panel{
+  margin-bottom: 0;
+}

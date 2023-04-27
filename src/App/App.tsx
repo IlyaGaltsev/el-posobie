@@ -1,7 +1,5 @@
-import { List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 import { colors } from '../constants/style/colors'
-import { Header } from '../components/Header'
 import { ConfigProvider } from 'antd'
 import { routes } from '../routes'
 import './App.scss'
@@ -16,10 +14,11 @@ import { PageBook } from 'src/screens/PageBook'
 import { VideoScreen } from 'src/screens/VideoScreen'
 import { PrezentationScreen } from 'src/screens/PrezentationScreen'
 import ConspectScreen from 'src/screens/ConspectScreen'
+import { PageVideo } from 'src/screens/PageVideo'
+import { PagePrezentation } from 'src/screens/PagePrezentation'
 
 const App = () => {
   const navigate = useNavigate()
-  const [openNavMenu, setOpenNavMenu] = useState(false)
   const [fontSizeTheme, setFontSizeTheme] = useState(fontSizes[0])
 
   useLayoutEffect(() => {
@@ -29,13 +28,6 @@ const App = () => {
       setFontSizeTheme(fontSizeThemeLocal)
     }
   }, [fontSizeTheme])
-
-  const onChange = (key: string) => {
-    navigate(key)
-  }
-  const closeMenu = () => {
-    setOpenNavMenu(true)
-  }
 
   return (
     <AppContext.Provider value={{ fontSizeTheme }}>
@@ -51,12 +43,17 @@ const App = () => {
             <Route path="/" element={<FirstScreen />} />
             <Route path="/book" element={<Book />}>
               <Route path="/book/content" element={<BookScreen />}>
-                <Route index path="/book/content/:id" element={<PageBook/>} />
+                <Route index path="/book/content/:id" element={<PageBook />} />
               </Route>
 
-              <Route path="/book/videos" element={<VideoScreen/>} />
-              <Route path="/book/prezentations" element={<PrezentationScreen/>} />
-              <Route path="/book/abstract" element={<ConspectScreen/>} />
+              <Route path="/book/videos" element={<VideoScreen />}/>
+              <Route path="/book/videos/:id" element={<PageVideo/>} />
+
+              <Route path="/book/prezentations" element={<PrezentationScreen />} />
+              <Route path="/book/prezentations/:id" element={<PagePrezentation/>} />
+
+
+              <Route path="/book/abstract" element={<ConspectScreen />} />
             </Route>
           </Routes>
         </div>

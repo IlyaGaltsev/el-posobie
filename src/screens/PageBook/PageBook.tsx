@@ -1,5 +1,5 @@
 import { bookPages } from 'src/assets/data/bookPages'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import './PageBook.scss'
 import { BOOK_ROUTE } from 'src/routesNames'
 import { useEffect, useState } from 'react'
@@ -8,6 +8,7 @@ import { FaArrowUp } from 'react-icons/fa'
 const PageBook = () => {
   const params = useParams()
   const bookPage = bookPages.find((item: any) => item.key === Number(params.id))
+const navigate = useNavigate()
 
   const arabicToRoman = (arabicNumber: number) => {
     const romanNumeralMap = new Map([
@@ -68,7 +69,7 @@ const PageBook = () => {
         </p>
       )}
 
-      {bookPage?.content() ?? 'Выберите страницу'}
+      {bookPage?.content(navigate) ?? 'Выберите страницу'}
       <div className="book-screen__page-actions">
         <Link
           to={`${BOOK_ROUTE}/${(bookPage?.key ?? 1) - 1}`}

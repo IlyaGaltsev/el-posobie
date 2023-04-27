@@ -23,6 +23,7 @@ const Header = () => {
             Титульная страница
           </button>
           <button className="primary-button">О проекте</button>
+          {/* <button className="bvi-open">BVI</button> */}
         </div>
       </div>
     </header>
