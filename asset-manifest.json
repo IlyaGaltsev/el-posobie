@@ -1,12 +1,11 @@
 {
   "files": {
-    "main.css": "/el-posobie/static/css/main.81ff067d.css",
+    "main.css": "/el-posobie/static/css/main.8cc8bfc7.css",
     "main.js": "/el-posobie/static/js/main.b4c4fc97.js",
     "static/js/787.f066138e.chunk.js": "/el-posobie/static/js/787.f066138e.chunk.js",
     "static/media/tp2.png": "/el-posobie/static/media/tp2.fb6ef3081dafd83dfb3b.png",
     "static/media/med9.png": "/el-posobie/static/media/med9.69d982c577f9196384f8.png",
     "static/media/med8.png": "/el-posobie/static/media/med8.f74e7ad2a6b6207beeb7.png",
-    "static/media/illustrationbackground.png": "/el-posobie/static/media/illustrationbackground.caf82314dca1337584a9.png",
     "static/media/tp1.png": "/el-posobie/static/media/tp1.1caccb1db56a22bd55e4.png",
     "static/media/med2.png": "/el-posobie/static/media/med2.4c8adbed04b14780971e.png",
     "static/media/med7.png": "/el-posobie/static/media/med7.99021a491464de1d48ee.png",
@@ -18,6 +17,7 @@
     "static/media/med6.png": "/el-posobie/static/media/med6.5b681e292df86fc1d56f.png",
     "static/media/tacktic1.jpg": "/el-posobie/static/media/tacktic1.02753d0d8d55e1003ac0.jpg",
     "static/media/oby1.jpg": "/el-posobie/static/media/oby1.a59b463c8e1e6c774398.jpg",
+    "static/media/illustrationbackground.png": "/el-posobie/static/media/illustrationbackground.cfe229801997b5718a53.png",
     "static/media/fire2.png": "/el-posobie/static/media/fire2.a8b586047c055bc7acc4.png",
     "static/media/oby2.jpg": "/el-posobie/static/media/oby2.c5f7bae8b24cf3273fea.jpg",
     "static/media/rxb4.jpg": "/el-posobie/static/media/rxb4.a566daefbfa8f4c969ad.jpg",
@@ -45,12 +45,12 @@
     "static/media/tp3.jpg": "/el-posobie/static/media/tp3.057dc642bc79174dde1f.jpg",
     "static/media/oby3.jpg": "/el-posobie/static/media/oby3.44054616a608a14d96fe.jpg",
     "index.html": "/el-posobie/index.html",
-    "main.81ff067d.css.map": "/el-posobie/static/css/main.81ff067d.css.map",
+    "main.8cc8bfc7.css.map": "/el-posobie/static/css/main.8cc8bfc7.css.map",
     "main.b4c4fc97.js.map": "/el-posobie/static/js/main.b4c4fc97.js.map",
     "787.f066138e.chunk.js.map": "/el-posobie/static/js/787.f066138e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.81ff067d.css",
+    "static/css/main.8cc8bfc7.css",
     "static/js/main.b4c4fc97.js"
   ]
 }
