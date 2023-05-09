@@ -17,10 +17,20 @@ const PrezentationScreen: FC = () => {
   })
 
   return (
-    <div className='grid-screen__wrapper'>
-      {massPrez.map(item => {
-        return <PrezentationCard key={item.title} {...item} />
-      })}
+    <div className="grid-screen__wrapper">
+      {massPrez
+        .sort((a, b) => {
+          if (a.tag < b.tag) {
+            return -1
+          }
+          if (a.tag > b.tag) {
+            return 1
+          }
+          return 0
+        })
+        .map(item => {
+          return <PrezentationCard key={item.title} {...item} />
+        })}
     </div>
   )
 }

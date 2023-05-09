@@ -37,10 +37,41 @@ section {
   align-items: center;
   justify-content: center;
 
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+
+  &__content {
+    display: none;
+
+    @media (max-width: 1000px) {
+      display: flex;
+    }
+  }
+
+  &__sidebar {
+    max-width: 400px;
+    width: 100%;
+
+    @media (max-width: 1000px) {
+      display: none;
+      max-width: none;
+      background-color: #465945;
+    }
+  }
+
+  &__sidebar_open {
+    display: flex;
+  }
+
   &__wrapper {
     max-width: 1920px;
     width: 100%;
     display: flex;
+
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      }
   }
 
   &__navigation {
@@ -69,7 +100,6 @@ section {
       }
     }
   }
- 
 
   &__page-actions {
     display: flex;

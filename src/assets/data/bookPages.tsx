@@ -4848,10 +4848,8 @@ export const bookPages = [
               <a onClick={() => linkConspects(massConspects[0])}>приложении 1</a>{' '}
             </span>
           </p>
-          <p className="c12">
-            <span className="c2">Видео выполнения строевых приемов </span>
-            <span className="c2 c7">(ссылка на видео)</span>
-            <span className="c0">.</span>
+          <p className="c12 c15">
+            <span className="c0" />
           </p>
           <p className="c12">
             <span className="c2 c14">Занятие 2. </span>
@@ -4869,9 +4867,8 @@ export const bookPages = [
               <a onClick={() => linkConspects(massConspects[1])}>приложении 2</a>{' '}
             </span>
           </p>
-          <p className="c12">
-            <span className="c2">Видео выполнения строевых приемов </span>
-            <span className="c2 c7">(ссылка на видео)</span>
+          <p className="c12 c15">
+            <span className="c0" />
           </p>
           <p className="c12">
             <span className="c2 c14">Занятие 3. </span>
@@ -4888,9 +4885,8 @@ export const bookPages = [
               <a onClick={() => linkConspects(massConspects[2])}>приложении 3</a>{' '}
             </span>
           </p>
-          <p className="c12">
-            <span className="c2">Видео выполнения строевых приемов </span>
-            <span className="c2 c7">(ссылка на видео)</span>
+          <p className="c12 c15">
+            <span className="c0" />
           </p>
           <p className="c12">
             <span className="c2 c14">Занятие 4.</span>
@@ -4907,10 +4903,7 @@ export const bookPages = [
               <a onClick={() => linkConspects(massConspects[3])}>приложении 4</a>{' '}
             </span>
           </p>
-          <p className="c12">
-            <span className="c2">Видео выполнения строевых приемов </span>
-            <span className="c2 c7">(ссылка на видео)</span>
-          </p>
+         
           <p className="c12 c15">
             <span className="c0" />
           </p>
@@ -4921,7 +4914,7 @@ export const bookPages = [
   {
     key: 16,
     chapter: 3,
-    title: 'Введение',
+    title: 'Глава 2',
     content: (navigate: any) => {
       return (
         <section id="16">
@@ -4952,33 +4945,12 @@ export const bookPages = [
           </p>
           <p className="c12">
             <span className="c2">
-              Видео выполнения норматива № 1 по тактической подготовке Сухопутных войск ВС РФ{' '}
-            </span>
-            <span className="c2 c7">(ссылка на видео)</span>
-          </p>
-          <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 7 по тактической подготовке Сухопутных войск ВС РФ{' '}
-            </span>
-            <span className="c2 c7">(ссылка на видео)</span>
-          </p>
-          <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 10 по тактической подготовке Сухопутных войск ВС РФ{' '}
-            </span>
-            <span className="c2 c7">(ссылка на видео)</span>
-          </p>
-          <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 11 по тактической подготовке Сухопутных войск ВС РФ{' '}
-            </span>
-            <span className="c2 c7">(ссылка на видео)</span>
-          </p>
-          <p className="c12">
-            <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
               <a onClick={() => linkConspects(massConspects[4])}>приложении 5</a>{' '}
             </span>
+          </p>
+          <p className="c12 c15">
+            <span className="c0" />
           </p>
           <p className="c12">
             <span className="c2 c14">Занятие 2. </span>
@@ -5000,6 +4972,9 @@ export const bookPages = [
               <a onClick={() => linkConspects(massConspects[5])}>приложении 6</a>{' '}
             </span>
           </p>
+          <p className="c12 c15">
+            <span className="c0" />
+          </p>
           <p className="c12">
             <span className="c2 c14">Занятие 3. </span>
             <span className="c0">
@@ -5007,15 +4982,15 @@ export const bookPages = [
               10, 11 по тактической подготовке Сухопутных войск ВС РФ. Прием зачетов по нормативам.
             </span>
           </p>
-          <p className="c12">
-            <span className="c2">Вариант презентации к занятию</span>
-            <span className="c2 c7">(ссылка).</span>
-          </p>
+         
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
               <a onClick={() => linkConspects(massConspects[6])}>приложении 7</a>{' '}
             </span>
+          </p>
+          <p className="c12 c15">
+            <span className="c0" />
           </p>
           <p className="c12">
             <span className="c2 c14">Занятие 4.</span>
@@ -5028,12 +5003,6 @@ export const bookPages = [
             <span className="c2">
               <a onClick={() => navigate(`${PREZENTATIONS_ROUTE}/${massPrez[15].id}`)}>Вариант презентации к занятию</a>
             </span>
-          </p>
-          <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 1 по военной топографии Сухопутных войск ВС РФ{' '}
-            </span>
-            <span className="c2 c7">(ссылка на видео)</span>
           </p>
           <p className="c12">
             <span className="c2">
@@ -5052,7 +5021,7 @@ export const bookPages = [
     key: 17,
     chapter: 3,
     title: 'Глава 3',
-    content: () => {
+    content: (navigate: any) => {
       return (
         <section id="17">
           <p className="c4">
@@ -5070,38 +5039,37 @@ export const bookPages = [
           <p className="c12">
             <span className="c2 c14">Занятие 1. </span>
             <span className="c0">
-              Практическое – 2 часа. Способы действий личного состава в условиях
-              &nbsp;радиационного, химического и биологического заражения. Тренировка в выполнении
-              нормативов по РХБЗ № 1, 4, 6 по РХБЗ Сухопутных войск ВС РФ.
+              Практическое – 2 часа. Способы действий личного состава в условиях  радиационного, химического и биологического заражения. Тренировка в выполнении нормативов по РХБЗ № 1, 4, 6 по РХБЗ Сухопутных войск ВС РФ.
             </span>
           </p>
-          <p className="c12">
+          {/* <p className="c12">
             <span className="c2">Вариант презентации к занятию </span>
             <span className="c0 c7">(ссылка на презентацию).</span>
+          </p> */}
+          <p className="c12">
+            <p className="c2" onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[15]?.id}`)}>
+              <a>Видео выполнения норматива № 1 по РХБЗ Сухопутных войск ВС РФ{' '}</a>
+            </p>
           </p>
           <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 1 по РХБЗ Сухопутных войск ВС РФ{' '}
-            </span>
-            <span className="c2 c7">(ссылка на видео)</span>
+            <p className="c2"  onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[18]?.id}`)}>
+              <a>Видео выполнения норматива № 4а по РХБЗ Сухопутных войск ВС РФ{' '}</a>
+            </p>
           </p>
           <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 4а по РХБЗ Сухопутных войск ВС РФ{' '}
+            <span className="c2" onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[19]?.id}`)}>
+              <a>Видео выполнения норматива № 4б по РХБЗ Сухопутных войск ВС РФ{' '}</a>
             </span>
-            <span className="c2 c7">(ссылка на видео)</span>
           </p>
           <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 4б по РХБЗ Сухопутных войск ВС РФ{' '}
+            <span className="c2" onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[16]?.id}`)} >
+              <a>Видео выполнения норматива № 6 по РХБЗ Сухопутных войск ВС РФ{' '}</a>
             </span>
-            <span className="c2 c7">(ссылка на видео)</span>
           </p>
           <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 6 по РХБЗ Сухопутных войск ВС РФ{' '}
+            <span className="c2" onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[17]?.id}`)} >
+              <a>Видео выполнения норматива № 8 по РХБЗ Сухопутных войск ВС РФ</a>
             </span>
-            <span className="c2 c7">(ссылка на видео)</span>
           </p>
           <p className="c12">
             <span className="c2">
@@ -5109,16 +5077,15 @@ export const bookPages = [
               <a onClick={() => linkConspects(massConspects[8])}>приложении 9</a>{' '}
             </span>
           </p>
+          <p className="c12 c15">
+            <span className="c0" />
+          </p>
           <p className="c12">
             <span className="c2 c14">Занятие 2.</span>
             <span className="c0">
               &nbsp;Практическое – 1 час. Прием зачетов по выполнению нормативов № 1, 4, 6 по РХБЗ
               Сухопутных войск ВС РФ.{' '}
             </span>
-          </p>
-          <p className="c12">
-            <span className="c2">Вариант презентации к занятию </span>
-            <span className="c0 c7">(ссылка на презентацию).</span>
           </p>
           <p className="c12">
             <span className="c2">
@@ -5203,6 +5170,9 @@ export const bookPages = [
               <a onClick={() => linkConspects(massConspects[11])}>приложении 12</a>{' '}
             </span>
           </p>
+          <p className="c12 c15">
+            <span className="c0" />
+          </p>
           <p className="c12">
             <span className="c2 c14">Занятие 2.</span>
             <span className="c0">
@@ -5219,6 +5189,9 @@ export const bookPages = [
               Вариант план-конспекта проведения занятия представлен в{' '}
               <a onClick={() => linkConspects(massConspects[12])}>приложении 13</a>{' '}
             </span>
+          </p>
+          <p className="c12 c15">
+            <span className="c0" />
           </p>
           <p className="c12">
             <span className="c2 c14">Занятие 3.</span>
@@ -5242,6 +5215,7 @@ export const bookPages = [
           <p className="c12 c15">
             <span className="c34 c2 c14" />
           </p>
+          
           <p className="c12">
             <span className="c19 c11">Тема 3:</span>
             <span className="c2 c19">&nbsp;Суточный наряд.</span>
@@ -5265,6 +5239,9 @@ export const bookPages = [
               <a onClick={() => linkConspects(massConspects[14])}>приложении 15</a>{' '}
             </span>
           </p>
+          <p className="c12 c15">
+            <span className="c0" />
+          </p>
           <p className="c12">
             <span className="c2 c14">Занятие 2.</span>
             <span className="c0">
@@ -5285,6 +5262,9 @@ export const bookPages = [
               <a onClick={() => linkConspects(massConspects[15])}>приложении 16</a>{' '}
             </span>
           </p>
+          <p className="c12 c15">
+            <span className="c0" />
+          </p>
           <p className="c12">
             <span className="c2 c14">Занятие 3.</span>
             <span className="c0">
@@ -5303,6 +5283,9 @@ export const bookPages = [
               Вариант план-конспекта проведения занятия представлен в{' '}
               <a onClick={() => linkConspects(massConspects[16])}>приложении 17</a>{' '}
             </span>
+          </p>
+          <p className="c12 c15">
+            <span className="c0" />
           </p>
           <p className="c12">
             <span className="c2 c14">Занятие 4.</span>
@@ -5354,39 +5337,34 @@ export const bookPages = [
             <span className="c2">&nbsp;Практическое – 2 часа. </span>
             <span className="c2 c14">&nbsp;</span>
             <span className="c0">
-              Оказание первой &nbsp;помощи. Неотложные &nbsp;реанимационные мероприятия. Выполнение
-              &nbsp;нормативов № 1, 2, &nbsp;4, &nbsp;8 по военно-медицинской подготовке Сухопутных
-              войск ВС РФ.{' '}
+              Оказание первой  помощи. Неотложные  реанимационные мероприятия. Выполнение  нормативов № 1, 2,  4,  8, 9 по военно-медицинской подготовке Сухопутных войск ВС РФ.
+            </span>
+          </p>
+          {/* <p className="c12">
+            <span className="c2">
+              <a onClick={() => navigate(`${PREZENTATIONS_ROUTE}/${massPrez[5].id}`)}>Вариант презентации к занятию</a>
+            </span>
+          </p> */}
+          <p className="c12">
+            <span className="c2" onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[5]?.id}`)}>
+              <a>Видео выполнения норматива № 1 по военно-медицинской подготовке Сухопутных войск ВС РФ</a>
+            </span>
+       
+          </p>
+          <p className="c12">
+            <span className="c2" onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[6]?.id}`)}>
+              <a>Видео выполнения норматива № 2 по военно-медицинской подготовке Сухопутных войск ВС РФ</a>
+            </span>
+          </p>
+          <p className="c12" onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[26]?.id}`)}>
+            <span className="c2">
+              <a>Видео выполнения норматива № 5 по военно-медицинской подготовке Сухопутных войск ВС РФ</a>
             </span>
           </p>
           <p className="c12">
-            <span className="c2">
-              <a onClick={() => navigate(`${PREZENTATIONS_ROUTE}/${massPrez[0].id}`)}>Вариант презентации к занятию</a>
+            <span className="c2" onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[25]?.id}`)}>
+              <a>Видео выполнения норматива № 8 по военно-медицинской подготовке Сухопутных войск ВС РФ</a>
             </span>
-          </p>
-          <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 1 по военно-медицинской подготовке Сухопутных войск ВС РФ{' '}
-            </span>
-            <span className="c2 c7">(ссылка на видео)</span>
-          </p>
-          <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 2 по военно-медицинской подготовке Сухопутных войск ВС РФ{' '}
-            </span>
-            <span className="c2 c7">(ссылка на видео)</span>
-          </p>
-          <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 4 по военно-медицинской подготовке Сухопутных войск ВС РФ{' '}
-            </span>
-            <span className="c2 c7">(ссылка на видео)</span>
-          </p>
-          <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 8 по военно-медицинской подготовке Сухопутных войск ВС РФ{' '}
-            </span>
-            <span className="c2 c7">(ссылка на видео)</span>
           </p>
           <p className="c12">
             <span className="c2">
@@ -5440,6 +5418,9 @@ export const bookPages = [
               <a onClick={() => linkConspects(massConspects[19])}>приложении 20</a>{' '}
             </span>
           </p>
+          <p className="c12 c15">
+            <span className="c0" />
+          </p>
           <p className="c12">
             <span className="c2 c14">Занятие 2. &nbsp;</span>
             <span className="c0">
@@ -5448,38 +5429,33 @@ export const bookPages = [
             </span>
           </p>
           <p className="c12">
-            <span className="c2">Вариант презентации к занятию </span>
-            <span className="c0 c7">(ссылка на презентацию).</span>
+            <span className="c2"  onClick={() => navigate(`${PREZENTATIONS_ROUTE}/${massPrez[16].id}`)}>
+              <a>Вариант презентации к занятию</a>
+            </span>
           </p>
           <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 1 по огневой подготовке Сухопутных войск ВС РФ{' '}
+            <span className="c2" onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[13]?.id}`)}>
+              <a>Видео выполнения норматива № 1 по огневой подготовке Сухопутных войск ВС РФ</a>
             </span>
-            <span className="c2 c7">(ссылка на видео)</span>
           </p>
           <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 13 по огневой подготовке Сухопутных войск ВС РФ{' '}
+            <span className="c2" onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[11]?.id}`)}>
+              <a>Видео выполнения норматива № 13 по огневой подготовке Сухопутных войск ВС РФ</a>
             </span>
-            <span className="c2 c7">(ссылка на видео)</span>
           </p>
           <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 14 по огневой подготовке Сухопутных войск ВС РФ{' '}
+            <span className="c2" onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[12]?.id}`)}>
+              <a>Видео выполнения норматива № 14 по огневой подготовке Сухопутных войск ВС РФ</a>
             </span>
-            <span className="c2 c7">(ссылка на видео)</span>
-          </p>
-          <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 16 по огневой подготовке Сухопутных войск ВС РФ{' '}
-            </span>
-            <span className="c2 c7">(ссылка на видео)</span>
           </p>
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
               <a onClick={() => linkConspects(massConspects[20])}>приложении 21</a>{' '}
             </span>
+          </p>
+          <p className="c12 c15">
+            <span className="c0" />
           </p>
           <p className="c12">
             <span className="c2 c14">Занятие 3. &nbsp;</span>
@@ -5504,6 +5480,7 @@ export const bookPages = [
           <p className="c12 c15">
             <span className="c0" />
           </p>
+          
           <p className="c12">
             <span className="c19 c11">Тема 2:</span>
             <span className="c21 c2 c19">&nbsp;Основы и правила стрельбы.</span>
@@ -5511,13 +5488,8 @@ export const bookPages = [
           <p className="c12">
             <span className="c2 c14">Занятие 1. </span>
             <span className="c0">
-              Практическое – 2 часа. Тренировка в изготовке к бою. Тренировка &nbsp;нормативов №
-              &nbsp;1, 13, 14, 16 по огневой подготовке Сухопутных войск ВС РФ.
+            Практическое – 2 часа. Тренировка в изготовке к бою. Тренировка  нормативов №  1, 13, 14, 16 по огневой подготовке Сухопутных войск ВС РФ.
             </span>
-          </p>
-          <p className="c12">
-            <span className="c2">Вариант презентации к занятию </span>
-            <span className="c0 c7">(ссылка на презентацию).</span>
           </p>
           <p className="c12">
             <span className="c2">
@@ -5554,6 +5526,9 @@ export const bookPages = [
               <a onClick={() => linkConspects(massConspects[23])}>приложении 24</a>{' '}
             </span>
           </p>
+          <p className="c12 c15">
+            <span className="c0" />
+          </p>
           <p className="c12">
             <span className="c2 c14">Занятие 2. </span>
             <span className="c2">Групповое – 1 час</span>
@@ -5563,22 +5538,17 @@ export const bookPages = [
             </span>
           </p>
           <p className="c12">
-            <span className="c2">Вариант презентации к занятию </span>
-            <span className="c0 c7">(ссылка на презентацию).</span>
-          </p>
-          <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
               <a onClick={() => linkConspects(massConspects[24])}>приложении 25</a>{' '}
             </span>
           </p>
+          <p className="c12 c15">
+            <span className="c0" />
+          </p>
           <p className="c12">
             <span className="c2 c14">Занятие 3. </span>
             <span className="c0">Практическое – 1 час. Выполнение 2-го УНС из АК-74.</span>
-          </p>
-          <p className="c12">
-            <span className="c2">Вариант презентации к занятию </span>
-            <span className="c0 c7">(ссылка на презентацию).</span>
           </p>
           <p className="c12">
             <span className="c2">
@@ -5600,10 +5570,6 @@ export const bookPages = [
             <span className="c0">
               &nbsp;Практическое – 2 часа. Выполнение упражнения стрельб из пневматической винтовки.
             </span>
-          </p>
-          <p className="c12">
-            <span className="c2">Вариант презентации к занятию </span>
-            <span className="c0 c7">(ссылка на презентацию).</span>
           </p>
           <p className="c12">
             <span className="c2">
@@ -5644,22 +5610,7 @@ export const bookPages = [
               (Подтягивание на перекладине) и 5 (Поднос ног к перекладине).
             </span>
           </p>
-          <p className="c12">
-            <span className="c2">Вариант презентации к занятию </span>
-            <span className="c0 c7">(ссылка на презентацию).</span>
-          </p>
-          <p className="c12">
-            <span className="c2">Видео выполнения упражнения № 1 НФП-2009 ВС РФ </span>
-            <span className="c2 c7">(ссылка на видео)</span>
-          </p>
-          <p className="c12">
-            <span className="c2">Видео выполнения упражнения № 4 НФП-2009 ВС РФ </span>
-            <span className="c2 c7">(ссылка на видео)</span>
-          </p>
-          <p className="c12">
-            <span className="c2">Видео выполнения упражнения № 5 НФП-2009 ВС РФ </span>
-            <span className="c2 c7">(ссылка на видео)</span>
-          </p>
+         
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
@@ -5680,10 +5631,6 @@ export const bookPages = [
               тренировка упражнений &nbsp;по бегу на 60м, 100м, челночный бег 10х10м и 1 км
               (упражнения &nbsp;№ 40, 41, 42 и 45 НФП-2009).{' '}
             </span>
-          </p>
-          <p className="c12">
-            <span className="c2">Вариант презентации к занятию </span>
-            <span className="c0 c7">(ссылка на презентацию).</span>
           </p>
           <p className="c12">
             <span className="c2">
@@ -5722,20 +5669,17 @@ export const bookPages = [
             <span className="c2 c14">Занятие 1.</span>
             <span className="c0">&nbsp;Комплекс рукопашного боя РБ-1</span>
           </p>
-          <p className="c12">
-            <span className="c2">Вариант презентации к занятию </span>
-            <span className="c0 c7">(ссылка на презентацию).</span>
-          </p>
+         
           <p className="c12">
             <span className="c2">
               <a onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[23]?.id}`)}>
-                Видео выполнения комплекса РБ-1 без оружия
+              Видео выполнения упражнения №30 (без оружия) 
               </a>
 
               <br />
 
               <a onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[24]?.id}`)}>
-                Видео выполнения комплекса РБ-1 с оружием
+              Видео выполнения упражнения №31 (с оружием)     
               </a>
             </span>
           </p>

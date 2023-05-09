@@ -12,11 +12,25 @@ header {
   &-wrapper {
     max-width: 1920px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 0px 32px;
     width: 100%;
+    height: 46px;
+
+    @media (max-width: 1000px) {
+      padding: 0px 20px;
+    }
   }
 
+  &-nav-menu {
+    display:none;
+    color: white;
+
+    @media (max-width: 1000px) {
+      display: flex;
+    }
+  }
   &-nav-links {
     gap: 16px;
 
@@ -34,10 +48,47 @@ header {
     a.active {
       border-bottom: 2px solid #ffa500;
     }
+
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      align-items: flex-start !important;
+      text-align: left;
+      position: absolute;
+      top: 48px;
+      left: 20px;
+      background-color:#3a3a3a;
+      display: none !important;
+      padding: 20px;
+
+
+    }
   }
+
+  &-nav-links_open {
+    display: flex !important;
+  }
+  
 
   &-buttons {
     gap: 12px;
+
+    button {
+      @media (max-width: 1000px) {
+        text-indent: -9999px;
+    font-size: 0 ;
+    gap: 0
+      }
+    }
+    
+  }
+
+  &-buttons-icon {
+    display: none;
+
+    @media (max-width: 1000px) {
+      display: flex;
+
+    }
   }
 
   &-nav-links,
