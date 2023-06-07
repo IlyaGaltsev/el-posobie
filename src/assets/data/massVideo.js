@@ -122,31 +122,31 @@ const massVideo = [
   {
     id: '6qWfQc6Q3wA',
     title: 'Надевание противогаза',
-    tag: 'РХБ',
+    tag: 'РХБЗ',
     promo: rxb1
   },
   {
     id: 'BK52NDw4JQY',
     title: 'Действия по вспышке ядерного взрыва',
-    tag: 'РХБ',
+    tag: 'РХБЗ',
     promo: rxb2
   },
   {
     id: 'BXDU_WvUIR4',
     title: 'Действия по сигналу химическая тревога',
-    tag: 'РХБ',
+    tag: 'РХБЗ',
     promo: rxb3
   },
   {
     id: '2fNIpllUSYo',
     title: 'Надевание в виде плаща 4А',
-    tag: 'РХБ',
+    tag: 'РХБЗ',
     promo: rxb4
   },
   {
     id: 'GVDMpBreuc0',
     title: 'Надевание ОЗК в виде комбинезона',
-    tag: 'РХБ',
+    tag: 'РХБЗ',
     promo: rxb5
   },
   {
@@ -178,6 +178,25 @@ const massVideo = [
     title: 'Комплекс РБ на 8 счетов с оружием',
     tag: 'Физическая подготовка',
     promo: fizic3
-  }
+  },
+  {
+    id: 'siWUrg2nERE',
+    title: 'Переворот спасения эвакуация раненого',
+    tag: 'Медицинская подготовка',
+    promo: fizic3
+  },
+  {
+    id: '9NaOMZuAckg',
+    title: 'Норматив наложение шины на голень',
+    tag: 'Медицинская подготовка',
+    promo: fizic3
+  },
+  {
+    id: 'qRBvmqiipog',
+    title: 'Норматив №9 по ВМП',
+    tag: 'Медицинская подготовка',
+    promo: fizic3
+  },
+  
 ]
 export default massVideo

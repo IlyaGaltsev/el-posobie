@@ -9,7 +9,6 @@ const linkConspects = (obj: any) => {
   window.open(url, "_blank");
 }
 
-
 export const bookPages = [
   {
     key: 0,
@@ -4848,10 +4847,8 @@ export const bookPages = [
               <a onClick={() => linkConspects(massConspects[0])}>приложении 1</a>{' '}
             </span>
           </p>
-          <p className="c12">
-            <span className="c2">Видео выполнения строевых приемов </span>
-            <span className="c2 c7">(ссылка на видео)</span>
-            <span className="c0">.</span>
+          <p className="c12 c15">
+            <span className="c0" />
           </p>
           <p className="c12">
             <span className="c2 c14">Занятие 2. </span>
@@ -4869,9 +4866,8 @@ export const bookPages = [
               <a onClick={() => linkConspects(massConspects[1])}>приложении 2</a>{' '}
             </span>
           </p>
-          <p className="c12">
-            <span className="c2">Видео выполнения строевых приемов </span>
-            <span className="c2 c7">(ссылка на видео)</span>
+          <p className="c12 c15">
+            <span className="c0" />
           </p>
           <p className="c12">
             <span className="c2 c14">Занятие 3. </span>
@@ -4888,9 +4884,8 @@ export const bookPages = [
               <a onClick={() => linkConspects(massConspects[2])}>приложении 3</a>{' '}
             </span>
           </p>
-          <p className="c12">
-            <span className="c2">Видео выполнения строевых приемов </span>
-            <span className="c2 c7">(ссылка на видео)</span>
+          <p className="c12 c15">
+            <span className="c0" />
           </p>
           <p className="c12">
             <span className="c2 c14">Занятие 4.</span>
@@ -4907,10 +4902,7 @@ export const bookPages = [
               <a onClick={() => linkConspects(massConspects[3])}>приложении 4</a>{' '}
             </span>
           </p>
-          <p className="c12">
-            <span className="c2">Видео выполнения строевых приемов </span>
-            <span className="c2 c7">(ссылка на видео)</span>
-          </p>
+         
           <p className="c12 c15">
             <span className="c0" />
           </p>
@@ -4921,7 +4913,7 @@ export const bookPages = [
   {
     key: 16,
     chapter: 3,
-    title: 'Введение',
+    title: 'Глава 2',
     content: (navigate: any) => {
       return (
         <section id="16">
@@ -4952,33 +4944,12 @@ export const bookPages = [
           </p>
           <p className="c12">
             <span className="c2">
-              Видео выполнения норматива № 1 по тактической подготовке Сухопутных войск ВС РФ{' '}
-            </span>
-            <span className="c2 c7">(ссылка на видео)</span>
-          </p>
-          <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 7 по тактической подготовке Сухопутных войск ВС РФ{' '}
-            </span>
-            <span className="c2 c7">(ссылка на видео)</span>
-          </p>
-          <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 10 по тактической подготовке Сухопутных войск ВС РФ{' '}
-            </span>
-            <span className="c2 c7">(ссылка на видео)</span>
-          </p>
-          <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 11 по тактической подготовке Сухопутных войск ВС РФ{' '}
-            </span>
-            <span className="c2 c7">(ссылка на видео)</span>
-          </p>
-          <p className="c12">
-            <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
               <a onClick={() => linkConspects(massConspects[4])}>приложении 5</a>{' '}
             </span>
+          </p>
+          <p className="c12 c15">
+            <span className="c0" />
           </p>
           <p className="c12">
             <span className="c2 c14">Занятие 2. </span>
@@ -5000,6 +4971,9 @@ export const bookPages = [
               <a onClick={() => linkConspects(massConspects[5])}>приложении 6</a>{' '}
             </span>
           </p>
+          <p className="c12 c15">
+            <span className="c0" />
+          </p>
           <p className="c12">
             <span className="c2 c14">Занятие 3. </span>
             <span className="c0">
@@ -5007,15 +4981,15 @@ export const bookPages = [
               10, 11 по тактической подготовке Сухопутных войск ВС РФ. Прием зачетов по нормативам.
             </span>
           </p>
-          <p className="c12">
-            <span className="c2">Вариант презентации к занятию</span>
-            <span className="c2 c7">(ссылка).</span>
-          </p>
+         
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
               <a onClick={() => linkConspects(massConspects[6])}>приложении 7</a>{' '}
             </span>
+          </p>
+          <p className="c12 c15">
+            <span className="c0" />
           </p>
           <p className="c12">
             <span className="c2 c14">Занятие 4.</span>
@@ -5028,12 +5002,6 @@ export const bookPages = [
             <span className="c2">
               <a onClick={() => navigate(`${PREZENTATIONS_ROUTE}/${massPrez[15].id}`)}>Вариант презентации к занятию</a>
             </span>
-          </p>
-          <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 1 по военной топографии Сухопутных войск ВС РФ{' '}
-            </span>
-            <span className="c2 c7">(ссылка на видео)</span>
           </p>
           <p className="c12">
             <span className="c2">
@@ -5052,7 +5020,7 @@ export const bookPages = [
     key: 17,
     chapter: 3,
     title: 'Глава 3',
-    content: () => {
+    content: (navigate: any) => {
       return (
         <section id="17">
           <p className="c4">
@@ -5070,38 +5038,37 @@ export const bookPages = [
           <p className="c12">
             <span className="c2 c14">Занятие 1. </span>
             <span className="c0">
-              Практическое – 2 часа. Способы действий личного состава в условиях
-              &nbsp;радиационного, химического и биологического заражения. Тренировка в выполнении
-              нормативов по РХБЗ № 1, 4, 6 по РХБЗ Сухопутных войск ВС РФ.
+              Практическое – 2 часа. Способы действий личного состава в условиях  радиационного, химического и биологического заражения. Тренировка в выполнении нормативов по РХБЗ № 1, 4, 6 по РХБЗ Сухопутных войск ВС РФ.
             </span>
           </p>
-          <p className="c12">
+          {/* <p className="c12">
             <span className="c2">Вариант презентации к занятию </span>
             <span className="c0 c7">(ссылка на презентацию).</span>
+          </p> */}
+          <p className="c12">
+            <p className="c2" onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[15]?.id}`)}>
+              <a>Видео выполнения норматива № 1 по РХБЗ Сухопутных войск ВС РФ{' '}</a>
+            </p>
           </p>
           <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 1 по РХБЗ Сухопутных войск ВС РФ{' '}
-            </span>
-            <span className="c2 c7">(ссылка на видео)</span>
+            <p className="c2"  onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[18]?.id}`)}>
+              <a>Видео выполнения норматива № 4а по РХБЗ Сухопутных войск ВС РФ{' '}</a>
+            </p>
           </p>
           <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 4а по РХБЗ Сухопутных войск ВС РФ{' '}
+            <span className="c2" onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[19]?.id}`)}>
+              <a>Видео выполнения норматива № 4б по РХБЗ Сухопутных войск ВС РФ{' '}</a>
             </span>
-            <span className="c2 c7">(ссылка на видео)</span>
           </p>
           <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 4б по РХБЗ Сухопутных войск ВС РФ{' '}
+            <span className="c2" onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[16]?.id}`)} >
+              <a>Видео выполнения норматива № 6 по РХБЗ Сухопутных войск ВС РФ{' '}</a>
             </span>
-            <span className="c2 c7">(ссылка на видео)</span>
           </p>
           <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 6 по РХБЗ Сухопутных войск ВС РФ{' '}
+            <span className="c2" onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[17]?.id}`)} >
+              <a>Видео выполнения норматива № 8 по РХБЗ Сухопутных войск ВС РФ</a>
             </span>
-            <span className="c2 c7">(ссылка на видео)</span>
           </p>
           <p className="c12">
             <span className="c2">
@@ -5109,16 +5076,15 @@ export const bookPages = [
               <a onClick={() => linkConspects(massConspects[8])}>приложении 9</a>{' '}
             </span>
           </p>
+          <p className="c12 c15">
+            <span className="c0" />
+          </p>
           <p className="c12">
             <span className="c2 c14">Занятие 2.</span>
             <span className="c0">
               &nbsp;Практическое – 1 час. Прием зачетов по выполнению нормативов № 1, 4, 6 по РХБЗ
               Сухопутных войск ВС РФ.{' '}
             </span>
-          </p>
-          <p className="c12">
-            <span className="c2">Вариант презентации к занятию </span>
-            <span className="c0 c7">(ссылка на презентацию).</span>
           </p>
           <p className="c12">
             <span className="c2">
@@ -5203,6 +5169,9 @@ export const bookPages = [
               <a onClick={() => linkConspects(massConspects[11])}>приложении 12</a>{' '}
             </span>
           </p>
+          <p className="c12 c15">
+            <span className="c0" />
+          </p>
           <p className="c12">
             <span className="c2 c14">Занятие 2.</span>
             <span className="c0">
@@ -5219,6 +5188,9 @@ export const bookPages = [
               Вариант план-конспекта проведения занятия представлен в{' '}
               <a onClick={() => linkConspects(massConspects[12])}>приложении 13</a>{' '}
             </span>
+          </p>
+          <p className="c12 c15">
+            <span className="c0" />
           </p>
           <p className="c12">
             <span className="c2 c14">Занятие 3.</span>
@@ -5242,6 +5214,7 @@ export const bookPages = [
           <p className="c12 c15">
             <span className="c34 c2 c14" />
           </p>
+          
           <p className="c12">
             <span className="c19 c11">Тема 3:</span>
             <span className="c2 c19">&nbsp;Суточный наряд.</span>
@@ -5265,6 +5238,9 @@ export const bookPages = [
               <a onClick={() => linkConspects(massConspects[14])}>приложении 15</a>{' '}
             </span>
           </p>
+          <p className="c12 c15">
+            <span className="c0" />
+          </p>
           <p className="c12">
             <span className="c2 c14">Занятие 2.</span>
             <span className="c0">
@@ -5285,6 +5261,9 @@ export const bookPages = [
               <a onClick={() => linkConspects(massConspects[15])}>приложении 16</a>{' '}
             </span>
           </p>
+          <p className="c12 c15">
+            <span className="c0" />
+          </p>
           <p className="c12">
             <span className="c2 c14">Занятие 3.</span>
             <span className="c0">
@@ -5303,6 +5282,9 @@ export const bookPages = [
               Вариант план-конспекта проведения занятия представлен в{' '}
               <a onClick={() => linkConspects(massConspects[16])}>приложении 17</a>{' '}
             </span>
+          </p>
+          <p className="c12 c15">
+            <span className="c0" />
           </p>
           <p className="c12">
             <span className="c2 c14">Занятие 4.</span>
@@ -5354,39 +5336,39 @@ export const bookPages = [
             <span className="c2">&nbsp;Практическое – 2 часа. </span>
             <span className="c2 c14">&nbsp;</span>
             <span className="c0">
-              Оказание первой &nbsp;помощи. Неотложные &nbsp;реанимационные мероприятия. Выполнение
-              &nbsp;нормативов № 1, 2, &nbsp;4, &nbsp;8 по военно-медицинской подготовке Сухопутных
-              войск ВС РФ.{' '}
+              Оказание первой  помощи. Неотложные  реанимационные мероприятия. Выполнение  нормативов № 1, 2,  4,  8, 9 по военно-медицинской подготовке Сухопутных войск ВС РФ.
+            </span>
+          </p>
+          {/* <p className="c12">
+            <span className="c2">
+              <a onClick={() => navigate(`${PREZENTATIONS_ROUTE}/${massPrez[5].id}`)}>Вариант презентации к занятию</a>
+            </span>
+          </p> */}
+          <p className="c12">
+            <span className="c2" onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[5]?.id}`)}>
+              <a>Видео выполнения норматива № 1 по военно-медицинской подготовке Сухопутных войск ВС РФ</a>
+            </span>
+       
+          </p>
+          <p className="c12">
+            <span className="c2" onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[6]?.id}`)}>
+              <a>Видео выполнения норматива № 2 по военно-медицинской подготовке Сухопутных войск ВС РФ</a>
+            </span>
+          </p>
+          <p className="c12" onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[26]?.id}`)}>
+            <span className="c2">
+              <a>Видео выполнения норматива № 5 по военно-медицинской подготовке Сухопутных войск ВС РФ</a>
             </span>
           </p>
           <p className="c12">
-            <span className="c2">
-              <a onClick={() => navigate(`${PREZENTATIONS_ROUTE}/${massPrez[0].id}`)}>Вариант презентации к занятию</a>
+            <span className="c2" onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[25]?.id}`)}>
+              <a>Видео выполнения норматива № 8 по военно-медицинской подготовке Сухопутных войск ВС РФ</a>
             </span>
           </p>
           <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 1 по военно-медицинской подготовке Сухопутных войск ВС РФ{' '}
+            <span className="c2" onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[27]?.id}`)}>
+              <a>Видео выполнения норматива № 9 по военно-медицинской подготовке Сухопутных войск ВС РФ</a>
             </span>
-            <span className="c2 c7">(ссылка на видео)</span>
-          </p>
-          <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 2 по военно-медицинской подготовке Сухопутных войск ВС РФ{' '}
-            </span>
-            <span className="c2 c7">(ссылка на видео)</span>
-          </p>
-          <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 4 по военно-медицинской подготовке Сухопутных войск ВС РФ{' '}
-            </span>
-            <span className="c2 c7">(ссылка на видео)</span>
-          </p>
-          <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 8 по военно-медицинской подготовке Сухопутных войск ВС РФ{' '}
-            </span>
-            <span className="c2 c7">(ссылка на видео)</span>
           </p>
           <p className="c12">
             <span className="c2">
@@ -5440,6 +5422,9 @@ export const bookPages = [
               <a onClick={() => linkConspects(massConspects[19])}>приложении 20</a>{' '}
             </span>
           </p>
+          <p className="c12 c15">
+            <span className="c0" />
+          </p>
           <p className="c12">
             <span className="c2 c14">Занятие 2. &nbsp;</span>
             <span className="c0">
@@ -5448,38 +5433,33 @@ export const bookPages = [
             </span>
           </p>
           <p className="c12">
-            <span className="c2">Вариант презентации к занятию </span>
-            <span className="c0 c7">(ссылка на презентацию).</span>
+            <span className="c2"  onClick={() => navigate(`${PREZENTATIONS_ROUTE}/${massPrez[16].id}`)}>
+              <a>Вариант презентации к занятию</a>
+            </span>
           </p>
           <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 1 по огневой подготовке Сухопутных войск ВС РФ{' '}
+            <span className="c2" onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[13]?.id}`)}>
+              <a>Видео выполнения норматива № 1 по огневой подготовке Сухопутных войск ВС РФ</a>
             </span>
-            <span className="c2 c7">(ссылка на видео)</span>
           </p>
           <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 13 по огневой подготовке Сухопутных войск ВС РФ{' '}
+            <span className="c2" onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[11]?.id}`)}>
+              <a>Видео выполнения норматива № 13 по огневой подготовке Сухопутных войск ВС РФ</a>
             </span>
-            <span className="c2 c7">(ссылка на видео)</span>
           </p>
           <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 14 по огневой подготовке Сухопутных войск ВС РФ{' '}
+            <span className="c2" onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[12]?.id}`)}>
+              <a>Видео выполнения норматива № 14 по огневой подготовке Сухопутных войск ВС РФ</a>
             </span>
-            <span className="c2 c7">(ссылка на видео)</span>
-          </p>
-          <p className="c12">
-            <span className="c2">
-              Видео выполнения норматива № 16 по огневой подготовке Сухопутных войск ВС РФ{' '}
-            </span>
-            <span className="c2 c7">(ссылка на видео)</span>
           </p>
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
               <a onClick={() => linkConspects(massConspects[20])}>приложении 21</a>{' '}
             </span>
+          </p>
+          <p className="c12 c15">
+            <span className="c0" />
           </p>
           <p className="c12">
             <span className="c2 c14">Занятие 3. &nbsp;</span>
@@ -5504,6 +5484,7 @@ export const bookPages = [
           <p className="c12 c15">
             <span className="c0" />
           </p>
+          
           <p className="c12">
             <span className="c19 c11">Тема 2:</span>
             <span className="c21 c2 c19">&nbsp;Основы и правила стрельбы.</span>
@@ -5511,13 +5492,8 @@ export const bookPages = [
           <p className="c12">
             <span className="c2 c14">Занятие 1. </span>
             <span className="c0">
-              Практическое – 2 часа. Тренировка в изготовке к бою. Тренировка &nbsp;нормативов №
-              &nbsp;1, 13, 14, 16 по огневой подготовке Сухопутных войск ВС РФ.
+            Практическое – 2 часа. Тренировка в изготовке к бою. Тренировка  нормативов №  1, 13, 14, 16 по огневой подготовке Сухопутных войск ВС РФ.
             </span>
-          </p>
-          <p className="c12">
-            <span className="c2">Вариант презентации к занятию </span>
-            <span className="c0 c7">(ссылка на презентацию).</span>
           </p>
           <p className="c12">
             <span className="c2">
@@ -5554,6 +5530,9 @@ export const bookPages = [
               <a onClick={() => linkConspects(massConspects[23])}>приложении 24</a>{' '}
             </span>
           </p>
+          <p className="c12 c15">
+            <span className="c0" />
+          </p>
           <p className="c12">
             <span className="c2 c14">Занятие 2. </span>
             <span className="c2">Групповое – 1 час</span>
@@ -5563,22 +5542,17 @@ export const bookPages = [
             </span>
           </p>
           <p className="c12">
-            <span className="c2">Вариант презентации к занятию </span>
-            <span className="c0 c7">(ссылка на презентацию).</span>
-          </p>
-          <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
               <a onClick={() => linkConspects(massConspects[24])}>приложении 25</a>{' '}
             </span>
           </p>
+          <p className="c12 c15">
+            <span className="c0" />
+          </p>
           <p className="c12">
             <span className="c2 c14">Занятие 3. </span>
             <span className="c0">Практическое – 1 час. Выполнение 2-го УНС из АК-74.</span>
-          </p>
-          <p className="c12">
-            <span className="c2">Вариант презентации к занятию </span>
-            <span className="c0 c7">(ссылка на презентацию).</span>
           </p>
           <p className="c12">
             <span className="c2">
@@ -5600,10 +5574,6 @@ export const bookPages = [
             <span className="c0">
               &nbsp;Практическое – 2 часа. Выполнение упражнения стрельб из пневматической винтовки.
             </span>
-          </p>
-          <p className="c12">
-            <span className="c2">Вариант презентации к занятию </span>
-            <span className="c0 c7">(ссылка на презентацию).</span>
           </p>
           <p className="c12">
             <span className="c2">
@@ -5644,22 +5614,7 @@ export const bookPages = [
               (Подтягивание на перекладине) и 5 (Поднос ног к перекладине).
             </span>
           </p>
-          <p className="c12">
-            <span className="c2">Вариант презентации к занятию </span>
-            <span className="c0 c7">(ссылка на презентацию).</span>
-          </p>
-          <p className="c12">
-            <span className="c2">Видео выполнения упражнения № 1 НФП-2009 ВС РФ </span>
-            <span className="c2 c7">(ссылка на видео)</span>
-          </p>
-          <p className="c12">
-            <span className="c2">Видео выполнения упражнения № 4 НФП-2009 ВС РФ </span>
-            <span className="c2 c7">(ссылка на видео)</span>
-          </p>
-          <p className="c12">
-            <span className="c2">Видео выполнения упражнения № 5 НФП-2009 ВС РФ </span>
-            <span className="c2 c7">(ссылка на видео)</span>
-          </p>
+         
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
@@ -5680,10 +5635,6 @@ export const bookPages = [
               тренировка упражнений &nbsp;по бегу на 60м, 100м, челночный бег 10х10м и 1 км
               (упражнения &nbsp;№ 40, 41, 42 и 45 НФП-2009).{' '}
             </span>
-          </p>
-          <p className="c12">
-            <span className="c2">Вариант презентации к занятию </span>
-            <span className="c0 c7">(ссылка на презентацию).</span>
           </p>
           <p className="c12">
             <span className="c2">
@@ -5722,20 +5673,17 @@ export const bookPages = [
             <span className="c2 c14">Занятие 1.</span>
             <span className="c0">&nbsp;Комплекс рукопашного боя РБ-1</span>
           </p>
-          <p className="c12">
-            <span className="c2">Вариант презентации к занятию </span>
-            <span className="c0 c7">(ссылка на презентацию).</span>
-          </p>
+         
           <p className="c12">
             <span className="c2">
               <a onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[23]?.id}`)}>
-                Видео выполнения комплекса РБ-1 без оружия
+              Видео выполнения упражнения №30 (без оружия) 
               </a>
 
               <br />
 
               <a onClick={() => navigate(`${VIDEO_ROUTE}/${massVideo[24]?.id}`)}>
-                Видео выполнения комплекса РБ-1 с оружием
+              Видео выполнения упражнения №31 (с оружием)     
               </a>
             </span>
           </p>
@@ -5806,241 +5754,238 @@ export const bookPages = [
           <p className="c18 c15">
             <span className="c34 c31 c50" />
           </p>
-          <p className="c6">
-            <span className="c0">
-              1. Федеральный закон от 28 марта 1998 г. N 53-ФЗ «О воинской обязанности и военной
-              службе» к обязательной и добровольной подготовке гражданина к военной службе (с
-              изменениями и дополнениями). URL:
-            </span>
-          </p>
-          <p className="c25">
-            <span className="c2 c19 c51">
-              <a
-                className="c8"
-                href="https://www.google.com/url?q=https://duma.consultant.ru/page.aspx?1105514&sa=D&source=editors&ust=1679828544833892&usg=AOvVaw20hAUX9VpVENcsHdboCwuP"
-              >
-                https://duma.consultant.ru/page.aspx?1105514
-              </a>
-            </span>
-          </p>
-          <p className="c6">
-            <span className="c2">
-              2. Федеральный закон «О внесении изменений в отдельные законодательные акты Российской
-              Федерации в связи с совершенствованием разграничения полномочий» от 31 декабря 2005 г.
-              N 199-ФЗ. URL:
-            </span>
-            <span>&nbsp;</span>
-            <span className="c0">https://base.garant.ru/12144089/</span>
-          </p>
-          <p className="c6">
-            <span className="c0">
-              3. Зорин А.С. Комментарии к закону «О воинской обязанности и военной службе». – «За
-              права военнослужащих». 2009. URL: http://ivo.garant.ru{' '}
-            </span>
-          </p>
-          <p className="c6">
-            <span className="c2">
-              4. Исайчева Е.А. Комментарий к Федеральному закону «О воинской обязанности и военной
-              службе»
-            </span>
-            <span>/ </span>
-            <span className="c2">
-              Е. А. Исайчева, Л. В. Смолина. - Москва: Экзамен, 2006, (Чехов (Моск. обл.):
-            </span>
-            <span className="c55">&nbsp;</span>
-            <span className="c2">Чеховский полиграфкомбинат). - 255 с. URL: </span>
-            <span>&nbsp;</span>
-            <span className="c2">https://search.rsl.ru/ru/record/01002952541</span>
-          </p>
-          <p className="c6">
-            <span className="c2">
-              5. Постановление Правительства РФ от 31 декабря 1999г. №&nbsp;1441 «Об утверждении
-              Положения «О подготовке граждан Российской Федерации к военной службе». URL:
-            </span>
-            <span>&nbsp;</span>
-            <span className="c0">https://base.garant.ru/181486/</span>
-          </p>
-          <p className="c6">
-            <span className="c0">
-              6. Приказ Министра обороны Российской Федерации и Министерства образования и науки
-              Российской Федерации от 24 февраля 2010 года № 96/134 «Об утверждении Инструкции об
-              организации обучения граждан Российской Федерации начальным знаниям в области обороны
-              и их подготовки по основам военной службы в образовательных учреждениях среднего
-              (полного) общего образования, образовательных учреждениях начального профессионального
-              и среднего профессионального образования и учебных пунктах». URL:
-              https://base.garant.ru/198025/
-            </span>
-          </p>
-          <p className="c1">
-            <span className="c2">
-              7. «Инструкции об организации обучения граждан Российской Федерации начальным знаниям
-              в области обороны и их подготовки по основам военной службы в образовательных
-              учреждениях среднего (полного) общего образования, образовательных учреждениях
-              начального профессионального и среднего профессионального образования и учебных
-              пунктах», утверждённой приказом Министра обороны Российской Федерации и Министра
-              образования и науки Российской Федерации от 24 февраля 2010 года № 96/134. &nbsp;URL:{' '}
-            </span>
-            <span className="c2 c40">
-              <a
-                className="c8"
-                href="https://www.google.com/url?q=https://base.garant.ru/198025&sa=D&source=editors&ust=1679828544834926&usg=AOvVaw27qrJT0ICogyuVJzTpTiV3"
-              >
-                https://base.garant.ru/198025
-              </a>
-            </span>
-          </p>
-          <p className="c6">
-            <span className="c2">8. Конституция Российской Федерации URL:</span>
-            <span>&nbsp;</span>
-            <span className="c0">http://www.constitution.ru/</span>
-          </p>
-          <p className="c6">
-            <span className="c2">
-              9. Федеральный конституционный закон «О Правительстве Российской Федерации» от 17
-              декабря 1997 г. N 2-ФКЗ (с изменениями и дополнениями) URL:
-            </span>
-            <span>&nbsp;</span>
-            <span className="c2 c40">
-              <a
-                className="c8"
-                href="https://www.google.com/url?q=http://www.consultant.ru/document/cons_doc_LAW_17107/&sa=D&source=editors&ust=1679828544835451&usg=AOvVaw0_AI7ZA_IVk7WpeTD3uQ2b"
-              >
-                http://www.consultant.ru/document/cons_doc_LAW_17107/
-              </a>
-            </span>
-          </p>
-          <p className="c6">
-            <span className="c0">
-              10. Федеральный закон «Об обороне» от 31 мая 1996 г. N 61-ФЗ (с изменениями и
-              дополнениями) URL: &nbsp; &nbsp;
-            </span>
-          </p>
-          <p className="c25">
-            <span className="c2 c40">
-              <a
-                className="c8"
-                href="https://www.google.com/url?q=http://www.consultant.ru/document/cons_doc_LAW_10591/&sa=D&source=editors&ust=1679828544835797&usg=AOvVaw0TLHIrXfUhVUGNTc38FLnm"
-              >
-                http://www.consultant.ru/document/cons_doc_LAW_10591/
-              </a>
-            </span>
-          </p>
-          <p className="c6">
-            <span className="c2">11. Федеральный </span>
-            <span className="c2 c31">закон</span>
-            <span className="c2">&nbsp;"Об </span>
-            <span className="c2 c31">образовании</span>
-            <span className="c2">&nbsp;в </span>
-            <span className="c2 c31">Российской Федерации</span>
-            <span className="c2">
-              " от 29.12.2012 N 273-ФЗ (с изменениями и дополнениями). URL:
-            </span>
-            <span>&nbsp;</span>
-            <span className="c0">http://www.consultant.ru/document/cons_doc_LAW_140174/ </span>
-          </p>
-          <p className="c6">
-            <span className="c0">
-              12. Приказ Министра обороны Российской «Федерации Об организации медицинской помощи в
-              военно-медицинских частях, соединениях и учреждениях Министерства Министерства обороны
-              Российской Федерации» от 16 января 2006 г. № 20 (с изменениями и дополнениями). URL:
-              https://doc.mil.ru/documents/quick_search/more.htm?id=10325876@egNPA{' '}
-            </span>
-          </p>
-          <p className="c6">
-            <span className="c2">
-              13. Правила возмещения расходов, понесенных организациями и гражданами Российской
-              Федерации в связи с реализацией Федерального закона «О воинской обязанности и военной
-              службе», утверждены Постановлением Правительства Российской Федерации от 1 декабря
-              2004 года № 704. URL:
-            </span>
-            <span>&nbsp;</span>
-            <span className="c0">https://base.garant.ru/187613/</span>
-          </p>
-          <p className="c1">
-            <span className="c0">
-              14. Обращение Государственной Думы Федерального Собрания Российской Федерации «О
-              нравственном и военно-патриотическом воспитании молодежи и повышении уровня культуры
-              военнослужащих, правоохранительных органов и силовых структур» № 2240-II ГД, Москва 4
-              марта 1998 года. URL:
-            </span>
-            <span className="c34 c31 c54">&nbsp;</span>
-            <span className="c0">
-              <a
-                className="c8"
-                href="https://www.google.com/url?q=http://pravo.gov.ru/proxy/ips/?docbody%3D%26link_id%3D8%26nd&sa=D&source=editors&ust=1679828544836618&usg=AOvVaw1e8iTLVMiWEz77tNpd9VXz"
-              >
-                http://pravo.gov.ru/proxy/ips/?docbody=&amp;link_id=8&amp;nd
-              </a>
-            </span>
-          </p>
-          <p className="c1">
-            <span className="c0">
-              15. Федеральный закон «О днях воинской славы и памятных датах России» От 13 марта 1995
-              г. № 32-ФЗ. URL:
-            </span>
-          </p>
-          <p className="c24">
-            <span className="c0">http://www.consultant.ru/document/cons_doc_LAW_5978/</span>
-          </p>
-          <h1 className="c1 c53">
-            <span className="c0">
-              16. Постановление Правительства РФ от 27.11.2006 N716 (ред. от 17.04.2021) «О порядке
-              проведения дней воинской славы России и мероприятий, посвященных памятным датам
-              России». URL:{' '}
-            </span>
+
+          <h1 className="c24 c53">
+            <p className="c6">
+              <span className="c0">
+                1. Федеральный закон от 28 марта 1998 г. N 53-ФЗ «О воинской обязанности и военной
+                службе» к обязательной и добровольной подготовке гражданина к военной службе (с
+                изменениями и дополнениями). URL:https://duma.consultant.ru/page.aspx?1105514
+              </span>
+            </p>
           </h1>
           <h1 className="c24 c53">
-            <span className="c2 c51">http://www.consultant.ru/document/cons_doc_LAW_92099/</span>
+            <p className="c6">
+              <span className="c2">
+                2. Федеральный закон «О внесении изменений в отдельные законодательные акты Российской
+                Федерации в связи с совершенствованием разграничения полномочий» от 31 декабря 2005 г.
+                N 199-ФЗ. URL:
+              </span>
+              <span>&nbsp;</span>
+              <span className="c0">https://base.garant.ru/12144089/</span>
+            </p>
+            <p className="c6">
+              <span className="c0">
+                3. Зорин А.С. Комментарии к закону «О воинской обязанности и военной службе». – «За
+                права военнослужащих». 2009. URL: http://ivo.garant.ru{' '}
+              </span>
+            </p>
           </h1>
-          <p className="c6">
-            <span className="c2">
-              17. Д. Локк Сочинения в трёх томах: Т. 3.- М.: Мысль, 1988, 668с.
-            </span>
-            <span>&nbsp;</span>
-            <span className="c0">URL: https://bookree.org/reader?file=1329917&amp;pg=86</span>
-          </p>
-          <p className="c6">
-            <span className="c0">
-              18. Ушинский К.Д. Избранные педагогические сочинения: В 2 т. – Т. 1. – М., 1953, 637с.
-              URL:
-            </span>
-          </p>
-          <p className="c25">
-            <span className="c0">
-              &nbsp;https://imwerden.de/pdf/ushinsky_sobranie_sochineny_tom02_1948_text.pdf
-            </span>
-          </p>
-          <p className="c6">
-            <span className="c0">
-              19. Виноградова Н.Д. Привычка – основа нравственного воспитания //Педагогика № 5.
-              1997. С.91-96. URL:
-            </span>
-          </p>
-          <p className="c25">
-            <span className="c2">&nbsp;</span>
-            <span className="c2">
-              <a
-                className="c8"
-                href="https://www.google.com/url?q=https://www.bibliofond.ru/view.aspx?id%3D51351%23text&sa=D&source=editors&ust=1679828544837594&usg=AOvVaw0grpVoC_wzZSs0GlWfIaiP"
-              >
-                https://www.bibliofond.ru/view.aspx?id=51351#text
-              </a>
-            </span>
-          </p>
-          <p className="c6">
-            <span className="c0">
-              20. Строевой устав Вооруженных Сил Российской Федерации. М.: Воениздат, 2015.
-            </span>
-          </p>
+
+          <h1 className="c24 c53">
+            <p className="c6">
+              <span className="c2">
+                4. Исайчева Е.А. Комментарий к Федеральному закону «О воинской обязанности и военной
+                службе»
+              </span>
+              <span>/ </span>
+              <span className="c2">
+                Е. А. Исайчева, Л. В. Смолина. - Москва: Экзамен, 2006, (Чехов (Моск. обл.):
+              </span>
+              <span className="c55">&nbsp;</span>
+              <span className="c2">Чеховский полиграфкомбинат). - 255 с. URL: https://search.rsl.ru/ru/record/01002952541</span>
+            </p>
+          </h1>
+          
+          <h1 className="c24 c53">
+            <p className="c6">
+              <span className="c2">
+                5. Постановление Правительства РФ от 31 декабря 1999г. №&nbsp;1441 «Об утверждении
+                Положения «О подготовке граждан Российской Федерации к военной службе». URL: https://base.garant.ru/181486/
+              </span>
+            </p>
+          </h1>
+          <h1 className="c24 c53">
+            <p className="c6">
+              <span className="c0">
+                6. Приказ Министра обороны Российской Федерации и Министерства образования и науки
+                Российской Федерации от 24 февраля 2010 года № 96/134 «Об утверждении Инструкции об
+                организации обучения граждан Российской Федерации начальным знаниям в области обороны
+                и их подготовки по основам военной службы в образовательных учреждениях среднего
+                (полного) общего образования, образовательных учреждениях начального профессионального
+                и среднего профессионального образования и учебных пунктах». URL:
+                https://base.garant.ru/198025/
+              </span>
+            </p>
+          </h1>      
+
+          <h1 className="c24 c53">
+            <p className="c1">
+              <span className="c2">
+                7. «Инструкции об организации обучения граждан Российской Федерации начальным знаниям
+                в области обороны и их подготовки по основам военной службы в образовательных
+                учреждениях среднего (полного) общего образования, образовательных учреждениях
+                начального профессионального и среднего профессионального образования и учебных
+                пунктах», утверждённой приказом Министра обороны Российской Федерации и Министра
+                образования и науки Российской Федерации от 24 февраля 2010 года № 96/134. &nbsp;URL:{' '}https://base.garant.ru/198025
+              </span>
+            </p>
+          </h1>
+
+          <h1 className="c24 c53">
+            <p className="c6">
+              <span className="c2">8. Конституция Российской Федерации URL: http://www.constitution.ru/</span>
+            </p>
+          </h1>
+
+          <h1 className="c24 c53">
+            <p className="c6">
+              <span className="c2">
+                9. Федеральный конституционный закон «О Правительстве Российской Федерации» от 17
+                декабря 1997 г. N 2-ФКЗ (с изменениями и дополнениями) URL: http://www.consultant.ru/document/cons_doc_LAW_17107/
+              </span>
+            </p>
+          </h1>
+
+          <h1 className="c24 c53">
+            <p className="c6">
+              <span className="c0">
+                10. Федеральный закон «Об обороне» от 31 мая 1996 г. N 61-ФЗ (с изменениями и
+                дополнениями) URL: http://www.consultant.ru/document/cons_doc_LAW_10591/
+              </span>
+            </p>
+          </h1>
+
+          <h1 className="c24 c53">
+            <p className="c6">
+              <span className="c2">11. Федеральный </span>
+              <span className="c2 c31">закон</span>
+              <span className="c2">&nbsp;"Об </span>
+              <span className="c2 c31">образовании</span>
+              <span className="c2">&nbsp;в </span>
+              <span className="c2 c31">Российской Федерации</span>
+              <span className="c2">
+                " от 29.12.2012 N 273-ФЗ (с изменениями и дополнениями). URL:
+              </span>
+              <span>&nbsp;</span>
+              <span className="c0">http://www.consultant.ru/document/cons_doc_LAW_140174/ </span>
+            </p>
+          </h1>
+
+          <h1 className="c24 c53">
+            <p className="c6">
+              <span className="c0">
+                12. Приказ Министра обороны Российской «Федерации Об организации медицинской помощи в
+                военно-медицинских частях, соединениях и учреждениях Министерства Министерства обороны
+                Российской Федерации» от 16 января 2006 г. № 20 (с изменениями и дополнениями). URL:
+                https://doc.mil.ru/documents/quick_search/more.htm?id=10325876@egNPA{' '}
+              </span>
+            </p>
+          </h1>
+          <h1 className="c24 c53">
+            <p className="c6">
+              <span className="c2">
+                13. Правила возмещения расходов, понесенных организациями и гражданами Российской
+                Федерации в связи с реализацией Федерального закона «О воинской обязанности и военной
+                службе», утверждены Постановлением Правительства Российской Федерации от 1 декабря
+                2004 года № 704. URL: https://base.garant.ru/187613/
+              </span>
+            </p>
+          </h1>
+
+          <h1 className="c24 c53">
+            <p className="c1">
+              <span className="c0">
+                14. Обращение Государственной Думы Федерального Собрания Российской Федерации «О
+                нравственном и военно-патриотическом воспитании молодежи и повышении уровня культуры
+                военнослужащих, правоохранительных органов и силовых структур» № 2240-II ГД, Москва 4
+                марта 1998 года. URL: http://pravo.gov.ru/proxy/ips/?docbody=&amp;link_id=8&amp;nd
+              </span>
+            </p>
+          </h1>
+
+          <h1 className="c24 c53">
+            <p className="c1">
+              <span className="c0">
+                15. Федеральный закон «О днях воинской славы и памятных датах России» От 13 марта 1995
+                г. № 32-ФЗ. URL: http://www.consultant.ru/document/cons_doc_LAW_5978/
+              </span>
+            </p>
+          </h1>
+
+          <h1 className="c24 c53">
+            <p className="c6">
+              <span className="c0">
+              16. Постановление Правительства РФ от 27.11.2006 N716 (ред. от 17.04.2021) «О порядке
+                проведения дней воинской славы России и мероприятий, посвященных памятным датам
+                России». URL:{' '}http://www.consultant.ru/document/cons_doc_LAW_92099/
+              </span>
+            </p>
+          </h1> 
+
+          <h1 className="c24 c53">
+            <p className="c6">
+              <span className="c2">
+                17. Д. Локк Сочинения в трёх томах: Т. 3.- М.: Мысль, 1988, 668с.
+              </span>
+              <span>&nbsp;</span>
+              <span className="c0">URL: https://bookree.org/reader?file=1329917&amp;pg=86</span>
+            </p>
+          </h1>
+          <h1 className="c24 c53">
+            <p className="c6">
+              <span className="c2">
+              18. Ушинский К.Д. Избранные педагогические сочинения: В 2 т. – Т. 1. – М., 1953, 637с. URL: https://imwerden.de/pdf/ushinsky_sobranie_sochineny_tom02_1948_text.pdf
+              </span>
+            </p>
+          </h1>
+
+          <h1 className="c24 c53">
+            <p className="c6">
+              <span className="c2">
+              19. Виноградова Н.Д. Привычка – основа нравственного воспитания //Педагогика № 5. 1997. С.91-96. URL: https://www.bibliofond.ru/view.aspx?id=51351#text
+              </span>
+            </p>
+          </h1>
+          <h1 className="c24 c53">
+            <p className="c6">
+              <span className="c0">
+                20. Строевой устав Вооруженных Сил Российской Федерации. М.: Воениздат, 2015.
+              </span>
+            </p>
+          </h1>
+
+          <h1 className="c24 c53">
+            <p className="c6">
+              <span className="c2">
+                21. Видео файл: Переворот спасения эвакуация раненого// URL: https://www.youtube.com/watch?v=siWUrg2nERE
+              </span>
+            </p>
+          </h1>
+          <h1 className="c24 c53">
+            <p className="c6">
+              <span className="c2">
+                22. Видео файл: Норматив наложение шины на голень// URL: https://www.youtube.com/watch?v=9NaOMZuAckg
+              </span>
+            </p>
+          </h1>
+
+          <h1 className="c24 c53">
+            <p className="c6">
+              <span className="c2">
+                23. Видео файл: Норматив 9 по ВМП// URL: https://www.youtube.com/watch?v=qRBvmqiipog
+              </span>
+            </p>
+          </h1>
         </section>
       )
     }
   },
-  {
-    key: 24,
-    title: 'Введение',
-    content: () => {
-      return
-    }
-  }
+  // {
+  //   key: 24,
+  //   title: 'Введение',
+  //   content: () => {
+  //     return
+  //   }
+  // }
 ]
