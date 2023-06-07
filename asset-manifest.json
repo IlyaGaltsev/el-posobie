@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/el-posobie/static/css/main.bf9d6d2f.css",
-    "main.js": "/el-posobie/static/js/main.7346a132.js",
+    "main.css": "/el-posobie/static/css/main.2fcaa9cf.css",
+    "main.js": "/el-posobie/static/js/main.ef41dc1c.js",
     "static/js/787.f066138e.chunk.js": "/el-posobie/static/js/787.f066138e.chunk.js",
     "static/media/tp2.png": "/el-posobie/static/media/tp2.fb6ef3081dafd83dfb3b.png",
     "static/media/med9.png": "/el-posobie/static/media/med9.69d982c577f9196384f8.png",
@@ -45,15 +45,15 @@
     "static/media/oby8.jpg": "/el-posobie/static/media/oby8.b6d3b3b9f784a7808adb.jpg",
     "static/media/obvs1.jpg": "/el-posobie/static/media/obvs1.5dde7774220ee379cf36.jpg",
     "static/media/tp3.jpg": "/el-posobie/static/media/tp3.057dc642bc79174dde1f.jpg",
+    "static/media/title3.png": "/el-posobie/static/media/title3.7ecd9242a80ca47efe11.png",
     "static/media/oby3.jpg": "/el-posobie/static/media/oby3.44054616a608a14d96fe.jpg",
-    "static/media/title3.png": "/el-posobie/static/media/title3.0f5125bc8c28942d1fc2.png",
     "index.html": "/el-posobie/index.html",
-    "main.bf9d6d2f.css.map": "/el-posobie/static/css/main.bf9d6d2f.css.map",
-    "main.7346a132.js.map": "/el-posobie/static/js/main.7346a132.js.map",
+    "main.2fcaa9cf.css.map": "/el-posobie/static/css/main.2fcaa9cf.css.map",
+    "main.ef41dc1c.js.map": "/el-posobie/static/js/main.ef41dc1c.js.map",
     "787.f066138e.chunk.js.map": "/el-posobie/static/js/787.f066138e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bf9d6d2f.css",
-    "static/js/main.7346a132.js"
+    "static/css/main.2fcaa9cf.css",
+    "static/js/main.ef41dc1c.js"
   ]
 }
