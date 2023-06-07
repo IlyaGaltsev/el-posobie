@@ -190,6 +190,13 @@ const massVideo = [
     title: 'Норматив наложение шины на голень',
     tag: 'Медицинская подготовка',
     promo: fizic3
-  }
+  },
+  {
+    id: 'qRBvmqiipog',
+    title: 'Норматив №9 по ВМП',
+    tag: 'Медицинская подготовка',
+    promo: fizic3
+  },
+  
 ]
 export default massVideo
