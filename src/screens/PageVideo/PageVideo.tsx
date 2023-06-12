@@ -4,7 +4,7 @@ import { AiOutlineArrowLeft } from 'react-icons/ai'
 import massVideo from 'src/assets/data/massVideo'
 import { Dialog, IconButton, Toolbar, AppBar } from '@mui/material'
 import { MdClose } from 'react-icons/md'
-// import
+import ReactPlayer from 'react-player'
 interface IVideoCard {
   id: string
   title: string
@@ -15,7 +15,7 @@ const PageVideo = () => {
   const params = useParams()
   const navigate = useNavigate()
 
-  const { title, tag }: IVideoCard | any = massVideo.find(
+  const { title, tag, path }: IVideoCard | any = massVideo.find(
     (item: IVideoCard) => item.id === params.id
   )
 
@@ -29,11 +29,7 @@ const PageVideo = () => {
           <h3>{title}</h3>
         </Toolbar>
       </AppBar>
-      <iframe
-        title="video"
-        src={`https://www.youtube.com/embed/${params.id}?autoplay=1`}
-        allow="autoplay"
-      />
+      <ReactPlayer url={path ?? ''} playing controls width="100%" height="calc(100vh - 46px)" />
     </Dialog>
   )
 }

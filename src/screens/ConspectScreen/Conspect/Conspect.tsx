@@ -1,23 +1,15 @@
 import { useNavigate, useParams } from 'react-router-dom'
-import './PagePrezentation.scss'
+import './Conspect.scss'
 import { Dialog, IconButton, Toolbar, AppBar } from '@mui/material'
 import { MdClose } from 'react-icons/md'
-import { massPrez } from 'src/assets/data/massPrez'
-interface IPrezentationCard {
-  id: string
-  title: string
-  tag: string
-  path: string
-  localPath?: any
-  preview?: any
-}
+import { massConspects } from 'src/assets/data/massConspects'
 
-const PagePrezentation = () => {
+const Conspect = () => {
   const params = useParams()
   const navigate = useNavigate()
 
-  const { title, localPath, path }: IPrezentationCard | any = massPrez.find(
-    (item: IPrezentationCard) => item.id === params.id
+  const { title, path }: any = massConspects.find(
+    (item: any) => item.id === params.id
   )
 
   return (
@@ -30,9 +22,9 @@ const PagePrezentation = () => {
           <h3>{title}</h3>
         </Toolbar>
       </AppBar>
-      <iframe title="prezentation" src={localPath} allow="autoplay" />
+      <iframe title="prezentation" src={path} allow="autoplay" />
     </Dialog>
   )
 }
 
-export { PagePrezentation }
+export { Conspect }

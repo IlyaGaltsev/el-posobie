@@ -1,9 +1,7 @@
 import { Route, Routes, useNavigate } from 'react-router-dom'
 import { colors } from '../constants/style/colors'
 import { ConfigProvider } from 'antd'
-import { routes } from '../routes'
 import './App.scss'
-import { Box } from '@mui/system'
 import { useLayoutEffect, useState } from 'react'
 import { fontSizes } from 'src/constants/fontSizes'
 import { AppContext } from 'src/context/AppContext'
@@ -16,6 +14,7 @@ import { PrezentationScreen } from 'src/screens/PrezentationScreen'
 import ConspectScreen from 'src/screens/ConspectScreen'
 import { PageVideo } from 'src/screens/PageVideo'
 import { PagePrezentation } from 'src/screens/PagePrezentation'
+import { Conspect } from 'src/screens/ConspectScreen/Conspect'
 
 const App = () => {
   const navigate = useNavigate()
@@ -54,6 +53,8 @@ const App = () => {
 
 
               <Route path="/book/abstract" element={<ConspectScreen />} />
+              <Route path="/book/abstract/:id" element={<Conspect/>} />
+
             </Route>
           </Routes>
         </div>
