@@ -5,4 +5,5 @@ export interface IMassConspects {
   subtitle: string
   id: string
   tag: string
+  path?: any
 }

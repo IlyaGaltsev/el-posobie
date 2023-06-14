@@ -1,13 +1,11 @@
 import { BOOK_ROUTE } from 'src/routesNames'
 import { useNavigate } from 'react-router-dom'
-import aboutApp from 'src/assets/images/title2.webp'
-import aboutAuthors from 'src/assets/images/title3.png'
-// import { Carousel } from 'react-responsive-carousel'
+import aboutApp from 'src/assets/images/title2.jpg'
+import aboutAuthors from 'src/assets/images/title3.jpg'
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
 import './FirstScreen.scss'
 import { Carousel } from 'antd'
 import { useRef } from 'react'
-// import {AiOutlineArrowRight, AiOutlineArrowLeft} from "react-icons/"
 import {AiOutlineArrowRight, AiOutlineArrowLeft} from "react-icons/ai"
 
 export const Сover = () => {
@@ -45,8 +43,8 @@ export const Сover = () => {
         <p>Электронное учебно-методическое пособие</p>
       </div>
       <div>
-        <p>© ФГОУ ВО «Тамбовский государственный университет имени Г.Р. Державина», 2022</p>
-        <p>© Гальцев И.А., 2022</p>
+        <p>© ФГОУ ВО «Тамбовский государственный университет имени Г.Р. Державина», 2023</p>
+        <p>© Гальцев И.А., 2023</p>
       </div>
     </div>
   )

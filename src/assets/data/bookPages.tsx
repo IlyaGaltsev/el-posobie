@@ -1,13 +1,7 @@
 import { massPrez } from 'src/assets/data/massPrez'
 import { massConspects } from 'src/assets/data/massConspects'
 import massVideo from 'src/assets/data/massVideo'
-import { PREZENTATIONS_ROUTE, VIDEO_ROUTE } from 'src/routesNames'
-
-const linkConspects = (obj: any) => {
-  console.log(obj)
-  const url = `https://docs.google.com/document/d/${obj.id}/edit?usp=sharing&ou32858117889381065&rtpof=true&sd=true`
-  window.open(url, "_blank");
-}
+import { PREZENTATIONS_ROUTE, VIDEO_ROUTE, CONSPECTS_ROUTE } from 'src/routesNames'
 
 export const bookPages = [
   {
@@ -4809,7 +4803,7 @@ export const bookPages = [
     key: 15,
     chapter: 3,
     title: 'Глава 1',
-    content: () => {
+    content: (navigate: any) => {
       return (
         <section id="15">
           <p className="c4">
@@ -4844,7 +4838,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[0])}>приложении 1</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[0].id}`)}>приложении 1</a>{' '}
             </span>
           </p>
           <p className="c12 c15">
@@ -4863,7 +4857,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[1])}>приложении 2</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[1].id}`)}>приложении 2</a>{' '}
             </span>
           </p>
           <p className="c12 c15">
@@ -4881,7 +4875,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[2])}>приложении 3</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[2].id}`)}>приложении 3</a>{' '}
             </span>
           </p>
           <p className="c12 c15">
@@ -4899,7 +4893,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[3])}>приложении 4</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[3].id}`)}>приложении 4</a>{' '}
             </span>
           </p>
          
@@ -4945,7 +4939,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[4])}>приложении 5</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[4].id}`)}>приложении 5</a>{' '}
             </span>
           </p>
           <p className="c12 c15">
@@ -4968,7 +4962,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[5])}>приложении 6</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[5].id}`)}>приложении 6</a>{' '}
             </span>
           </p>
           <p className="c12 c15">
@@ -4985,7 +4979,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[6])}>приложении 7</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[6].id}`)}>приложении 7</a>{' '}
             </span>
           </p>
           <p className="c12 c15">
@@ -5006,7 +5000,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия апредствален в{' '}
-              <a onClick={() => linkConspects(massConspects[7])}>приложении 8</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[7].id}`)}>приложении 8</a>{' '}
             </span>
           </p>
           <p className="c4 c15">
@@ -5073,7 +5067,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[8])}>приложении 9</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[8].id}`)}>приложении 9</a>{' '}
             </span>
           </p>
           <p className="c12 c15">
@@ -5089,7 +5083,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[9])}>приложении 10</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[9].id}`)}>приложении 10</a>{' '}
             </span>
           </p>
           <p className="c4 c15">
@@ -5140,7 +5134,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[10])}>приложении 11</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[10].id}`)}>приложении 11</a>{' '}
             </span>
           </p>
           <p className="c12 c15">
@@ -5166,7 +5160,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[11])}>приложении 12</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[11].id}`)}>приложении 12</a>{' '}
             </span>
           </p>
           <p className="c12 c15">
@@ -5186,7 +5180,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[12])}>приложении 13</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[12].id}`)}>приложении 13</a>{' '}
             </span>
           </p>
           <p className="c12 c15">
@@ -5208,7 +5202,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[13])}>приложении 14</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[13].id}`)}>приложении 14</a>{' '}
             </span>
           </p>
           <p className="c12 c15">
@@ -5235,7 +5229,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[14])}>приложении 15</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[14].id}`)}>приложении 15</a>{' '}
             </span>
           </p>
           <p className="c12 c15">
@@ -5258,7 +5252,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[15])}>приложении 16</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[15].id}`)}>приложении 16</a>{' '}
             </span>
           </p>
           <p className="c12 c15">
@@ -5280,7 +5274,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[16])}>приложении 17</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[16].id}`)}>приложении 17</a>{' '}
             </span>
           </p>
           <p className="c12 c15">
@@ -5301,7 +5295,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[17])}>приложении 18</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[17].id}`)}>приложении 18</a>{' '}
             </span>
           </p>
           <p className="c4 c15">
@@ -5373,7 +5367,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[18])}>приложении 19</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[18].id}`)}>приложении 19</a>{' '}
             </span>
           </p>
           <p className="c4 c15">
@@ -5419,7 +5413,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[19])}>приложении 20</a>{' '}
+              <a onClick={() =>navigate(`${CONSPECTS_ROUTE}/${massConspects[19].id}`)}>приложении 20</a>{' '}
             </span>
           </p>
           <p className="c12 c15">
@@ -5455,7 +5449,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[20])}>приложении 21</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[20].id}`)}>приложении 21</a>{' '}
             </span>
           </p>
           <p className="c12 c15">
@@ -5478,7 +5472,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[21])}>приложении 22</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[21].id}`)}>приложении 22</a>{' '}
             </span>
           </p>
           <p className="c12 c15">
@@ -5498,7 +5492,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[22])}>приложении 23</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[22].id}`)}>приложении 23</a>{' '}
             </span>
           </p>
           <p className="c12 c15">
@@ -5527,7 +5521,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[23])}>приложении 24</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[23].id}`)}>приложении 24</a>{' '}
             </span>
           </p>
           <p className="c12 c15">
@@ -5544,7 +5538,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[24])}>приложении 25</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[24].id}`)}>приложении 25</a>{' '}
             </span>
           </p>
           <p className="c12 c15">
@@ -5557,7 +5551,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[25])}>приложении 26</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[25].id}`)}>приложении 26</a>{' '}
             </span>
           </p>
           <p className="c12 c15">
@@ -5578,7 +5572,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[26])}>приложении 27</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[26].id}`)}>приложении 27</a>{' '}
             </span>
           </p>
           <p className="c4 c15">
@@ -5618,7 +5612,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[27])}>приложении 28</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[27].id}`)}>приложении 28</a>{' '}
             </span>
           </p>
           <p className="c12 c15">
@@ -5639,7 +5633,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[28])}>приложении 29</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[28].id}`)}>приложении 29</a>{' '}
             </span>
           </p>
           <p className="c12 c15">
@@ -5659,7 +5653,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[29])}>приложении 30</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[29].id}`)}>приложении 30</a>{' '}
             </span>
           </p>
           <p className="c12 c15">
@@ -5690,7 +5684,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[30])}>приложении 31</a>{' '}
+              <a onClick={() =>navigate(`${CONSPECTS_ROUTE}/${massConspects[30].id}`)}>приложении 31</a>{' '}
             </span>
           </p>
           <p className="c4 c15">
@@ -5732,7 +5726,7 @@ export const bookPages = [
           <p className="c12">
             <span className="c2">
               Вариант план-конспекта проведения занятия представлен в{' '}
-              <a onClick={() => linkConspects(massConspects[31])}>приложении 32</a>{' '}
+              <a onClick={() => navigate(`${CONSPECTS_ROUTE}/${massConspects[31].id}`)}>приложении 32</a>{' '}
             </span>
           </p>
           <p className="c24 c15">
