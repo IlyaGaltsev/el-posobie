@@ -15,6 +15,7 @@ import ConspectScreen from 'src/screens/ConspectScreen'
 import { PageVideo } from 'src/screens/PageVideo'
 import { PagePrezentation } from 'src/screens/PagePrezentation'
 import { Conspect } from 'src/screens/ConspectScreen/Conspect'
+import { AboutScreen } from 'src/screens/AboutScreen'
 
 const App = () => {
   const navigate = useNavigate()
@@ -56,6 +57,8 @@ const App = () => {
               <Route path="/book/abstract/:id" element={<Conspect/>} />
 
             </Route>
+            <Route path="/about" element={<AboutScreen/>}/>
+
           </Routes>
         </div>
       </ConfigProvider>

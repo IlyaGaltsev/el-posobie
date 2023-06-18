@@ -29,17 +29,11 @@ const Header = () => {
           </button>
           <button
             className="primary-button"
-            onClick={() =>
-              window.open(
-                'https://docs.google.com/document/d/1mW77FIHs7DN1H2TDlcz3mPJR0kEpFGx9/edit?usp=sharing&ouid=102538077575094677183&rtpof=true&sd=true',
-                '_blank'
-              )
-            }
+            onClick={() => navigate('/about')}
           >
             <VscInfo className='header-buttons-icon' size={24}/>
             О проекте
           </button>
-          {/* <button className="bvi-open">BVI</button> */}
         </div>
       </div>
     </header>
