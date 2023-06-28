@@ -51,7 +51,6 @@ const navigate = useNavigate()
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = document?.querySelector('.page-book')?.scrollTop
-      console.log(scrollPosition)
       setIsVisible((scrollPosition ?? 0) > 100)
     }
 
