@@ -1,4 +1,4 @@
-import * as route from 'src/routesNames'
+import * as route from 'src/navigation/routesNames'
 
 export const navigation = [
   {

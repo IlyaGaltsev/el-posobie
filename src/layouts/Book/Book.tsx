@@ -1,7 +1,7 @@
 import { Header } from 'src/components/Header'
 import { Outlet, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
-import { BOOK_ROUTE } from 'src/routesNames'
+import { BOOK_ROUTE } from 'src/navigation/routesNames'
 
 const Book = () => {
   const navigate = useNavigate()

@@ -1,7 +1,7 @@
 import { massPrez } from 'src/assets/data/massPrez'
 import { massConspects } from 'src/assets/data/massConspects'
 import massVideo from 'src/assets/data/massVideo'
-import { PREZENTATIONS_ROUTE, VIDEO_ROUTE, CONSPECTS_ROUTE } from 'src/routesNames'
+import { PREZENTATIONS_ROUTE, VIDEO_ROUTE, CONSPECTS_ROUTE } from 'src/navigation/routesNames'
 
 export const bookPages = [
   {

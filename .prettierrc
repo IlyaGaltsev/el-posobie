@@ -9,6 +9,7 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "singleQuote": true
+  "singleQuote": true,
+  "singleAttributePerLine": true
 }
 

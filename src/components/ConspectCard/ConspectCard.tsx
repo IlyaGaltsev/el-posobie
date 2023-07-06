@@ -1,7 +1,7 @@
 import { Card, CardContent, CardActions } from '@mui/material'
 import * as P from '../../styled/PublicComponents.styled'
 import { MdFileCopy } from 'react-icons/md'
-import type { IMassConspects } from '@/types'
+import type { IMassConspects } from 'src/types'
 import { Link } from 'react-router-dom'
 
 const ConspectCard = ({ id, task, title, subtitle }: IMassConspects) => {
