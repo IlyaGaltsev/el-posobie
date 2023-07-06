@@ -1,13 +1,4 @@
-export interface INavBookChildren {
-  key: number
-  label: string
-}
-
-export interface INavBook {
-  key: number
-  label: string
-  children?: INavBookChildren[]
-}
+import { INavBook } from "src/types";
 
 export const navBook: INavBook[] = [
   { key: 0, label: 'Введение' },

@@ -19,15 +19,38 @@ const App: FC = () => {
                 element={element}
               >
                 {childrenRoutes
-                  ? childrenRoutes.map(({ path: childernPath, element: chidrenElement }) => {
-                      return (
-                        <Route
-                          key={childernPath}
-                          path={childernPath}
-                          element={chidrenElement}
-                        />
-                      )
-                    })
+                  ? childrenRoutes.map(
+                      ({
+                        path: childernPath,
+                        element: chidrenElement,
+                        childrenRoutes: childrenRoutesChilder
+                      }) => {
+                        return (
+                          <Route
+                            key={childernPath}
+                            path={childernPath}
+                            element={chidrenElement}
+                          >
+                            {childrenRoutesChilder
+                              ? childrenRoutesChilder.map(
+                                  ({
+                                    path: childernPathChildren,
+                                    element: chidrenElementChildren
+                                  }) => {
+                                    return (
+                                      <Route
+                                        key={childernPathChildren}
+                                        path={childernPathChildren}
+                                        element={chidrenElementChildren}
+                                      />
+                                    )
+                                  }
+                                )
+                              : null}
+                          </Route>
+                        )
+                      }
+                    )
                   : null}
               </Route>
             )
