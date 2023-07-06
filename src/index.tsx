@@ -1,12 +1,11 @@
-import './styled/GoogleStyles.css'
+import App from './App'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { GlobalStyle } from './styled/GlobalStyle.styled'
-// import { BrowserRouter } from 'react-router-dom'
-import { App } from './app'
-import 'antd/dist/reset.css'
-import './index.css'
 import { HashRouter } from 'react-router-dom'
+import { GlobalStyle } from './styled/GlobalStyle.styled'
+
+import './styled/GoogleStyles.css'
+import 'antd/dist/reset.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 

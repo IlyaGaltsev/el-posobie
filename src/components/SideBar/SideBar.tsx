@@ -1,4 +1,4 @@
-import { BOOK_ROUTE } from 'src/routesNames'
+import { BOOK_ROUTE } from 'src/navigation/routesNames'
 import { NavLink, useParams } from 'react-router-dom'
 import { navBook } from 'src/constants/navBook'
 import { Dropdown } from '../Dropdown'

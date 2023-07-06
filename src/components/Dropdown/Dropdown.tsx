@@ -1,4 +1,4 @@
-import { BOOK_ROUTE } from 'src/routesNames'
+import { BOOK_ROUTE } from 'src/navigation/routesNames'
 import { NavLink } from 'react-router-dom'
 import './Dropdown.scss'
 import type { INavBookChildren } from 'src/constants/navBook'
