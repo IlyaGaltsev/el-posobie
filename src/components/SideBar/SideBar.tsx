@@ -1,37 +1,60 @@
-import { BOOK_ROUTE } from 'src/navigation/routesNames'
-import { NavLink, useParams } from 'react-router-dom'
-import { navBook } from 'src/constants/navBook'
-import { Dropdown } from '../Dropdown'
-import './Sidebar.scss'
+import SidebarButton from './components/SidebarButton'
 import { useLayoutEffect, useState } from 'react'
+import { navBook } from 'src/navigation/navBook'
+import { useParams } from 'react-router-dom'
+import { Dropdown } from '../Dropdown'
+import { INavBook } from '@/types'
+
+import './Sidebar.scss'
 
 const Sidebar = () => {
   const params = useParams()
   let defaultValue = [false, false, false]
+
   const [defaultOpen, setDefaultOpen] = useState(defaultValue)
 
   useLayoutEffect(() => {
-    if (Number(params?.id) >= 1 && Number(params?.id) <= 6) setDefaultOpen([true, false, false])
-    if (Number(params?.id) >= 7 && Number(params?.id) <= 14) setDefaultOpen([false, true, false])
-    if (Number(params?.id) >= 15 && Number(params?.id) <= 22) setDefaultOpen([false, false, true])
-
-  }, [params.id])
+    const id = Number(params?.id)
+    if (id >= 1 && id <= 6) {
+      setDefaultOpen([true, false, false])
+    }
+    if (id >= 7 && id <= 14) {
+      setDefaultOpen([false, true, false])
+    }
+    if (id >= 15 && id <= 22) {
+      setDefaultOpen([false, false, true])
+    }
+  }, [params?.id])
 
   const handleOnClickDropDown = (key: number) => {
-    if (key === 1) setDefaultOpen([!defaultOpen[0], defaultOpen[1], defaultOpen[2]])
-    if (key === 2) setDefaultOpen([defaultOpen[0], !defaultOpen[1], defaultOpen[2]])
-    if (key === 3) setDefaultOpen([defaultOpen[0], defaultOpen[1], !defaultOpen[2]])
-  }
+    const updatedDefaultOpen = [...defaultOpen]
 
+    if (key === 1) {
+      updatedDefaultOpen[0] = !defaultOpen[0]
+    }
+
+    if (key === 2) {
+      updatedDefaultOpen[1] = !defaultOpen[1]
+    }
+
+    if (key === 3) {
+      updatedDefaultOpen[2] = !defaultOpen[2]
+    }
+
+    setDefaultOpen(updatedDefaultOpen)
+  }
+  
   return (
     <div className="sidebar">
       <div className="sidebar-wrapper">
-        {navBook.map(({ children, key, label }: any, index: number) => {
+        {navBook.map(({ children, key, label }: INavBook, index: number) => {
           if (!children?.length)
             return (
-              <NavLink key={key} className="sidebar-wrapper-navlink" to={`${BOOK_ROUTE}/${key}`}>
-                {label}
-              </NavLink>
+              <SidebarButton
+                key={key}
+                id={key}
+                label={label}
+              />
             )
 
           return (

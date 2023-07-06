@@ -5,40 +5,12 @@ import { BOOK_ROUTE } from 'src/navigation/routesNames'
 import { useEffect, useState } from 'react'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 import { FaArrowUp } from 'react-icons/fa'
+import { arabicToRoman } from 'src/utils/config/globalMethods/arabicToRoman'
 
 const Page = () => {
   const params = useParams()
   const bookPage = bookPages.find((item: any) => item.key === Number(params.id))
   const navigate = useNavigate()
-
-  const arabicToRoman = (arabicNumber: number) => {
-    const romanNumeralMap = new Map([
-      [1000, 'M'],
-      [900, 'CM'],
-      [500, 'D'],
-      [400, 'CD'],
-      [100, 'C'],
-      [90, 'XC'],
-      [50, 'L'],
-      [40, 'XL'],
-      [10, 'X'],
-      [9, 'IX'],
-      [5, 'V'],
-      [4, 'IV'],
-      [1, 'I']
-    ])
-
-    let result = ''
-
-    romanNumeralMap.forEach((value, key) => {
-      while (arabicNumber >= key) {
-        result += value
-        arabicNumber -= key
-      }
-    })
-
-    return result
-  }
 
   const scrollOnPageTop = () => {
     if (document !== null) document?.getElementById(String(bookPage?.key) ?? '0')?.scrollIntoView()
