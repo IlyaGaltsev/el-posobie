@@ -1,4 +1,4 @@
-import { BOOK_ROUTE } from 'src/navigation/routesNames'
+import { BOOK_PAGE_ROUTE } from 'src/navigation/routesNames'
 import { useNavigate } from 'react-router-dom'
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
 import './Main.scss'
@@ -23,7 +23,7 @@ const Main: FC = () => {
         <div className="firstscreen-action-buttons">
           <button
             className="primary-button"
-            onClick={() => navigate(`${BOOK_ROUTE}/0`)}
+            onClick={() => navigate(`${BOOK_PAGE_ROUTE}/0`)}
           >
             К содержанию
           </button>

@@ -1,7 +1,7 @@
 import { bookPages } from 'src/assets/data/bookPages'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import './Page.scss'
-import { BOOK_ROUTE } from 'src/navigation/routesNames'
+import { BOOK_PAGE_ROUTE } from 'src/navigation/routesNames'
 import { useEffect, useState } from 'react'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 import { FaArrowUp } from 'react-icons/fa'
@@ -15,6 +15,7 @@ const Page = () => {
   const scrollOnPageTop = () => {
     if (document !== null) document?.getElementById(String(bookPage?.key) ?? '0')?.scrollIntoView()
   }
+
   useEffect(() => {
     scrollOnPageTop()
   }, [bookPage])
@@ -44,7 +45,7 @@ const Page = () => {
       {bookPage?.content(navigate) ?? 'Выберите страницу'}
       <div className="book-screen__page-actions">
         <Link
-          to={`${BOOK_ROUTE}/${(bookPage?.key ?? 1) - 1}`}
+          to={`${BOOK_PAGE_ROUTE}/${(bookPage?.key ?? 1) - 1}`}
           className="primary-button"
           style={bookPage?.key === 0 ? { display: 'none' } : {}}
         >
@@ -54,7 +55,7 @@ const Page = () => {
         <div />
 
         <Link
-          to={`${BOOK_ROUTE}/${(bookPage?.key ?? -1) + 1}`}
+          to={`${BOOK_PAGE_ROUTE}/${(bookPage?.key ?? -1) + 1}`}
           className="primary-button"
           style={bookPage?.key === 23 ? { display: 'none' } : {}}
         >

@@ -8,7 +8,7 @@ import './App.scss'
 
 const App: FC = () => {
   return (
-    <ConfigProvider theme={themeConfig}>
+    // <ConfigProvider theme={themeConfig}>
       <div className="app-wrapper">
         <Routes>
           {routes.map(({ path, element, childrenRoutes }) => {
@@ -57,7 +57,7 @@ const App: FC = () => {
           })}
         </Routes>
       </div>
-    </ConfigProvider>
+    // </ConfigProvider>
   )
 }
 
