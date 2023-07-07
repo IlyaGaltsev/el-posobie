@@ -2,10 +2,13 @@ import { bookPages } from 'src/assets/data/bookPages'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import './Page.scss'
 import { BOOK_PAGE_ROUTE } from 'src/Navigation/routesNames'
-import { useEffect, useState } from 'react'
+import { memo, useEffect, useState } from 'react'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 import { FaArrowUp } from 'react-icons/fa'
 import { arabicToRoman } from 'src/utils/config/globalMethods/arabicToRoman'
+import BottomNavigation from 'src/components/Book/BottomNavigation'
+import ButtonUp from 'src/components/ButtonUp'
+import BookPageTitle from 'src/components/Book/BookPageTitle'
 
 const Page = () => {
   const params = useParams()
@@ -35,40 +38,13 @@ const Page = () => {
 
   return (
     <div className="page-book">
-      {isVisible && (
-        <p className="page-book__title">
-          {bookPage?.chapter ? `Раздел ${arabicToRoman(bookPage?.chapter ?? 0)} >` : ''}{' '}
-          {bookPage?.title}
-        </p>
-      )}
+      <BookPageTitle isShow={isVisible} {...bookPage}/>
 
       {bookPage?.content(navigate) ?? 'Выберите страницу'}
-      <div className="book-screen__page-actions">
-        <Link
-          to={`${BOOK_PAGE_ROUTE}/${(bookPage?.key ?? 1) - 1}`}
-          className="primary-button"
-          style={bookPage?.key === 0 ? { display: 'none' } : {}}
-        >
-          <AiOutlineArrowLeft /> Назад
-        </Link>
 
-        <div />
-
-        <Link
-          to={`${BOOK_PAGE_ROUTE}/${(bookPage?.key ?? -1) + 1}`}
-          className="primary-button"
-          style={bookPage?.key === 23 ? { display: 'none' } : {}}
-        >
-          Далее <AiOutlineArrowRight />
-        </Link>
-      </div>
-      <div
-        className="page-book__up-button"
-        onClick={scrollOnPageTop}
-      >
-        <FaArrowUp size={20} />
-      </div>
+      {bookPage ? <BottomNavigation bookPage={bookPage} /> : null}
+      <ButtonUp onClick={scrollOnPageTop} />
     </div>
   )
 }
-export default Page
+export default memo(Page)

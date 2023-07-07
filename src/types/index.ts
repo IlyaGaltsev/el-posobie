@@ -1,7 +1,39 @@
+import { MouseEventHandler } from 'react'
+
 export interface IRoute {
   path: string
   element: any
   childrenRoutes?: IRoute[]
+}
+
+export type TBookPage = {
+  key: number
+  title: string
+  content: any
+  chapter?: number
+}
+
+export type TBookPageTitle = {
+  isShow: boolean
+  key?: number | undefined
+  title?: string | undefined
+  content?: any
+  chapter?: number | undefined
+}
+
+export type TBottomNavigation = {
+  bookPage: TBookPage
+}
+
+export type TBottomNavigationButton = {
+  position: string
+  bookKey: number
+}
+
+export type TBottomNavigationButtonContent = Pick<TBottomNavigationButton, 'position'>
+
+export type TButtonUp = {
+  onClick: MouseEventHandler<HTMLDivElement>
 }
 
 export interface IMassConspects {

@@ -1,6 +1,6 @@
+import { Book as BookLayout } from 'src/layouts/Book'
 import { Route, Routes } from 'react-router-dom'
 import * as routesNames from './routesNames'
-import { Book as BookLayout } from 'src/layouts/Book'
 
 import Main from 'src/pages/Main'
 import About from 'src/pages/About'

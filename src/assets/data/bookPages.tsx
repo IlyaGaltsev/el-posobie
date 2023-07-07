@@ -2,8 +2,9 @@ import { massPrez } from 'src/assets/data/massPrez'
 import { massConspects } from 'src/assets/data/massConspects'
 import massVideo from 'src/assets/data/massVideo'
 import { PREZENTATIONS_ROUTE, VIDEO_ROUTE, CONSPECTS_ROUTE } from 'src/Navigation/routesNames'
+import { TBookPage } from '@/types'
 
-export const bookPages = [
+export const bookPages: TBookPage[] = [
   {
     key: 0,
     title: 'Введение',
