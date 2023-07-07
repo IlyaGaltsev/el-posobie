@@ -1,0 +1,20 @@
+.up-button {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: #556832;
+  color: white;
+  padding: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 200;
+  height: 54px;
+  width: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover, &:active {
+    background: #687f3d;
+  }
+}

@@ -30,20 +30,4 @@
     top: 0;
     background: white;
   }
-
-  &__up-button {
-    position: fixed;
-    bottom: 32px;
-    right: 32px;
-    background: #556832;
-    color: white;
-    padding: 16px;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: 200;
-
-    &:hover {
-      background: #687f3d;
-    }
-  }
 }
