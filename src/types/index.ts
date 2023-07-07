@@ -6,6 +6,17 @@ export interface IRoute {
   childrenRoutes?: IRoute[]
 }
 
+export type THeaderNavigation = {
+  key: string
+  label: string
+}
+
+export type THeaderButton = {
+  title: string
+  to: string
+  icon: Function
+}
+
 export type TBookPage = {
   key: number
   title: string
