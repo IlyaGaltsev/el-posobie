@@ -1,4 +1,4 @@
-import { BOOK_PAGE_ROUTE } from 'src/navigation/routesNames'
+import { BOOK_PAGE_ROUTE } from 'src/Navigation/routesNames'
 import { useNavigate } from 'react-router-dom'
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
 import './Main.scss'

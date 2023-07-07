@@ -1,6 +1,6 @@
-import * as route from 'src/navigation/routesNames'
+import * as route from './routesNames'
 
-export const navigation = [
+export const headerNavigation = [
   {
     key: route.BOOK_PAGE_ROUTE,
     label: 'Учебник'

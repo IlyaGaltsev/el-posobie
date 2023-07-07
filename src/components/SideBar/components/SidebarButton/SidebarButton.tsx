@@ -1,4 +1,4 @@
-import { BOOK_PAGE_ROUTE } from 'src/navigation/routesNames'
+import { BOOK_PAGE_ROUTE } from 'src/Navigation/routesNames'
 import { TSidebarButton } from '@/types'
 import { NavLink } from 'react-router-dom'
 

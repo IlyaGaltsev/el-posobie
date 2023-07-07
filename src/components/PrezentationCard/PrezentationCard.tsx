@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import { FaPlay } from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom'
-import { PREZENTATIONS_ROUTE } from 'src/navigation/routesNames'
+import { PREZENTATIONS_ROUTE } from 'src/Navigation/routesNames'
 
 interface IPrezentationCard {
   id: string

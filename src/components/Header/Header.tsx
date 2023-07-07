@@ -7,7 +7,7 @@ import { AiOutlineMenuUnfold } from 'react-icons/ai'
 import './Header.scss'
 import { useState } from 'react'
 import {VscPreview, VscInfo} from "react-icons/vsc"
-import { navigation } from 'src/navigation/navigation'
+import { headerNavigation } from 'src/Navigation/headerNavigation'
 const Header = () => {
   const navigate = useNavigate()
   const [isOpen, setOpen] = useState(false)
@@ -17,7 +17,7 @@ const Header = () => {
       <div className="header-wrapper">
         <AiOutlineMenuUnfold className="header-nav-menu" onClick={() => setOpen(!isOpen)} size={32} />
         <div className={`header-nav-links ${isOpen ? 'header-nav-links_open' :''}`}>
-          {navigation.map(({ key, label }: any) => (
+          {headerNavigation.map(({ key, label }: any) => (
             <NavLink key={key} to={key}>
               {label}
             </NavLink>
