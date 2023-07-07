@@ -14,6 +14,22 @@ export interface IMassConspects {
   path?: any
 }
 
+export interface IPrezentationCard {
+  id: string
+  title: string
+  tag: string
+  path: string
+  localPath?: any
+  preview?: any
+}
+
+export interface IVideoCard {
+  id: string
+  title: string
+  tag: string
+  promo?: any
+}
+
 export interface INavBook {
   key: number
   label: string

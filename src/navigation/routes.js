@@ -22,28 +22,28 @@ import ConspectItem from 'src/pages/Conspects/ConspectItem'
 
 export const routes = [
   {
-    path: '/',
+    path: routesNames.MAIN_ROUTE,
     element: <Main />
   },
   {
-    path: '/book',
+    path: routesNames.BOOK_ROUTE,
     element: <BookLayout />,
     childrenRoutes: [
       {
-        path: '/book/content',
+        path: routesNames.BOOK_PAGE_ROUTE,
         element: <Book />,
-        childrenRoutes: [{ path: '/book/content/:id', element: <Page /> }]
+        childrenRoutes: [{ path: routesNames.BOOK_PAGE_ID_ROUTE, element: <Page /> }]
       },
-      { path: '/book/videos', element: <Videos /> },
-      { path: '/book/videos/:id', element: <VideoItem /> },
-      { path: '/book/prezentations', element: <Prezentations /> },
-      { path: '/book/prezentations/:id', element: <PrezentationItem /> },
-      { path: '/book/abstract', element: <Conspects /> },
-      { path: '/book/abstract/:id', element: <ConspectItem /> }
+      { path: routesNames.VIDEO_ROUTE, element: <Videos /> },
+      { path: routesNames.VIDEO_ID_ROUTE, element: <VideoItem /> },
+      { path: routesNames.PREZENTATIONS_ROUTE, element: <Prezentations /> },
+      { path: routesNames.PREZENTATIONS_ID_ROUTE, element: <PrezentationItem /> },
+      { path: routesNames.CONSPECTS_ROUTE, element: <Conspects /> },
+      { path: routesNames.CONSPECTS_ID_ROUTE, element: <ConspectItem /> }
     ]
   },
   {
-    path: '/about',
+    path: routesNames.ABOUT_ROUTE,
     element: <About />
   }
 ]

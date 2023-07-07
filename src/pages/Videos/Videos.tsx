@@ -7,9 +7,15 @@ const VideoScreen: FC = () => {
   return (
     <div className="grid-screen__wrapper">
       {massVideo.map(item => {
-        return <VideoCard key={item.id} {...item} />
+        return (
+          <VideoCard
+            key={item.id}
+            {...item}
+          />
+        )
       })}
     </div>
   )
 }
-export default VideoScreen;
+
+export default VideoScreen

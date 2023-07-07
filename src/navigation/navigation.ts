@@ -2,7 +2,7 @@ import * as route from 'src/navigation/routesNames'
 
 export const navigation = [
   {
-    key: route.BOOK_ROUTE,
+    key: route.BOOK_PAGE_ROUTE,
     label: 'Учебник'
   },
   {

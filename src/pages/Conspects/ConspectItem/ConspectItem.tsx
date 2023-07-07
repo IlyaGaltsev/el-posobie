@@ -1,29 +1,20 @@
-import { useNavigate, useParams } from 'react-router-dom'
-import './ConspectItem.scss'
-import { Dialog, IconButton, Toolbar, AppBar } from '@mui/material'
-import { MdClose } from 'react-icons/md'
+import { useParams } from 'react-router-dom'
 import { massConspects } from 'src/assets/data/massConspects'
+import ContentItem from 'src/layouts/ContentItem'
 
 const ConspectItem = () => {
   const params = useParams()
-  const navigate = useNavigate()
 
-  const { title, path }: any = massConspects.find(
-    (item: any) => item.id === params.id
-  )
+  const { title, path }: any = massConspects.find((item: any) => item.id === params.id)
 
   return (
-    <Dialog className="page-video__wrapper" fullScreen open={true} onClose={() => navigate(-1)}>
-      <AppBar sx={{ position: 'relative', background: '#556832', height: 46 }}>
-        <Toolbar>
-          <IconButton edge="start" color="inherit" onClick={() => navigate(-1)} aria-label="close">
-            <MdClose />
-          </IconButton>
-          <h3>{title}</h3>
-        </Toolbar>
-      </AppBar>
-      <iframe title="prezentation" src={path} allow="autoplay" />
-    </Dialog>
+    <ContentItem title={title}>
+      <iframe
+        title="prezentation"
+        src={path}
+        allow="autoplay"
+      />
+    </ContentItem>
   )
 }
 
