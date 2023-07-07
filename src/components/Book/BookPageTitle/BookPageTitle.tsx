@@ -1,5 +1,6 @@
 import { TBookPageTitle } from '@/types'
 import { arabicToRoman } from 'src/utils/config/globalMethods/arabicToRoman'
+import './BookPageTitle.scss'
 
 const BookPageTitle = ({ isShow, chapter, title }: TBookPageTitle) => {
   const getLocation = () => {
@@ -9,7 +10,7 @@ const BookPageTitle = ({ isShow, chapter, title }: TBookPageTitle) => {
   if (!isShow) return null
 
   return (
-    <p className="page-book__title">
+    <p className="book-page-title">
       {chapter ? `Раздел ${getLocation()} > ` : ''}
       {title}
     </p>

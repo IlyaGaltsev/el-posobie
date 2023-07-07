@@ -1,14 +1,10 @@
-import { bookPages } from 'src/assets/data/bookPages'
-import { Link, useNavigate, useParams } from 'react-router-dom'
-import './Page.scss'
-import { BOOK_PAGE_ROUTE } from 'src/Navigation/routesNames'
 import { memo, useEffect, useState } from 'react'
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
-import { FaArrowUp } from 'react-icons/fa'
-import { arabicToRoman } from 'src/utils/config/globalMethods/arabicToRoman'
+import { bookPages } from 'src/assets/data/bookPages'
+import { useNavigate, useParams } from 'react-router-dom'
 import BottomNavigation from 'src/components/Book/BottomNavigation'
-import ButtonUp from 'src/components/ButtonUp'
 import BookPageTitle from 'src/components/Book/BookPageTitle'
+import ButtonUp from 'src/components/ButtonUp'
+import './Page.scss'
 
 const Page = () => {
   const params = useParams()
@@ -38,7 +34,7 @@ const Page = () => {
 
   return (
     <div className="page-book">
-      <BookPageTitle isShow={isVisible} {...bookPage}/>
+      <BookPageTitle isShow={isVisible} {...bookPage} />
 
       {bookPage?.content(navigate) ?? 'Выберите страницу'}
 
