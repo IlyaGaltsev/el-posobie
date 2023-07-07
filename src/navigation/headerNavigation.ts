@@ -1,6 +1,7 @@
+import { THeaderNavigation } from '@/types'
 import * as route from './routesNames'
 
-export const headerNavigation = [
+export const headerNavigation: THeaderNavigation[] = [
   {
     key: route.BOOK_PAGE_ROUTE,
     label: 'Учебник'
