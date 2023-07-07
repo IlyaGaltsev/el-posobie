@@ -1,7 +1,7 @@
 import { bookPages } from 'src/assets/data/bookPages'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import './Page.scss'
-import { BOOK_PAGE_ROUTE } from 'src/navigation/routesNames'
+import { BOOK_PAGE_ROUTE } from 'src/Navigation/routesNames'
 import { useEffect, useState } from 'react'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 import { FaArrowUp } from 'react-icons/fa'

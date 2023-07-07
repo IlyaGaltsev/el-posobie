@@ -1,6 +1,6 @@
 import { Header } from 'src/components/Header'
 import { Outlet, useNavigate } from 'react-router-dom'
-import { BOOK_PAGE_ROUTE } from 'src/navigation/routesNames'
+import { BOOK_PAGE_ROUTE } from 'src/Navigation/routesNames'
 import { useEffect } from 'react'
 
 const Book = () => {

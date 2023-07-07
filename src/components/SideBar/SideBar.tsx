@@ -1,6 +1,6 @@
 import SidebarButton from './components/SidebarButton'
 import { useLayoutEffect, useState } from 'react'
-import { navBook } from 'src/navigation/navBook'
+import { navBook } from 'src/Navigation/navBook'
 import { useParams } from 'react-router-dom'
 import { Dropdown } from '../Dropdown'
 import { INavBook } from '@/types'
