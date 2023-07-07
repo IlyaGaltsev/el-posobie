@@ -7,7 +7,7 @@ export interface IRoute {
 }
 
 export type THeaderNavigation = {
-  key: string
+  path: string
   label: string
 }
 

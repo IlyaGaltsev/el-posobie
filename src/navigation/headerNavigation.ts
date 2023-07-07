@@ -3,19 +3,19 @@ import * as route from './routesNames'
 
 export const headerNavigation: THeaderNavigation[] = [
   {
-    key: route.BOOK_PAGE_ROUTE,
+    path: route.BOOK_PAGE_ROUTE,
     label: 'Учебник'
   },
   {
-    key: route.VIDEO_ROUTE,
+    path: route.VIDEO_ROUTE,
     label: 'Видео'
   },
   {
-    key: route.PREZENTATIONS_ROUTE,
+    path: route.PREZENTATIONS_ROUTE,
     label: 'Презентации'
   },
   {
-    key: route.CONSPECTS_ROUTE,
+    path: route.CONSPECTS_ROUTE,
     label: 'Конспекты'
   }
 ]
