@@ -2,6 +2,14 @@ import { useState } from 'react'
 import { Document, Page } from 'react-pdf'
 import './PdfViewer.scss'
 
+/**
+ *
+ * тут нужно описать слайдер
+ * если появятся серьезные
+ * проблемы с отображением pdf
+ *
+ *  */
+
 const PdfViewer = ({ pdfFile }: any) => {
   const [numPages, setNumPages] = useState(null)
   const [pageNumber, setPageNumber] = useState(3)
