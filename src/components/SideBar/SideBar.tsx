@@ -7,7 +7,7 @@ import { INavBook } from '@/types'
 
 import './Sidebar.scss'
 
-const Sidebar = () => {
+const Sidebar = ({closeSideBar}: any) => {
   const params = useParams()
   let defaultValue = [false, false, false]
 
@@ -24,6 +24,8 @@ const Sidebar = () => {
     if (id >= 15 && id <= 22) {
       setDefaultOpen([false, false, true])
     }
+
+    closeSideBar()
   }, [params?.id])
 
   const handleOnClickDropDown = (key: number) => {

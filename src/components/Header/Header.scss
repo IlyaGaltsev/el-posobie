@@ -1,3 +1,5 @@
+@import 'src/assets/scss/Main.scss';
+
 header {
   display: flex;
   justify-content: center;
@@ -54,13 +56,12 @@ header {
       align-items: flex-start !important;
       text-align: left;
       position: absolute;
+      z-index: 6;
       top: 48px;
       left: 20px;
       background-color:#3a3a3a;
       display: none !important;
       padding: 20px;
-
-
     }
   }
 
