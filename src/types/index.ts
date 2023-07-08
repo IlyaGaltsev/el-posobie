@@ -61,7 +61,7 @@ export interface IPrezentationCard {
   id: string
   title: string
   tag: string
-  path: string
+  path?: string
   localPath?: any
   preview?: any
 }
@@ -72,6 +72,19 @@ export interface IVideoCard {
   tag: string
   promo?: any
 }
+
+export type TUniwerselCardMedia = {
+  to: string
+  title: string
+  tag: string
+  actionTitle?: string
+  imageUrl?: string
+  subtitle?: string
+}
+
+export type TActionSection = Pick<TUniwerselCardMedia, 'actionTitle'>
+export type TImageSection = Pick<TUniwerselCardMedia, 'imageUrl' | 'title'>
+export type TContentSection = Omit<TUniwerselCardMedia, 'actionTitle' | 'to'>
 
 export interface INavBook {
   key: number
