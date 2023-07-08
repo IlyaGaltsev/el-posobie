@@ -37,14 +37,14 @@ section {
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 1000px) {
+  @media (max-width: $transformationSidebarBreakpoint) {
     flex-direction: column;
   }
 
   &__content {
     display: none;
 
-    @media (max-width: 1000px) {
+    @media (max-width: $transformationSidebarBreakpoint) {
       display: flex;
     }
   }
@@ -53,7 +53,7 @@ section {
     max-width: 400px;
     width: 100%;
 
-    @media (max-width: 1000px) {
+    @media (max-width: $transformationSidebarBreakpoint) {
       display: none;
       max-width: none;
       background-color: #465945;
@@ -64,14 +64,27 @@ section {
     display: flex;
   }
 
+  &__tool-wrapper {
+    display: flex;
+    position: absolute;
+    top: 50px;
+    padding: 0 20px;
+    z-index: 1;
+
+    @media (min-width: $transformationSidebarBreakpoint) {
+      display: none;
+    
+    }
+  }
+
   &__wrapper {
     max-width: 1920px;
     width: 100%;
     display: flex;
 
-    @media (max-width: 1000px) {
+    @media (max-width: $transformationSidebarBreakpoint) {
       flex-direction: column;
-      }
+    }
   }
 
   &__navigation {
